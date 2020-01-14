@@ -399,13 +399,13 @@ The scope of this Protection Profile (PP) is to
             </title>
             <note role="application"></note>
             <aactivity>
-              <Guidance>
-Activities assoiated with guidance
-              </Guidance>
               <TSS>
 Activities assoiated with the TSS.
               </TSS>
-              <Tests>
+               <Guidance>
+Activities assoiated with guidance
+              </Guidance>
+             <Tests>
 Activities assoiated with the TTests.
               </Tests>
 	    </aactivity>
