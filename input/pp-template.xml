@@ -384,12 +384,21 @@ The scope of this Protection Profile (PP) is to
 
       <!-- Note: Every SFR must have a status = "threshold" or "optional" or "sel-based" or "objective" -->
       <subsection title="QQQQ" id="QQQQ">
-        <f-component id="QQQ_QQQ.1" name="QQQQQ" status="threshold">
+        <f-component id="fqq_qqq.1" name="QQQQQ">
           <f-element>
             <title> 
             </title>
             <note role="application"></note>
             <aactivity>
+              <Guidance>
+Activities assoiated with guidance
+              </Guidance>
+              <TSS>
+Activities assoiated with the TSS.
+              </TSS>
+              <Tests>
+Activities assoiated with the TTests.
+              </Tests>
 	    </aactivity>
           </f-element>
         </f-component>
