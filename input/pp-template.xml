@@ -46,6 +46,7 @@ The scope of this Protection Profile (PP) is to
  	<h:ul>
 	  <h:li> Terms with abbrs like ASLR, or API, should be found a linked automatically.</h:li>
    	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
+          <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li>
         </h:ul>
       </h:p>
     </section>
@@ -395,7 +396,7 @@ The scope of this Protection Profile (PP) is to
       <subsection title="QQQQ" id="QQQQ">
         <f-component id="fqq_qqq.1" name="QQQQQ">
           <f-element>
-            <title> 
+            <title> The TOE shall do either <selectables><selectable id="aaa">this</selectable><selectable>that</selectable></selectables>. 
             </title>
             <note role="application"></note>
             <aactivity>
