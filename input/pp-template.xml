@@ -33,12 +33,21 @@
 
   <chapter title="Introduction" id="int">
     <section title="Overview" id="ppoverview">
+
+
 The scope of this Protection Profile (PP) is to
       describe the security functionality of QQQQ products in terms of <cite linkend="bibCC"/>
       and to define functional and assurance requirements for such products.
       An operating system is software that manages computer hardware and software
       resources, and provides common services for application programs. The hardware
       it manages may be physical or virtual.
+
+      <h:p> This is going to show some tests:
+ 	<h:ul>
+	  <h:li> Terms with abbrs like ASLR, or API, should be found a linked automatically.</h:li>
+   	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
+        </h:ul>
+      </h:p>
     </section>
     <tech-terms>
       <term abbr='AES' full="Advanced Encryption Standard"/>
