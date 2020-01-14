@@ -5,23 +5,17 @@
     xmlns:h="http://www.w3.org/1999/xhtml">
   <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
-  <PPReference title="PP Reference">
+  <PPReference>
     <ReferenceTable>
       <PPTitle>Protection Profile for QQQQ</PPTitle>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2015-08-14</PPPubDate>
-      <PPCertificationID>unassigned</PPCertificationID>
-      <CCVersion>3.1R4</CCVersion>
       <Keywords>QQQQ</Keywords>
-      <entry>
-        <name>Registration</name>
-        <description>National Information Assurance Partnership</description>
-      </entry>
     </ReferenceTable>
   </PPReference>
 
-  <RevisionHistory role="draft">
+  <RevisionHistory>
     <entry>
       <version>Round 1</version>
       <date>2015-04-23</date>
@@ -29,7 +23,7 @@
     </entry>
   </RevisionHistory>
 
-  <RevisionHistory role="final">
+  <RevisionHistory>
     <entry>
       <version>1.0</version>
       <date>2015-08-14</date>
@@ -38,13 +32,171 @@
   </RevisionHistory>
 
   <chapter title="Introduction" id="int">
-    <section title="Overview" id="ppoverview"> The scope of this Protection Profile (PP) is to
-      describe the security functionality of operating systems in terms of <cite linkend="bibCC"/>
+    <section title="Overview" id="ppoverview">
+The scope of this Protection Profile (PP) is to
+      describe the security functionality of QQQQ products in terms of <cite linkend="bibCC"/>
       and to define functional and assurance requirements for such products.
       An operating system is software that manages computer hardware and software
       resources, and provides common services for application programs. The hardware
       it manages may be physical or virtual.
     </section>
+    <tech-terms>
+      <term abbr='AES' full="Advanced Encryption Standard"/>
+      <term abbr='API' full="Application Programming Interface"/>
+      <term full="Address Space Layout Randomization" abbr="ASLR">
+	An anti-exploitation feature which loads memory mappings into unpredictable
+	locations. ASLR makes it more difficult for an attacker to redirect control to code
+	that they have introduced into the address space of a process.
+      </term>
+      <term full="Administrator">
+	An administrator is responsible for management activities, including setting policies that are 
+	applied by the enterprise on the operating system.
+	This administrator could be acting remotely through a management server, from which the system
+	receives configuration policies.
+	An administrator can enforce settings on the system which cannot be overridden by non-administrator users.
+      </term>
+      <term full="Application" abbr="app">
+	Software that runs on a platform and performs tasks on behalf of the user
+	or owner of the platform, as well as its supporting documentation. 
+      </term>
+      <term full="Application Programming Interface" abbr="API">
+	A specification of routines, data structures, object classes, and variables
+	that allows an application to make use of services provided by another software
+	component, such as a library. APIs are often provided for a set of libraries included
+	with the platform.
+      </term>
+      <term abbr='CESG' full="Communications-Electronics Security Group"/>
+      <term abbr='CMC' full="Certificate Management over CMS"/>
+      <term abbr='CMS' full="Cryptographic Message Syntax"/>
+      <term abbr='CN' full="Common Names"/>
+      <term full="Credential">
+	Data that establishes the identity of a user, e.g. a cryptographic key or
+	password.
+      </term>
+      <term abbr='CRL' full="Certificate Revocation List"/>
+      <term abbr='CSA' full="Computer Security Act"/>
+      <term full="Critical Security Parameters" abbr="CSP">
+	Information that is either user or system defined and
+	is used to operate a cryptographic module in processing encryption functions including
+	cryptographic keys and authentication data, such as passwords, the disclosure or modification
+	of which can compromise the security of a cryptographic module or the security of the
+	information protected by the module.
+      </term>
+      <term full="Data At Rest" abbr="DAR" />
+      <term full="DAR Protection">
+	Countermeasures that prevent attackers, even those with physical access,
+	from extracting data from non-volatile storage.
+	Common techniques include data encryption and wiping.
+      </term>
+      <term full="Data Execution Prevention" abbr="DEP">
+	An anti-exploitation feature of modern operating systems executing on
+	modern computer hardware, which enforces a non-execute permission on pages of memory.
+	DEP prevents pages of memory from containing both data and instructions, which makes
+	it more difficult for an attacker to introduce and execute code.
+      </term>
+      <term abbr='DES' full="Data Encryption Standard"/>
+      <term full="Developer">
+	An entity that writes OS software. For the purposes of this document,
+	vendors and developers are the same.
+      </term>
+      <term full="General Purpose Operating System">
+	A class of OSes designed to support a wide-variety of workloads consisting of many concurrent applications or services.
+	Typical characteristics for OSes in this class include support for third-party applications,
+	support for multiple users, and security separation between users and their respective resources.
+	General Purpose Operating Systems also lack the real-time constraint that defines Real Time Operating Systems (RTOS).
+	RTOSes typically power routers, switches, and embedded devices.
+      </term>
+      <term abbr='DHE' full="Diffie-Hellman Ephemeral"/>
+      <term abbr='DNS' full="Domain Name System"/>
+      <term abbr='DRBG' full="Deterministic Random Bit Generator"/>
+      <term abbr='DSS' full="Digital Signature Standard"/>
+      <term abbr='DT' full="Date/Time Vector"/>
+      <term abbr='DTLS' full="Datagram Transport Layer Security"/>
+      <term abbr='EAP' full="Extensible Authentication Protocol"/>
+      <term abbr='ECDHE' full="Elliptic Curve Diffie-Hellman Ephemeral"/>
+      <term abbr='ECDSA' full="Elliptic Curve Digital Signature Algorithm"/>
+      <term abbr='EST' full="Enrollment over Secure Transport"/>
+      <term abbr='FIPS' full="Federal Information Processing Standards"/>
+      <term abbr='HMAC' full="Hash-based Message Authentication Code"/>
+      <term full="Host-based Firewall">
+	A software-based firewall implementation running on the OS for filtering inbound and
+	outbound network traffic to and from processes running on the OS.
+      </term>
+      <term abbr='HTTP' full="Hypertext Transfer Protocol"/>
+      <term abbr='HTTPS' full="Hypertext Transfer Protocol Secure"/>
+      <term abbr='DSS' full="Digital Signature Standard"/>
+      <term abbr='IETF' full="Internet Engineering Task Force"/>
+      <term abbr='IP' full="Internet Protocol"/>
+      <term abbr='ISO' full="International Organization for Standardization"/>
+      <term abbr='IT' full="Information Technology"/>
+      <term abbr='ITSEF' full="Information Technology Security Evaluation Facility"/>
+      <term abbr='NIAP' full="National Information Assurance Partnership"/>
+      <term abbr='NIST' full="National Institute of Standards and Technology"/>
+      <term abbr='OCSP' full="Online Certificate Status Protocol"/>
+      <term abbr='OID' full="Object Identifier"/>
+      <term abbr='OMB' full="Office of Management and Budget"/>
+      <term full="Operating System" abbr="OS">
+	Software that manages physical and logical resources and provides services
+	for applications. The terms <h:i>TOE</h:i> and <h:i>OS</h:i> are interchangeable in this
+	document. 
+      </term>
+      <term abbr='PKI' full="Public Key Infrastructure"/>
+      <term abbr='PP' full="Protection Profile"/>
+      <term abbr='RBG' full="Random Bit Generator"/>
+      <term abbr='RFC' full="Request for Comment"/>
+      <term abbr='RNG' full="Random Number Generator"/>
+      <term abbr='RNGVS' full="Random Number Generator Validation System"/>
+      <term full="Personally Identifiable Information" abbr="PII">
+	Any information about an individual maintained by an agency, including, but
+	not limited to, education, financial transactions, medical history, and criminal or
+	employment history and information which can be used to distinguish or trace an
+	individual's identity, such as their name, social security number, date and place of
+	birth, mother's maiden name, biometric records, etc., including any other personal
+	information which is linked or linkable to an individual.<cite linkend="bibOMB"/>
+      </term>
+      <term abbr='SAN' full="Subject Alternative Name"/>
+      <term abbr='SHA' full="Secure Hash Algorithm"/>
+      <term abbr='S/MIME' full="Secure/Multi-purpose Internet Mail Extensions"/>
+      <term full="Sensitive Data">
+	Sensitive data may include all user or enterprise data or may be specific
+	application data such as PII, emails, messaging, documents, calendar items, and contacts.
+	Sensitive data must minimally include credentials and keys. Sensitive data shall
+	be identified in the OS's TSS by the ST author. 
+      </term>
+      <term abbr='SIP' full="Session Initiation Protocol"/>
+      <term abbr='SWID' full="Software Identification"/>
+      <term abbr='TLS' full="Transport Layer Security"/>
+      <term abbr='URI' full="Uniform Resource Identifier"/>
+      <term abbr='URL' full="Uniform Resource Locator"/>
+      <term abbr='USB' full="Universal Serial Bus"/>
+      <term full="User">
+	A user is subject to configuration policies applied
+	to the operating system by administrators.  On some systems under certain
+	configurations, a normal user can temporarily elevate privileges to that of an administrator.
+	At that time, such a user should be considered an administrator.
+      </term>
+      <term abbr='XCCDF' full="eXtensible Configuration Checklist Description Format"/>
+      <term abbr='XOR' full="Exclusive Or"/>
+    </tech-terms>    
+    <section title="Compliant Targets of Evaluation" id="TOEdescription">
+      <subsection title="TOE Boundary" id="toeboundary">
+        The TOE boundary encompasses the OS kernel and its drivers, shared
+        software libraries, and some application software included with the OS. The applications considered within the TOE
+        are those that provide essential security services, many of which run with elevated
+        privileges.  Applications which are covered by more-specific Protection Profiles cannot
+        claim evaluation as part of the OS evaluation, even when it is necessary to evaluate
+        some of their functionality as it relates to their role as part of the OS.
+        <figure entity="images/Toe.png" title="General TOE " id="toe"/>
+      </subsection>
+      <subsection title="TOE Platform" id="TOEplatform">
+	The TOE platform, which consists of the physical or virtual hardware on which the TOE executes,
+        is outside the scope of evaluation.  At the same time, the security of the TOE relies upon it.
+        Other hardware components which independently run their own software and are
+        relevant to overall system security are also outside the scope of evaluation.
+      </subsection>
+    </section>
+ 
+
     <section title="Terms" id="glossary"> The following sections provide both Common Criteria and
       technology terms used in this Protection Profile. <subsection title="Common Criteria Terms"
         id="ccterms">
@@ -128,7 +280,7 @@
   </chapter>
   <chapter title="Conformance Claims" id="ccl">
     <cclaims>
-      <cclaim id="Conformance Statement">
+      <cclaim title="Conformance Statement">
         <description> To be conformant to this PP, a <abbr linkend="ST"/> must demonstrate Exact
           Conformance, a subset of Strict Conformance as defined in <cite linkend="bibCC"/> Part 1
           (ASE_CCL). The <abbr linkend="ST"/> must include all components in this PP that are: <h:ul>
@@ -139,7 +291,7 @@
             <h:li>optional or</h:li>
             <h:li>objective.</h:li>
           </h:ul>
-          <InsertAppendixExplainer/> The <abbr linkend="ST"/> may iterate any of these components,
+          The <abbr linkend="ST"/> may iterate any of these components,
           but it must not include any additional component (e.g. from CC Part 2 or 3 or a PP not
           conformant with this one, or extended by the <abbr linkend="ST"/>) not defined in this PP
           or a PP conformant to this one. 
@@ -150,7 +302,7 @@
 		  upon which there is a dependency.
         </description>
       </cclaim>
-      <cclaim id="CC Conformance Claims">
+      <cclaim title="CC Conformance Claims">
         <description>This PP is conformant to Parts 2 (extended) and 3 (extended) of Common Criteria
           Version 3.1, Revision 4.<cite linkend="bibCC"/>.</description>
       </cclaim>
@@ -268,7 +420,7 @@
       <!-- Note: Every SFR must have a status = "threshold" or "optional" or "sel-based" or "objective" -->
       <subsection title="QQQQ" id="QQQQ">
         <f-component id="QQQ_QQQ.1" name="QQQQQ" status="threshold">
-          <f-element id="QQQ_QQQ.1.1">
+          <f-element>
             <title> 
             </title>
             <note role="application"></note>
@@ -322,7 +474,7 @@
           evaluated are characterized through the information needed to perform the assurance
           activities listed, rather than as an independent, abstract list. 
 	  <evalactionlabel title="Developer action elements:"/>
-            <a-element id="ADV_FSP.1.1D">
+            <a-element type="D">
               <title>The developer shall provide a functional specification.</title>
             </a-element>
             <a-element id="ADV_FSP.1.2D">
@@ -859,7 +1011,7 @@
 	This information benefits systems engineering activities which call for inclusion of 
 	particular security controls.  Evaluation against the Protection Profile
 	provides evidence that these controls are present and have been evaluated.
-    <table>
+    <table xmlns="http://www.w3.org/1999/xhtml">
 	<tr class="header">
 	<td>Requirement</td>
 	<td>Rationale for Satisfaction</td>
