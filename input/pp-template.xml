@@ -49,7 +49,7 @@ The scope of this Protection Profile (PP) is to
           <h:li> And so can requirements: FQQ_QQQ.1.1 or by their unique identifier: <linkref linkend="a-unique-id"/></h:li>
  
    	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
-          <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li>
+          <!-- <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li> -->
         </h:ul>
       </h:p>
     </section>
