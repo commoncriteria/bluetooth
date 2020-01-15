@@ -49,6 +49,17 @@ The scope of this Protection Profile (PP) is to
           <h:li> And so can requirements: FQQ_QQQ.1.1 or by their unique identifier: <linkref linkend="a-unique-id"/></h:li>
  
    	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
+          <h:li> This is how you do a picture: 
+                <figure entity="images/niaplogo.png" title="Niap's Logo " id="fig-logo"/> </h:li>
+          <h:li> And this is how you reference it: <figref refid="fig-logo"/></h:li>
+          <h:li> This is how you do an equation with an arbitrary counter:  
+               <h:table><h:tr><h:td>
+               $$x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$$ 
+               </h:td>
+               <h:td style="vertical-align: middle">(<ctr id="quadeq" ctr-type='eq' pre=""/>)</h:td></h:tr></h:table>
+</h:li> 
+          <h:li> And this is how you reference it: <ctr-ref refid="quadeq"/> </h:li>
+                             
           <!-- <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li> -->
         </h:ul>
       </h:p>
