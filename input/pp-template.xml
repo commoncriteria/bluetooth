@@ -46,7 +46,7 @@ The scope of this Protection Profile (PP) is to
  	<h:ul>
 	  <h:li> Terms with abbrs like ASLR, or API, should be found a linked automatically.</h:li>
           <h:li> And components can be refered to by their name: FQQ_QQQ.1 </h:li>
-          <h:li> And so can requirements: FQQ_QQQ.1.1 or by their unique identifier: <linkref linkend="a_unique_id"/></h:li>
+          <h:li> And so can requirements: FQQ_QQQ.1.1 or by their unique identifier: <linkref linkend="a-unique-id"/></h:li>
  
    	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
           <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li>
