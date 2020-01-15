@@ -54,7 +54,7 @@ The scope of this Protection Profile (PP) is to
           <h:li> And this is how you reference it: <figref refid="fig-logo"/></h:li>
           <h:li> This is how you do an equation with an arbitrary counter:  
               <equation><value>x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}</value>
-                        <label><ctr id="quadeq" ctr-type='eq' pre=""/></label></equation>
+                        <label><ctr id="quadeq" ctr-type='eq-'/></label></equation>
 
 </h:li> 
           <h:li> And this is how you reference it: <ctr-ref refid="quadeq"/> </h:li>
