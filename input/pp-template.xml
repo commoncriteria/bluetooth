@@ -45,6 +45,9 @@ The scope of this Protection Profile (PP) is to
       <h:p> This is going to show some tests:
  	<h:ul>
 	  <h:li> Terms with abbrs like ASLR, or API, should be found a linked automatically.</h:li>
+          <h:li> And components can be refered to by their name: FQQ_QQQ.1 </h:li>
+          <h:li> And so can requirements: FQQ_QQQ.1.1 or by their unique identifier: <linkref linkend="a_unique_id"/></h:li>
+ 
    	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
           <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li>
         </h:ul>
@@ -392,10 +395,10 @@ The scope of this Protection Profile (PP) is to
       Technology Security Evaluation, Version 3.1, Revision 4, with additional extended functional
       components. 
 
-      <!-- Note: Every SFR must have a status = "threshold" or "optional" or "sel-based" or "objective" -->
+      <!-- Note: Every SFR must have a " or "optional" or "sel-based" or "objective" -->
       <subsection title="QQQQ" id="QQQQ">
-        <f-component id="fqq_qqq.1" name="QQQQQ">
-          <f-element>
+         <f-component id="fqq_qqq.1" name="QQQQQ">
+          <f-element id="a-unique-id">
             <title> The TOE shall do either <selectables><selectable id="aaa">this</selectable><selectable>that</selectable></selectables>. 
             </title>
             <note role="application"></note>
@@ -409,6 +412,40 @@ Activities assoiated with guidance
              <Tests>
 Activities assoiated with the TTests.
               </Tests>
+	    </aactivity>
+          </f-element>
+        </f-component>
+        <f-component id="fqq_qqq.3" name="BQQQQQ" status="objective">
+          <f-element>
+            <title> The TOE shall do <assignable>guidance on what things should be assignable </assignable>. </title>
+            <note role="application">Notes. Notes. Notes.</note>
+            <aactivity>
+              <Guidance>
+Activities assoiated with guidance
+              </Guidance>
+	    </aactivity>
+          </f-element>
+        </f-component>>
+        <f-component id="fqq_qqq.2" name="TQQQQQ" status="optional">
+          <f-element>
+            <title> The TOE shall do soemthing.</title>
+            <note role="application"></note>
+            <aactivity>
+              <TSS>
+Activities assoiated with the TSS.
+              </TSS>
+	    </aactivity>
+          </f-element>
+        </f-component>
+        <f-component id="fqq_qqq.4" name="UQQQQQ" status="sel-based">
+          <selection-depends req="a-unique-id" ids="aaa"/>
+          <f-element>
+            <title> The TOE shall do something great.</title>
+            <note role="application"></note>
+            <aactivity>
+              <TSS>
+Activities assoiated with the TSS.
+              </TSS>
 	    </aactivity>
           </f-element>
         </f-component>
