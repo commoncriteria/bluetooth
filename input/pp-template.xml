@@ -53,13 +53,11 @@ The scope of this Protection Profile (PP) is to
                 <figure entity="images/niaplogo.png" title="Niap's Logo " id="fig-logo"/> </h:li>
           <h:li> And this is how you reference it: <figref refid="fig-logo"/></h:li>
           <h:li> This is how you do an equation with an arbitrary counter:  
-               <h:table><h:tr><h:td>
-               $$x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$$ 
-               </h:td>
-               <h:td style="vertical-align: middle">(<ctr id="quadeq" ctr-type='eq' pre=""/>)</h:td></h:tr></h:table>
+              <equation><value>x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}</value>
+                        <label><ctr id="quadeq" ctr-type='eq' pre=""/></label></equation>
+
 </h:li> 
           <h:li> And this is how you reference it: <ctr-ref refid="quadeq"/> </h:li>
-                             
           <!-- <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li> -->
         </h:ul>
       </h:p>
