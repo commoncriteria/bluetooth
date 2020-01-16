@@ -446,10 +446,22 @@ Activities assoiated with the TSS.
 	    </aactivity>
           </f-element>
         </f-component>
-        <f-component id="fqq_qqq.4" name="UQQQQQ" status="sel-based">
+         <f-component id="fqq_qqq.4" name="UQQQQQ" status="sel-based">
           <selection-depends req="a-unique-id" ids="aaa"/>
           <f-element>
             <title> The TOE shall do something great.</title>
+            <note role="application"></note>
+            <aactivity>
+              <TSS>
+Activities assoiated with the TSS.
+              </TSS>
+	    </aactivity>
+          </f-element>
+        </f-component>
+        <f-component id="fqq_qqq.6" name="WQQQQQ">
+          <depends on="implements" ref-id="a-feature-id"/>
+          <f-element>
+            <title> The TOE shall do something with regards to some implementation.</title>
             <note role="application"></note>
             <aactivity>
               <TSS>
@@ -1215,5 +1227,14 @@ Activities assoiated with the TSS.
   <appendix title="Acronyms" id="acronyms">
    <acronyms/>
   </appendix>
+
+
+
+  <implements>
+    <feature id="a-feature-id" title="Widget Thing">
+      <description> If the TOE includes the widget thing, all of the following SFRs must be claimed: <h:ul><h:li> FQQ_QQQ.6</h:li></h:ul>
+      </description>
+    </feature>
+  </implements>
 </PP>
 
