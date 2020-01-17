@@ -58,7 +58,10 @@ The scope of this Protection Profile (PP) is to
 
 </h:li> 
           <h:li> And this is how you reference it: <ctr-ref refid="quadeq"/> </h:li>
-          <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> Some text </h:div> </h:li> 
+          <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> 
+                    Some text </h:div> </h:li> 
+          <h:li> <h:div><depends on="implements" ref-id="a-feature-id"/> 
+                    Someting dependent on a feature</h:div> </h:li> 
         </h:ul>
       </h:p>
     </section>
