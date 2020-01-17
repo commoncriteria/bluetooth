@@ -62,6 +62,11 @@ The scope of this Protection Profile (PP) is to
                     Some text </h:div> </h:li> 
           <h:li> <h:div><depends on="implements" ref-id="a-feature-id"/> 
                     Someting dependent on a feature</h:div> </h:li> 
+
+          <h:li> And here's the audit event table for mandatory requirements. <h:br/>
+
+                 <audit-events table="mandatory"/>
+          </h:li>
         </h:ul>
       </h:p>
     </section>
@@ -426,6 +431,13 @@ Activities assoiated with the TTests.
               </Tests>
 	    </aactivity>
           </f-element>
+ 	  <audit-event>
+             <table known="mandatory"/>
+                <description>
+	On failure of audit data capture due to lack of disk space or pre-defined limit.<h:br></h:br>
+	        </description>
+                <add-info>None.</add-info>
+          </audit-event>
         </f-component>
         <f-component id="fqq_qqq.3" name="BQQQQQ" status="objective">
           <f-element>
