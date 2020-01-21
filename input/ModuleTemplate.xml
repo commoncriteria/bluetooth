@@ -336,7 +336,7 @@
   <chapter title="Security Requirements" id="sfrs">
     <base-pp version="2.1" name="Network Device" product="Network Device" short="ND" url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=440&amp;id=440" xmlurl="test">
       <modified-sfrs>
-        <subsection title="Protection of the TSF (FPT)" id="fpt">
+        <subsection title="Protection of the TSF (FPT)" id="from_nd_fpt">
           <f-component id="fpt_itt.1" name="Basic Internal TSF Data Transfer Protection"><!-- DONE -->
             <consistency-rationale/>
             <f-element>
@@ -423,7 +423,7 @@
       <con-op-en/>
     </base-pp>
     <man-sfrs>
-      <subsection title="Security Audit (FAU)" id="fau">
+      <subsection title="Security Audit (FAU)" id="man_fau">
         <f-component id="fau_arp.1" name="Security Alarms"> <!-- DONE -->
           <consistency-rationale/>
           <f-element id="fel-arp">
@@ -516,7 +516,10 @@
                 <h:li><h:i>Failure of wireless sensor communication].</h:i></h:li>
               </h:ol>
               <h:table>
-                <h:tr><h:td><h:b>Requirement</h:b></h:td><h:td><h:b>Auditable Events</h:b></h:td><h:td><h:b>Additional Audit Record Contents</h:b></h:td></h:tr>
+                <h:thead>
+                  <h:tr><h:td colspan="99"> <ctr id="auditWids" ctr-type="Table">: Auditable Events</ctr> </h:td></h:tr>
+                  <h:tr><h:th>Requirement</h:th><h:th>Auditable Events</h:th><h:th>Additional Audit Record Contents</h:th></h:tr>
+                </h:thead>
                 <h:tr><h:td>FAU_ANO_EXT.1</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
                 <h:tr><h:td>FAU_ARP.1</h:td><h:td>Actions taken due to potential security violations</h:td><h:td>None</h:td></h:tr>
                 <h:tr><h:td>FAU_ARP_EXT.2</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
@@ -555,16 +558,16 @@
                 <h:tr><h:td>FPT_ITT.1</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
                 <h:tr><h:td>FTP_ITC.1</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
               </h:table>
-              <ctr id="auditWids" ctr-type="Table">: Auditable Events</ctr>
+              <ctr id="auditWids2" ctr-type="Table">: Auditable Events</ctr>
             </title>
             <note role="application"> 
               
-              The auditable events defined in <ctr-ref refid="auditWids"/>
+              The auditable events defined in <ctr-ref refid="auditWids2"/>
               are for the SFRs that are explicitly defined in this PP-Module and are intended to
               extend FAU_GEN.1 in the Base-PP. The events in the <ctr-ref refid="auditWids"/> should
               be combined with those of the ND cPP in the context of a conforming Security
               Target.<h:br/><h:br/> 
-              The Auditable Events (<ctr-ref refid="auditWids"/>) includes
+              The Auditable Events (<ctr-ref refid="auditWids2"/>) includes
               optional and objective SFRs. The auditing of optional and objective SFRs is only
               required if that SFR is included in the ST. <h:br/><h:br/>
               Per FAU_STG_EXT.1 in the Base-PP, the TOE must support transfer of the audit data to an external IT entity using a trusted channel.     
@@ -1878,7 +1881,7 @@ The evaluator shall examine the operational guidance to verify that it
       </subsection>
     </man-sfrs>
     <opt-sfrs>
-      <subsection title="Security Audit (FAU)" id="fau">
+      <subsection title="Security Audit (FAU)" id="opt_fau">
         <ext-comp-def title="Wireless Spectrum Monitoring" fam-id="FAU_WID_EXT">
           <mod-def/>
         </ext-comp-def>
@@ -1953,7 +1956,7 @@ The evaluator shall examine the operational guidance to verify that it
     </opt-sfrs>
     
     <sel-sfrs>
-      <subsection title="Security Audit (FAU)" id="fau">
+      <subsection title="Security Audit (FAU)" id="sel_fau">
         <ext-comp-def title="Anomaly-Based Intrusion Detection" fam-id="FAU_ANO_EXT">
           <fam-behavior/>
         </ext-comp-def>
@@ -2143,7 +2146,7 @@ The evaluator shall examine the operational guidance to verify that it
     
     <obj-sfrs>
 
-      <subsection title="Security Audit (FAU)" id="fau">
+      <subsection title="Security Audit (FAU)" id="obj_fau">
         <!-- Originally I asked Justin to add this SFR, most likely do not need it, b/c ND cPP covers it.  -->
         <!-- <f-component id="fau_gen.1" name="Device Configuration - Exporting Event Data">         
           <consistency-rationale/>
