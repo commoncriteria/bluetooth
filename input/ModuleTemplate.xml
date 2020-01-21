@@ -4,59 +4,31 @@
 <?xml-model href="https://github.com/commoncriteria/transforms/raw/master/schemas/CCModule.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 
-<!-- TODO:
-  Lauren
-  - Are there any Use Cases??
-  - FPT_ITA, FPT_ITC, FPT_ITI - exportability of TSF data 
-
-  NIAP
-  - FAU_SAA
-  - consistency rationales throughout document
-  - ECDs throughout document
-  - Does this Module claim any packages?
-
-  Kevin
-  - Iterations as '/' - need Kevin to allow '/' in component id. Need to update boilerplate text that defines iteration as (#)
-  - ND cPP is not in XML/github - how do I reference it?
-  - Can we mark SFRs as (optional, sel-based, objective) in objective mapping?
-  - Can you define abbr in the acronyms section?
- 
- DONE:
- - Moved fpt_itt and ftp_itc to modified sfrs
- - DONE: Selection-Depends
- - DONE: Table ctr
- 
--->
-
-
-<Module boilerplate="yes" target-products="WIDS/WIPS" xmlns="https://niap-ccevs.org/cc/v1" name="Wireless Intrusion Detection/Prevention Systems" xmlns:h="http://www.w3.org/1999/xhtml">
+<Module boilerplate="yes" target-products="Widgets" xmlns="https://niap-ccevs.org/cc/v1" name="Widgets" xmlns:h="http://www.w3.org/1999/xhtml">
   <PPReference>
     <ReferenceTable>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2020-01-16</PPPubDate>
-      <Keywords>WIDS/WIPS, Wireless Intrusion Detection/Prevention System</Keywords>
+      <Keywords>widgets</Keywords>
     </ReferenceTable>
   </PPReference>
   <RevisionHistory>
     <entry>
       <version>1.0</version>
       <date>2016-10-06</date>
-      <subject>Initial Release - EP for NDcPP</subject>
+      <subject>Initial Release </subject>
     </entry>
   </RevisionHistory>
   <chapter title="Introduction" id="int">
     <section title="Overview" id="ppoverview"> 
-      This Protection Profile Module (PP-Module) describes
-      security requirements for a Wireless Intrusion Detection System (WIDS) defined to be an IEEE
-      802.11 network intrusion detection product located at the edge of a private network that can
-      collect, inspect, and analyze real-time network traffic and alert the administrator of policy
-      violations. This PP-Module is intended to provide a minimal baseline set of requirements that
-      are targeted at mitigating well defined and described threats. <h:br/><h:br/> This PP-Module
-      contains optional requirements for a Wireless Intrustion Protection System (WIPS) a security
-      product that provides network security administrators with the additional ability to react in
-      real-time to potentially malicious wireless (IEEE 802.11) network traffic. <h:br/><h:br/> This
-      PP-Module extends the collaborative Protection Profile for Network Devices (NDcPP). </section>
+      This Protection Profile Module (PP-Module) describes security requirements for Widgets. 
+      This PP-Module is intended to provide a minimal baseline set of requirements that
+      are targeted at mitigating well defined and described threats. 
+      <h:p>This PP-Module contains optional requirements for Widgets, a security
+      product that provides something.
+      </h:p>
+    </section>
     <tech-terms>
       <term abbr="AES" full="Advanced Encryption Standard"/>
       <term abbr="AP" full="Access Point"> 
@@ -150,30 +122,11 @@
     </cclaims>
   </chapter>
   <chapter title="Security Problem Description" id="spd">  
-    WIDS address a range of security threats related to detection of and reaction to potentially malicious WLAN traffic. The malicious
+    <h:p>WIDS address a range of security threats related to detection of and reaction to potentially malicious WLAN traffic. The malicious
     traffic may pose a threat to one or more endpoints on the monitored networks, to the network
     infrastructure, or to the TOE itself. Attacks against a WLAN could compromise the
     confidentiality and integrity of WLAN users and system data as well as the availability of the
-    WLAN to legitimate users. <h:br/><h:br/> 
-    The term “monitored network” is used here to represent
-    any WLAN and/or wired network that the TOE is configured to monitor and detect intrusions on.
-    This extends to the wired networks as intrusions on the wireless network can also be damaging to
-    the wired infrastructure. The WIDS/WIPS also protect the wired infrastructure by detecting rogue
-    devices that are directly connected to the wired infrastructure, which may expose the wired
-    network, or unauthorized WLAN devices deployed in a no-wireless zone. The terms "Wi-Fi", “Wi-Fi
-    Network” and “WLAN” will be used interchangeably to represent a Wi-Fi network.<h:br/>
-    <h:br/> 
-    The proper installation, configuration, and administration of the WIDS are critical to
-    its correct operation. A site is responsible for developing its security policy and configuring
-    a rule set that the WIDS will enforce and provide an appropriate response to meet their needs,
-    relative to their own risk analysis and their perceived threats.<h:br/><h:br/> 
-    Note that this
-    PP-Module does not repeat the threats identified in the NDcPP, though they all apply given the
-    conformance and hence dependence of this PP-Module on the NDcPP. Note also that while the NDcPP
-    contains only threats to the ability of the TOE to provide its security functions, this
-    PP-Module addresses only threats to resources in the operational environment. Together the
-    threats of the NDcPP and those defined in this PP-Module define the comprehensive set of
-    security threats addressed by a WIDS TOE. 
+    WLAN to legitimate users.</h:p>
     <section title="Threats" id="threats">
       <threats>
         <threat id="T.UNAUTHORIZED_DISCLOSURE_OF_INFORMATION">
