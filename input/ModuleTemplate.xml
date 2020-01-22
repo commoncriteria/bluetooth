@@ -2471,8 +2471,10 @@ The evaluator shall examine the operational guidance to verify that it
       </subsection>
     </obj-sfrs>
   </chapter>
-  
-  
+  <appendix id="my_appendix" title="An Example Appendix">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </appendix>
+
   <bibliography>
     <cc-entry/>
   </bibliography>
@@ -2481,48 +2483,3 @@ The evaluator shall examine the operational guidance to verify that it
 
 
 
-
-
-
-<!-- 
- 20190930     
-  - Split apart any generic reference to WIDS/WIPS. It should be clear if something is for WIDS or WIPS
-  - Push #1: Added requirements to FAU_WID_EXT.2 Wireless Intrusion Detection – Passive Information Flow Monitoring (FAU_WID_EXT.2.5 and FAU_WID_EXT.2.6 (Lines 1107 - 1123))
-  - Push #2: Added requirements to FAU_IDS_EXT.1 Wireless Intrusion Detection – Intrusion Detection System – Intrusion Detection and Reporting  Methods (FAU_IDS_EXT.1.2 and FAU_IDS_EXT.1.3 (Lines 1107 - 1123))
-  - Push #3: Updated Updated FAU_IDS_EXT.1.3
-  - Push #4: Updated technical terms  and replaced 46 out of 58 referenced to "WIDS/WIPS" with  "WIDS"
-  
-  20191002
-  - Push #1: Added requirement to Objective SFRs (FAU_INV_EXT.4 Precise Location of Environmental Objects) for the inclusion of a signal library.
-  - Push #2: Made some grammar and punctuation changes. 
-
-20191003
-  - Push # 1: Added a component requirment under Objective SFRs ("PLACEHOLDER" element name) for TSF Device Configurations - Monitoring Time and Frequency. (Lines: 2332 - 2371)
-  - Push # 2: Added a component requirment under Objective SFRs ("PLACEHOLDER" element name) for TSF Device Configurations - Device Configuration - Exporting Configuration and Event Data.
-    (Lines: 2375 - 2421)
-    Corrected formatting issue.
-  - Push # 3: Push to synchronize changes.
-     # Need to troubleshoot why I don't see the changes for Push #2, but I see the other ones. Commited and pushed changes twice, but when I refresh the https://commoncriteria.github.io/pp/wids/wids-release.html
-         page, the changes aren't there. I see the push in GitHub, and all the other changes pushed today were successfully changed and verified.
-20191004
-  - Fixed build issue. Removed extra <steplist> tag that had no closing tag. Added </f-component> closing tag that was missing.
-
-  20191009
-   - Push # 1: Added WLAN Definition
-   - Push # 2: Comments: Lauren - I identified the purpose behind "FAU_GEN.2(WIDS) Alerts Data Generation (WIDS/WIPS)"" table we had questions about yesterday, and I've changed my opinion about it usefullness. 
-                      I now support it's inclusion for the following reason (please argue against if you think I'm missing something here):
-
-                      The "FAU_SAA.1 Potential Violation Analysis - Potential Security Violations" table simply labels the types of auditable events the TSF should trigger off of, and whether it's a mandatory,
-                       objective, or optional SFR.  Applying a set of rules for monitoring the wireless traffic, and based upon these rules, indicating a potential malicious action is different than actually identifying 
-                       what information should be contanied within the triggered alert. If an event is triggerable, the "FAU_GEN.2(WIDS) Alerts Data Generation (WIDS/WIPS)" table specifically identifies what 
-                      attributes (i.e. MAC address, SSID, signal strength, BSSID) should be captured and contained within the alert, and then eventually parsed and displayed by a reporting mechanism (e.g. SIEM, 
-                      syslog, 3rd party solution). This table sperately provides a space within the mudule to define the specific device and event attributes that should be monitored for and captured 
-                      within a triggerable event. Not all of the SFRs trigger an actual alert, hence why some requirements within the table have "None" specified under the "Auditable Events" column.
-
-                      Let me know if you see and holes in my logic and understanding. 
- 
- 20191011
- - Push # 1: Added Assurance Activity to "fau_wid_ext.2.5" and "fau_wid_ext.2.6" 
-
- 20191018
- - Push #1: Added additional aactivity testing and responded to 4 out 6 of Lauren's comments. -->
