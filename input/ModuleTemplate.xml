@@ -520,6 +520,7 @@
                   <h:tr><h:td colspan="99"> <ctr id="auditWids" ctr-type="Table">: Auditable Events</ctr> </h:td></h:tr>
                   <h:tr><h:th>Requirement</h:th><h:th>Auditable Events</h:th><h:th>Additional Audit Record Contents</h:th></h:tr>
                 </h:thead>
+                <h:tbody>
                 <h:tr><h:td>FAU_ANO_EXT.1</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
                 <h:tr><h:td>FAU_ARP.1</h:td><h:td>Actions taken due to potential security violations</h:td><h:td>None</h:td></h:tr>
                 <h:tr><h:td>FAU_ARP_EXT.2</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
@@ -557,20 +558,16 @@
                   failure.</h:td></h:tr>
                 <h:tr><h:td>FPT_ITT.1</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
                 <h:tr><h:td>FTP_ITC.1</h:td><h:td>None</h:td><h:td>None</h:td></h:tr>
+                </h:tbody>
               </h:table>
-              <ctr id="auditWids2" ctr-type="Table">: Auditable Events</ctr>
             </title>
             <note role="application"> 
               
-              The auditable events defined in <ctr-ref refid="auditWids2"/>
+              The auditable events defined in <ctr-ref refid="auditWids"/>
               are for the SFRs that are explicitly defined in this PP-Module and are intended to
               extend FAU_GEN.1 in the Base-PP. The events in the <ctr-ref refid="auditWids"/> should
               be combined with those of the ND cPP in the context of a conforming Security
               Target.<h:br/><h:br/> 
-              The Auditable Events (<ctr-ref refid="auditWids2"/>) includes
-              optional and objective SFRs. The auditing of optional and objective SFRs is only
-              required if that SFR is included in the ST. <h:br/><h:br/>
-              Per FAU_STG_EXT.1 in the Base-PP, the TOE must support transfer of the audit data to an external IT entity using a trusted channel.     
             </note>
           </f-element>
           <f-element>
