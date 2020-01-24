@@ -209,87 +209,6 @@ The scope of this Protection Profile (PP) is to
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>    
     <section title="Compliant Targets of Evaluation" id="TOEdescription">
-      <subsection title="TOE Boundary" id="toeboundary">
-        The TOE boundary encompasses the OS kernel and its drivers, shared
-        software libraries, and some application software included with the OS. The applications considered within the TOE
-        are those that provide essential security services, many of which run with elevated
-        privileges.  Applications which are covered by more-specific Protection Profiles cannot
-        claim evaluation as part of the OS evaluation, even when it is necessary to evaluate
-        some of their functionality as it relates to their role as part of the OS.
-        <figure entity="images/Toe.png" title="General TOE " id="toe"/>
-      </subsection>
-      <subsection title="TOE Platform" id="TOEplatform">
-	The TOE platform, which consists of the physical or virtual hardware on which the TOE executes,
-        is outside the scope of evaluation.  At the same time, the security of the TOE relies upon it.
-        Other hardware components which independently run their own software and are
-        relevant to overall system security are also outside the scope of evaluation.
-      </subsection>
-    </section>
- 
-
-    <section title="Terms" id="glossary"> The following sections provide both Common Criteria and
-      technology terms used in this Protection Profile. <subsection title="Common Criteria Terms"
-        id="ccterms">
-        <glossary>
-          <entry>
-            <term><abbr title="Common Criteria">CC</abbr></term>
-            <description>Common Criteria for Information Technology Security
-              Evaluation.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Common Evaluation Methodology">CEM</abbr></term>
-            <description>Common Evaluation Methodology for Information Technology Security
-              Evaluation.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Protection Profile">PP</abbr></term>
-            <description>An implementation-independent set of security requirements for a category
-              of products.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Security Target">ST</abbr></term>
-            <description>A set of implementation-dependent security requirements for a specific
-              product.</description>
-          </entry>
-          <entry>
-            <term><abbr title="Target of Evaluation">TOE</abbr></term>
-            <description>
-	      The product under evaluation. In this case, the Operating System and its
-              supporting documentation.
-	    </description>
-          </entry>
-          <entry>
-            <term><abbr title="TOE Security Functionality">TSF</abbr></term>
-            <description>The security functionality of the product under evaluation.</description>
-          </entry>
-          <entry>
-            <term><abbr title="TOE Summary Specification">TSS</abbr></term>
-            <description>A description of how a <abbr linkend="TOE"/> satisfies the SFRs in a <abbr
-                linkend="ST"/>. </description>
-          </entry>
-          <entry>
-            <term><abbr title="Security Functional Requirement">SFR</abbr></term>
-            <description>A requirement for security enforcement by the <abbr linkend="TOE"/>.
-            </description>
-          </entry>
-          <entry>
-            <term><abbr title="Security Assurance Requirement">SAR</abbr></term>
-            <description>A requirement to assure the security of the <abbr linkend="TOE"/>.
-            </description>
-          </entry>
-        </glossary>
-      </subsection>
-      <subsection title="Technology Terms" id="techterms">
-        <glossary>
-          <entry>
-            <term><abbr title="SOMETHING"></abbr></term>
-            <description>
-	    </description>
-          </entry>
-        </glossary>
-      </subsection>
-	  </section>
-    <section title="Compliant Targets of Evaluation" id="TOEdescription">
       <subsection title="TOE Boundary" id="TOEboundary">
         <figure entity="images/Toe.png" title="Figure 1: General TOE " id="toe"/>
       </subsection>
@@ -438,6 +357,13 @@ Activities assoiated with the TTests.
 	        </description>
                 <add-info>None.</add-info>
           </audit-event>
+  	  <audit-event>
+             <table other="turtle"/>
+                <description>
+	On number of turtles in the area.
+	        </description>
+                <add-info>None.</add-info>
+          </audit-event>
         </f-component>
         <f-component id="fqq_qqq.3" name="BQQQQQ" status="objective">
           <f-element>
@@ -485,7 +411,306 @@ Activities assoiated with the TSS.
 	    </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </subsection> 
+           <!-- FAU_GEN.1 -->
+            <subsection id="fau" title="Security Audit (FAU)">
+                <f-component id="fau_gen.1" name="Audit Data Generation">
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall be able to generate an audit record of the following auditable events:
+                            <h:ol type="a">
+                                <h:li>Start-up and shutdown of audit functions</h:li>
+                                <h:li>All administrative actions</h:li>
+                                <h:li>[Specifically defined auditable events in Table 1]</h:li>
+                                <h:li><selectables>
+
+				<!-- It makes no sense to have a selection for the various audit tables. The entries in those 
+				tables are automatically included in the ST is the associated SFR is included. The audit events are effectively
+				part of their corresponding SFRs. Selecting them here has no effect. 
+				-->
+                                    <selectable id="table2">additional information defined in Table 2</selectable>
+				    <selectable>additional information defined in Table 3</selectable>
+                                    <selectable>additional information defined in Table 4</selectable>
+                                    <selectable>additional information defined in in Table 5</selectable>
+                                    <selectable>no other information</selectable>
+
+				 </selectables></h:li>
+                            </h:ol>
+                        </title>
+                    </f-element>
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall record within each audit record at least the following information:
+                            <h:ol type="a">
+                                <h:li>Date and time of the event</h:li>
+                                <h:li>Type of event</h:li>
+                                <h:li>Subject and object identity (if applicable)</h:li>
+                                <h:li>The outcome (success or failure) of the event</h:li>
+                                <h:li>[Additional information defined in Table 1]</h:li>
+                                <h:li><selectables>
+<!-- XXX Table 2 is Optional.
+        Depending on the specific optional SFRs from Annex A that are claimed in the ST, the ST author shall
+	include the appropriate auditable events from Table 2 for FAU_GEN.1.<h:br></h:br><h:br></h:br>
+
+        Depending on the specific selection-based SFRs from Annex B that are claimed in the ST, the ST author shall
+	include the appropriate auditable events from Table 4 for FAU_GEN.1.<h:br></h:br><h:br></h:br>
+
+        Depending on the specific objective SFRs from Annex C that are claimed in the ST, the ST author shall
+	include the appropriate auditable events from Table 4 for FAU_GEN.1.<h:br></h:br><h:br></h:br>
+	
+	FIA_UIA_EXT.1 is a mandatory requirement that has both mandatory and optional audit events. I think
+ 	I should handle this with a selection within the audit event table.
+ 
+-->
+                                    <selectable>additional information defined in Table 2</selectable>
+                                    <selectable>additional information defined in Table 3</selectable>
+                                    <selectable>additional information defined in Table 4</selectable>
+                                    <selectable>additional information defined in in Table 5</selectable>
+                                    <selectable>no other information</selectable>
+                                </selectables></h:li>
+                            </h:ol>
+                        </title>
+                        <note role="application">
+                            The <abbr linkend="ST"/> author can include other auditable events directly in Table 1; they are not limited to the list presented. The <abbr linkend="ST"/> author should update the table in FAU_GEN.1.2 with any additional information generated. “Subject identity” in FAU_GEN.1.2 could be a user id or an identifier specifying a <abbr linkend="VM"/>, for example.<h:br></h:br><h:br></h:br>
+                            If ‘additional information defined in Table 3’ is selected, it is acceptable to include individual
+                            entries from Table 3 without including the entirety of Table 3.  Appropriate entries from Tables 2, 4,
+                            and 5 should be included in the <abbr linkend="ST"/> if the associated SFRs and selections are included.<h:br></h:br><h:br></h:br>
+                            The Table 1 entry for FDP_VNC_EXT.1 refers to configuration settings that attach <abbr linkend="VM"/>s to virtualized network components. Changes to these configurations can be made during <abbr linkend="VM"/> execution or when <abbr linkend="VM"/>s are not running. Audit records must be generated for either case.<h:br></h:br><h:br></h:br>
+                            The intent of the audit requirement for FDP_PPR_EXT.1 is to log that the <abbr linkend="VM"/> is connected to a physical device (when the device becomes part of the <abbr linkend="VM"/>’s hardware view), not to log every time that the device is accessed. Generally, this is only once at <abbr linkend="VM"/> startup. However, some devices can be connected and disconnected during operation (e.g., virtual USB devices such as CD-ROMs). All such connection/disconnection events must be logged.
+                        </note>
+			<aactivity>
+                            <TSS>
+                                The evaluator shall check the <abbr linkend="TSS"/> and ensure that it lists all of the auditable events 
+                                and provides a format for audit records. Each audit record format type shall be covered, along with a 
+                                brief description of each field. The evaluator shall check to make sure that every audit event type 
+                                mandated by the PP is described in the <abbr linkend="TSS"/>.<h:br></h:br><h:br></h:br>
+                            </TSS>
+                            <Guidance>
+                                The evaluator shall also make a determination of the administrative actions that are relevant in the 
+                                context of this PP. The evaluator shall examine the administrative guide and make a determination of which 
+                                administrative commands, including subcommands, scripts, and configuration files, are related to the 
+                                configuration (including enabling or disabling) of the mechanisms implemented in the <abbr linkend="TOE"/> 
+                                that are necessary to enforce the requirements specified in the PP. The evaluator shall document the 
+                                methodology or approach taken while determining which actions in the administrative guide are 
+                                security-relevant with respect to this PP.<h:br></h:br><h:br></h:br>
+                            </Guidance>
+                            <Tests>
+                                The evaluator shall test the <abbr linkend="TOE"/>’s ability to correctly generate audit records by 
+                                having the <abbr linkend="TOE"/> generate audit records for the events listed and administrative actions. 
+                                For administrative actions, the evaluator shall test that each action determined by the evaluator above to 
+                                be security relevant in the context of this PP is auditable. When verifying the test results, the 
+                                evaluator shall ensure the audit records generated during testing match the format specified in the 
+                                administrative guide, and that the fields in each audit record have the proper entries.<h:br></h:br>
+                                <h:br></h:br>
+                                Note that the testing here can be accomplished in conjunction with the testing of the security mechanisms 
+                                directly.<h:br></h:br>
+				    
+				    							
+			See <ctr-ref refid="man-table">: Auditable Events</ctr-ref> for more information.
+
+			<!-- AUDIT TABLE for MANDATORY SFRs. This needs to move outside the EAs -->
+                        <ctr id="man-table" ctr-type="Table">: Auditable Events</ctr>
+                        <audit-events table="mandatory"/><h:br/>
+			    
+                        <audit-events table="turtle">
+                            <ctr id="turtle-table" ctr-type="Table">: Auditable Events</ctr>
+			    <depends on="selection"><uid>table2</uid></depends>
+			</audit-events><h:br/>
+
+
+                            </Tests>   
+                        </aactivity>
+                    </f-element>
+		    <audit-event>
+                        <table known="mandatory"/>
+			<description>None.</description>
+                        <add-info>None.</add-info>
+		    </audit-event>
+                </f-component>
+                
+                <!-- FAU_SAR.1 -->
+                <f-component id="fau_sar.1" name="Audit Review">
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall provide [administrators] with the capability to read [all information] from the audit records.
+                        </title>
+                    </f-element>
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall provide the audit records in a manner suitable for the user to interpret the information.
+                        </title>
+                        <aactivity>
+                            <Guidance>
+                                The evaluator shall review the operational guidance for the procedure on how to review the audit 
+                                records.
+                            </Guidance>
+                            <Tests>
+                                The evaluator shall verify that the audit records provide all of the information specified in 
+                                FAU_GEN.1 and that this information is suitable for human interpretation. The assurance 
+                                activity for this requirement is performed in conjunction with the assurance activity for 
+                                FAU_GEN.1.
+                            </Tests>
+                        </aactivity>
+                    </f-element>
+		    <audit-event>
+                        <table known="mandatory"/>
+                        <description>None.</description>
+                        <add-info>None.</add-info>
+		    </audit-event>
+                </f-component>
+                
+                <!-- FAU_STG.1 -->
+                <f-component id="fau_stg.1" name="Protected Audit Trail Storage">
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall protect the stored audit records in the audit trail from unauthorized deletion.
+                        </title>
+                    </f-element>
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall be able to [prevent] modifications to the stored audit records in the audit trail.
+                        </title>
+                        <note role="application">The assurance activity for this SFR is not intended to imply that the <abbr linkend="TOE"/> must support an administrator’s ability to designate individual audit records for deletion. That level of granularity is not required.</note>
+                        <aactivity>The evaluator shall ensure that the <abbr linkend="TSS"/> describes how the audit records are protected from unauthorized modification or deletion. The evaluator shall ensure that the <abbr linkend="TSS"/> describes the conditions that must be met for authorized deletion of audit records. The evaluator shall perform the following tests:<h:br></h:br><h:br></h:br>
+                            <Tests>
+                                <testlist>
+                                    <test>The evaluator shall access the audit trail as an unauthorized Administrator and attempt 
+                                        to modify and delete the audit records. The evaluator shall verify that these attempts 
+                                        fail.
+                                    </test>
+                                    <test>The evaluator shall access the audit trail as an authorized Administrator and attempt 
+                                        to delete the audit records. The evaluator shall verify that these attempts succeed. 
+                                        The evaluator shall verify that only the records authorized for deletion are deleted.
+                                    </test>
+                                </testlist>
+                            </Tests>
+                        </aactivity>
+                    </f-element>
+		    <audit-event>
+                        <table known="mandatory"/>
+                        <description>None.</description>
+                        <add-info>None.</add-info>
+		    </audit-event>
+                </f-component>
+
+                <!-- FAU_STG_EXT.1 -->
+                <f-component id="fau_stg_ext.1" name="Off-Loading of Audit Data">
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall be able to transmit the generated audit data to an external IT entity using a trusted channel as specified in FTP_ITC_EXT.1.
+                        </title>
+                        <aactivity>
+                            Protocols used for implementing the trusted channel must be selected in FTP_ITC_EXT.1.
+                            <TSS>
+                                The evaluator shall examine the <abbr linkend="TSS"/> to ensure it describes the means by which 
+                                the audit data are transferred to the external audit server, and how the trusted channel is 
+                                provided. 
+                            </TSS>
+                            <Guidance>
+                                The evaluator shall examine the operational guidance to ensure it describes how to establish the trusted channel to the audit server, as well as describe any requirements 
+                                on the audit server (particular audit server protocol, version of the protocol required, etc.), as well 
+                                as configuration of the <abbr linkend="TOE"/> needed to communicate with the audit server.
+                            </Guidance>
+                            <Tests>
+                                Testing of the trusted channel mechanism is to be performed as specified in the assurance 
+                                activities for FTP_ITC_EXT.1. <h:br></h:br><h:br></h:br>
+                                The evaluator shall perform the following test for this requirement:<h:br></h:br><h:br></h:br>
+                                <testlist>
+                                    <test>The evaluator shall establish a session between the <abbr linkend="TOE"/> and the audit server according to the configuration guidance provided. The evaluator shall then examine the traffic that passes between the audit server and the <abbr linkend="TOE"/> during several activities of the evaluator’s choice designed to generate audit data to be transferred to the audit server. The evaluator shall observe that these data are not able to be viewed in the clear during this transfer, and that they are successfully received by the audit server. The evaluator shall record the particular software (name, version) used on the audit server during testing.</test>
+                                </testlist>
+                            </Tests>
+                        </aactivity>
+                    </f-element>
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall
+                            <selectables>
+                                <selectable>drop new audit data</selectable>
+                                <selectable>overwrite previous audit records according to the following rule:
+                                    <assignable>rule for overwriting previous audit records</assignable></selectable>
+                                <selectable><assignable>other action</assignable></selectable>
+                            </selectables>
+                            when the local storage space for audit data is full.
+                        </title>
+                        <note role="application">An external log server, if available, might be used as alternative storage space in case the local storage space is full. An ‘other action’ could be defined in this case as ‘send the new audit data to an external IT entity’.</note>
+                        <aactivity>
+                            <TSS>
+                                The evaluator shall examine the <abbr linkend="TSS"/> to ensure it describes what happens when the 
+                                local audit data store is full. 
+                            </TSS>
+                            <Guidance>
+                                The evaluator shall also examine the operational guidance to 
+                                determine that it describes the relationship between the local audit data and the audit data that 
+                                are sent to the audit log server. For example, when an audit event is generated, is it simultaneously
+                                sent to the external server and the local store, or is the local store used as a buffer and “cleared”
+                                periodically by sending the data to the audit server.
+                            </Guidance>
+                            <Tests>
+                                The evaluator shall perform operations that generate audit data and verify that this data is 
+                                stored locally. The evaluator shall perform operations that generate audit data until the local 
+                                storage space is exceeded and verifies that the <abbr linkend="TOE"/> complies with the behavior 
+                                defined in the <abbr linkend="ST"/> for FAU_STG_EXT.1.2.
+                            </Tests>
+                        </aactivity>
+                    </f-element>
+		    <audit-event>
+                        <table known="mandatory"/>
+                        <description>
+				Failure of audit data capture due to lack of disk space or pre-defined limit.<h:br></h:br>
+                                On failure of logging function, capture record of failure and record upon restart of logging function.
+			</description>
+                        <add-info>None.</add-info>
+		    </audit-event>
+                </f-component>
+                
+                <!-- FAU_ARP.1 -->
+                <f-component id="fau_arp.1" name="Security Audit Automatic Response"  status="optional">
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall take <assignable>list of actions</assignable> upon detection of a potential security violation.
+                        </title>
+                        <note role="application">In certain cases, it may be useful for Virtualization Systems to perform automated responses to certain security events. An example may include halting a <abbr linkend="VM"/> which has taken some action to violate a key system security policy. This may be especially useful with headless endpoints when there is no human user in the loop.<h:br></h:br><h:br></h:br>
+                            The potential security violation mentioned in FAU_ARP.1.1 refers to FAU_SAA.1. </note>
+                        <aactivity>
+                            <Tests>
+                                The evaluator shall generate a potential security violation as defined in FAU_SAA.1 and verify 
+                                that each action in the assignment in FAU_ARP.1.1 is performed by the <abbr linkend="TSF"/> as a 
+                                result. The evaluator shall perform this action for each security violation that is defined in 
+                                FAU_SAA.1.
+                            </Tests>
+                        </aactivity>
+                    </f-element>
+		    <audit-event>
+                        <table known="optional"/>
+                        <description>Actions taken due to potential security violations.</description>
+                        <add-info>None.</add-info>
+		    </audit-event>
+	        </f-component>
+                
+                <!-- FAU_SAA.1 -->
+                <f-component id="fau_saa.1" name="Security Audit Analysis"  status="optional">
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall be able to apply a set of rules in monitoring the audited events and based upon these rules indicate a potential violation of the enforcement of the SFRs.
+                        </title>
+                    </f-element>
+                    <f-element>
+                        <title>The <abbr linkend="TSF"/> shall enforce the following rules for monitoring audited events:
+                            <h:ol type="a">
+                                <h:li>accumulation or combination of <assignable>subset of defined auditable events</assignable> known to indicate a potential security violation</h:li>
+                                <h:li><assignable>any other rules</assignable></h:li>
+                            </h:ol>
+                        </title>
+                        <note role="application">The potential security violation described in FAU_SAA.1 can be used as a trigger for automated responses as defined in FAU_ARP.1.</note>
+                        <aactivity>
+                            <Tests>
+                                The evaluator shall cause each combination of auditable events defined in FAU_SAA.1.2 to occur,
+                                and verify that a potential security violation is indicated by the <abbr linkend="TSF"/>.
+                            </Tests>
+                        </aactivity>
+                    </f-element>
+		    <audit-event>
+                        <table known="optional"/>
+                        <description>
+				Enabling and disabling of any of the analysis mechanisms<h:br></h:br>
+                    		Automated responses performed by the <abbr linkend="TSF"/>
+			</description>
+                        <add-info>None.</add-info>
+		    </audit-event>
+	        </f-component>
+            </subsection>
+            
+
     </section>
     <section title="Security Assurance Requirements" id="SARs">
       The Security Objectives in 
