@@ -411,8 +411,53 @@ Activities assoiated with the TSS.
 	    </aactivity>
           </f-element>
         </f-component>
-      </subsection> 
-           <!-- FAU_GEN.1 -->
+      </subsection>
+
+      <subsection title="Security Management (FMT)" id="fmt-2">
+          <f-component id="fmt_smf.1" iteration="HOST" name="Specification of Management Functions (EDR Management of Host Agent)">
+            <f-element>
+              <title>The EDR shall be capable of performing the following functions that control
+                behavior of the Host Agent:<h:br/>
+                <management-function-set default="O">
+                  <manager cid="a">Administrator</manager>
+                  <manager cid="s">SOC Analyst</manager>
+                  <manager cid="u">Read-Only User</manager>
+                  <management-function>
+                    <text>Configure the time frame for sending Host Agent data to the EDR
+                        <assignable>list of configurable time frames</assignable>
+                    </text>
+                    <M ref="a"/><O ref="s"/><_ ref="u"/>
+                  </management-function>
+                  <management-function>
+                    <text>Assign a label or tag to categorize or group individual endpoint systems </text>
+                    <M ref="a"/><O ref="s"/><_ ref="u"/>
+                  </management-function>
+                </management-function-set>
+              </title>
+              <note role="application">This requirement captures all the configuration
+                functionality the EDR provides the administrator to configure the
+                EDR Host Agents. <h:br/><h:br/>
+              Chart legend: X = Mandatory, O = Optional, - = N/A</note>
+              <aactivity>
+                <TSS>The evaluator shall verify the ST contains a list of roles and what functions they can perform.  
+                  The evaluator shall verify the list matches the chart in the requirement.</TSS>
+                <Guidance>The evaluator shall review the operational guidance to verify that the EDR has
+                documented capabilities to perform the management functions.</Guidance>
+                <Tests>The evaluator shall perform the below tests:
+                 <testlist>
+                   <test>The evaluator shall modify the time frame for sending Host Agent data to the EDR
+                   and verify that an affected Host Agent is sending data at the intended interval.</test>
+                   <test>The evaluator shall tag or categorize a group of individual endpoint systems and
+                   verify that the tag or categorization persists within the EDR management dashboard for
+                   other users.</test>
+                   <test>The evaluator shall attempt each function with each role and verify access conforms with the chart in the requirement.</test>
+                 </testlist>
+                </Tests>
+              </aactivity>
+            </f-element>
+          </f-component>
+         </subsection> 
+          <!-- FAU_GEN.1 -->
             <subsection id="fau" title="Security Audit (FAU)">
                 <f-component id="fau_gen.1" name="Audit Data Generation">
                     <f-element>
