@@ -5,7 +5,8 @@ dist: xenial
 # whitelist of branches to build
 branches:
   only:
-    - master
+#    - master
+  - worksheet
 
 before_install:
   - sudo apt-get update -qq
