@@ -37,7 +37,7 @@ git mv input/pp-template.xml input/something.xml
 
 6. If creating a Protection Profile Module open input/somethhing.xml and change the opening \<PP> and closing \</PP> tags to be \<Module> and \</Module> respectively. If you're creating a standard Protection Profile then these tags do not need to be changed.
 
-7. Remove this content from the readme, up to the line below and customize. 
+7. Remove this content from the readme, up to the line below and customize (look for 'QQQQ' and 'pp-template'). 
 
 ----
 
