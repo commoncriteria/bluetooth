@@ -91,7 +91,7 @@ To pull updates from the upstream _transforms_ submodule and commit them run:
 * input - Contains the 'meat' of the project. It's the input content (in XML form) that gets transformed to readable html.
 * output - The output directory where the html is placed after transformation.
 * output/images - The directory where images are stored
-* transforms - Points to the transform subproject which is really a repository for resources shared amongst many Common Criteria projects.
+* transforms - Points to the transform subproject which is really a repository for resources shared amongst many Common Criteria projects. You shouldn't need to modify it.
 
 ## Links 
 * [National Information Assurance Partnership (NIAP)](https://www.niap-ccevs.org/)
