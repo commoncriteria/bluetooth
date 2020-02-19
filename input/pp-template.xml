@@ -470,7 +470,6 @@ users of the same system.
       included in this section are derived from Part 2 of the Common Criteria for Information
       Technology Security Evaluation, Version 3.1, Revision 4, with additional extended functional
       components. 
-      <subsection title="TOE Security Requirements Rationale" id="obj_map"/>
 
       <subsection title="QQQQ" id="QQQQ">
          <f-component id="fqq_qqq.1" name="QQQQQ">
@@ -896,6 +895,7 @@ Activities assoiated with the TSS.
             </subsection>
             
 
+            <subsection title="TOE Security Requirements Rationale" id="obj_map"/>
     </section>
     <section title="Security Assurance Requirements" id="SARs">
       The Security Objectives in 
