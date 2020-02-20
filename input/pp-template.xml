@@ -893,10 +893,8 @@ Activities assoiated with the TSS.
 		    </audit-event>
 	        </f-component>
             </subsection>
-            
-
-            <subsection title="TOE Security Requirements Rationale" id="obj_map"/>
     </section>
+    <section title="TOE Security Requirements Rationale" id="obj_map"/>
     <section title="Security Assurance Requirements" id="SARs">
       The Security Objectives in 
       <secref linkend="obj"/> were constructed to address threats identified in
