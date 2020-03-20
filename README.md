@@ -6,7 +6,6 @@ Quickstart
 
 1. To make a new protection profile create a new repo, probably through the web interface. 
 
-
 2. Copy the URL to the projects git file to the clipboard. Run the following script, pasting the value copied into where you see $NEW_REPO_GIT_URL.
 
 ````
