@@ -89,7 +89,7 @@
         through use of various forms of anomaly detection whereby the WIDS/WIPS is provided with (or
         learns/creates) a definition of expected/typical traffic patterns, such that it’s able to
         detect and react to anomalous (unexpected/atypical) traffic patterns.<h:br/><h:br/>
-        <figure entity="images/TOE.jpg" title="General TOE" id="toe"/>
+        <figure entity="images/TOE.png" title="General TOE" id="toe"/>
       </subsection>
     </section>
     <section title="Use Cases" id="usecases">
