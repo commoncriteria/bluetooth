@@ -43,6 +43,8 @@ rm -rf pp-template.git
 
 Note: Adding this project to the Travis CI live build requires special permission and cannot be done without assistance.
 
+For more information see the PP development wiki.
+
 ----
 
 Protection Profile or Extended Package for QQQQ
