@@ -43,7 +43,7 @@ rm -rf pp-template.git
 
 Note: Adding this project to the Travis CI live build requires special permission and cannot be done without assistance.
 
-For more information see the PP development wiki.
+For more information see the [PP Development Wiki](https://github.com/commoncriteria/pp-template/wiki).
 
 ----
 
