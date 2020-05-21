@@ -42,6 +42,7 @@ rm -rf pp-template.git
 7. Remove this content from the readme, up to the line below and customize (look for 'QQQQ' and 'pp-template'). 
 
 Note: Adding this project to the Travis CI live build requires special permission and cannot be done without assistance.
+Contact the the framework coordinators for more informatino.
 
 
 For more information see the [PP Development Wiki](https://github.com/commoncriteria/pp-template/wiki).
