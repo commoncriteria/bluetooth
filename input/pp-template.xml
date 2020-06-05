@@ -51,14 +51,14 @@ The scope of this Protection Profile (PP) is to
    	  <h:li> Or you can stop them <no-link>ASLR</no-link> </h:li>
           <h:li> This is how you do a picture: 
                 <figure entity="images/niaplogo.png" title="Niap's Logo " id="fig-logo"/> </h:li>
-          <h:li> And this is how you reference it: <figref refid="fig-logo"/></h:li>
+          <h:li> And this is how you reference it: <figref ref-id="fig-logo"/></h:li>
           <h:li> This is how you do an equation with an arbitrary counter:  
               <equation><value>x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}</value>
                         <label><ctr id="quadeq" ctr-type='eq-'/></label></equation>
 
 </h:li> 
-          <h:li> And this is how you reference it: <ctr-ref refid="quadeq"/> </h:li>
-          <h:li> <h:div><depends on="selection"><uid>aaa</uid></depends> 
+          <h:li> And this is how you reference it: <ctr-ref ref-id="quadeq"/> </h:li>
+          <h:li> <h:div><depends on="selection"><ref-id>aaa</ref-id></depends> 
                     Some text </h:div> </h:li> 
           <h:li> <h:div><depends on="implements" ref-id="a-feature-id"/> 
                     Someting dependent on a feature</h:div> </h:li> 
@@ -466,13 +466,9 @@ users of the same system.
         "(1)")</h:li>
     </h:ul>
 
-    <section title="Security Functional Requirements" id="SFRs">The Security Functional Requirements
-      included in this section are derived from Part 2 of the Common Criteria for Information
-      Technology Security Evaluation, Version 3.1, Revision 4, with additional extended functional
-      components. 
-
+    <section title="Security Functional Requirements" id="SFRs">
       <subsection title="QQQQ" id="QQQQ">
-         <f-component id="fqq_qqq.1" name="QQQQQ">
+         <f-component cc-id="fqq_qqq.1" name="QQQQQ">
           <f-element id="a-unique-id">
             <title> The TOE shall do either <selectables><selectable id="aaa">this</selectable><selectable>that</selectable></selectables>. 
             </title>
@@ -504,7 +500,7 @@ Activities assoiated with the TTests.
                 <add-info>None.</add-info>
           </audit-event>
         </f-component>
-        <f-component id="fqq_qqq.3" name="BQQQQQ" status="objective">
+        <f-component cc-id="fqq_qqq.3" name="BQQQQQ" status="objective">
           <f-element>
             <title> The TOE shall do <assignable>guidance on what things should be assignable </assignable>. </title>
             <note role="application">Notes. Notes. Notes.</note>
@@ -514,8 +510,8 @@ Activities assoiated with guidance
               </Guidance>
 	    </aactivity>
           </f-element>
-        </f-component>>
-        <f-component id="fqq_qqq.2" name="TQQQQQ" status="optional">
+        </f-component>
+        <f-component cc-id="fqq_qqq.2" name="TQQQQQ" status="optional">
           <f-element>
             <title> The TOE shall do soemthing.</title>
             <note role="application"></note>
@@ -526,7 +522,7 @@ Activities assoiated with the TSS.
 	    </aactivity>
           </f-element>
         </f-component>
-         <f-component id="fqq_qqq.4" name="UQQQQQ" status="sel-based">
+         <f-component cc-id="fqq_qqq.4" name="UQQQQQ" status="sel-based">
           <selection-depends req="a-unique-id" ids="aaa"/>
           <f-element>
             <title> The TOE shall do something great.</title>
@@ -538,7 +534,7 @@ Activities assoiated with the TSS.
 	    </aactivity>
           </f-element>
         </f-component>
-        <f-component id="fqq_qqq.6" name="WQQQQQ">
+        <f-component cc-id="fqq_qqq.6" name="WQQQQQ">
           <depends on="implements" ref-id="a-feature-id"/>
           <f-element>
             <title> The TOE shall do something with regards to some implementation.</title>
@@ -553,7 +549,7 @@ Activities assoiated with the TSS.
       </subsection>
 
       <subsection title="Security Management (FMT)" id="fmt-2">
-          <f-component id="fmt_smf.1" iteration="HOST" name="Specification of Management Functions (EDR Management of Host Agent)">
+          <f-component cc-id="fmt_smf.1" iteration="HOST" name="Specification of Management Functions (EDR Management of Host Agent)">
             <f-element>
               <title>The EDR shall be capable of performing the following functions that control
                 behavior of the Host Agent:<h:br/>
@@ -598,7 +594,7 @@ Activities assoiated with the TSS.
          </subsection> 
           <!-- FAU_GEN.1 -->
             <subsection id="fau" title="Security Audit (FAU)">
-                <f-component id="fau_gen.1" name="Audit Data Generation">
+                <f-component cc-id="fau_gen.1" name="Audit Data Generation">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall be able to generate an audit record of the following auditable events:
                             <h:ol type="a">
@@ -688,7 +684,7 @@ Activities assoiated with the TSS.
                                 directly.<h:br></h:br>
 				    
 				    							
-			See <ctr-ref refid="man-table">: Auditable Events</ctr-ref> for more information.
+			See <ctr-ref ref-id="man-table">: Auditable Events</ctr-ref> for more information.
 
 			<!-- AUDIT TABLE for MANDATORY SFRs. This needs to move outside the EAs -->
                         <ctr id="man-table" ctr-type="Table">: Auditable Events</ctr>
@@ -696,7 +692,7 @@ Activities assoiated with the TSS.
 			    
                         <audit-events table="turtle">
                             <ctr id="turtle-table" ctr-type="Table">: Auditable Events</ctr>
-			    <depends on="selection"><uid>table2</uid></depends>
+			    <depends on="selection"><ref-id>table2</ref-id></depends>
 			</audit-events><h:br/>
 
 
@@ -711,7 +707,7 @@ Activities assoiated with the TSS.
                 </f-component>
                 
                 <!-- FAU_SAR.1 -->
-                <f-component id="fau_sar.1" name="Audit Review">
+                <f-component cc-id="fau_sar.1" name="Audit Review">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall provide [administrators] with the capability to read [all information] from the audit records.
                         </title>
@@ -740,7 +736,7 @@ Activities assoiated with the TSS.
                 </f-component>
                 
                 <!-- FAU_STG.1 -->
-                <f-component id="fau_stg.1" name="Protected Audit Trail Storage">
+                <f-component cc-id="fau_stg.1" name="Protected Audit Trail Storage">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall protect the stored audit records in the audit trail from unauthorized deletion.
                         </title>
@@ -772,7 +768,7 @@ Activities assoiated with the TSS.
                 </f-component>
 
                 <!-- FAU_STG_EXT.1 -->
-                <f-component id="fau_stg_ext.1" name="Off-Loading of Audit Data">
+                <f-component cc-id="fau_stg_ext.1" name="Off-Loading of Audit Data">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall be able to transmit the generated audit data to an external IT entity using a trusted channel as specified in FTP_ITC_EXT.1.
                         </title>
@@ -840,7 +836,7 @@ Activities assoiated with the TSS.
                 </f-component>
                 
                 <!-- FAU_ARP.1 -->
-                <f-component id="fau_arp.1" name="Security Audit Automatic Response"  status="optional">
+                <f-component cc-id="fau_arp.1" name="Security Audit Automatic Response"  status="optional">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall take <assignable>list of actions</assignable> upon detection of a potential security violation.
                         </title>
@@ -863,7 +859,7 @@ Activities assoiated with the TSS.
 	        </f-component>
                 
                 <!-- FAU_SAA.1 -->
-                <f-component id="fau_saa.1" name="Security Audit Analysis"  status="optional">
+                <f-component cc-id="fau_saa.1" name="Security Audit Analysis"  status="optional">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall be able to apply a set of rules in monitoring the audited events and based upon these rules indicate a potential violation of the enforcement of the SFRs.
                         </title>
@@ -894,7 +890,6 @@ Activities assoiated with the TSS.
 	        </f-component>
             </subsection>
     </section>
-    <section title="TOE Security Requirements Rationale" id="obj_map"/>
     <section title="Security Assurance Requirements" id="SARs">
       The Security Objectives in 
       <secref linkend="obj"/> were constructed to address threats identified in
@@ -925,7 +920,7 @@ Activities assoiated with the TSS.
         contained in the TSS as it relates to the functional requirements. The Assurance Activities
         contained in <secref linkend="SFRs"/> should provide the <abbr linkend="ST"/> authors with
         sufficient information to determine the appropriate content for the TSS section.
-          <a-component id="adv_fsp.1" name="Basic Functional Specification (ADV_FSP.1)">The
+          <a-component cc-id="adv_fsp.1" name="Basic Functional Specification (ADV_FSP.1)">The
           functional specification describes the <abbr title="TSF Interface">TSFI</abbr>s. It is not
           necessary to have a formal or complete specification of these interfaces. Additionally,
           because <abbr linkend="OS"/>s conforming to this PP will necessarily have interfaces to
@@ -1005,7 +1000,7 @@ Activities assoiated with the TSS.
         larger operational environment. Guidance pertaining to particular security functionality is
         also provided; requirements on such guidance are contained in the assurance activities
         specified with each requirement. 
-	<a-component id="agd_ope.1" name="Operational User Guidance (AGD_OPE.1)">
+	<a-component cc-id="agd_ope.1" name="Operational User Guidance (AGD_OPE.1)">
 	    <a-element type="D">
 	      <title>The developer shall provide operational user guidance.</title>
 	      <note role="application">The operational user guidance does not have to be contained in a
@@ -1090,7 +1085,7 @@ Activities assoiated with the TSS.
           </a-element>
 	  
         </a-component>
-        <a-component id="agd_pre.1" name="Preparative Procedures (AGD_PRE.1)">
+        <a-component cc-id="agd_pre.1" name="Preparative Procedures (AGD_PRE.1)">
             <a-element type="D">
               <title>The developer shall provide the <abbr linkend="OS"/>, including its preparative
               procedures.</title>
@@ -1134,7 +1129,7 @@ Activities assoiated with the TSS.
         management process. This is not meant to diminish the critical role that a developer’s
         practices play in contributing to the overall trustworthiness of a product; rather, it is a
         reflection on the information to be made available for evaluation at this assurance level.
-          <a-component id="alc_cmc.1" name="Labeling of the TOE (ALC_CMC.1)">This component is
+          <a-component cc-id="alc_cmc.1" name="Labeling of the TOE (ALC_CMC.1)">This component is
           targeted at identifying the <abbr linkend="OS"/> such that it can be distinguished from
           other products or versions from the same vendor and can be easily specified when being
           procured by an end user. 
@@ -1170,7 +1165,7 @@ Activities assoiated with the TSS.
             </a-element>
 	  
         </a-component>
-        <a-component id="alc_cms.1" name="TOE CM Coverage (ALC_CMS.1)">
+        <a-component cc-id="alc_cms.1" name="TOE CM Coverage (ALC_CMS.1)">
 	  Given the scope of the <abbr linkend="OS"/> and its associated evaluation 
 	  evidence requirements, this component’s assurance activities are covered 
 	  by the assurance activities listed for ALC_CMC.1.
@@ -1219,7 +1214,7 @@ Activities assoiated with the TSS.
           </a-element>
 	  
         </a-component>
-        <a-component id="alc_tsu_ext.1" name="Timely Security Updates"> This component requires the
+        <a-component cc-id="alc_tsu_ext.1" name="Timely Security Updates"> This component requires the
           OS developer, in conjunction with any other necessary parties, to provide information as
           to how the end-user devices are updated to address security issues in a timely manner. The
           documentation describes the process of providing updates to the public from the time a
@@ -1277,7 +1272,7 @@ Activities assoiated with the TSS.
         family. At the assurance level specified in this PP, testing is based on advertised
         functionality and interfaces with dependency on the availability of design information. One
         of the primary outputs of the evaluation process is the test report as specified in the
-        following requirements. <a-component id="ate_ind.1"
+        following requirements. <a-component cc-id="ate_ind.1"
           name="Independent Testing – Conformance (ATE_IND.1)"> Testing is performed to confirm the
           functionality described in the <abbr linkend="TSS"/> as well as the administrative
           (including configuration and operational) documentation provided. The focus of the testing
@@ -1352,7 +1347,7 @@ Activities assoiated with the TSS.
         />. The labs will be expected to comment on the likelihood of these vulnerabilities given
         the documentation provided by the vendor. This information will be used in the development
         of penetration testing tools and for the development of future protection profiles.
-        <a-component id="ava_van.1" name="Vulnerability Survey (AVA_VAN.1)">
+        <a-component cc-id="ava_van.1" name="Vulnerability Survey (AVA_VAN.1)">
             <a-element type="D">
               <title>The developer shall provide the <abbr linkend="OS"/> for testing.</title>
             </a-element>
