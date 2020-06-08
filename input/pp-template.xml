@@ -211,7 +211,7 @@ The scope of this Protection Profile (PP) is to
     </tech-terms>    
     <section title="Compliant Targets of Evaluation" id="TOEdescription">
       <subsection title="TOE Boundary" id="TOEboundary">
-        <figure entity="images/Toe.png" title="Figure 1: General TOE " id="toe"/>
+        <figure entity="images/Toe.png" title="General TOE " id="toe"/>
       </subsection>
       <subsection title="TOE Platform" id="TOEplatform">
       </subsection>
