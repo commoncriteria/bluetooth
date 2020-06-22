@@ -206,6 +206,7 @@ The scope of this Protection Profile (PP) is to
 	configurations, a normal user can temporarily elevate privileges to that of an administrator.
 	At that time, such a user should be considered an administrator.
       </term>
+	  <term abbr="VM" full="Virtual Machine">Blah Blah Blah</term>
       <term abbr='XCCDF' full="eXtensible Configuration Checklist Description Format"/>
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>    
