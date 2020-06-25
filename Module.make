@@ -1,6 +1,7 @@
-TRANS?=transforms
 # Optionally include some User preferences.
--include User.make
+-include  LocalUser.make
 
+TRANS?=transforms
 # Include the Module Makefile
 include $(TRANS)/module/Module.make
+
