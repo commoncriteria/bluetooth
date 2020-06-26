@@ -211,6 +211,11 @@
               A.PROPER_ADMIN.</rationale>
           </objective-refer>
         </assumption>
+        <assumption name="A.PHYSICAL_PROTECTION"><from base="Network Device"/>
+          <objective-refer ref="O.WIDS_ANALYZE">
+            <rationale> Cuase I wanted to show an example.  </rationale>
+          </objective-refer>
+        </assumption>
       </assumptions>
     </section>
     <section title="Organizational Security Policies" id="osp"> An organization deploying the TOE is
