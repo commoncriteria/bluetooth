@@ -35,13 +35,14 @@
   <chapter title="Introduction" id="int">
     <section title="Overview" id="ppoverview">
 
-
-The scope of this Protection Profile (PP) is to
+      
+      The scope of this Protection Profile (PP) is to
       describe the security functionality of QQQQ products in terms of <cite linkend="bibCC"/>
       and to define functional and assurance requirements for such products.
-      An operating system is software that manages computer hardware and software
+      <choice>An operating system is software that manages computer hardware and software
       resources, and provides common services for application programs. The hardware
-      it manages may be physical or virtual.
+      it manages may be <selectables><selectable id="physical">physical</selectable>
+		                             <selectable id="virtual">virtual</selectable><selectable id="imgi">imaginary</selectable></selectables>.</choice>
 
       <h:p> This is going to show some tests:
  	<h:ul>
@@ -483,7 +484,14 @@ Activities assoiated with the TSS.
 Activities assoiated with guidance
               </Guidance>
              <Tests>
-Activities assoiated with the TTests.
+Activities assoiated with the Tests. 
+                 <h:div><depends on="selection"><ref-id>virtual</ref-id></depends>
+					 Great tests for something virtual.
+				 </h:div>
+                 <h:div><depends on="selection"><ref-id>physical</ref-id><ref-id>imgi</ref-id></depends>
+					 Great tests for something tangible or in my mind.
+				 </h:div>
+
               </Tests>
 	    </aactivity>
           </f-element>
