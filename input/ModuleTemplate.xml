@@ -64,12 +64,23 @@
       <term abbr="WPA" full="Wi-Fi Protected Access"/>
     </tech-terms>
     <section title="Compliant Targets of Evaluation" id="TOEdescription">
-      <subsection title="TOE Boundary" id="TOEboundary"> This PP-Module specifically addresses
-        Wireless Intrusion Detection/Prevention Systems (WIDS/WIPS). A conformant WIDS is a product
+      <subsection title="TOE Boundary" id="TOEboundary"> 
+        <h:p>
+        This PP-Module specifically addresses widgets.
+        Wireless Intrusion Detection/Prevention Systems (WIDS/WIPS). 
+        </h:p>
+        <h:p><depends><base-ref>Network Device</base-ref></depends>
+          Text specific to widgets when Newtork Device is the base.
+        </h:p>
+        <h:p>
+
+       A conformant WIDS is a product
         that can monitor, collect, inspect, and analyze real-time network traffic and alert the
         administrator of policy violations. WIPS functionality is not required to conform to this
         PP-Module, and it is optional for the TOE to have the additional ability to react in
-        real-time to potentially malicious wireless (IEEE 802.11) network traffic.<h:br/><h:br/> A
+        real-time to potentially malicious wireless (IEEE 802.11) network traffic.
+        </h:p>
+        A
         WIDS/WIPS TOE consists of multiple sensors that passively scan the RF environment on the
         WLAN radio frequency spectrum and a centralized mechanism such as a Server or Controller
         that processes the data collected by the sensors. Conformant TOEs must use a secure

@@ -37,7 +37,7 @@
 
       
       The scope of this Protection Profile (PP) is to
-      describe the security functionality of QQQQ products in terms of <cite linkend="bibCC"/>
+      describe the security functionality of QQQQ products in terms of <citeCC/>
       and to define functional and assurance requirements for such products.
       <choice>An operating system is software that manages computer hardware and software
       resources, and provides common services for application programs. The hardware
@@ -62,7 +62,7 @@
           <h:li> And this is how you reference it: <ctr-ref ref-id="quadeq"/> </h:li>
           <h:li> <h:div><depends on="selection"><ref-id>aaa</ref-id></depends> 
                     Some text </h:div> </h:li> 
-          <h:li> <h:div><depends on="implements" ref-id="a-feature-id"/> 
+  		<h:li> <h:div><depends on="implements"><ref-id>a-feature-id</ref-id></depends> 
                     Someting dependent on a feature</h:div> </h:li> 
 
           <h:li> And here's the audit event table for mandatory requirements. <h:br/>
@@ -545,7 +545,7 @@ Activities assoiated with the TSS.
           </f-element>
         </f-component>
         <f-component cc-id="fqq_qqq.6" name="WQQQQQ">
-          <depends on="implements" ref-id="a-feature-id"/>
+          <depends on="implements"><ref-id>a-feature-id</ref-id></depends>
           <f-element>
             <title> The TOE shall do something with regards to some implementation.</title>
             <note role="application"></note>
