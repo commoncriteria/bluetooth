@@ -469,7 +469,13 @@ users of the same system.
     </h:ul>
 
     <section title="Security Functional Requirements" id="SFRs">
-      <subsection title="QQQQ" id="QQQQ">
+
+    <!-- This is one way to do an audit table. -->
+    <subsection id="ss-audit-table" title="Auditable Events for Mandatory SFRs">
+         <audit-table table="mandatory"/>
+    </subsection>
+    
+    <subsection title="QQQQ" id="QQQQ">
          <f-component cc-id="fqq_qqq.1" name="QQQQQ">
           <f-element id="a-unique-id">
             <title> The TOE shall do either <selectables><selectable id="aaa">this</selectable><selectable>that</selectable></selectables>. 
