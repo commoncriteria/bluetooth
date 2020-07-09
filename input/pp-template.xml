@@ -470,13 +470,13 @@ users of the same system.
 
     <section title="Security Functional Requirements" id="SFRs">
 
-    <!-- This is one way to do an audit table. -->
-    <subsection id="ss-audit-table" title="Auditable Events for Mandatory SFRs">
+    <!-- This is one way to do an audit table. That isn't working yet. -->
+<!--    <subsection id="ss-audit-table" title="Auditable Events for Mandatory SFRs">
          <audit-table table="mandatory"/>
-    </subsection>
+    </subsection>    -->
     
     <subsection title="QQQQ" id="QQQQ">
-         <f-component cc-id="fqq_qqq.1" name="QQQQQ" status="mandatory">
+         <f-component cc-id="fqq_qqq.1" name="QQQQQ">
           <f-element id="a-unique-id">
             <title> The TOE shall do either <selectables><selectable id="aaa">this</selectable><selectable>that</selectable></selectables>. 
             </title>
@@ -577,7 +577,7 @@ Activities assoiated with the TSS.
       </subsection>
 
       <subsection title="Security Management (FMT)" id="fmt-2">
-          <f-component cc-id="fmt_smf.1" iteration="HOST" name="Specification of Management Functions (EDR Management of Host Agent)" status="mandatory">
+          <f-component cc-id="fmt_smf.1" iteration="HOST" name="Specification of Management Functions (EDR Management of Host Agent)">
             <f-element>
               <title>The EDR shall be capable of performing the following functions that control
                 behavior of the Host Agent:<h:br/>
@@ -622,7 +622,7 @@ Activities assoiated with the TSS.
          </subsection> 
           <!-- FAU_GEN.1 -->
             <subsection id="fau" title="Security Audit (FAU)">
-                <f-component cc-id="fau_gen.1" name="Audit Data Generation" status="mandatory">
+                <f-component cc-id="fau_gen.1" name="Audit Data Generation">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall be able to generate an audit record of the following auditable events:
                             <h:ol type="a">
@@ -731,7 +731,7 @@ Activities assoiated with the TSS.
                 </f-component>
                 
                 <!-- FAU_SAR.1 -->
-                <f-component cc-id="fau_sar.1" name="Audit Review" status="mandatory">
+                <f-component cc-id="fau_sar.1" name="Audit Review">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall provide [administrators] with the capability to read [all information] from the audit records.
                         </title>
@@ -756,7 +756,7 @@ Activities assoiated with the TSS.
                 </f-component>
                 
                 <!-- FAU_STG.1 -->
-                <f-component cc-id="fau_stg.1" name="Protected Audit Trail Storage" status="mandatory">
+                <f-component cc-id="fau_stg.1" name="Protected Audit Trail Storage">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall protect the stored audit records in the audit trail from unauthorized deletion.
                         </title>
@@ -784,7 +784,7 @@ Activities assoiated with the TSS.
                 </f-component>
 
                 <!-- FAU_STG_EXT.1 -->
-                <f-component cc-id="fau_stg_ext.1" name="Off-Loading of Audit Data" status="mandatory">
+                <f-component cc-id="fau_stg_ext.1" name="Off-Loading of Audit Data">
                     <f-element>
                         <title>The <abbr linkend="TSF"/> shall be able to transmit the generated audit data to an external IT entity using a trusted channel as specified in FTP_ITC_EXT.1.
                         </title>
