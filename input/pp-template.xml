@@ -73,7 +73,6 @@
       </h:p>
     </section>
     <tech-terms>
-      <term abbr='AES' full="Advanced Encryption Standard"/>
       <term abbr='API' full="Application Programming Interface"/>
       <term full="Address Space Layout Randomization" abbr="ASLR">
 	An anti-exploitation feature which loads memory mappings into unpredictable
@@ -495,20 +494,33 @@ Activities assoiated with the Tests.
               </Tests>
 	    </aactivity>
           </f-element>
- 	  <audit-event>
-             <table known="mandatory"/>
-                <description>
-	On failure of audit data capture due to lack of disk space or pre-defined limit.<h:br></h:br>
-	        </description>
-                <add-info>None.</add-info>
+		 
+	  <!-- In f-component audit-event specification. -->
+	  <!-- audit-event: table attr defaults to the status attr of the f-compnent. Default status is 'mandatory'  -->
+	  <!--              type='optional' is used to indicate the audit event is selectable by the ST author -->
+	  <!--                Default is 'normal.' Selections are not allowed in the body of audit events.  -->
+	  <!-- audit-event-descr: Defaults to "None" if missing. You can have only one description per audit-event.      -->
+	  <!--                    If the audit event is to be selectable by ST author use the type attribute above.  -->	 
+	  <!-- audit-event-info: Defaults to "None" if missing. You can have as many of these as you want per audit-event.  -->
+	  <!--                   If the type attr is set to 'optiona' then this is displayed as a selection with "None" as the other choice -->		 
+ 	  <audit-event table="mandatory" type="normal">
+             <audit-event-descr>
+		On failure of audit data capture due to lack of disk space or pre-defined limit.
+             </audit-event-descr>
+             <audit-event-info>
+		And all the other things you can think of.
+  	     </audit-event-info>
+             <audit-event-info type="optional">
+		And this thing, which is should appear as a seleciton of this or None.
+  	     </audit-event-info>
           </audit-event>
-  	  <audit-event>
-             <table other="turtle"/>
-                <description>
-	On number of turtles in the area.
-	        </description>
-                <add-info>None.</add-info>
+	  <!-- Audit event that is a selection with no additional info -->
+  	  <audit-event type="optional">
+             <audit-event-descr>
+		This is a selection.
+             </audit-event-descr>
           </audit-event>
+	  <audit-event />  <!-- Audit event that uses all the defaults. -->
         </f-component>
         <f-component cc-id="fqq_qqq.3" name="BQQQQQ" status="objective">
           <f-element>
@@ -709,11 +721,7 @@ Activities assoiated with the TSS.
                             </Tests>   
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-			<description>None.</description>
-                        <add-info>None.</add-info>
-		    </audit-event>
+		    <audit-event />  <!-- Audit event that uses all the defaults -->
                 </f-component>
                 
                 <!-- FAU_SAR.1 -->
@@ -738,11 +746,7 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-                        <description>None.</description>
-                        <add-info>None.</add-info>
-		    </audit-event>
+		    <audit-event />
                 </f-component>
                 
                 <!-- FAU_STG.1 -->
@@ -770,11 +774,7 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-                        <description>None.</description>
-                        <add-info>None.</add-info>
-		    </audit-event>
+		    <audit-event />
                 </f-component>
 
                 <!-- FAU_STG_EXT.1 -->
@@ -836,12 +836,14 @@ Activities assoiated with the TSS.
                         </aactivity>
                     </f-element>
 		    <audit-event>
-                        <table known="mandatory"/>
-                        <description>
-				Failure of audit data capture due to lack of disk space or pre-defined limit.<h:br></h:br>
+                        <audit-event-descr>
+				Failure of audit data capture due to lack of disk space or pre-defined limit.
+                        </audit-event-descr>
+		    </audit-event>
+		    <audit-event>
+                        <audit-event-descr>
                                 On failure of logging function, capture record of failure and record upon restart of logging function.
-			</description>
-                        <add-info>None.</add-info>
+                        </audit-event-descr>
 		    </audit-event>
                 </f-component>
                 
@@ -862,9 +864,7 @@ Activities assoiated with the TSS.
                         </aactivity>
                     </f-element>
 		    <audit-event>
-                        <table known="optional"/>
-                        <description>Actions taken due to potential security violations.</description>
-                        <add-info>None.</add-info>
+                        <audit-event-descr>Actions taken due to potential security violations.</audit-event-descr>
 		    </audit-event>
 	        </f-component>
                 
@@ -890,12 +890,14 @@ Activities assoiated with the TSS.
                         </aactivity>
                     </f-element>
 		    <audit-event>
-                        <table known="optional"/>
-                        <description>
-				Enabling and disabling of any of the analysis mechanisms<h:br></h:br>
-                    		Automated responses performed by the <abbr linkend="TSF"/>
-			</description>
-                        <add-info>None.</add-info>
+                        <audit-event-descr>
+				Enabling and disabling of any of the analysis mechanisms.
+                        </audit-event-descr>
+		    </audit-event>
+		    <audit-event type="optional">
+                        <audit-event-descr>
+                    		Automated responses performed by the TSF.
+                        </audit-event-descr>
 		    </audit-event>
 	        </f-component>
             </subsection>
