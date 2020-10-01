@@ -67,7 +67,9 @@
 
           <h:li> And here's the audit event table for mandatory requirements. <h:br/>
 
-                 <audit-events table="mandatory"/>
+          <audit-table table="mandatory"/>
+<!-- 
+                 <audit-events table="mandatory"/> -->
           </h:li>
         </h:ul>
       </h:p>
@@ -496,18 +498,15 @@ Activities assoiated with the Tests.
 	    </aactivity>
           </f-element>
  	  <audit-event>
-             <table known="mandatory"/>
-                <description>
-	On failure of audit data capture due to lack of disk space or pre-defined limit.<h:br></h:br>
-	        </description>
-                <add-info>None.</add-info>
+                <audit-event-descr>
+	On failure of audit data capture due to lack of disk space or pre-defined limit.
+                </audit-event-descr>
+                <audit-event-info>None.</audit-event-info>
           </audit-event>
-  	  <audit-event>
-             <table other="turtle"/>
-                <description>
+  	  <audit-event type="optional" table="turtle">
+                <audit-event-descr>
 	On number of turtles in the area.
-	        </description>
-                <add-info>None.</add-info>
+                </audit-event-descr>
           </audit-event>
         </f-component>
         <f-component cc-id="fqq_qqq.3" name="BQQQQQ" status="objective">
@@ -544,7 +543,7 @@ Activities assoiated with the TSS.
 	    </aactivity>
           </f-element>
         </f-component>
-        <f-component cc-id="fqq_qqq.6" name="WQQQQQ">
+        <f-component cc-id="fqq_qqq.6" name="WQQQQQ" status="feat-based">
           <depends on="implements"><ref-id>a-feature-id</ref-id></depends>
           <f-element>
             <title> The TOE shall do something with regards to some implementation.</title>
@@ -697,23 +696,19 @@ Activities assoiated with the TSS.
 			See <ctr-ref ref-id="man-table">: Auditable Events</ctr-ref> for more information.
 
 			<!-- AUDIT TABLE for MANDATORY SFRs. This needs to move outside the EAs -->
-                        <ctr id="man-table" ctr-type="Table">: Auditable Events</ctr>
+<!-- Bob killed this 
+                       <ctr id="man-table" ctr-type="Table">: Auditable Events</ctr>
                         <audit-events table="mandatory"/><h:br/>
 			    
                         <audit-events table="turtle">
                             <ctr id="turtle-table" ctr-type="Table">: Auditable Events</ctr>
 			    <depends on="selection"><ref-id>table2</ref-id></depends>
 			</audit-events><h:br/>
-
+-->
 
                             </Tests>   
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-			<description>None.</description>
-                        <add-info>None.</add-info>
-		    </audit-event>
                 </f-component>
                 
                 <!-- FAU_SAR.1 -->
@@ -738,11 +733,6 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-                        <description>None.</description>
-                        <add-info>None.</add-info>
-		    </audit-event>
                 </f-component>
                 
                 <!-- FAU_STG.1 -->
@@ -770,11 +760,7 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-                        <description>None.</description>
-                        <add-info>None.</add-info>
-		    </audit-event>
+					
                 </f-component>
 
                 <!-- FAU_STG_EXT.1 -->
@@ -835,15 +821,14 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="mandatory"/>
-                        <description>
-				Failure of audit data capture due to lack of disk space or pre-defined limit.<h:br></h:br>
+		    <audit-event table="mandatory">
+                        <audit-event-descr>
+				Failure of audit data capture due to lack of disk space or pre-defined limit.
                                 On failure of logging function, capture record of failure and record upon restart of logging function.
-			</description>
-                        <add-info>None.</add-info>
+					</audit-event-descr>
 		    </audit-event>
                 </f-component>
+ 					
                 
                 <!-- FAU_ARP.1 -->
                 <f-component cc-id="fau_arp.1" name="Security Audit Automatic Response"  status="optional">
@@ -861,10 +846,8 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="optional"/>
-                        <description>Actions taken due to potential security violations.</description>
-                        <add-info>None.</add-info>
+		    <audit-event table="optional">
+                        <audit-event-descr>Actions taken due to potential security violations.</audit-event-descr>
 		    </audit-event>
 	        </f-component>
                 
@@ -889,13 +872,11 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-		    <audit-event>
-                        <table known="optional"/>
-                        <description>
-				Enabling and disabling of any of the analysis mechanisms<h:br></h:br>
-                    		Automated responses performed by the <abbr linkend="TSF"/>
-			</description>
-                        <add-info>None.</add-info>
+		    <audit-event table="optional">
+                        <audit-event-descr>
+				Enabling and disabling of any of the analysis mechanisms
+                    		Automated responses performed by the TSF.
+			</audit-event-descr>
 		    </audit-event>
 	        </f-component>
             </subsection>
@@ -1642,8 +1623,6 @@ Activities assoiated with the TSS.
    <acronyms/>
   </appendix>
 
-
-
   <implements>
     <feature id="a-feature-id" title="Widget Thing">
       <description> If the TOE includes the widget thing, all of the following SFRs must be claimed: <h:ul><h:li> FQQ_QQQ.6</h:li></h:ul>
@@ -1651,4 +1630,3 @@ Activities assoiated with the TSS.
     </feature>
   </implements>
 </PP>
-
