@@ -72,7 +72,7 @@
                  <audit-events table="mandatory"/> -->
           </h:li>
         </h:ul>
-        And this is another sentence (or fragment). And some added stuff.
+        And this is another sentence (or fragment). I added this sentence and deleted the next one. 
       </h:p>
     </section>
     <tech-terms>
