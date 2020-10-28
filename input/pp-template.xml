@@ -67,12 +67,13 @@
            
           <h:li> And here's the audit event table for mandatory requirements. <h:br/>
            
-          <audit-table table="mandatory"/>
+          <!-- <audit-table table="mandatory"/> -->
 <!-- 
                  <audit-events table="mandatory"/> -->
           </h:li>
         </h:ul>
         And this is another sentence (or fragment). I added this sentence and deleted the next one. 
+		This uses the plural acronym OSes. 
       </h:p>
     </section>
     <tech-terms>
