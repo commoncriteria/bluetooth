@@ -511,7 +511,7 @@ Activities assoiated with the Tests.
           </audit-event>
         </f-component>
         <f-component cc-id="fqq_qqq.3" name="BQQQQQ" status="objective">
-          <f-element>
+          <f-element id="objective-example">
             <title> The TOE shall do <assignable>guidance on what things should be assignable </assignable>. </title>
             <note role="application">Notes. Notes. Notes.</note>
             <aactivity>
@@ -522,7 +522,7 @@ Activities assoiated with guidance
           </f-element>
         </f-component>
         <f-component cc-id="fqq_qqq.2" name="TQQQQQ" status="optional">
-          <f-element>
+          <f-element id="optional-example">
             <title> The TOE shall do soemthing.</title>
             <note role="application"></note>
             <aactivity>
@@ -534,7 +534,7 @@ Activities assoiated with the TSS.
         </f-component>
          <f-component cc-id="fqq_qqq.4" name="UQQQQQ" status="sel-based">
           <selection-depends req="a-unique-id" ids="aaa"/>
-          <f-element>
+          <f-element id="selbased-example">
             <title> The TOE shall do something great.</title>
             <note role="application"></note>
             <aactivity>
@@ -546,7 +546,7 @@ Activities assoiated with the TSS.
         </f-component>
         <f-component cc-id="fqq_qqq.6" name="WQQQQQ" status="feat-based">
           <depends on="implements"><ref-id>a-feature-id</ref-id></depends>
-          <f-element>
+          <f-element id="feat-based-example">
             <title> The TOE shall do something with regards to some implementation.</title>
             <note role="application"></note>
             <aactivity>
@@ -560,7 +560,7 @@ Activities assoiated with the TSS.
 
       <subsection title="Security Management (FMT)" id="fmt-2">
           <f-component cc-id="fmt_smf.1" iteration="HOST" name="Specification of Management Functions (EDR Management of Host Agent)">
-            <f-element>
+            <f-element id="iteration-example">
               <title>The EDR shall be capable of performing the following functions that control
                 behavior of the Host Agent:<h:br/>
                 <management-function-set default="O">
@@ -605,7 +605,7 @@ Activities assoiated with the TSS.
           <!-- FAU_GEN.1 -->
             <subsection id="fau" title="Security Audit (FAU)">
                 <f-component cc-id="fau_gen.1" name="Audit Data Generation">
-                    <f-element>
+                    <f-element id="fel-audit-gen">
                         <title>The TSF shall be able to generate an audit record of the following auditable events:
                             <h:ol type="a">
                                 <h:li>Start-up and shutdown of audit functions</h:li>
@@ -627,7 +627,7 @@ Activities assoiated with the TSS.
                             </h:ol>
                         </title>
                     </f-element>
-                    <f-element>
+                    <f-element id="fel-audit-record">
                         <title>The TSF shall record within each audit record at least the following information:
                             <h:ol type="a">
                                 <h:li>Date and time of the event</h:li>
@@ -714,11 +714,11 @@ Activities assoiated with the TSS.
                 
                 <!-- FAU_SAR.1 -->
                 <f-component cc-id="fau_sar.1" name="Audit Review">
-                    <f-element>
+                    <f-element id="fel-audit-cap">
                         <title>The TSF shall provide [administrators] with the capability to read [all information] from the audit records.
                         </title>
                     </f-element>
-                    <f-element>
+                    <f-element id="fel-audit-present">
                         <title>The TSF shall provide the audit records in a manner suitable for the user to interpret the information.
                         </title>
                         <aactivity>
@@ -738,11 +738,11 @@ Activities assoiated with the TSS.
                 
                 <!-- FAU_STG.1 -->
                 <f-component cc-id="fau_stg.1" name="Protected Audit Trail Storage">
-                    <f-element>
+                    <f-element id="fel-audit-del">
                         <title>The TSF shall protect the stored audit records in the audit trail from unauthorized deletion.
                         </title>
                     </f-element>
-                    <f-element>
+                    <f-element id="fel-audit-mod">
                         <title>The TSF shall be able to [prevent] modifications to the stored audit records in the audit trail.
                         </title>
                         <note role="application">The assurance activity for this SFR is not intended to imply that the TOE must support an administrator’s ability to designate individual audit records for deletion. That level of granularity is not required.</note>
@@ -766,7 +766,7 @@ Activities assoiated with the TSS.
 
                 <!-- FAU_STG_EXT.1 -->
                 <f-component cc-id="fau_stg_ext.1" name="Off-Loading of Audit Data">
-                    <f-element>
+                    <f-element id="fel-audit-mov">
                         <title>The TSF shall be able to transmit the generated audit data to an external IT entity using a trusted channel as specified in FTP_ITC_EXT.1.
                         </title>
                         <aactivity>
@@ -791,7 +791,7 @@ Activities assoiated with the TSS.
                             </Tests>
                         </aactivity>
                     </f-element>
-                    <f-element>
+                    <f-element id="fel-audit-full">
                         <title>The TSF shall
                             <selectables>
                                 <selectable>drop new audit data</selectable>
@@ -833,7 +833,7 @@ Activities assoiated with the TSS.
                 
                 <!-- FAU_ARP.1 -->
                 <f-component cc-id="fau_arp.1" name="Security Audit Automatic Response"  status="optional">
-                    <f-element>
+                    <f-element id="fel-counter">
                         <title>The TSF shall take <assignable>list of actions</assignable> upon detection of a potential security violation.
                         </title>
                         <note role="application">In certain cases, it may be useful for Virtualization Systems to perform automated responses to certain security events. An example may include halting a VM which has taken some action to violate a key system security policy. This may be especially useful with headless endpoints when there is no human user in the loop.<h:br></h:br><h:br></h:br>
@@ -854,11 +854,11 @@ Activities assoiated with the TSS.
                 
                 <!-- FAU_SAA.1 -->
                 <f-component cc-id="fau_saa.1" name="Security Audit Analysis"  status="optional">
-                    <f-element>
+                    <f-element id="fel-audit-mon">
                         <title>The TSF shall be able to apply a set of rules in monitoring the audited events and based upon these rules indicate a potential violation of the enforcement of the SFRs.
                         </title>
                     </f-element>
-                    <f-element>
+                    <f-element id="fel-audit-rules">
                         <title>The TSF shall enforce the following rules for monitoring audited events:
                             <h:ol type="a">
                                 <h:li>accumulation or combination of <assignable>subset of defined auditable events</assignable> known to indicate a potential security violation</h:li>
