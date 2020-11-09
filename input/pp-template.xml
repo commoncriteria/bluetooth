@@ -1406,7 +1406,7 @@ Activities assoiated with the TSS.
 
   <!-- 
        Do NOT put SFRs in this section. All SFR belong up above in SFR section. 
-       To make an SFR optional tag it above as status="objective" 
+       To make an SFR optional tag it above as /"objective" 
   -->
   <appendix title="Objective Requirements" id="objective"> This appendix includes requirements that
     specify security functionality which also addresses threats. The requirements are not currently
@@ -1548,8 +1548,7 @@ Activities assoiated with the TSS.
 
   <implements>
     <feature id="a-feature-id" title="Widget Thing">
-      <description> If the TOE includes the widget thing, all of the following SFRs must be claimed: <h:ul><h:li> FQQ_QQQ.6</h:li></h:ul>
-      </description>
+      <description> This is a super description of this certain feature.</description>
     </feature>
   </implements>
   <use-case title="Elephant-own device" id="elephant">
