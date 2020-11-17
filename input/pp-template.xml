@@ -71,9 +71,11 @@
 <!-- 
                  <audit-events table="mandatory"/> -->
           </h:li>
+          <h:li> Test for an xref to section <xref linkend="Threats">Section </xref> </h:li>
         </h:ul>
         And this is another sentence (or fragment). I added this sentence and deleted the next one. 
 		This uses the plural acronym OSes. 
+
       </h:p>
     </section>
     <tech-terms>
@@ -226,11 +228,15 @@
       address the security problems in at least the following use cases. These use cases are intentionally
       very broad, as many specific use cases exist for an operating system. These use cases may also
       overlap with one another.  An operating system's functionality may even be effectively extended by
-      privileged applications installed onto it.  However, these are out of scope of this PP. <usecases>
-        <usecase title="End User Devices" id="enduserdevices">
-          <description>
-          </description>
-        </usecase>
+      privileged applications installed onto it.  However, these are out of scope of this PP. 
+      <usecases>
+      <usecase title="Elephant-own device" id="elephant">
+        <description>This is everything we need to describe in words about this use case.</description>	
+	  <config>
+		<ref-id>aaa</ref-id>
+		<not><ref-id>table2</ref-id></not>
+	  </config>
+      </usecase>
       </usecases>
     </section>
   </chapter>
@@ -488,6 +494,13 @@ Activities assoiated with the TSS.
 Activities assoiated with guidance
               </Guidance>
              <Tests>
+                 <testlist>
+                    <test>
+                     Make shadow puppets.
+                       <test-obj>This is the motivation behind the tests.</test-obj>
+                       <evidence>A warm fuzzy feeling </evidence>
+                     </test>
+                 </testlist>
 Activities assoiated with the Tests. 
                  <h:div><depends on="selection"><ref-id>virtual</ref-id></depends>
 					 Great tests for something virtual.
@@ -598,6 +611,8 @@ Activities assoiated with the TSS.
                    other users.</test>
                    <test>The evaluator shall attempt each function with each role and verify access conforms with the chart in the requirement.</test>
                  </testlist>
+                 <test-obj>This is the motivation behind the tests.</test-obj>
+                 <evidence>A check should appear.</evidence>
                 </Tests>
               </aactivity>
             </f-element>
@@ -1551,12 +1566,5 @@ Activities assoiated with the TSS.
       <description> This is a super description of this certain feature.</description>
     </feature>
   </implements>
-  <use-case title="Elephant-own device" id="elephant">
-    <description>This is everything we need to describe in words about this use case.</description>	
-	<config>
-		<ref-id>aaa</ref-id>
-		<not><ref-id>table2</ref-id></not>
-	</config>
-  </use-case>
-	
+
 </PP>
