@@ -6,7 +6,6 @@ dist: xenial
 branches:
   only:
     - master
-#  - worksheet
 
 before_install:
   - sudo apt-get update -qq
@@ -21,8 +20,8 @@ before_script:
 script:
   - make
   - BASE=ModuleTemplate make -f Module.make
-  - DAISY_DIR=ExecuteDaisy  make little-diff
-  - DAISY_DIR=ExecuteDaisy  make diff
+  - make little-diff
+  - make diff
   - git clone https://github.com/commoncriteria/commoncriteria.github.io.git
   - git clone https://github.com/commoncriteria/ci-scripts.git
   - mkdir -p commoncriteria.github.io/pp/$(basename $TRAVIS_REPO_SLUG)
