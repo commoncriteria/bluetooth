@@ -233,8 +233,10 @@
       <usecase title="Elephant-own device" id="elephant">
         <description>This is everything we need to describe in words about this use case.</description>	
 	  <config>
-		<ref-id>aaa</ref-id>
-		<not><ref-id>table2</ref-id></not>
+                <same-req><ref-id>soup</ref-id><not><ref-id>ratatouille</ref-id><ref-id>pizza</ref-id></not></same-req>
+	        <all-or-none><ref-id>tea</ref-id><ref-id>aaa</ref-id></all-or-none> <!-- Group selections from the same requirement -->
+                <not><ref-id>table2</ref-id></not> <!-- This says you can't choose this selectable-->
+                <ref-id>optional-comp-example</ref-id><!-- Inclusion of an optional/objective requirement -->
 	  </config>
       </usecase>
       </usecases>
@@ -480,7 +482,36 @@ users of the same system.
     </h:ul>
 
     <section title="Security Functional Requirements" id="SFRs">
-      <subsection title="QQQQ" id="QQQQ">
+      <subsection title="QQQQ" id="FOO">
+         <f-component cc-id="foo_foo.1" name="Foo Foo">
+          <f-element id="foo-foo-id">
+            <title> The TOE shall consiste of  
+              <selectables>
+                 <selectable id="soup">soup</selectable>
+                 <selectable id="salad">salad</selectable>
+              </selectables>
+              followed by 
+              <selectables>
+                 <selectable id="pizza">pizza</selectable>
+                 <selectable id="spaghetti">spaghetti</selectable>
+                 <selectable id="ratatouille">ratatouille</selectable>
+                 <selectable id="sushi">sushi</selectable>
+              </selectables>. 
+            </title>
+            <note role="application"></note>
+            <aactivity>Something<TSS>ABC</TSS></aactivity>
+          </f-element>
+        </f-component>
+        <f-component cc-id="foo_bar.1" name="Foo Bar">
+          <f-element id="foo-bar-id">
+            <title> The TOE shall drink  <selectables><selectable id="tea">tea</selectable><selectable>coffee</selectable></selectables>. 
+            </title>
+            <note role="application"></note>
+            <aactivity>Something<TSS>ABC</TSS></aactivity>
+          </f-element>
+         </f-component>
+       </subsection>
+       <subsection title="QQQQ" id="QQQQ">
          <f-component cc-id="fqq_qqq.1" name="QQQQQ">
           <f-element id="a-unique-id">
             <title> The TOE shall do either <selectables><selectable id="aaa">this</selectable><selectable>that</selectable></selectables>. 
@@ -535,7 +566,7 @@ Activities assoiated with guidance
 	    </aactivity>
           </f-element>
         </f-component>
-        <f-component cc-id="fqq_qqq.2" name="TQQQQQ" status="optional">
+        <f-component cc-id="fqq_qqq.2" name="TQQQQQ" status="optional" id="optional-comp-example">
           <f-element id="optional-example">
             <title> The TOE shall do soemthing.</title>
             <note role="application"></note>
