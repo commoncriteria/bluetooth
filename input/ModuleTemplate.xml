@@ -113,7 +113,7 @@
   </chapter>
   <chapter title="Conformance Claims" id="ConformanceClaims">
     <cclaims>
-      <cclaim title="Conformance Statement">
+      <cclaim name="Conformance Statement">
         <description> This PP-Module inherits exact conformance as required from the specified
           Base-PP and as defined in the CC and CEM addenda for Exact Conformance, Selection-Based
           SFRs, and Optional SFRs (dated May 2017).<h:br/><h:br/> The following PPs and PP-Modules
@@ -122,11 +122,11 @@
           </h:ul>
         </description>
       </cclaim>
-      <cclaim title="CC Conformance Claims">
+      <cclaim name="CC Conformance Claims">
         <description>This PP-Module is conformant to Parts 2 (extended) and 3 (conformant) of Common
           Criteria Version 3.1, Release 5 [CC]. </description>
       </cclaim>
-      <cclaim title="Package Claims">
+      <cclaim name="Package Claims">
         <description><!-- Later_NIAP: Does this module need to claim any packages? If YES: This PP-Module is <package name> Conformant. --> 
           This PP-Module does not claim conformance to any packages.</description>
       </cclaim>
@@ -717,6 +717,12 @@
               <selectable><assignable>other detection method</assignable></selectable>
               </selectables>.
             </title>
+            <ext-comp-def-title>
+              <title> 
+                The TSF shall provide the following methods of intrusion detection
+                   <assignable>detection methods</assignable>.
+              </title>
+            </ext-comp-def-title>
             <note role="application"> 
               At least one detection method must be selected. If multiple detection methods are supported, each method supported shall be selected. <h:br/><h:br/>  
               If anomaly-based detection is selected, then FAU_ANO_EXT.1 shall be included in the ST. If signature-based detection is selected, then FAU_SIG_EXT.1 shall be included in the ST.<h:br/><h:br/> 
@@ -1918,8 +1924,13 @@ The evaluator shall examine the operational guidance to verify that it
                 <selectable>60 GHz</selectable>
                 <selectable>sub-GHz (0-900 MHz)</selectable>
                 <selectable id="cell">all cellular bands</selectable>
-              </selectables>
+              </selectables>.
             </title>
+            <ext-comp-def-title>
+            <title> The TSF shall detect the presence of network devices that operate in the
+              following RF bands: <assignable>some bands</assignable>.
+            </title>
+            </ext-comp-def-title>
             <note role="application"> This SFR refers to Non-Wi-Fi (IEEE 802.11 a, b, g, n, and ac)
               network devices that operate in the specified frequencies. If the ST author selects
               detection of devices in the cellular bands, FAU_INV_EXT.4 must
