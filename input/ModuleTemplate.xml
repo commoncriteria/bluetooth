@@ -444,7 +444,7 @@
       <con-sec-prob/>
       <con-obj/>
       <con-op-en/>
-      <con-mod ref-id="T.UNAUTHORIZED_ACCESS">HHHHHHHHYYY.</con-mod>
+      <con-mod ref="T.UNAUTHORIZED_ACCESS">HHHHHHHHYYY.</con-mod>
     </base-pp>
     <man-sfrs>
       <subsection title="Security Audit (FAU)" id="man_fau">
