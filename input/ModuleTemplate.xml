@@ -361,7 +361,7 @@
       <modified-sfrs>
         <subsection title="Protection of the TSF (FPT)" id="from_nd_fpt">
           <f-component cc-id="fpt_itt.1" name="Basic Internal TSF Data Transfer Protection"><!-- DONE -->
-            <consistency-rationale/>
+            <consistency-rationale>Some really good reasons </consistency-rationale>
             <f-element>
               <title>The TSF shall protect TSF data from <h:u>disclosure and <h:b>detect its</h:b> modification</h:u> when it is transmitted between separate parts of the TOE <h:b>through the use of <selectables>
                   <selectable>IPsec</selectable>
@@ -445,6 +445,8 @@
       <con-obj/>
       <con-op-en/>
       <con-mod ref="T.UNAUTHORIZED_ACCESS">HHHHHHHHYYY.</con-mod>
+      <con-mod ref="fau_gen.1" iteration="WIDS"> Specific to the ND base. </con-mod>
+      <con-mod ref="ftp_itc.1">FTP base reasons</con-mod>
     </base-pp>
     <man-sfrs>
       <subsection title="Security Audit (FAU)" id="man_fau">
@@ -530,7 +532,7 @@
         </f-component>
         
         <f-component cc-id="fau_gen.1" name="Audit Data Generation" iteration="WIDS"><!-- DONE for now. FAU_SAA is how to look at audit records and determine that something bad may have happened, so should all of the "events" in FAU_SAA be audit records? -->
-          <consistency-rationale/>
+          <consistency-rationale>Wids module rationale/</consistency-rationale>
           <f-element> <!-- Changed: Moved the actual audit events from objective FAU_GEN and put here. -->
             <title> The TSF shall be able to generate an audit record of the following auditable
               events: <h:ol type="a">
