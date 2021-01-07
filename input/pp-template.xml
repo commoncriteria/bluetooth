@@ -616,11 +616,11 @@ Activities assoiated with the TSS.
                     <text>Configure the time frame for sending Host Agent data to the EDR
                         <assignable>list of configurable time frames</assignable>
                     </text>
-                    <M ref="a"/><O ref="s"/><_ ref="u"/>
+                    <M ref="a"/><O ref="s"/><NA ref="u"/>
                   </management-function>
                   <management-function>
                     <text>Assign a label or tag to categorize or group individual endpoint systems </text>
-                    <M ref="a"/><O ref="s"/><_ ref="u"/>
+                    <M ref="a"/><O ref="s"/><NA ref="u"/>
                   </management-function>
                 </management-function-set>
               </title>
