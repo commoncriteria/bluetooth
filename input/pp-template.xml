@@ -66,9 +66,9 @@
   		<h:li> <h:div><depends on="implements"><ref-id>a-feature-id</ref-id></depends> 
                     Someting dependent on a feature</h:div> </h:li> 
            
-          <h:li> And here's the audit event table for mandatory requirements. <h:br/>
+          <h:li> And here's the audit event table for mandatory requirements. 
            
-          <!-- <audit-table table="mandatory"/> -->
+			 <xref to="t-audit-mandatory"/> for more information.
 <!-- 
                  <audit-events table="mandatory"/> -->
           </h:li>
@@ -234,8 +234,7 @@
       <usecase title="Elephant-own device" id="elephant">
         <description>This is everything we need to describe in words about this use case.</description>	
 	  <config>
-                <same-req><ref-id>soup</ref-id><not><ref-id>ratatouille</ref-id><ref-id>pizza</ref-id></not></same-req>
-	        <all-or-none><ref-id>tea</ref-id><ref-id>aaa</ref-id></all-or-none> <!-- Group selections from the same requirement -->
+                <ref-id>soup</ref-id><not><ref-id>ratatouille</ref-id><ref-id>pizza</ref-id></not>
                 <not><ref-id>table2</ref-id></not> <!-- This says you can't choose this selectable-->
                 <ref-id>optional-comp-example</ref-id><!-- Inclusion of an optional/objective requirement -->
 	  </config>
@@ -249,7 +248,7 @@
     of the threats that the OS is expected to address, assumptions about the
     operational environment, and any organizational security policies that the OS
     is expected to enforce.
-    <section title="Threats" id="threats">
+    <sec:Threats>
       <threats>
         <threat name="T.NETWORK_ATTACK">
           <description> An attacker is positioned on a communications channel or elsewhere on the
@@ -313,7 +312,7 @@
           </objective-refer>
         </threat>
       </threats>
-    </section>
+    </sec:Threats>
     <section title="Assumptions" id="assumptions">
       <assumptions>
         <assumption name="A.PLATFORM">
@@ -482,7 +481,11 @@ users of the same system.
         "(1)")</h:li>
     </h:ul>
 
-    <section title="Security Functional Requirements" id="SFRs">
+    <sec:SFRs title="Security Functional Requirements">
+      <sec:Something>
+          Here's whwere we talk about an audit table.
+          <audit-table table="mandatory"/>
+      </sec:Something>
       <section title="QQQQ" id="FOO">
          <f-component cc-id="foo_foo.1" name="Foo Foo">
           <f-element id="foo-foo-id">
@@ -742,7 +745,7 @@ Activities assoiated with the TSS.
                                 directly.<h:br></h:br>
 				    
 				    							
-			See <xref to="man-table"/> for more information.
+			See <xref to="t-audit-mandatory"/> for more information.
 
 			<!-- AUDIT TABLE for MANDATORY SFRs. This needs to move outside the EAs -->
 <!-- Bob killed this 
@@ -929,26 +932,26 @@ Activities assoiated with the TSS.
 		    </audit-event>
 	        </f-component>
             </section>
-    </section>
+    </sec:SFRs>
     <section title="Security Assurance Requirements" id="SARs">
-      The Security Objectives in 
-      <xref to="obj"/> were constructed to address threats identified in
-      <xref to="threats"/>. The Security Functional Requirements (SFRs)
+      The Security Objectives in <xref to="Security_Objectives"/> were constructed
+      to address threats identified in
+      <xref to="Threats"/>. The Security Functional Requirements (SFRs)
       in <xref to="SFRs"/> are a formal instantiation of the Security Objectives. The PP
       identifies the Security Assurance Requirements (SARs) to frame the extent to
       which the evaluator assesses the documentation applicable for the evaluation and performs
       independent testing. <h:br/> This section lists the set of SARs from CC part 3
       that are required in evaluations against this PP. Individual Assurance Activities
-      <!--(AAs). Never use these again --> to be performed are specified both in 
-      <xref to="req"/> as well as in this section. <h:br/>
+      o be performed are specified both in 
+      <xref to="SFRs"/> as well as in this section. <h:br/>
       The general model for evaluation of OSs against STs written to conform to this PP is as follows: <h:br/>
       After the  ST has been approved for evaluation, the TSEF will obtain the
         OS, supporting environmental IT, and the administrative/user guides for
       the OS. The ITSEF is expected to perform actions mandated by the Common Evaluation
       Methodology (CEM) for the ASE and ALC SARs. The ITSEF also performs the Assurance Activities
-      contained within <xref to="req"/>, which are intended to be an interpretation of the
+      contained within <xref to="SFRs"/>, which are intended to be an interpretation of the
       other CEM assurance requirements as they apply to the specific technology instantiated in the
-      OS. The Assurance Activities that are captured in <xref to="req"/> also provide
+      OS. The Assurance Activities that are captured in <xref to="SFRs"/> also provide
       clarification as to what the developer needs to provide to demonstrate the OS is compliant
       with the PP.
      <section title="Class ASE: Security Target" id="ase">As per ASE activities
