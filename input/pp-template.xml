@@ -499,10 +499,29 @@ users of the same system.
                  <selectable id="spaghetti">spaghetti</selectable>
                  <selectable id="ratatouille">ratatouille</selectable>
                  <selectable id="sushi">sushi</selectable>
+              </selectables> with 
+              <selectables>
+                 <selectable id="s-white">white</selectable>
+                 <selectable id="s-red">red</selectable>
               </selectables>. 
             </title>
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
+<!-- So an 'or' with one child means This OR NOTHING. -->
+<!-- So the following means -->
+            <or>
+               <and>
+                 <ref-id>s-white</ref-id>
+                 <or><ref-id>ratatouille</ref-id>
+                     <ref-id>sushi</ref-id></or>
+               </and>
+               <and>
+                  <ref-id>s-red</ref-id>
+                  <or><ref-id>spaghetti</ref-id>
+                     <ref-id>pizza</ref-id></or>
+               </and>
+            </or>
+
           </f-element>
         </f-component>
         <f-component cc-id="foo_bar.1" name="Foo Bar">
@@ -512,6 +531,13 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
           </f-element>
+          <f-element id="foo-bar-cookie">
+            <title> The TOE shall eat <selectables><selectable id="crackers">crackers</selectable><selectable>nothing</selectable></selectables></title>
+            <note role="application">Deonstrating rules across elements</note>
+            <aactivity>Something <Guidance></Guidance></aactivity>
+            <or><and><ref-id>tea</ref-id><ref-id>crackers</ref-id></and></or>
+          </f-element>
+
          </f-component>
        </section>
        <section title="QQQQ" id="QQQQ">
