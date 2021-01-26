@@ -4,7 +4,10 @@
 <?xml-model href="https://github.com/commoncriteria/transforms/raw/master/schemas/CCModule.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 
-<Module boilerplate="yes" target-products="Widgets" xmlns="https://niap-ccevs.org/cc/v1" name="Widgets" xmlns:h="http://www.w3.org/1999/xhtml">
+<Module boilerplate="yes" target-products="Widgets" name="Widgets" 
+	xmlns="https://niap-ccevs.org/cc/v1"
+	xmlns:sec="https://niap-ccevs.org/cc/v1/section"
+	xmlns:h="http://www.w3.org/1999/xhtml">
   <PPReference>
     <ReferenceTable>
       <PPVersion>1.0</PPVersion>
@@ -20,15 +23,15 @@
       <subject>Initial Release </subject>
     </entry>
   </RevisionHistory>
-  <chapter title="Introduction" id="int">
-    <section title="Overview" id="ppoverview"> 
+  <sec:Introduction>
+    <sec:Overview>
       This Protection Profile Module (PP-Module) describes security requirements for Widgets. 
       This PP-Module is intended to provide a minimal baseline set of requirements that
       are targeted at mitigating well defined and described threats. 
       <h:p>This PP-Module contains optional requirements for Widgets, a security
       product that provides something.
       </h:p>
-    </section>
+    </sec:Overview>
     <tech-terms>
       <term abbr="AES" full="Advanced Encryption Standard"/>
       <term abbr="AP" full="Access Point"> 
@@ -63,8 +66,8 @@
         limited area such as a home, school, computer laboratory, campus, office building etc. </term>
       <term abbr="WPA" full="Wi-Fi Protected Access"/>
     </tech-terms>
-    <section title="Compliant Targets of Evaluation" id="TOEdescription">
-      <subsection title="TOE Boundary" id="TOEboundary"> 
+    <sec:Compliant_Targets_of_Evaluation>
+      <sec:TOE_Boundary>
         <h:p>
         This PP-Module specifically addresses widgets.
         Wireless Intrusion Detection/Prevention Systems (WIDS/WIPS). 
@@ -87,7 +90,7 @@
         communication path(s) between WIDS/WIPS components. <h:br/><h:br/> A WIDS/WIPS can be
         Integrated (be part of the WLAN infrastructure) or Overlay (independent from WLAN)
         architecture depending on vendor implementation. The two different architectures are
-        illustrated in the <figref ref-id="toe"/> figure below. <h:br/><h:br/> A WIDS/WIPS is
+        illustrated in the <xref to="toe"/> figure below. <h:br/><h:br/> A WIDS/WIPS is
         expected to inspect layers 1 and 2 network traffic, per the OSI network model and monitor
         wireless frames in the RF spectrum utilized by IEEE 802.11 a, b, g, n, and ac. Monitoring
         and inspection of other technologies (e.g., cellular) and protocols are
@@ -101,17 +104,17 @@
         learns/creates) a definition of expected/typical traffic patterns, such that it’s able to
         detect and react to anomalous (unexpected/atypical) traffic patterns.<h:br/><h:br/>
         <figure entity="images/Toe.png" title="General TOE" id="toe"/>
-      </subsection>
-    </section>
-    <section title="Use Cases" id="usecases">
+      </sec:TOE_Boundary>
+    </sec:Compliant_Targets_of_Evaluation>
+    <sec:Use_Cases>
       <usecases>
         <usecase id="usecase1" title="Use Case 1">
           <description/>
         </usecase>
       </usecases>
-    </section>
-  </chapter>
-  <chapter title="Conformance Claims" id="ConformanceClaims">
+    </sec:Use_Cases>
+  </sec:Introduction>
+  <sec:Conformance_Claims>
     <cclaims>
       <cclaim name="Conformance Statement">
         <description> This PP-Module inherits exact conformance as required from the specified
@@ -131,8 +134,8 @@
           This PP-Module does not claim conformance to any packages.</description>
       </cclaim>
     </cclaims>
-  </chapter>
-  <chapter title="Security Problem Description" id="spd">  
+  </sec:Conformance_Claims>
+  <sec:Security_Problem_Description>
     <h:p>WIDS address a range of security threats related to detection of and reaction to potentially malicious WLAN traffic. The malicious
     traffic may pose a threat to one or more endpoints on the monitored networks, to the network
     infrastructure, or to the TOE itself. Attacks against a WLAN could compromise the
@@ -249,9 +252,9 @@
         </OSP>
       </OSPs>
     </section>
-  </chapter>
-  <chapter title="Security Objectives" id="obj">
-    <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE">
+  </sec:Security_Problem_Description>
+  <sec:Security_Objectives>
+    <sec:Security_Objectives_for_the_TOE>
       <!-- Later: Make sure new SFRs are mapped to SOs -->
       <SOs>
         <SO name="O.SYSTEM_MONITORING">
@@ -333,7 +336,7 @@
           <rationale>Good reasons</rationale>
         </SO>
       </SOs>
-    </section>
+    </sec:Security_Objectives_for_the_TOE>
     <section title="Security Objectives for the Operational Environment" id="SecurityObjectivesTOEorEnvironment"> 
       The following security objectives for the operational
       environment assist the TOE in correctly providing its security functionality. These track the
@@ -355,11 +358,11 @@
     <section title="Security Objectives Rationale" id="SOR">
       <!-- NOTE: This section should remain empty and is populated from the rationale tags in the previous sections.  -->
     </section>
-  </chapter>
-  <chapter title="Security Requirements" id="sfrs">
+  </sec:Security_Objectives>
+  <sec:Security_Requirements>
     <base-pp version="2.1" name="Network Device" product="Network Device" short="ND" url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=440&amp;id=440" xmlurl="test">
       <modified-sfrs>
-        <subsection title="Protection of the TSF (FPT)" id="from_nd_fpt">
+        <sec:from_nd_fpt title="Protection of the TSF (FPT)">
           <f-component cc-id="fpt_itt.1" name="Basic Internal TSF Data Transfer Protection"><!-- DONE -->
             <consistency-rationale>Some really good reasons </consistency-rationale>
             <f-element>
@@ -386,8 +389,8 @@
               </aactivity>
             </f-element>
           </f-component>
-        </subsection>
-        <subsection title="Trusted Paths/Channels (FTP)" id="ftp">
+        </sec:from_nd_fpt>
+        <sec:ftp title="Trusted Paths/Channels (FTP)">
           <f-component cc-id="ftp_itc.1" name="Inter-TSF trusted channel"><!-- DONE -->
             <consistency-rationale/>
             <f-element>
@@ -436,7 +439,7 @@
               </aactivity>
             </f-element>
           </f-component>
-        </subsection>
+	</sec:ftp>
       </modified-sfrs>
       <additional-sfrs/>
       <con-toe> 
@@ -449,7 +452,7 @@
       <con-mod ref="ftp_itc.1">FTP base reasons</con-mod>
     </base-pp>
     <man-sfrs>
-      <subsection title="Security Audit (FAU)" id="man_fau">
+      <sec:man_fau title="Security Audit (FAU)">
         <f-component cc-id="fau_arp.1" name="Security Alarms"> <!-- DONE -->
           <consistency-rationale/>
           <f-element id="fel-arp">
@@ -538,7 +541,7 @@
               events: <h:ol type="a">
                 <h:li>Start-up and shutdown of the audit functions;</h:li>
                 <h:li>All auditable events for the [not specified] level of audit;</h:li>
-                <h:li><h:i>[Auditable events listed in <ctr-ref ref-id="auditWids"/>;</h:i></h:li>
+                <h:li><h:i>[Auditable events listed in <xref to="auditWids"/>;</h:i></h:li>
                 <h:li><h:i>Failure of wireless sensor communication].</h:i></h:li>
               </h:ol>
               <h:table>
@@ -589,9 +592,9 @@
             </title>
             <note role="application"> 
               
-              The auditable events defined in <ctr-ref ref-id="auditWids"/>
+              The auditable events defined in <xref to="auditWids"/>
               are for the SFRs that are explicitly defined in this PP-Module and are intended to
-              extend FAU_GEN.1 in the Base-PP. The events in the <ctr-ref ref-id="auditWids"/> should
+              extend FAU_GEN.1 in the Base-PP. The events in the <xref to="auditWids"/> should
               be combined with those of the ND cPP in the context of a conforming Security
               Target.<h:br/><h:br/> 
             </note>
@@ -602,7 +605,7 @@
                 applicable);</h:li>
               <h:li>For each audit event type, based on the auditable event definitions of the
                 functional components included in the PP/ST, [<h:i>auditable events listed in
-                  <ctr-ref ref-id="auditWids"/></h:i>]. </h:li>
+                  <xref to="auditWids"/></h:i>]. </h:li>
             </h:ol>
             </title>
             <note role="application">
@@ -1055,9 +1058,7 @@ enforcement of the SFRs.  -->
           <f-element>
             <title>The TSF shall enforce the following rules for monitoring wireless traffic: <h:ol type="a">
               <h:li>Accumulation or combination of <assignable>subset of defined auditable events</assignable> known to indicate a potential security violation; </h:li>
-              <h:li><h:i>[other potential security violations as defined by <ctr-ref ref-id="SecViolations"/>]</h:i>.</h:li>
-              <!-- Todo: Totals of similar events occurring within a specified time period] – new element in alert rules -->
-              <!-- Todo: move items from fau_gen in objective requirement for this. -->
+              <h:li><h:i>[other potential security violations as defined by <xref to="SecViolations"/>]</h:i>.</h:li>
             </h:ol>
               <h:table>
                 <h:tr class="header">
@@ -1747,9 +1748,9 @@ enforcement of the SFRs.  -->
       
       <!-- TODO: Look at FAU_SAR, should probably add all three elements -->
       
-      </subsection>
+      </sec:man_fau>
       
-      <subsection title="User Data Protection (FDP)" id="fdp">
+      <sec:fdp title="User Data Protection (FDP)">
         <f-component cc-id="fdp_ifc.1" name="Information Flow Control Policy"> <!-- DONE -->
           <consistency-rationale/>
           <f-element>
@@ -1792,9 +1793,9 @@ enforcement of the SFRs.  -->
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:fdp>
       
-      <subsection title="Security Management (FMT)" id="fmt">
+      <sec:fmt title="Security Management (FMT)">
         <f-component cc-id="fmt_smf.1" name="Specification of Management Functions (WIDS)" iteration="WIDS"> <!-- TODO: Need to finish EA. Can simply say that these functions shall be tested in conjunction of the other components listed below-->
           <consistency-rationale/>
           <f-element> <!-- Later_Justin: Anyother current requirements that would require configuration? Any other capabilities that we would want to manage. -->
@@ -1907,10 +1908,10 @@ The evaluator shall examine the operational guidance to verify that it
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:fmt>
     </man-sfrs>
     <opt-sfrs>
-      <subsection title="Security Audit (FAU)" id="opt_fau">
+      <sec:opt_fau title="Security Audit (FAU)">
         <ext-comp-def title="Wireless Spectrum Monitoring" fam-id="FAU_WID_EXT">
           <mod-def/>
         </ext-comp-def>
@@ -1986,11 +1987,11 @@ The evaluator shall examine the operational guidance to verify that it
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:opt_fau>
     </opt-sfrs>
     
     <sel-sfrs>
-      <subsection title="Security Audit (FAU)" id="sel_fau">
+      <sec:sel_fau title="Security Audit (FAU)">
         <ext-comp-def title="Anomaly-Based Intrusion Detection" fam-id="FAU_ANO_EXT">
           <fam-behavior/>
         </ext-comp-def>
@@ -2175,13 +2176,10 @@ The evaluator shall examine the operational guidance to verify that it
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:sel_fau>
     </sel-sfrs>
-    
     <obj-sfrs>
-
-      <subsection title="Security Audit (FAU)" id="obj_fau">
-       
+      <sec:obj_fau title="Security Audit (FAU)">
         <ext-comp-def title="Detection of Unauthorized Connections" fam-id="FAU_INV_EXT">
           <mod-def/>
         </ext-comp-def>
@@ -2441,9 +2439,9 @@ The evaluator shall examine the operational guidance to verify that it
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:obj_fau>
       
-      <subsection title="Protection of the TSF (FPT)" id="fpt">
+      <sec:fpt title="Protection of the TSF (FPT)">
         <f-component cc-id="fpt_fls.1" name="Basic Internal TSF Data Transfer Protection"> <!-- DONE -->
           <consistency-rationale/>
           <f-element>
@@ -2463,9 +2461,9 @@ The evaluator shall examine the operational guidance to verify that it
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:fpt>
     </obj-sfrs>
-  </chapter>
+  </sec:Security_Requirements>
   <appendix id="my_appendix" title="An Example Appendix">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </appendix>
