@@ -147,7 +147,7 @@
           <description> Unintended/unauthorized disclosure of sensitive information on a protected
             WLAN, such as sending unencrypted sensitive data. The WIDS will be capable of collecting
             and analyzing WLAN data to detect unauthorized disclosure of information. </description>
-           <consistency-rationale> This threat is consistent with <base-name/> </consistency-rationale>
+           <consistency-rationale> This threat is consistent with <_/> </consistency-rationale>
           <objective-refer ref="O.SYSTEM_MONITORING">
             <rationale>The threat T.Unauthorized_Disclosure_of_Information is countered by
               O.SYSTEM_MONITORING as this provides for visibility into the network which enables
@@ -169,7 +169,7 @@
             connect to the unauthorized AP If malicious external APs or EUDs are able to communicate
             with APs or EUDs on the protected WLAN, then those devices may be susceptible to the
             unauthorized disclosure of information. </description>
-           <consistency-rationale> This threat is consistent with <base-name/> </consistency-rationale>
+           <consistency-rationale> This threat is consistent with <_/> </consistency-rationale>
           <objective-refer ref="O.SYSTEM_MONITORING">
             <rationale>The threat T.UNAUTHORIZED_ACCESS is countered by O.SYSTEM_MONITORING as this
               provides for visibility into the network which enables detection of unauthorized APs
@@ -192,7 +192,7 @@
           <description> Attacks against the WLAN infrastructure might lead to denial of service
             (DoS) attacks within a protected WLAN. A wireless DoS may occur in two ways: at the
             physical layer through RF Jamming, or at the data link layer through packet injection. </description>
-           <consistency-rationale> This threat is consistent with <base-name/> </consistency-rationale>
+           <consistency-rationale> This threat is consistent with <_/> </consistency-rationale>
           <objective-refer ref="O.SYSTEM_MONITORING">
             <rationale>The threat T.DISRUPTION is countered by O.SYSTEM_MONITORING as this provides
               for visibility into the network which enables detection of DoS attacks.</rationale>
@@ -214,7 +214,7 @@
           <description> It is assumed that the TOE is connected to distinct networks in a manner
              that ensures that the TOE's security policies will be enforced on all applicable network
              traffic flowing among the attached networks. </description>
-           <consistency-rationale> This assumption is consistent with <base-name/> </consistency-rationale>
+           <consistency-rationale> This assumption is consistent with <_/> </consistency-rationale>
            <objective-refer ref="OE.CONNECTIONS">
              <rationale> The operational environment objective OE.CONNECTIONS is realized through
               A.CONNECTIONS.</rationale>
@@ -224,7 +224,7 @@
           <description> The administrator of the WIDS is not careless, willfully negligent or
             hostile, and administers the WIDS within compliance of the applied enterprise security
             policy. </description>
-           <consistency-rationale> This assumption is consistent with <base-name/> </consistency-rationale>
+           <consistency-rationale> This assumption is consistent with <_/> </consistency-rationale>
           <objective-refer ref="OE.PROPER_ADMIN">
             <rationale> The operational environment objective OE.PROPER_ADMIN is realized through
               A.PROPER_ADMIN.</rationale>
@@ -244,7 +244,7 @@
           <description>Analytical processes and information to derive conclusions about potential
             intrusions must be applied to WIDS data and appropriate response actions
             taken.</description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
           <objective-refer ref="O.WIDS_ANALYZE">
             <rationale>The organizational security policy P.ANALYZE is facilitated through
               O.WIDS_ANALYZE. </rationale>
@@ -262,7 +262,7 @@
             WIDS must be able to collect and store essential data elements of network traffic on
             monitored networks.<h:br/>
           </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
 	  <addressed-by>FAU_GEN.1/WIDS</addressed-by>
           <rationale>Good reasons</rationale><!-- Mandatory -->
 	  <addressed-by>FAU_STG_EXT.1/PCAP</addressed-by>
@@ -274,7 +274,7 @@
             unauthorized connections involving internal WLAN devices, and non-secure communications.
             <h:br/><h:br/>
           </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
           <addressed-by>
 	    <!-- Mandatory -->
 	    FAU_ARP.1, FAU_ARP_EXT.2, FAU_IDS_EXT.1, FAU_INV_EXT.1, FAU_INV_EXT.2, FAU_INV_EXT.3,
@@ -292,7 +292,7 @@
             isolate/contain WLAN devices that have been determined to violate administrator-defined
             WIPS policies. <h:br/>
           </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
 	  <addressed-by>
             FAU_WIP_EXT.1 (OPTIONAL)
 	  </addressed-by>
@@ -303,7 +303,7 @@
             in the base PP, Conformant TOEs will provide the functions necessary for an
             administrator to configure the WIDS Capabilities of the TOE. <h:br/>
           </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
 	  <addressed-by>
             FMT_SMF.1/WIDS
           </addressed-by>
@@ -316,7 +316,7 @@
             hardware or software specification, the TOE will log or produce an alert upon discovery
             of a problem reported via the self-test mechanism. <h:br/>
           </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
 	  <addressed-by>
 	    FPT_FLS.1(Optional)
 	  </addressed-by>
@@ -327,7 +327,7 @@
             defined in the base PP, conformant TOEs will provide trusted communications between
             distributed components if any exist. <h:br/>
           </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
           <addressed-by>
             <!-- Mandatory -->
 	    FPT_ITT.1, FTP_ITC.1
@@ -345,13 +345,13 @@
           <description> TOE administrators will ensure that the TOE is installed in a manner that
             will allow the TOE to effectively enforce its policies on the network traffic of
             monitored networks. </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
         </SOE>
         <SOE name="OE.PROPER_ADMIN">
           <description> The administrator of the WIDS is not careless, willfully negligent or
             hostile, and administers the WIDS within compliance of the applied enterprise security
             policy. </description>
-           <consistency-rationale>Just because <base-name/></consistency-rationale>
+           <consistency-rationale>Just because <_/></consistency-rationale>
         </SOE>
       </SOEs>
     </section>

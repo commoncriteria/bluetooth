@@ -507,8 +507,6 @@ users of the same system.
             </title>
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
-<!-- So an 'or' with one child means This OR NOTHING. -->
-<!-- So the following means -->
             <or>
                <and>
                  <ref-id>s-white</ref-id>
@@ -534,8 +532,11 @@ users of the same system.
           <f-element id="foo-bar-cookie">
             <title> The TOE shall eat <selectables><selectable id="crackers">crackers</selectable><selectable>nothing</selectable></selectables></title>
             <note role="application">Deonstrating rules across elements</note>
-            <aactivity>Something <Guidance></Guidance></aactivity>
-            <or><and><ref-id>tea</ref-id><ref-id>crackers</ref-id></and></or>
+            <aactivity>Something <Guidance> Some guidance</Guidance></aactivity>
+            <or>
+                <and><ref-id>tea</ref-id><ref-id>crackers</ref-id></and>
+                <and><not><ref-id>tea</ref-id></not><not><ref-id>crackers</ref-id></not></and>
+            </or>
           </f-element>
 
          </f-component>
