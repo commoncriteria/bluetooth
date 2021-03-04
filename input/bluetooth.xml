@@ -4,8 +4,10 @@
 <!-- test -->
 
 <?xml-model href="../transforms/schemas/CCModule.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<Module xmlns="https://niap-ccevs.org/cc/v1" target-products="Bluetooth" name="PP-Module for Bluetooth"
-    xmlns:h="http://www.w3.org/1999/xhtml">
+<Module target-products="Bluetooth" name="PP-Module for Bluetooth"
+  xmlns="https://niap-ccevs.org/cc/v1"
+  xmlns:sec="https://niap-ccevs.org/cc/v1/section"
+  xmlns:h="http://www.w3.org/1999/xhtml">
   <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
   <PPReference>
@@ -26,15 +28,15 @@
     </entry>
   </RevisionHistory>
 
-  <chapter title="Introduction" id="int">
+  <sec:Introduction>
     <section title="Overview" id="ppoverview">
-      The scope of the Bluetooth <abbr linkend="PP-Module"/> is to describe the security functionality of Bluetooth technology in terms of [<abbr linkend="CC"/>] 
+      The scope of the Bluetooth <xref to="PP-Module"/> is to describe the security functionality of Bluetooth technology in terms of [<xref to="CC"/>] 
       and to define functional and assurance requirements for the Bluetooth capability of mobile devices and operating systems. 
-      This <abbr linkend="PP-Module"/> is intended for use with the following <abbr linkend="Base-PP"/>s: <h:ul>
+      This <xref to="PP-Module"/> is intended for use with the following <xref to="Base-PP"/>s: <h:ul>
         <h:li>General Purpose Operating System (GPOS) Protection Profile, Version 4.2.1</h:li>
         <h:li>Mobile Device Fundamentals (MDF) Protection Profile, Version 3.1</h:li>
       </h:ul>
-      <h:p/> These <abbr linkend="Base-PP"/>s are valid because consumer-grade desktop and mobile devices may both have Bluetooth hardware radios and so both desktop and mobile operating systems have the 
+      <h:p/> These <xref to="Base-PP"/>s are valid because consumer-grade desktop and mobile devices may both have Bluetooth hardware radios and so both desktop and mobile operating systems have the 
       software/firmware capability to allow products to use them.
     </section>
 <tech-terms>
@@ -105,17 +107,17 @@
 </tech-terms>
     <section title="Compliant Targets of Evaluation" id="TOEdescription">
      
-     The Target of Evaluation (TOE) in this <abbr linkend="PP-Module"/> is a product that implements Bluetooth functionality.
-      This <abbr linkend="PP-Module"/> describes the extended security functionality of Bluetooth in terms of CC. This PP-Module extends the Protection Profile for General Purpose Operating Systems or Mobile Device Fundamentals. 
+     The Target of Evaluation (TOE) in this <xref to="PP-Module"/> is a product that implements Bluetooth functionality.
+      This <xref to="PP-Module"/> describes the extended security functionality of Bluetooth in terms of CC. This PP-Module extends the Protection Profile for General Purpose Operating Systems or Mobile Device Fundamentals. 
       A compliant TOE will meet all mandatory SFRs defined in this PP-Module in addition to the mandatory SFRs of its claimed Base-PP. For each Base-PP, this PP-Module refines several of the Base-PP's SFRs so that they can accommodate the
       Bluetooth functionality defined by the PP-Module. A compliant TOE will claim all selection-based SFRs from this PP-Module and its Base-PP as needed based on the relevant selections in other requirements being chosen.
       <h:p/>
-      Note that <cite linkend="bibMDF"/>. evaluation activities require certain tests to be performed against all radios present on the device. When the TOE also claims conformance to this PP-Module, those tests are executed against the Bluetooth radio as well.
+      Note that <xref to="bibMDF"/>. evaluation activities require certain tests to be performed against all radios present on the device. When the TOE also claims conformance to this PP-Module, those tests are executed against the Bluetooth radio as well.
       <h:p/>
       Also note that each Base-PP defines its own requirements for protection of data at rest. When the TOE also claims conformance to this PP-Module, any data that is used by the TOE's Bluetooth implementation is expected to be stored using the same protection mechanisms.
 
       
-      <subsection title="TOE Boundary" id="TOEboundary">
+      <section title="TOE Boundary" id="TOEboundary">
         The Bluetooth implementation is a logical component executing on an end user personal computing or mobile device. As such, the TOE must rely heavily on the TOE's operational environment (host platform,
         network stack, and operating system) for its execution domain and its proper usage. The TOE
         will rely on the IT environment to address much of the security functionality related to
@@ -124,7 +126,7 @@
         
         <!-- 
         <figure entity="images/Toe.png" title="WLAN Client Operating Environment" id="toe"/> --> 
-      </subsection> 
+      </section> 
       <!-- 
       <subsection title="TOE Platform" id="TOEplatform">
       </subsection>  -->
@@ -153,15 +155,15 @@
         
       </usecases>
     </section>
-  </chapter>
+  </sec:Introduction>
 
 
-  <chapter title="Conformance Claims" id="conf">
+  <sec:Conformance_Claims>
     <cclaims>
       <cclaim name="Conformance Statement">
-        <description> This <abbr linkend="PP-Module"/> inherits exact conformance as required from
-          the specified <abbr linkend="Base-PP"/> and as defined in the <abbr linkend="CC"/> and
-          <abbr linkend="CEM"/> addenda for Exact Conformance, Selection-Based SFRs, and Optional
+        <description> This <xref to="PP-Module"/> inherits exact conformance as required from
+          the specified <xref to="Base-PP"/> and as defined in the <xref to="CC"/> and
+          <xref to="CEM"/> addenda for Exact Conformance, Selection-Based SFRs, and Optional
           SFRs (dated May 2017).<h:p/> 
           The following PPs and PP-Modules are allowed to
           be specified in a PP-Configuration with this PP-Module. <h:ul>
@@ -172,24 +174,24 @@
         </description>
       </cclaim>
       <cclaim name="CC Conformance Claims">
-        <description>This <abbr linkend="PP-Module"/> is conformant to Parts 2 (extended) and 3
-          (conformant) of Common Criteria Version 3.1, Release 5 [<abbr linkend="CC"/>].
+        <description>This <xref to="PP-Module"/> is conformant to Parts 2 (extended) and 3
+          (conformant) of Common Criteria Version 3.1, Release 5 [<xref to="CC"/>].
         </description>
       </cclaim>
       <cclaim name="Package Claims">
         <description>There are no package claims for this PP-Module.</description>
       </cclaim>
     </cclaims>
-  </chapter>
+  </sec:Conformance_Claims>
 
 
-  <chapter id="spd" title="Security Problem Description">
+  <sec:spd title="Security Problem Description">
     All threats, assumptions, organizational security policies, and/or objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. 
     This PP-Module does not add or remove any elements to the security problem definition given in the Base-PP. 
     The SFRs defined in this PP-Module provide additional mechanisms for mitigating the threats already defined in the Base-PPs due to the fact that including a 
     Bluetooth implementation introduces a new external interface to the underlying general-purpose OS or mobile device platform.
     
-    <section id="threats" title="Threats">
+    <sec:Threats>
      
       No threats have been identified that are specific to Bluetooth technology. However, any
       organizational security policies defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.
@@ -203,7 +205,7 @@
         </objective-refer>  
         </threat>
       </threats>
-     </section>
+     </sec:Threats>
         
     <section id="Assumptions" title="Assumptions">
       <h:p/>
@@ -211,15 +213,24 @@
       </assumptions>
     </section>
     
-    <section id="securityPolicy" title="Organizational Security Policies">
-      No organizational policies have been identified that are specific to Bluetooth technology. However, any
-      objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.
-    </section>
-  </chapter>
+    <sec:Organizational_Security_Policies>
+      <OSPs>
+      <OSP name="P.PLACEHOLDER">
+        <description>No organizational policies have been identified that are specific to Bluetooth technology. However, any
+          objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.</description>
+        <consistency-rationale></consistency-rationale>
+        <objective-refer ref="O.PLACEHOLDER">
+          <rationale>aaaaa</rationale>
+        </objective-refer>
+      </OSP>
+      </OSPs>
+    </sec:Organizational_Security_Policies>
+  </sec:spd>
+  
 
 
-  <chapter title="Security Objectives" id="obj">
-    <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE">
+  <sec:Security_Objectives>
+    <sec:Security_Objectives_for_the_TOE>
       No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
       TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.
       <SOs>
@@ -232,7 +243,7 @@
           </rationale>
         </SO>
       </SOs>
-    </section>
+    </sec:Security_Objectives_for_the_TOE>
     
     <section title="Security Objectives for the Operational Environment"
       id="objectivesEnvironment"><!-- The Operational Environment of the TOE implements technical and procedural measures 
@@ -254,14 +265,14 @@
     <section title="Security Objectives Rationale" id="SOR">
       <!-- NOTE: This section should remain empty and is populated from the rationale tags in the previous sections.  -->
     </section>
-  </chapter>
+  </sec:Security_Objectives>
   
-  <chapter title="Security Requirements" id="req">
+  <sec:Security_Requirements>
     <!-- SME: the intro to this chapter appears to be getting populated with default text rather than what is specified here, which is problematic because the default text does not
     define refinements correctly for this Module. How can we get it to use what is here instead of the default? -->
     This chapter describes the security requirements
-    which have to be fulfilled by the <abbr linkend="OS"/>. Those requirements comprise functional
-    components from Part 2 and assurance components from Part 3 of <cite linkend="bibCC"/>. 
+    which have to be fulfilled by the <xref to="OS"/>. Those requirements comprise functional
+    components from Part 2 and assurance components from Part 3 of <xref to="bibCC"/>. 
         
     The following notations are used: <h:ul>
       <h:li>
@@ -285,7 +296,7 @@
 
       <modified-sfrs>
  
-        <subsection title="Security Audit (FAU)" id="FAU">
+        <sec:fau title="Security Audit (FAU)">
           <f-component cc-id="fau_gen.1" name="Audit Data Generation"> 
             <consistency-rationale>The ST author is instructed to add new auditable events for Bluetooth functionality; the SFR behavior itself is otherwise unmodified.</consistency-rationale>
             <f-element>
@@ -381,10 +392,10 @@
             </f-element>
           </f-component>
           
-        </subsection>
+        </sec:fau>
 
 
-        <subsection title="Security Management (FMT)" id="FMT">
+        <sec:fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions"> 
             <consistency-rationale>The ST author is instructed to complete an assignment in the SFR with information related to Bluetooth, 
               and to include additional management functions in this SFR based on the Bluetooth capability defined by the PP-Module.</consistency-rationale>
@@ -544,7 +555,7 @@
             </f-element>
           </f-component>
           
-        </subsection>
+        </sec:fmt>
 
 
       </modified-sfrs>
@@ -613,7 +624,7 @@
       
       <modified-sfrs>
   
-        <subsection title="Security Audit (FAU)" id="FAU">
+        <sec:fau title="Security Audit (FAU)">
           <f-component cc-id="fau_gen.1" name="Audit Data Generation"> 
             <consistency-rationale>The ST author is instructed to add new auditable events for Bluetooth functionality; the SFR behavior itself is otherwise unmodified.</consistency-rationale>
             <f-element>
@@ -707,10 +718,10 @@
             </f-element>
           </f-component>
           
-        </subsection>
+        </sec:fau>
         
         
-        <subsection title="Security Management (FMT)" id="FMT">
+        <sec:fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
             <consistency-rationale>The ST author is required to associate all claimed management functions with the administrative privileges required to execute them. 
               This PP-Module simply extends this requirement to apply to the management functions added and mandated by the PP-Module.</consistency-rationale>
@@ -849,7 +860,7 @@
             </f-element>
           </f-component>
           
-        </subsection>
+        </sec:fmt>
   
       </modified-sfrs>
       <additional-sfrs/>
@@ -883,7 +894,7 @@
     </base-pp>
       
     <man-sfrs>
-      <subsection id="fcs" title="Cryptographic Support (FCS)">
+      <sec:fcs title="Cryptographic Support (FCS)">
         
         <ext-comp-def fam-id="FCS_CKM_EXT" title="Cryptographic Key Management">
           <fam-behavior>Components in this family define requirements for cryptographic key management beyond those which are specified in the Part 2 family FCS_CKM.
@@ -929,9 +940,9 @@
 
         
  
-       </subsection>
+       </sec:fcs>
       
-      <subsection id="fia" title="Identification and Authentication (FIA)">
+      <sec:fia title="Identification and Authentication (FIA)">
 
         <ext-comp-def fam-id="FIA_BLT_EXT" title="Bluetooth Pairing">
           <fam-behavior>Components in this family define Bluetooth-specific identification and authentication requirements.
@@ -1218,11 +1229,11 @@
           </f-element>
         </f-component>
 
-       </subsection>  
+       </sec:fia>  
       
  
  
-      <subsection id="ftp" title="Trusted Path/Channels (FTP)">
+      <sec:ftp title="Trusted Path/Channels (FTP)">
         
         <ext-comp-def fam-id="FTP_BLT_EXT" title="Bluetooth Trusted Communications">
           <fam-behavior>Components in this family define requirements for Bluetooth encryption.
@@ -1361,7 +1372,7 @@
           </f-element>
         </f-component>
  
-      </subsection>
+      </sec:ftp>
     </man-sfrs>
     
     <!-- SME: the template guidance said to use the "status" attribute in the f-component tag to specify an SFR as optional. However, when we did this, the optional SFR still stayed in the mandatory requirements section - 
@@ -1378,7 +1389,7 @@
     it should be an issue here, but for future use it may be beneficial to correct the template so that it behaves as intended. -->
     <sel-sfrs>
 
-      <subsection id="ftp_sel" title="Trusted Path/Channels">
+      <sec:ftp title="Trusted Path/Channels">
         
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (LE)" iteration="LE">
           <consistency-rationale></consistency-rationale>
@@ -1420,13 +1431,13 @@
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:ftp>
       
       
     </sel-sfrs>
     <obj-sfrs>
       
-      <subsection id="fia_obj" title="Identification and Authentication">
+      <sec:fia title="Identification and Authentication">
         
         <f-component cc-id="fia_blt_ext.5" name="Bluetooth Secure Connections">
           <consistency-rationale></consistency-rationale>
@@ -1473,20 +1484,20 @@
             </aactivity>
           </f-element>
         </f-component>
-      </subsection>
+      </sec:fia>
       
     </obj-sfrs>
-  </chapter>
+    <impl-dep-sfrs></impl-dep-sfrs>
+  </sec:Security_Requirements>
 
-  <appendix title="Optional Requirements" id="optional"> As indicated in <secref linkend="ccl"/>,
+  <appendix title="Optional Requirements" id="optional"> As indicated in <xref to="ccl"/>,
     the baseline requirements (those that must be performed by the TOE are
     contained in the body of this PP. Additionally, there are three other types of requirements
-    specified in <appref linkend="optional"/>, <appref linkend="sel-based"/>, and <appref
-      linkend="objective"/>. The first type (in this appendix) are requirements that can be included
-    in the <abbr linkend="ST"/>, but are not required in order for a TOE to claim conformance to
-    this PP-Module. The second type (in <appref linkend="sel-based"/>) are requirements based on selections
+    specified in <xref to="optional"/>, <xref to="sel-based"/>, and <xref to="objective"/>. The first type (in this appendix) are requirements that can be included
+    in the <xref to="ST"/>, but are not required in order for a TOE to claim conformance to
+    this PP-Module. The second type (in <xref to="sel-based"/>) are requirements based on selections
     in the body of the PP-Module: if certain selections are made, then additional requirements in that
-    appendix must be included. The third type (in <appref linkend="objective"/> are components that
+    appendix must be included. The third type (in <xref to="objective"/> are components that
     are not required in order to conform to this PP-Module, but will be included in the baseline
     requirements in future versions of this PP-Module, so adoption by vendors is encouraged. </appendix>
 
@@ -1535,8 +1546,8 @@
       </h:tr>
       <h:tr>
         <h:td>FPT_STM.1 - Reliable Time Stamps</h:td>
-        <h:td>FCS_CKM_EXT.8 has a dependency on FPT_STM.1 because key generation may be triggered by a given time period elapsing. When the TOE claims conformance to <cite linkend="bibMDF"/>,
-        this dependency is satisfied explicitly through the Base-PP's definition of FPT_STM.1. When the TOE claims conformance to <cite linkend="bibGPOS"/>, this dependency is satisfied implicitly through that
+        <h:td>FCS_CKM_EXT.8 has a dependency on FPT_STM.1 because key generation may be triggered by a given time period elapsing. When the TOE claims conformance to <xref to="bibMDF"/>,
+        this dependency is satisfied explicitly through the Base-PP's definition of FPT_STM.1. When the TOE claims conformance to <xref to="bibGPOS"/>, this dependency is satisfied implicitly through that
         PP's A.PLATFORM assumption of a trustworthy computing platform, which can be reasonably assumed to include a hardware real-time clock.</h:td>
       </h:tr>
     </h:table>
