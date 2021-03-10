@@ -1323,8 +1323,7 @@
           </f-element>
         </f-component>
 
-
-        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (BR/EDR)" iteration="BR">
+        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters" status="invisible">
           <consistency-rationale></consistency-rationale>
           <comp-lev>specifies the key sizes used for Bluetooth.</comp-lev>
           <management>The following actions could be considered for the management functions in FMT: <h:ul>
@@ -1335,12 +1334,21 @@
           <dependencies>FTP_BLT_EXT.1 Bluetooth Encryption</dependencies>
           
           <f-element>
+            <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for <assignable>Bluetooth protocol</assignable>.
+            </title>
+           
+          </f-element>
+        </f-component>
+
+
+        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (BR/EDR)" iteration="BR">
+          <consistency-rationale></consistency-rationale>
+
+          
+          <f-element>
             <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for [<h:i>BR/EDR</h:i>] and not negotiate encryption key sizes smaller than the minimum size.
             </title>
-            <ext-comp-def-title>
-              <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for <assignable>Bluetooth protocol</assignable>.
-              </title>
-            </ext-comp-def-title>
+
             <note role="application">
               Encryption is mandatory for BR/EDR connections when both devices support Secure Simple Pairing. 
               Minimum encryption requirements will be set and verified for each Bluetooth profile/application. 
