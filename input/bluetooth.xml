@@ -231,8 +231,10 @@
 
   <sec:Security_Objectives>
     <sec:Security_Objectives_for_the_TOE>
-      No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
-      TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.
+ <!--       No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
+      TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.-->
+      
+      
       <SOs>
         <SO name="O.PLACEHOLDER">
           <description>placeholder</description>
@@ -242,7 +244,8 @@
             placeholder
           </rationale>
         </SO>
-      </SOs>
+      </SOs> 
+      
     </sec:Security_Objectives_for_the_TOE>
     
     <section title="Security Objectives for the Operational Environment"
