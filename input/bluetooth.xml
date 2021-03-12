@@ -906,7 +906,7 @@
         <f-component cc-id="fcs_ckm_ext.8" name="Bluetooth Key Generation">
           <consistency-rationale/>
           
-          <comp-lev>requires the TSF to generate key pairs used for Bluetooth over a specified time period or in response to some observed event.</comp-lev>
+          <comp-lev> requires the TSF to generate key pairs used for Bluetooth over a specified time period or in response to some observed event.</comp-lev>
           <management>No specific management functions are identified.</management>
           <audit>There are no auidtable events foreseen.</audit>
           <dependencies>FCS_CKM.1 Cryptographic Key Generation <h:p/>FPT_STM.1 Reliable Time Stamps<h:p/>FTP_BLT_EXT.1 Bluetooth Encryption</dependencies>
@@ -1325,7 +1325,7 @@
 
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters" status="invisible">
           <consistency-rationale></consistency-rationale>
-          <comp-lev>specifies the key sizes used for Bluetooth.</comp-lev>
+          <comp-lev> specifies the key sizes used for Bluetooth.</comp-lev>
           <management>The following actions could be considered for the management functions in FMT: <h:ul>
             <h:li>Specification of minimum encryption key size.</h:li>
           </h:ul>
@@ -1339,12 +1339,8 @@
            
           </f-element>
         </f-component>
-
-
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (BR/EDR)" iteration="BR">
-          <consistency-rationale></consistency-rationale>
-
-          
+          <consistency-rationale></consistency-rationale>       
           <f-element>
             <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for [<h:i>BR/EDR</h:i>] and not negotiate encryption key sizes smaller than the minimum size.
             </title>
@@ -1520,8 +1516,6 @@
     this PP-Module, the baseline requirements are contained in the body of this PP-Module. There are additional requirements based on
     selections in the body of the PP-Module: if certain selections are made, then additional requirements
     below will need to be included. 
-  
-  
   </appendix>
 
   <!-- 
