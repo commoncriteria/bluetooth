@@ -1,5 +1,6 @@
 Protection Profile Template
 ===============
+![Build](https://github.com/commoncriteria/bluetooth/workflows/Build/badge.svg)
 
 Quickstart
 ----------

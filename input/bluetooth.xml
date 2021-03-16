@@ -215,10 +215,18 @@
       <assumptions/>
     </sec:Assumptions>
     
-    <sec:Organizational_Security_Policies>
-      <OSPs>
 
-      </OSPs>
+    <sec:Organizational_Security_Policies>
+      <OSPs/>
+      <!-- <OSP name="P.PLACEHOLDER">
+        <description>No organizational policies have been identified that are specific to Bluetooth technology. However, any
+          objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.</description>
+        <consistency-rationale></consistency-rationale>
+        <objective-refer ref="O.PLACEHOLDER">
+          <rationale>aaaaa</rationale>
+        </objective-refer>
+      </OSP>
+      </OSPs> -->
     </sec:Organizational_Security_Policies>
   </sec:spd>
   
@@ -227,11 +235,19 @@
   <sec:Security_Objectives>
     <sec:Security_Objectives_for_the_TOE>
  <!--       No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
-      TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.-->
+      TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth. -->
       
       
       <SOs>
 
+        <SO name="O.PLACEHOLDER">
+          <description>placeholder</description>
+          <consistency-rationale/>
+          <addressed-by>placeholder</addressed-by>
+          <rationale>
+            placeholder
+          </rationale>
+        </SO>
       </SOs> 
       
     </sec:Security_Objectives_for_the_TOE>
@@ -279,16 +295,20 @@
         <h:b>Iteration</h:b> operation: Identified with a slash followed by a unique text string (e.g. "/WLAN") or a number inside parentheses (e.g. "(1)")</h:li>
     </h:ul>
 
+
 <!--    
     <base-pp version="3.1" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
-      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417"> -->
-      <!--       xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
+      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417"> 
+             xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> 
 
       <base-pp id='MDF'>
         <raw-url> https://github.com/commoncriteria/mobile-device/raw/master/input/mobile-device.xml</raw-url>
         <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417</url>
-        
-
+        -->
+    
+    <base-pp version="3.1" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
+      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417">
+      <!--       xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
 
       <modified-sfrs>
  
