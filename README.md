@@ -51,7 +51,7 @@ For more information see the [PP Development Wiki](https://github.com/commoncrit
 
 ----
 
-Protection Profile or Extended Package for QQQQ
+PP-Module for Bluetooth
 ===============
 
 [![Build Status](https://travis-ci.com/commoncriteria/pp-template.svg?branch=master)](https://travis-ci.com/commoncriteria/pp-template)
