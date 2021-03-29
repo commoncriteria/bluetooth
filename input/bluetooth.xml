@@ -320,18 +320,26 @@
  
 
 
+
+
+      </modified-sfrs>
+      <additional-sfrs>
+        
+        
         <sec:fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions"> 
+          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="Bluetooth"> 
             <consistency-rationale>The ST author is instructed to complete an assignment in the SFR with information related to Bluetooth, 
               and to include additional management functions in this SFR based on the Bluetooth capability defined by the PP-Module.</consistency-rationale>
             <f-element>
               <title>
+                The TSF shall be capable of performing the following <h:b>Bluetooth</h:b> management functions:
+                <!-- 
                 This PP-Module prescribes the following changes to this SFR as defined in the Base-PP: <h:ul>
                   <h:li>The list of radios specified in the assignment for management function 4 ("enable/disable [<h:b>assignment:</h:b><h:i> list of all radios</h:i>]") 
                     will include Bluetooth radios. Bluetooth BR/EDR and Bluetooth LE will be listed separately if the TSF provides the ability to enable/disable them separately 
                     (i.e., if management function BT-3 below is claimed). Otherwise, both interfaces will be treated as one radio for that assignment.</h:li>
                   <h:li>The following additional management functions are defined, and should be appended to the table in the Base-PP:</h:li>
-                </h:ul>
+                </h:ul>  -->
                 
                 
                 <h:table style="width: 100%">
@@ -343,83 +351,83 @@
                     <h:col span="1" style="width: 10%;"></h:col>
                   </h:colgroup>
                   <h:tbody>
-                  <h:tr>
-                    <h:th>Function</h:th>
-                    <h:th><no-link>FMT_ SMF_ EXT.1</no-link></h:th>
-                    <h:th><no-link>FMT_ MOF_ EXT.1.1</no-link></h:th>
-                    <h:th>Admin</h:th>
-                    <h:th><no-link>FMT_ MOF_ EXT.1.2</no-link></h:th>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-1. Configure the Bluetooth trusted channel. <h:ul>
-                      <h:li>Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes;</h:li>
-                    </h:ul></h:td>
-                    <h:td>M</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-2. Change the Bluetooth device name (separately for BR/EDR and LE);</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-3. Provide separate controls for turning the BR/EDR and LE radios on and off;</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-4.  Allow/disallow the following additional wireless technologies to be used with Bluetooth: 
-                      <selectables>
-                        <selectable>Wi-Fi</selectable>
-                        <selectable>NFC</selectable>
-                        <selectable><assignable>other wireless technologies</assignable></selectable>
-                      </selectables>;</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-5. Configure allowable methods of Out of Band pairing (for BR/EDR and LE);</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-6. Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes separately;</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-7. Disable/enable the Connectable mode (for BR/EDR and LE);</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-8. Disable/enable the Bluetooth <assignable>list of Bluetooth service and/or profiles available on the OS (for BR/EDR and LE)</assignable>;</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>BT-9. Specify minimum level of security for each pairing (for BR/EDR and LE);</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                    <h:td>O</h:td>
-                  </h:tr>
+                    <h:tr>
+                      <h:th>Function</h:th>
+                      <h:th><no-link>FMT_ SMF_ EXT.1</no-link></h:th>
+                      <h:th><no-link>FMT_ MOF_ EXT.1.1</no-link></h:th>
+                      <h:th>Admin</h:th>
+                      <h:th><no-link>FMT_ MOF_ EXT.1.2</no-link></h:th>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-1. Configure the Bluetooth trusted channel. <h:ul>
+                        <h:li>Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes;</h:li>
+                      </h:ul></h:td>
+                      <h:td>M</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-2. Change the Bluetooth device name (separately for BR/EDR and LE);</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-3. Provide separate controls for turning the BR/EDR and LE radios on and off;</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-4.  Allow/disallow the following additional wireless technologies to be used with Bluetooth: 
+                        <selectables>
+                          <selectable>Wi-Fi</selectable>
+                          <selectable>NFC</selectable>
+                          <selectable><assignable>other wireless technologies</assignable></selectable>
+                        </selectables>;</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-5. Configure allowable methods of Out of Band pairing (for BR/EDR and LE);</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-6. Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes separately;</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-7. Disable/enable the Connectable mode (for BR/EDR and LE);</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-8. Disable/enable the Bluetooth <assignable>list of Bluetooth service and/or profiles available on the OS (for BR/EDR and LE)</assignable>;</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td>BT-9. Specify minimum level of security for each pairing (for BR/EDR and LE);</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                      <h:td>O</h:td>
+                    </h:tr>
                   </h:tbody>
                 </h:table>
               </title>
@@ -454,16 +462,16 @@
                   If function BT-5, "Configure allowable methods of Out of Band pairing (for BR/EDR and LE)," is selected, the evaluator shall verify that the TSS describes when Out of Band pairing methods are allowed and which ones are configurable.<h:p/>
                   If function BT-8, "Disable/enable the Bluetooth services and/or profiles available on the OS (for BR/EDR and LE)," is selected, the evaluator shall verify that all supported Bluetooth services are listed in the TSS as manageable and, if the TOE allows disabling by application rather than by service name, that a list of services for each application is also listed.<h:p/> 
                   If function BT-9, "Specify minimum level of security for each pairing (for BR/EDR and LE)," is selected, the evaluator shall verify that the TSS describes the method by which the level of security for pairings are managed, including whether the setting is performed for each pairing or is a global setting. <h:p/>
-                  </TSS>
+                </TSS>
                 <Guidance>
                   There are no additional guidance evaluation activities for this SFR beyond what is defined in the Base-PP. The evaluator shall ensure that the management functions defined in the PP-Module are described in the guidance to the same extent required for the Base-PP management functions.<h:p/>
-                  </Guidance>
+                </Guidance>
                 <Tests>
                   The evaluator shall use a Bluetooth-specific protocol analyzer to perform the following tests:<h:p/>
                   <testlist>
-                  <test>The evaluator shall disable the Discoverable mode and shall verify that other Bluetooth BR/EDR devices cannot detect the TOE. The evaluator shall use the protocol analyzer to verify that the TOE does not respond to inquiries from other devices searching for Bluetooth devices. The evaluator shall enable Discoverable mode and verify that other devices can detect the TOE and that the TOE sends response packets to inquiries from searching devices.
-                  <h:p/>
-                    The following tests are conditional on if the corresponding function is included in the ST:<h:p/></test>
+                    <test>The evaluator shall disable the Discoverable mode and shall verify that other Bluetooth BR/EDR devices cannot detect the TOE. The evaluator shall use the protocol analyzer to verify that the TOE does not respond to inquiries from other devices searching for Bluetooth devices. The evaluator shall enable Discoverable mode and verify that other devices can detect the TOE and that the TOE sends response packets to inquiries from searching devices.
+                      <h:p/>
+                      The following tests are conditional on if the corresponding function is included in the ST:<h:p/></test>
                     <test>(conditional): The evaluator shall examine Bluetooth traffic from the TOE to determine the current Bluetooth device name, change the Bluetooth device name, and verify that the Bluetooth traffic from the TOE lists the new name. The evaluator shall examine Bluetooth traffic from the TOE to determine the current Bluetooth device name for BR/EDR and LE. The evaluator shall change the Bluetooth device name for LE independently of the device name for BR/EDR. The evaluator shall verify that the Bluetooth traffic from the TOE lists the new name.</test>
                     <test>(conditional): The evaluator shall disable Bluetooth BR/EDR and enable Bluetooth LE. The evaluator shall examine Bluetooth traffic from the TOE to confirm that only Bluetooth LE traffic is present. The evaluator shall repeat the test with Bluetooth BR/EDR enabled and Bluetooth LE disabled, confirming that only Bluetooth BR/EDR is present.</test>
                     <test>(conditional): For each additional wireless technology that can be used with Bluetooth as claimed in the ST, the evaluator shall revoke Bluetooth permissions from that technology. If the set of supported wireless technologies includes Wi-Fi, the evaluator shall verify that Bluetooth High Speed is not able to send Bluetooth traffic over Wi-Fi when disabled. If the set of supported wireless technologies includes NFC, the evaluator shall verify that NFC cannot be used for pairing when disabled. For any other supported wireless technology, the evaluator shall verify that it cannot be used with Bluetooth in the specified manner when disabled. The evaluator shall then re-enable all supported wireless technologies and verify that all functionality that was previously unavailable has been restored.</test>
@@ -481,10 +489,9 @@
           </f-component>
           
         </sec:fmt>
-
-
-      </modified-sfrs>
-      <additional-sfrs/>
+        
+        
+      </additional-sfrs>
       
           
        
@@ -549,42 +556,65 @@
       
       <modified-sfrs>
 
+  
+  
+      </modified-sfrs>
+      <additional-sfrs>
+        
         
         <sec:fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
+          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior" iteration="Bluetooth"> 
             <consistency-rationale>The ST author is required to associate all claimed management functions with the administrative privileges required to execute them. 
               This PP-Module simply extends this requirement to apply to the management functions added and mandated by the PP-Module.</consistency-rationale>
             <f-element>
               <title>
+                The OS shall restrict the ability to perform the function indicated in the "Administrator" column in FMT_SMF_EXT.1.1<h:b>/Bluetooth</h:b> to the administrator.
+                <!-- 
                 There is no change to the text of this SFR. 
                 The SFR references FMT_SMF_EXT.1 and states that the OS shall permit the administrator role to perform the relevant functions listed in FMT_SMF_EXT.1. 
                 The function "Enable/Disable the Bluetooth interface" is listed as an optional management function in FMT_SMF_EXT.1 for both users and administrators. 
                 When this PP-Module is claimed, the administrator or user role must be able to enable/disable the Bluetooth interface. 
                 In other words, the function itself is moved from optional to mandatory, but this PP-Module does not require that it be implemented by a specific role. 
-                If the ST indicates that the administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply to it. 
+                If the ST indicates that the administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply to it.  --> 
               </title>
+              <note role="Application">
+                The management functions in FMT_SMF_EXT.1/Bluetooth require the function BT-1 to be supported by the TOE and manageable by an Administrator at minimum. All other management functions, 
+                and what roles may perform them, are optional. The ST must make it clear which of these functions are provided by the TOE and which roles are able to manage them.
+              </note>
               <aactivity>
                 <TSS>
-                There is no change to the text of this SFR or its Evaluation Activities in this PP-Module. 
-                The "Enable/Disable the Bluetooth interface" function defined in FMT_SMF_EXT.1.1 is mandatory for a TOE that claims conformance to this PP-Module. 
-                However, the PP-Module does not specify a role that must or must not be able to perform this function. 
-                The evaluator shall ensure that appropriate testing is performed on the administrative privileges required to perform this function based on the ST's description of what the TSF permits.
+                  The evaluator shall examine the TSS to ensure that it identifies the Bluetooth-related management functions that are supported by the TOE and the roles that are authorized to perform each function.<h:p/>
                 </TSS>
+                <Guidance>
+                  The evaluator shall examine the operational guidance to ensure that it provides sufficient guidance on each supported Bluetooth manaagement function to describe how the function is performed and any role restrictions on 
+                  the subjects that are authorized to perform the function.
+                </Guidance>
+                <Tests>
+                  For each function that is indicated as restricted to the
+                  administrator, the evaluation shall perform the function as an
+                  administrator, as specified in the Operational Guidance, and determine
+                  that it has the expected effect as outlined by the Operational Guidance
+                  and the SFR. The evaluator will then perform the function (or otherwise
+                  attempt to access the function) as a non-administrator and observe that
+                  they are unable to invoke that functionality.
+                </Tests>
+                
               </aactivity>
             </f-element>
           </f-component>
           
-          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions"> 
+          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="Bluetooth"> 
             <consistency-rationale>The ST author is required to include an optional management function defined in the Base-PP that relates to Bluetooth, 
               and to include additional management functions in this SFR based on the Bluetooth capability defined by the PP-Module. </consistency-rationale>
             <f-element>
               <title>
+                <!-- 
                 This PP-Module prescribes the following changes to this SFR as defined in the Base-PP: <h:ul>
                   <h:li>The function "Enable/disable Bluetooth interface" must be implemented, though this PP-Module does not mandate whether it be assigned to the Administrator or User role.</h:li>
                   <h:li>The following additional management functions are defined, and should be appended to the table in the Base-PP:</h:li>
-                </h:ul>
+                </h:ul>  -->
                 
-                
+                The OS shall be capable of performing the following <h:b>Bluetooth</h:b> management functions:
                 <h:table>
                   <h:tr>
                     <h:th>Function</h:th>
@@ -690,9 +720,9 @@
           </f-component>
           
         </sec:fmt>
-  
-      </modified-sfrs>
-      <additional-sfrs/>
+        
+        
+      </additional-sfrs>
       
       
       
@@ -734,7 +764,7 @@
               <h:ol>
                 <h:li>Start-up and shutdown of the audit functions</h:li>
                 <h:li>All auditable events for the [<h:i>not selected</h:i>] level of audit</h:li>
-                <h:li>[<h:i>Specifically defined auditable events in the Auditable Events table</h:i>]</h:li>
+                <h:li>[<h:i>Specifically defined auditable events in the Auditable Events table</h:i>].</h:li>
               </h:ol>
               
               <h:b><ctr id="audit" ctr-type="Table"> Auditable Events</ctr></h:b>
@@ -811,6 +841,16 @@
               </h:table>
               
             </title>
+          </f-element>
+            <f-element>
+              <title>The TSF shall record within each audit record at least the following information: <h:ol>
+                <h:li>Date and time of the event</h:li>
+                <h:li>Type of event</h:li>
+                <h:li>Subject identity</h:li>
+                <h:li>The outcome (success or failure) of the event</h:li>
+                <h:li>[<h:i>Additional information in the Auditable Events table</h:i>].</h:li>
+              </h:ol>
+              </title>
             <note role="application">It is not feasible for the <no-link>FIA_BLT_EXT.3</no-link> event to be audited if the rejection is performed at the HCI layer because the Bluetooth standard does not provide a notification 
               interface for this behavior in the HCI. This is why the event is labeled as optional. 
               However, if the rejection is performed above the HCI layer, it is expected that a conformant TOE should implement this functionality.</note>
