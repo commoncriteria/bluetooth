@@ -15,7 +15,7 @@
     <ReferenceTable>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2021-02-17</PPPubDate>
+      <PPPubDate>2021-03-31</PPPubDate>
       <Keywords>Bluetooth; NFC</Keywords>
     </ReferenceTable>
   </PPReference>
@@ -166,8 +166,8 @@
     <cclaims>
       <cclaim name="Conformance Statement">
         <description> This PP-Module inherits exact conformance as required from
-          the specified Base-PP and as defined in the <xref to="CC"/> and
-          <xref to="CEM"/> addenda for Exact Conformance, Selection-Based SFRs, and Optional
+          the specified Base-PP and as defined in the CC and
+          CEM addenda for Exact Conformance, Selection-Based SFRs, and Optional
           SFRs (dated May 2017).<h:p/> 
           The following PPs and PP-Modules are allowed to
           be specified in a PP-Configuration with this PP-Module. <h:ul>
@@ -179,7 +179,7 @@
       </cclaim>
       <cclaim name="CC Conformance Claims">
         <description>This PP-Module is conformant to Parts 2 (extended) and 3
-          (extended) of Common Criteria Version 3.1, Release 5 [<xref to="CC"/>].
+          (extended) of Common Criteria Version 3.1, Release 5 [CC].
         </description>
       </cclaim>
       <cclaim name="Package Claims">
@@ -317,103 +317,7 @@
 
       <modified-sfrs>
  
-        <sec:fau title="Security Audit (FAU)">
-          <f-component cc-id="fau_gen.1" name="Audit Data Generation"> 
-            <consistency-rationale>The ST author is instructed to add new auditable events for Bluetooth functionality; the SFR behavior itself is otherwise unmodified.</consistency-rationale>
-            <f-element>
-              <title>
-                In addition to the auditable events defined in the [MDF PP], 
-                the mobile device shall generate audit records for audit events related to Bluetooth functionality. 
-                A conformant TOE shall append Table 1 in the [MDF PP] with the following mandatory auditable events:
-                
-                
-                <h:table>
-                  <h:tr>
-                    <h:th>Requirement</h:th>
-                    <h:th>Auditable Events</h:th>
-                    <h:th>Additional Audit Record Contents</h:th>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FCS_CKM_EXT.8</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-
-                  <h:tr>
-                    <h:td rowspan="2">FIA_BLT_EXT.1</h:td>
-                    <h:td>Failed user authorization of Bluetooth device.</h:td>
-                    <h:td>User authorization decision (e.g., user rejected connection, incorrect pin entry).</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>Failed user authorization for local Bluetooth Service.</h:td>
-                    <h:td>Bluetooth address and name of device.  Bluetooth profile. Identity of local service with 
-                      <selectables>
-                        <selectable>service ID</selectable>
-                        <selectable>profile name</selectable>
-                      </selectables>.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td rowspan="2">FIA_BLT_EXT.2</h:td>
-                    <h:td>Initiation of Bluetooth connection.</h:td>
-                    <h:td>Bluetooth address and name of device.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>Failure of Bluetooth connection.</h:td>
-                    <h:td>Reason for failure.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.3 (optional)</h:td>
-                    <h:td>Duplicate connection attempt.</h:td>
-                    <h:td>BD_ADDR of connection attempt.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.4</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.5 (if claimed)</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.6</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.7</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.1</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.2</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.3/BR</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.3/LE (if claimed)</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                </h:table>
-
-              </title>
-              <note role="application">It is not feasible for the <no-link>FIA_BLT_EXT.3</no-link> event to be audited if the rejection is performed at the HCI layer because the Bluetooth standard does not provide a notification 
-                interface for this behavior in the HCI. This is why the event is labeled as optional. 
-                However, if the rejection is performed above the HCI layer, it is expected that a conformant TOE should implement this functionality.</note>
-              <aactivity>
-                <TSS>
-                There are additional auditable events that serve to extend the FAU_GEN.1 SFR found in the Base-PP. <h:p/>
-                This SFR is evaluated in the same manner as defined by the Evaluation Activities for the Base-PP. 
-                The only difference is that the evaluator shall also assess the auditable events required for this PP-Module in addition to those defined in the Base-PP.
-                </TSS>
-              </aactivity>
-            </f-element>
-          </f-component>
-          
-        </sec:fau>
+ 
 
 
         <sec:fmt title="Security Management (FMT)">
@@ -644,103 +548,7 @@
       
       
       <modified-sfrs>
-  
-        <sec:fau title="Security Audit (FAU)">
-          <f-component cc-id="fau_gen.1" name="Audit Data Generation"> 
-            <consistency-rationale>The ST author is instructed to add new auditable events for Bluetooth functionality; the SFR behavior itself is otherwise unmodified.</consistency-rationale>
-            <f-element>
-              <title>
-                In addition to the auditable events defined in the [GPOS PP], the OS shall generate audit records for the following audit events related to Bluetooth functionality:
-                
-                
-                <h:table>
-                  <h:tr>
-                    <h:th>Requirement</h:th>
-                    <h:th>Auditable Events</h:th>
-                    <h:th>Additional Audit Record Contents</h:th>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FCS_CKM_EXT.8</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  
-                  <h:tr>
-                    <h:td rowspan="2">FIA_BLT_EXT.1</h:td>
-                    <h:td>Failed user authorization of Bluetooth device.</h:td>
-                    <h:td>User authorization decision (e.g., user rejected connection, incorrect pin entry).</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>Failed user authorization for local Bluetooth Service.</h:td>
-                    <h:td>Bluetooth address and name of device.  Bluetooth profile. Identity of local service with 
-                      <selectables>
-                        <selectable>service ID</selectable>
-                        <selectable>profile name</selectable>
-                      </selectables>.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td rowspan="2">FIA_BLT_EXT.2</h:td>
-                    <h:td>Initiation of Bluetooth connection.</h:td>
-                    <h:td>Bluetooth address and name of device.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>Failure of Bluetooth connection.</h:td>
-                    <h:td>Reason for failure.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.3 (optional)</h:td>
-                    <h:td>Duplicate connection attempt.</h:td>
-                    <h:td>BD_ADDR of connection attempt.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.4</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.5 (if claimed)</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.6</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FIA_BLT_EXT.7</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.1</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.2</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.3/BR</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td>FTP_BLT_EXT.3/LE (if claimed)</h:td>
-                    <h:td colspan="2">None.</h:td>
-                  </h:tr>
-                </h:table>
-                
-              </title>
-              <note role="application">It is not feasible for the <no-link>FIA_BLT_EXT.3</no-link> event to be audited if the rejection is performed at the HCI layer because the Bluetooth standard 
-                does not provide a notification interface for this behavior in the HCI. This is why the event is labeled as optional.  
-                However, if the rejection is performed above the HCI layer, it is expected that a conformant TOE should implement this functionality.</note>
-              <aactivity>
-                <TSS>
-                  There are additional auditable events that serve to extend the FAU_GEN.1 SFR found in the Base-PP. <h:p/>
-                  This SFR is evaluated in the same manner as defined by the Evaluation Activities for the Base-PP. 
-                  The only difference is that the evaluator shall also assess the auditable events required for this PP-Module in addition to those defined in the Base-PP.
-                </TSS>
-              </aactivity>
-            </f-element>
-          </f-component>
-          
-        </sec:fau>
-        
+
         
         <sec:fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
@@ -915,6 +723,109 @@
     </base-pp>
       
     <man-sfrs>
+      
+      <sec:fau title="Security Audit (FAU)">
+        <f-component cc-id="fau_gen.1" name="Audit Data Generation" iteration="Bluetooth"> 
+          <consistency-rationale>The PP-Module defines auditable events for Bluetooth that extends the audit functionality defined in each Base-PP.</consistency-rationale>
+          <f-element>
+            <title>
+              The TSF shall be able to generate an audit record of the following auditable events: 
+              <h:p/>
+              <h:ol>
+                <h:li>Start-up and shutdown of the audit functions</h:li>
+                <h:li>All auditable events for the [<h:i>not selected</h:i>] level of audit</h:li>
+                <h:li>[<h:i>Specifically defined auditable events in the Auditable Events table</h:i>]</h:li>
+              </h:ol>
+              
+              <h:b><ctr id="audit" ctr-type="Table"> Auditable Events</ctr></h:b>
+              <h:table>
+                <h:tr>
+                  <h:th>Requirement</h:th>
+                  <h:th>Auditable Events</h:th>
+                  <h:th>Additional Audit Record Contents</h:th>
+                </h:tr>
+                <h:tr>
+                  <h:td>FCS_CKM_EXT.8</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                
+                <h:tr>
+                  <h:td rowspan="2">FIA_BLT_EXT.1</h:td>
+                  <h:td>Failed user authorization of Bluetooth device.</h:td>
+                  <h:td>User authorization decision (e.g., user rejected connection, incorrect pin entry).</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>Failed user authorization for local Bluetooth Service.</h:td>
+                  <h:td>Bluetooth address and name of device.  Bluetooth profile. Identity of local service with 
+                    <selectables>
+                      <selectable>service ID</selectable>
+                      <selectable>profile name</selectable>
+                    </selectables>.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td rowspan="2">FIA_BLT_EXT.2</h:td>
+                  <h:td>Initiation of Bluetooth connection.</h:td>
+                  <h:td>Bluetooth address and name of device.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>Failure of Bluetooth connection.</h:td>
+                  <h:td>Reason for failure.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FIA_BLT_EXT.3 (optional)</h:td>
+                  <h:td>Duplicate connection attempt.</h:td>
+                  <h:td>BD_ADDR of connection attempt.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FIA_BLT_EXT.4</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FIA_BLT_EXT.5 (if claimed)</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FIA_BLT_EXT.6</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FIA_BLT_EXT.7</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FTP_BLT_EXT.1</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FTP_BLT_EXT.2</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FTP_BLT_EXT.3/BR</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+                <h:tr>
+                  <h:td>FTP_BLT_EXT.3/LE (if claimed)</h:td>
+                  <h:td colspan="2">None.</h:td>
+                </h:tr>
+              </h:table>
+              
+            </title>
+            <note role="application">It is not feasible for the <no-link>FIA_BLT_EXT.3</no-link> event to be audited if the rejection is performed at the HCI layer because the Bluetooth standard does not provide a notification 
+              interface for this behavior in the HCI. This is why the event is labeled as optional. 
+              However, if the rejection is performed above the HCI layer, it is expected that a conformant TOE should implement this functionality.</note>
+            <aactivity>
+              <TSS>
+                There are additional auditable events that serve to extend the FAU_GEN.1 SFR found in each Base-PP. <h:p/>
+                This SFR is evaluated in the same manner as defined by the Evaluation Activities for the claimed Base-PP. 
+                The only difference is that the evaluator shall also assess the auditable events required for this PP-Module in addition to those defined in the claimed Base-PP.
+              </TSS>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+      </sec:fau>
+      
       <sec:fcs title="Cryptographic Support (FCS)">
         
         <ext-comp-def fam-id="FCS_CKM_EXT" title="Cryptographic Key Management">
