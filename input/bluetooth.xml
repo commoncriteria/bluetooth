@@ -30,13 +30,15 @@
 
   <sec:Introduction>
     <section title="Overview" id="ppoverview">
-      The scope of the Bluetooth <xref to="PP-Module"/> is to describe the security functionality of Bluetooth technology in terms of [<xref to="CC"/>] 
-      and to define functional and assurance requirements for the Bluetooth capability of mobile devices and operating systems. 
-      This <xref to="PP-Module"/> is intended for use with the following <xref to="Base-PP"/>s: <h:ul>
+      The scope of the Bluetooth PP-Module is to describe the security functionality of Bluetooth technology in terms of [CC] 
+      and to define functional and assurance requirements for the Bluetooth capability of mobile devices and operating systems.
+      Bluetooth is a communications standard for short-range wireless transmissions. 
+      Bluetooth is implemented in many commercial devices as a method for wirelessly connecting devices or accessories.
+      This PP-Module is intended for use with the following Base-PPs: <h:ul>
         <h:li>General Purpose Operating System (GPOS) Protection Profile, Version 4.2.1</h:li>
         <h:li>Mobile Device Fundamentals (MDF) Protection Profile, Version 3.1</h:li>
       </h:ul>
-      <h:p/> These <xref to="Base-PP"/>s are valid because consumer-grade desktop and mobile devices may both have Bluetooth hardware radios and so both desktop and mobile operating systems have the 
+      <h:p/> These Base-PPs are valid because consumer-grade desktop and mobile devices may both have Bluetooth hardware radios and so both desktop and mobile operating systems have the 
       software/firmware capability to allow products to use them.
     </section>
 <tech-terms>
@@ -107,14 +109,16 @@
 </tech-terms>
     <section title="Compliant Targets of Evaluation" id="TOEdescription">
      
-     The Target of Evaluation (TOE) in this <xref to="PP-Module"/> is a product that implements Bluetooth functionality.
-      This <xref to="PP-Module"/> describes the extended security functionality of Bluetooth in terms of CC. This PP-Module extends the Protection Profile for General Purpose Operating Systems or Mobile Device Fundamentals. 
+     The Target of Evaluation (TOE) in this PP-Module is a product that implements Bluetooth functionality.
+      This PP-Module describes the extended security functionality of Bluetooth in terms of CC. This PP-Module extends the Protection Profile for General Purpose Operating Systems or Mobile Device Fundamentals. 
       A compliant TOE will meet all mandatory SFRs defined in this PP-Module in addition to the mandatory SFRs of its claimed Base-PP. For each Base-PP, this PP-Module refines several of the Base-PP's SFRs so that they can accommodate the
       Bluetooth functionality defined by the PP-Module. A compliant TOE will claim all selection-based SFRs from this PP-Module and its Base-PP as needed based on the relevant selections in other requirements being chosen.
       <h:p/>
-      Note that <xref to="bibMDF"/>. evaluation activities require certain tests to be performed against all radios present on the device. When the TOE also claims conformance to this PP-Module, those tests are executed against the Bluetooth radio as well.
+      Note that <xref to="bibMDF"/> evaluation activities require certain tests to be performed against all radios present on the device. When the TOE also claims conformance to a PP-Configuration that includes 
+      this PP-Module, those tests are executed against the Bluetooth radio as well.
       <h:p/>
-      Also note that each Base-PP defines its own requirements for protection of data at rest. When the TOE also claims conformance to this PP-Module, any data that is used by the TOE's Bluetooth implementation is expected to be stored using the same protection mechanisms.
+      Also note that each Base-PP defines its own requirements for protection of data at rest. When the TOE also claims conformance to a PP-Configuration that includes this PP-Module, 
+      any data that is used by the TOE's Bluetooth implementation is expected to be stored using the same protection mechanisms.
 
       
       <section title="TOE Boundary" id="TOEboundary">
@@ -161,21 +165,21 @@
   <sec:Conformance_Claims>
     <cclaims>
       <cclaim name="Conformance Statement">
-        <description> This <xref to="PP-Module"/> inherits exact conformance as required from
-          the specified <xref to="Base-PP"/> and as defined in the <xref to="CC"/> and
+        <description> This PP-Module inherits exact conformance as required from
+          the specified Base-PP and as defined in the <xref to="CC"/> and
           <xref to="CEM"/> addenda for Exact Conformance, Selection-Based SFRs, and Optional
           SFRs (dated May 2017).<h:p/> 
           The following PPs and PP-Modules are allowed to
           be specified in a PP-Configuration with this PP-Module. <h:ul>
             <h:li>PP-Module for VPN Client, Version 2.1</h:li>
             <h:li>PP-Module for MDM Agent, Version 1.0</h:li>
-            <h:li>PP-Module for WLAN Clients, Version 1.0</h:li>
+            <!-- <h:li>PP-Module for WLAN Clients, Version 1.0</h:li> -->
           </h:ul>
         </description>
       </cclaim>
       <cclaim name="CC Conformance Claims">
-        <description>This <xref to="PP-Module"/> is conformant to Parts 2 (extended) and 3
-          (conformant) of Common Criteria Version 3.1, Release 5 [<xref to="CC"/>].
+        <description>This PP-Module is conformant to Parts 2 (extended) and 3
+          (extended) of Common Criteria Version 3.1, Release 5 [<xref to="CC"/>].
         </description>
       </cclaim>
       <cclaim name="Package Claims">
@@ -237,7 +241,8 @@
  <!--       No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
       TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth. -->
       
-      
+      <SOs/>
+      <!-- 
       <SOs>
 
         <SO name="O.PLACEHOLDER">
@@ -248,7 +253,7 @@
             placeholder
           </rationale>
         </SO>
-      </SOs> 
+      </SOs> --> 
       
     </sec:Security_Objectives_for_the_TOE>
     
@@ -1419,8 +1424,9 @@
             <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for [<h:i>LE</h:i>] and not negotiate encryption key sizes smaller than the minimum size.
             </title>
             <note role="application">
-              To conform to this PP-Module, the TOE must implement encryption for Bluetooth BR/EDR as required by FTP_BLT_EXT.1.1. A conformant TOE does not need to support Bluetooth LE;
-              however, if it does, then it must also support encryption for it. FTP_BLT_EXT.3/LE must therefore be claimed if 'LE' is selected in FTP_BLT_EXT.1.1.
+              The TOE must implement encryption for Bluetooth BR/EDR as required by FTP_BLT_EXT.1.1. 
+              A conformant TOE does not need to support Bluetooth LE; however, if it does, then it must also support encryption for it. 
+              FTP_BLT_EXT.3/LE must therefore be claimed if 'LE' is selected in FTP_BLT_EXT.1.1.
             </note>   
             
             <aactivity>
