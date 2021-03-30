@@ -158,7 +158,8 @@
   </sec:Introduction>
 
 
-  <sec:Conformance_Claims>
+<!--  <section id="conf" title="Conformance Claims" boilerplate="no">  -->
+  <sec:Conformance_Claims boilerplate="no"> 
     <cclaims>
       <cclaim name="Conformance Statement">
         <description> This <xref to="PP-Module"/> inherits exact conformance as required from
@@ -182,6 +183,7 @@
         <description>There are no package claims for this PP-Module.</description>
       </cclaim>
     </cclaims>
+<!--  </section>  -->
   </sec:Conformance_Claims>
 
 
