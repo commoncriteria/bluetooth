@@ -51,7 +51,7 @@ For more information see the [PP Development Wiki](https://github.com/commoncrit
 
 ----
 
-Protection Profile or Extended Package for QQQQ
+Protection Profile Module for Bluetooth
 ===============
 
 [![Build Status](https://travis-ci.com/commoncriteria/pp-template.svg?branch=master)](https://travis-ci.com/commoncriteria/pp-template)
@@ -66,8 +66,10 @@ A list of products that have passed evaluation against this Protection Profile c
 
 ## Draft Version
 
-* [Protection Profile for QQQQ](https://commoncriteria.github.io/pp/QQQQ/QQQQ-release.html) (html)
-* [Protection Profile for QQQQ](https://commoncriteria.github.io/pp/QQQQ/QQQQ-release.pdf) (pdf)
+* [PP-Module for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.html) (html)
+* [PP-Module for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.pdf) (pdf)
+* [PP-Module SD for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.html) (html)
+* [PP-Module SD for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.pdf) (pdf)
 
 ## Release Version
 * [Protection Profile for QQQQ](QQQQ)
