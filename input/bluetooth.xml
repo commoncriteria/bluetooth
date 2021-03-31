@@ -189,7 +189,7 @@
   </sec:Conformance_Claims>
 
 
-  <sec:spd title="Security Problem Description">
+  <sec:spd title="Security Problem Description" boilerplate="no">
     All threats, assumptions, organizational security policies, and/or objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. 
     This PP-Module does not add or remove any elements to the security problem definition given in the Base-PP. 
     The SFRs defined in this PP-Module provide additional mechanisms for mitigating the threats already defined in the Base-PPs due to the fact that including a 
@@ -220,7 +220,7 @@
     </sec:Assumptions>
     
 
-    <sec:Organizational_Security_Policies>
+    <sec:Organizational_Security_Policies boilerplate="no">
       <OSPs/>
       <!-- <OSP name="P.PLACEHOLDER">
         <description>No organizational policies have been identified that are specific to Bluetooth technology. However, any
@@ -236,7 +236,7 @@
   
 
 
-  <sec:Security_Objectives>
+  <sec:Security_Objectives boilerplate="no">
     <sec:Security_Objectives_for_the_TOE>
  <!--       No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
       TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth. -->
