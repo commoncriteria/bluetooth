@@ -761,7 +761,7 @@
             <title>
               The TSF shall be able to generate an audit record of the following auditable events: 
               <h:p/>
-              <h:ol>
+              <h:ol type="a">
                 <h:li>Start-up and shutdown of the audit functions</h:li>
                 <h:li>All auditable events for the [<h:i>not selected</h:i>] level of audit</h:li>
                 <h:li>[<h:i>Specifically defined auditable events in the Auditable Events table</h:i>].</h:li>
@@ -843,7 +843,7 @@
             </title>
           </f-element>
             <f-element>
-              <title>The TSF shall record within each audit record at least the following information: <h:ol>
+              <title>The TSF shall record within each audit record at least the following information: <h:ol type="a">
                 <h:li>Date and time of the event</h:li>
                 <h:li>Type of event</h:li>
                 <h:li>Subject identity</h:li>
