@@ -319,7 +319,7 @@
  
 <sec:fmt title="Security Management (FMT)">
   <f-component name="Specification of Management Functions Placeholder" cc-id="fmt_smf_ext.1">
-    <consistency-rationale></consistency-rationale>
+    <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
  <f-element>
    <title>
     
@@ -573,7 +573,7 @@
       <modified-sfrs>
         <sec:fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior Placeholder"> 
-            <consistency-rationale></consistency-rationale>
+            <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
     <f-element>
       <title>
         There is no change to the text of this SFR. 
@@ -588,7 +588,7 @@
           
          
           <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions Placeholder">
-            <consistency-rationale></consistency-rationale>
+            <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
             <f-element>
               <title>
                 This PP-Module prescribes the following changes to this SFR as defined in the Base-PP: <h:ul>
