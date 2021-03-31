@@ -171,7 +171,7 @@
           SFRs (dated May 2017).<h:p/> 
           The following PPs and PP-Modules are allowed to
           be specified in a PP-Configuration with this PP-Module. <h:ul>
-            <h:li>PP-Module for VPN Client, Version 2.1</h:li>
+            <h:li>PP-Module for VPN Client, Version 2.2</h:li>
             <h:li>PP-Module for MDM Agent, Version 1.0</h:li>
             <!-- <h:li>PP-Module for WLAN Clients, Version 1.0</h:li> -->
           </h:ul>
@@ -189,7 +189,7 @@
   </sec:Conformance_Claims>
 
 
-  <sec:spd title="Security Problem Description" boilerplate="no">
+  <sec:spd title="Security Problem Description">
     All threats, assumptions, organizational security policies, and/or objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. 
     This PP-Module does not add or remove any elements to the security problem definition given in the Base-PP. 
     The SFRs defined in this PP-Module provide additional mechanisms for mitigating the threats already defined in the Base-PPs due to the fact that including a 
@@ -220,7 +220,7 @@
     </sec:Assumptions>
     
 
-    <sec:Organizational_Security_Policies boilerplate="no">
+    <sec:Organizational_Security_Policies>
       <OSPs/>
       <!-- <OSP name="P.PLACEHOLDER">
         <description>No organizational policies have been identified that are specific to Bluetooth technology. However, any
@@ -236,7 +236,7 @@
   
 
 
-  <sec:Security_Objectives boilerplate="no">
+  <sec:Security_Objectives>
     <sec:Security_Objectives_for_the_TOE>
  <!--       No TOE security objectives have been identified that are specific to Bluetooth technology. However, any
       TOE security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth. -->
@@ -317,7 +317,23 @@
 
       <modified-sfrs>
  
+<sec:fmt title="Security Management (FMT)">
+  <f-component name="Specification of Management Functions Placeholder" cc-id="fmt_smf_ext.1">
+    <consistency-rationale></consistency-rationale>
+ <f-element>
+   <title>
+    
+                This PP-Module prescribes the following changes to this SFR as defined in the Base-PP: <h:ul>
+                  <h:li>The list of radios specified in the assignment for management function 4 ("enable/disable [<h:b>assignment:</h:b><h:i> list of all radios</h:i>]") 
+                    will include Bluetooth radios. Bluetooth BR/EDR and Bluetooth LE will be listed separately if the TSF provides the ability to enable/disable them separately 
+                    (i.e., if management function BT-3 below is claimed). Otherwise, both interfaces will be treated as one radio for that assignment.</h:li>
+                  <h:li>The following additional management functions are defined, and should be appended to the table in the Base-PP:</h:li>
+                </h:ul>  
+   </title>
+ </f-element>
+  </f-component>
  
+</sec:fmt> 
 
 
 
@@ -555,9 +571,35 @@
       
       
       <modified-sfrs>
-
-  
-  
+        <sec:fmt title="Security Management (FMT)">
+          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior Placeholder"> 
+            <consistency-rationale></consistency-rationale>
+    <f-element>
+      <title>
+        There is no change to the text of this SFR. 
+        The SFR references FMT_SMF_EXT.1 and states that the OS shall permit the administrator role to perform the relevant functions listed in FMT_SMF_EXT.1. 
+        The function "Enable/Disable the Bluetooth interface" is listed as an optional management function in FMT_SMF_EXT.1 for both users and administrators. 
+        When this PP-Module is claimed, the administrator or user role must be able to enable/disable the Bluetooth interface. 
+        In other words, the function itself is moved from optional to mandatory, but this PP-Module does not require that it be implemented by a specific role. 
+        If the ST indicates that the administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply to it
+      </title>
+    </f-element>
+          </f-component>
+          
+         
+          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions Placeholder">
+            <consistency-rationale></consistency-rationale>
+            <f-element>
+              <title>
+                This PP-Module prescribes the following changes to this SFR as defined in the Base-PP: <h:ul>
+                  <h:li>The function "Enable/disable Bluetooth interface" must be implemented, though this PP-Module does not mandate whether it be assigned to the Administrator or User role.</h:li>
+                  <h:li>The following additional management functions are defined, and should be appended to the table in the Base-PP:</h:li>
+                </h:ul>  
+              </title>
+            </f-element>
+          </f-component>
+            
+        </sec:fmt>
       </modified-sfrs>
       <additional-sfrs>
         
@@ -608,11 +650,7 @@
               and to include additional management functions in this SFR based on the Bluetooth capability defined by the PP-Module. </consistency-rationale>
             <f-element>
               <title>
-                <!-- 
-                This PP-Module prescribes the following changes to this SFR as defined in the Base-PP: <h:ul>
-                  <h:li>The function "Enable/disable Bluetooth interface" must be implemented, though this PP-Module does not mandate whether it be assigned to the Administrator or User role.</h:li>
-                  <h:li>The following additional management functions are defined, and should be appended to the table in the Base-PP:</h:li>
-                </h:ul>  -->
+
                 
                 The OS shall be capable of performing the following <h:b>Bluetooth</h:b> management functions:
                 <h:table>
