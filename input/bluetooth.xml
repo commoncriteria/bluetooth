@@ -162,7 +162,7 @@
   </sec:Introduction>
 
 
-  <sec:Conformance_Claims>
+  <sec:Conformance_Claims boilerplate="no">
     <cclaims>
       <cclaim name="Conformance Statement">
         <description> This PP-Module inherits exact conformance as required from
