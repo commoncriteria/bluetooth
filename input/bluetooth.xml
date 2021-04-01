@@ -224,11 +224,6 @@
 					that are transmitted outside of the TOE.
 			      </rationale>
 			  </objective-refer>
-		      <objective-refer ref="O.AUTH">
-			      <rationale>The threat T.NETWORK_EAVESDROP is countered by O.AUTH as this provides authentication of the 
-					Bluetooth endpoints of a trusted communication path.
-			      </rationale>
-		      </objective-refer>
 	      </threat>
 	      <threat name="T.NETWORK_ATTACK">
 		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
@@ -239,11 +234,6 @@
 				  are transmitted outside of the TOE.
 			      </rationale>
 			  </objective-refer>
-		      <objective-refer ref="O.AUTH">
-			      <rationale>The threat T.NETWORK_ATTACK is countered by O.AUTH as this provides authentication of the Bluetooth endpoints
-				  of a trusted communication path.
-			      </rationale>
-		      </objective-refer>
 	      </threat>		      
       </threats>     
     </sec:Threats>
