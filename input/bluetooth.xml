@@ -212,12 +212,12 @@
      </sec:Threats>  -->
     
     <sec:Threats>
-        This PP-Module defines no additional threats beyond those defined in the base MDF PP. Note however that the
-        SFRs defined in this PP-Module will assist in the mitigation of the following threats defined in the base PP:	      
+        This PP-Module defines no additional threats beyond those defined in the base PPs. Note however that the
+        SFRs defined in this PP-Module will assist in the mitigation of the following threats defined in the base PPs:	      
         <threats>
 	      <threat name="T.NETWORK_EAVESDROP">
-		      <description>See MDF PP, Section 3.1.</description>
-		      <consistency-rationale>This threat comes directly from the PP.</consistency-rationale>
+		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
+		      <consistency-rationale>This threat comes directly from the base PPs.</consistency-rationale>
 		      <objective-refer ref="O.PROTECTED_COMMS">
 			      <rationale>The threat T.NETWORK_EAVESDROP is countered by O.PROTECTED_COMMS as this provides the capability 
 					to communicate using Bluetooth as a means to maintain the confidentiality of data
@@ -231,8 +231,8 @@
 		      </objective-refer>
 	      </threat>
 	      <threat name="T.NETWORK_ATTACK">
-		      <description>See MDF PP, Section 3.1.</description>
-		      <consistency-rationale>This threat comes directly from the PP.</consistency-rationale>
+		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
+		      <consistency-rationale>This threat comes directly from the base PPs.</consistency-rationale>
 		      <objective-refer ref="O.PROTECTED_COMMS">
 			      <rationale>The threat T.NETWORK_ATTACK is countered by O.PROTECTED_COMMS as this provides the capability
 				  to communicate using Bluetooth as a means to maintain the confidentiality of data that
@@ -286,11 +286,11 @@
 
   <sec:Security_Objectives>
     <sec:Security_Objectives_for_the_TOE>
-	This PP-Module defines no additional TOE security objectives beyond those defined in the base MDF PP. Note however 
+	This PP-Module defines no additional TOE security objectives beyond those defined in the base PPs. Note however 
 		that the SFRs defined in this PP-Module will assist in the achievement of the following objectives defined in the base PP:    
 		<SOs>
 			<SO name="O.PROTECTED_COMMS">
-				<description>See MDF PP, Section 4.1.</description>
+				<description>See MDF PP, Section 4.1 and GPOS PP, Section 4.1.</description>
 				<consistency-rationale>This objective comes directly from the PP.</consistency-rationale> 
 				<addressed-by>FPT_BLT_EXT.1</addressed-by><rationale>FPT_BLT_EXT.1 supports the objective by requiring the TSF to disable certain Bluetooth profiles when they are inactive such that explicit user authorization is required to re-enable them.</rationale>
 				<addressed-by>FIA_BLT_EXT.1</addressed-by><rationale>FIA_BLT_EXT.1 supports the objective by ensuring that Bluetooth communications are not initiated without user approval.</rationale>
