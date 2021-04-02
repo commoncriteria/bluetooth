@@ -217,48 +217,23 @@
         <threats>
 	      <threat name="T.NETWORK_EAVESDROP">
 		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
-		      <consistency-rationale>This threat comes directly from the base PPs.</consistency-rationale>
+		      <consistency-rationale>This threat comes directly from both base PPs.</consistency-rationale>
 		      <objective-refer ref="O.PROTECTED_COMMS">
 			      <rationale>The threat T.NETWORK_EAVESDROP is countered by O.PROTECTED_COMMS as this provides the capability 
 					to communicate using Bluetooth as a means to maintain the confidentiality of data
 					that are transmitted outside of the TOE.
 			      </rationale>
 			  </objective-refer>
-		      <objective-refer ref="O.AUTH">
-			      <rationale>The threat T.NETWORK_EAVESDROP is countered by O.AUTH as this provides authentication of the 
-					Bluetooth endpoints of a trusted communication path.
-			      </rationale>
-		      </objective-refer>
 	      </threat>
 	      <threat name="T.NETWORK_ATTACK">
 		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
-		      <consistency-rationale>This threat comes directly from the base PPs.</consistency-rationale>
+		      <consistency-rationale>This threat comes directly from both base PPs.</consistency-rationale>
 		      <objective-refer ref="O.PROTECTED_COMMS">
 			      <rationale>The threat T.NETWORK_ATTACK is countered by O.PROTECTED_COMMS as this provides the capability
 				  to communicate using Bluetooth as a means to maintain the confidentiality of data that
 				  are transmitted outside of the TOE.
 			      </rationale>
 			  </objective-refer>
-		      <objective-refer ref="O.AUTH">
-			      <rationale>The threat T.NETWORK_ATTACK is countered by O.AUTH as this provides authentication of the Bluetooth endpoints
-				  of a trusted communication path.
-			      </rationale>
-		      </objective-refer>
-	      </threat>		      
-	      <threat name="T.MALICIOUS_APP">
-		      <description>See MDF PP, Section 3.1.</description>
-		      <consistency-rationale>This threat comes directly from the PP.</consistency-rationale>
-		      <objective-refer ref="O.PROTECTED_COMMS">
-			      <rationale>The threat T.MALICIOUS_APP is countered by O.PROTECTED_COMMS as this provides the capability to communicate 
-				  using Bluetooth as a means to maintain the confidentiality of data that are transmitted outside 
-				  of the TOE.
-			      </rationale>
-			  </objective-refer>
-		      <objective-refer ref="O.AUTH">
-			      <rationale>The threat T.MALICIOUS_APP is countered by O.AUTH as this provides the capability to authenticate the user
-				  and Bluetooth endpoints of a trusted path to ensure they are communicating with an authorized entity with appropriate privileges.
-			      </rationale>
-		      </objective-refer>
 	      </threat>		      
       </threats>     
     </sec:Threats>
@@ -301,12 +276,6 @@
 				<addressed-by>FIA_BLT_EXT.6</addressed-by><rationale>FIA_BLT_EXT.6 supports the objective by requiring the TSF to specify the Bluetooth profiles that it requires explicit user authorization to grant access to for trusted devices.</rationale>
 				<addressed-by>FTP_BLT_EXT.1</addressed-by><rationale>FTP_BLT_EXT.1 supports the objective by requiring the TSF to implement encryption to protect Bluetooth communications</rationale>
 				<addressed-by>FTP_BLT_EXT.2</addressed-by><rationale>FTP_BLT_EXT.2 supports the objective by requiring the TSF to prevent data transmission over Bluetooth if the paired device is not using encryption.</rationale>
-			</SO>
-			<SO name="O.AUTH">
-				<description>See MDF PP, Section 4.1.</description>
-				<consistency-rationale>This objective comes directly from the PP.</consistency-rationale> 
-				<addressed-by>FIA_BLT_EXT.1</addressed-by><rationale>FIA_BLT_EXT.1 supports the objective by requiring a user to authorize all Blueooth pairings.</rationale>
-				<addressed-by>FIA_BLT_EXT.2</addressed-by><rationale>FIA_BLT_EXT.2 supports the objective by requiring the TSF to enforce mutual authentication for Bluetooth.</rationale>
 			</SO>
 		</SOs>
     </sec:Security_Objectives_for_the_TOE>
