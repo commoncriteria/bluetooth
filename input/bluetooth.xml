@@ -383,6 +383,11 @@
                     (i.e., if management function BT-3 below is claimed). Otherwise, both interfaces will be treated as one radio for that assignment.</h:li>
                 </h:ul>  
    </title>
+   <aactivity>
+     <no-tests>
+       There is no change to the Base PP EAs for this SFR when this PP-Module is claimed.<h:p/> 
+     </no-tests>
+   </aactivity>
  </f-element>
   </f-component>
  
@@ -636,6 +641,11 @@
         In other words, the function itself is moved from optional to mandatory, but this PP-Module does not require that it be implemented by a specific role. 
         If the ST indicates that the administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply to it
       </title>
+      <aactivity>
+        <no-tests>
+          There is no change to the Base PP EAs for this SFR when this PP-Module is claimed.<h:p/> 
+        </no-tests>
+      </aactivity>
     </f-element>
           </f-component>
           
@@ -648,6 +658,11 @@
                   <h:li>The function "Enable/disable Bluetooth interface" must be implemented, though this PP-Module does not mandate whether it be assigned to the Administrator or User role.</h:li>
                 </h:ul>  
               </title>
+              <aactivity>
+                <no-tests>
+                  There is no change to the Base PP EAs for this SFR when this PP-Module is claimed.<h:p/> 
+                </no-tests>
+              </aactivity>
             </f-element>
           </f-component>
             
