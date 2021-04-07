@@ -267,7 +267,7 @@
 			<SO name="O.PROTECTED_COMMS">
 				<description>See MDF PP, Section 4.1 and GPOS PP, Section 4.1.</description>
 				<consistency-rationale>This objective comes directly from the PP.</consistency-rationale> 
-				<addressed-by>FPT_BLT_EXT.1</addressed-by><rationale>FPT_BLT_EXT.1 supports the objective by requiring the TSF to disable certain Bluetooth profiles when they are inactive such that explicit user authorization is required to re-enable them.</rationale>
+			  <!-- 			<addressed-by>FPT_BLT_EXT.1</addressed-by><rationale>FPT_BLT_EXT.1 supports the objective by requiring the TSF to disable certain Bluetooth profiles when they are inactive such that explicit user authorization is required to re-enable them.</rationale>  -->
 				<addressed-by>FIA_BLT_EXT.1</addressed-by><rationale>FIA_BLT_EXT.1 supports the objective by ensuring that Bluetooth communications are not initiated without user approval.</rationale>
 				<addressed-by>FIA_BLT_EXT.2</addressed-by><rationale>FIA_BLT_EXT.2 supports the objective by requiring the TSF to implement Bluetooth mutual authenticaiton.</rationale>
 				<addressed-by>FIA_BLT_EXT.3</addressed-by><rationale>FIA_BLT_EXT.3 supports the objective by preventing Bluetooth spoofing by rejecting connections with duplicate device addresses.</rationale>
