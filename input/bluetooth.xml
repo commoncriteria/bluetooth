@@ -646,7 +646,7 @@
               This PP-Module simply extends this requirement to apply to the management functions added and mandated by the PP-Module.</consistency-rationale>
             <f-element>
               <title>
-                The OS shall restrict the ability to perform the function indicated in the "Administrator" column in FMT_SMF_EXT.1.1<h:b>/Bluetooth</h:b> to the administrator.
+                The OS shall restrict the ability to perform the function indicated in the "Administrator" column in FMT_SMF_EXT.1.1<h:b>/BT</h:b> to the administrator.
                 <!-- 
                 There is no change to the text of this SFR. 
                 The SFR references FMT_SMF_EXT.1 and states that the OS shall permit the administrator role to perform the relevant functions listed in FMT_SMF_EXT.1. 
@@ -656,7 +656,7 @@
                 If the ST indicates that the administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply to it.  --> 
               </title>
               <note role="Application">
-                The management functions in FMT_SMF_EXT.1/Bluetooth require the function BT-1 to be supported by the TOE and manageable by an Administrator at minimum. All other management functions, 
+                The management functions in FMT_SMF_EXT.1/BT require the function BT-1 to be supported by the TOE and manageable by an Administrator at minimum. All other management functions, 
                 and what roles may perform them, are optional. The ST must make it clear which of these functions are provided by the TOE and which roles are able to manage them.
               </note>
               <aactivity>
