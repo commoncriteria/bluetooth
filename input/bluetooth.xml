@@ -7,8 +7,7 @@
   xmlns="https://niap-ccevs.org/cc/v1"
   xmlns:sec="https://niap-ccevs.org/cc/v1/section"
   xmlns:h="http://www.w3.org/1999/xhtml">
-  <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->
-  <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
+
   <PPReference>
    
     <ReferenceTable>
