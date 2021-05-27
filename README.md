@@ -1,8 +1,8 @@
 
 PP-Module for Bluetooth
 ===============
-
-[![Build Status](https://travis-ci.com/commoncriteria/pp-template.svg?branch=master)](https://travis-ci.com/commoncriteria/pp-template)
+[![Build](https://github.com/commoncriteria/bluetooth/actions/workflows/build.yml/badge.svg)](https://github.com/commoncriteria/bluetooth/actions/workflows/build.yml)
+[![Validate](https://github.com/commoncriteria/bluetooth/actions/workflows/validate.yml/badge.svg)](https://github.com/commoncriteria/bluetooth/actions/workflows/validate.yml)
 [![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/pp-template.svg?maxAge=2592000)](https://github.com/commoncriteria/pp-template/issues) 
 ![license](https://img.shields.io/badge/license-Unlicensed-blue.svg)
 
