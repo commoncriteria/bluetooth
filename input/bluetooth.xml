@@ -327,15 +327,15 @@
       url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417"> 
              xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> 
 
-      <base-pp id='MDF'>
-        <raw-url> https://github.com/commoncriteria/mobile-device/raw/master/input/mobile-device.xml</raw-url>
-        <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417</url>
-        -->
-    
+       -->
+   <!-- 
     <base-pp version="3.2" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
-      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417">
+      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417">-->
       <!--       xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
-
+      <base-pp id="b-mdf">
+        <raw-url>https://github.com/commoncriteria/mobile-device/raw/master/input/mobile-device.xml</raw-url>
+        <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417</url>
+ 
       <modified-sfrs>
  
 <sec:fmt title="Security Management (FMT)">
@@ -586,13 +586,14 @@
       <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
       
     </base-pp>
-    
+   <!-- 
     <base-pp version="4.2.1" name="General Purpose Operating Systems" product="Operating System" short="GPOS"
       url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442">
-      <!--       xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
+            xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
     
-      
-      
+     <base-pp id="b-gpos"> 
+       <raw-url>https://raw.githubusercontent.com/commoncriteria/operatingsystem/release-4.2.1/input/operatingsystem.xml</raw-url>
+       <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442</url>
       <modified-sfrs>
         <sec:fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
@@ -1442,7 +1443,6 @@
     <sel-sfrs>
 
       <sec:ftp title="Trusted Path/Channels">
-        
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (LE)" iteration="LE">
           <consistency-rationale></consistency-rationale>
 
@@ -1615,21 +1615,8 @@
         <description>
           <h:a href="https://www.bluetooth.org/en-us/specification/adopted-specifications">Bluetooth Core Specifications, version 5.2; December 2019</h:a>,</description>
       </entry>
-      <entry id="bibCC">
-        <tag>CC</tag>
-        <description>Common Criteria for Information Technology Security Evaluation - <h:ul>
-            <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
-                1: Introduction and General Model</h:a>, CCMB-2017-04-001, Version 3.1 Revision 5,
-              April 2017.</h:li>
-            <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf">Part
-                2: Security Functional Components</h:a>, CCMB-2017-04-002, Version 3.1 Revision 5,
-              April 2017.</h:li>
-            <h:li><h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part
-                3: Security Assurance Components</h:a>, CCMB-2017-04-003, Version 3.1 Revision 5,
-              April 2017.</h:li>
-          </h:ul></description>
-      </entry>
-      <entry id="bibCEM">
+     <cc-entry/>
+     <entry id="bibCEM">
         <tag>CEM</tag>
         <description>
           <h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R5.pdf">Common
@@ -1648,8 +1635,5 @@
       </entry>
  
     </bibliography>
- 
-    <acronyms/>
-  
 </Module>
 
