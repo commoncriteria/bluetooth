@@ -40,7 +40,8 @@
       software/firmware capability to allow products to use them.
     </section>
 <tech-terms>
-  
+  <term abbr="AFH" full="Adaptive Frequency Hopping"></term>
+  <term abbr="ACL" full="Asynchronous Connection-Less"/>
   <term abbr="AES" full="Advanced Encryption Standard"></term>
   <term abbr="AES-CCM" full="AES Counter with CBC-MAC Mode"></term>
   <term abbr="API" full="Application Programming Interface"></term>
@@ -267,7 +268,7 @@
 				<consistency-rationale>This objective comes directly from the PP.</consistency-rationale> 
 			  <!-- 			<addressed-by>FPT_BLT_EXT.1</addressed-by><rationale>FPT_BLT_EXT.1 supports the objective by requiring the TSF to disable certain Bluetooth profiles when they are inactive such that explicit user authorization is required to re-enable them.</rationale>  -->
 				<addressed-by>FIA_BLT_EXT.1</addressed-by><rationale>FIA_BLT_EXT.1 supports the objective by ensuring that Bluetooth communications are not initiated without user approval.</rationale>
-				<addressed-by>FIA_BLT_EXT.2</addressed-by><rationale>FIA_BLT_EXT.2 supports the objective by requiring the TSF to implement Bluetooth mutual authenticaiton.</rationale>
+				<addressed-by>FIA_BLT_EXT.2</addressed-by><rationale>FIA_BLT_EXT.2 supports the objective by requiring the TSF to implement Bluetooth mutual authentication.</rationale>
 				<addressed-by>FIA_BLT_EXT.3</addressed-by><rationale>FIA_BLT_EXT.3 supports the objective by preventing Bluetooth spoofing by rejecting connections with duplicate device addresses.</rationale>
 				<addressed-by>FIA_BLT_EXT.4</addressed-by><rationale>FIA_BLT_EXT.4 supports the objective by defining the TSF's implementation of Bluetooth Secure Simple Pairing.</rationale>
 				<addressed-by>FIA_BLT_EXT.5</addressed-by><rationale>FIA_BLT_EXT.5 supports the objective by requiring the TSF to support Secure Connections Only mode for the supported Bluetooth communication channels.</rationale>
@@ -957,7 +958,7 @@
           
           <comp-lev> requires the TSF to generate key pairs used for Bluetooth over a specified time period or in response to some observed event.</comp-lev>
           <management>No specific management functions are identified.</management>
-          <audit>There are no auidtable events foreseen.</audit>
+          <audit>There are no auditable events foreseen.</audit>
           <dependencies>FCS_CKM.1 Cryptographic Key Generation <h:p/>FPT_STM.1 Reliable Time Stamps<h:p/>FTP_BLT_EXT.1 Bluetooth Encryption</dependencies>
           <f-element>
             <title>The TSF shall generate public/private ECDH key pairs every <assignable>frequency of and/or criteria for new key pair generation</assignable>.

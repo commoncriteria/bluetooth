@@ -1,0 +1,12 @@
+Piconet
+ACL
+ADDR
+AFH
+BD
+BT
+wirelessly
+v4
+discoverable
+Wi-Fi
+OSP
+OSPs
