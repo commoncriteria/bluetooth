@@ -3,6 +3,7 @@ PP-Module for Bluetooth
 ===============
 [![Build](https://github.com/commoncriteria/bluetooth/workflows/Build/badge.svg)
 ![Validate](https://github.com/commoncriteria/bluetooth/workflows/Validate/badge.svg)
+[![Validation](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/validation.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/ValidationReport.txt)
 [![SanityChecks](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/warnings-badge.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/SanityChecksOutput.md)
 [![SpellCheck](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/spell-badge.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/SpellCheckReport.txt)
 [![QuickBuild](https://github.com/commoncriteria/bluetooth/actions/workflows/quick_build.yml/badge.svg)](https://commoncriteria.github.io/bluetooth)
