@@ -111,7 +111,7 @@ jobs:
     - name: Generate the validation badge SVG image
       uses: emibcn/badge-action@v1
       with:
-        label: 'Misspellings'
+        label: 'Validation'
         status: ${{ steps.validate.outputs.VALERRORS }}
         color: ${{ steps.coverage.outputs.valcolor }}
         path: ${{ steps.extract_branch.outputs.branch }}/validation.svg
@@ -147,7 +147,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add "${{ steps.extract_branch.outputs.branch }}"
+        git add output #"${{ steps.extract_branch.outputs.branch }}"
         git commit -m "Add/Update badges"
 
     - name: Push badge commit
