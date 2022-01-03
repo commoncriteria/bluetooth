@@ -1,0 +1,2577 @@
+										      >	This page is best viewed with JavaScript enabled! {#this-page-is-best-viewed-with-jav
+										      >	=================================================
+										      >
+										      >	::: {.center}
+										      >	![NIAP Logo](images/niaplogo.png)\
+										      >	Version: 1.0\
+										      >	2021-04-15\
+										      >	**National Information Assurance Partnership**\
+										      >	:::
+										      >
+										      >	Revision History {#revision-history style="page-break-before:always;"}
+										      >	----------------
+										      >
+										      >	  Version   Date         Comment
+										      >	  --------- ------------ -----------------
+										      >	  1.0       2021-04-15   Initial Release
+										      >
+										      >	Contents
+										      >	--------
+										      >
+										      >	::: {#toc .toc}
+										      >	[1Introduction](#Introduction)[1.1Overview](#ppoverview)[1.2Terms](#glossary)[1.2.1Co
+										      >	Criteria Terms](#cc-terms)[1.2.2Technical
+										      >	Terms](#tech-terms)[1.3Compliant Targets of
+										      >	Evaluation](#TOEdescription)[1.3.1TOE Boundary](#TOEboundary)[1.4Use
+										      >	Cases](#usecases)[2Conformance Claims](#Conformance_Claims)[3Security
+										      >	Problem
+										      >	Description](#spd)[3.1Threats](#Threats)[3.2Assumptions](#Assumptions)[3.3Organizatio
+										      >	Security Policies](#Organizational_Security_Policies)[4Security
+										      >	Objectives](#Security_Objectives)[4.1Security Objectives for the
+										      >	TOE](#Security_Objectives_for_the_TOE)[4.2Security Objectives for the
+										      >	Operational Environment](#objectivesEnvironment)[4.3Security Objectives
+										      >	Rationale](#SOR)[5Security Requirements](#)[5.1mobile devices PP
+										      >	Security Functional Requirements Direction ](#secreq-b-mdf)[5.1.1
+										      >	Modified SFRs ](#modsfr-b-mdf)[5.1.1.1Security Management
+										      >	(FMT)](#fmt)[5.1.2 Additional SFRs](#addsfr-b-mdf)[5.1.2.1Security
+										      >	Management (FMT)](#fmt)[5.2General Purpose Operating Systems PP Security
+										      >	Functional Requirements Direction ](#secreq-b-gpos)[5.2.1 Modified SFRs
+										      >	](#modsfr-b-gpos)[5.2.1.1Security Management (FMT)](#fmt)[5.2.2
+										      >	Additional SFRs](#addsfr-b-gpos)[5.2.2.1Security Management
+										      >	(FMT)](#fmt)[5.3TOE Security Functional
+										      >	Requirements](#man-sfrs)[5.3.1Security Audit
+										      >	(FAU)](#fau)[5.3.2Cryptographic Support (FCS)](#fcs)[5.3.3Identification
+										      >	and Authentication (FIA)](#fia)[5.3.4Trusted Path/Channels
+										      >	(FTP)](#ftp)[5.4TOE Security Functional Requirements
+										      >	Rationale](#obj-req-map)[5.5TOE Security Assurance
+										      >	Requirements](#mod-sars)[6Consistency Rationale](#mod-conrat)[6.1
+										      >	Protection Profile for mobile devices](#conrat-b-mdf)[6.1.1 Consistency
+										      >	of TOE Type ](#contoe-b-mdf)[6.1.2 Consistency of Security Problem
+										      >	Definition ](#consecprob-b-mdf)[6.1.3 Consistency of Objectives
+										      >	](#conobj-b-mdf)[6.1.4 Consistency of Requirements ](#conreq-b-mdf)[6.2
+										      >	Protection Profile for General Purpose Operating
+										      >	Systems](#conrat-b-gpos)[6.2.1 Consistency of TOE Type
+										      >	](#contoe-b-gpos)[6.2.2 Consistency of Security Problem Definition
+										      >	](#consecprob-b-gpos)[6.2.3 Consistency of Objectives
+										      >	](#conobj-b-gpos)[6.2.4 Consistency of Requirements
+										      >	](#conreq-b-gpos)[Appendix A - Optional SFRs](#opt-sfrs)[A.1Strictly
+										      >	Optional Requirements ](#opt-sfrs)[A.2Objective Requirements
+										      >	](#obj-sfrs)[A.2.1Identification and
+										      >	Authentication](#fia)[A.3Implementation-Based Requirements
+										      >	](#impl-dep-sfrs)[Appendix B - Selection-Based Requirements
+										      >	](#sel-sfrs)[B.1Trusted Path/Channels](#ftp)[Appendix C - Extended
+										      >	Component Definitions](#ext-comp-defs)[C.1Extended Components
+										      >	Table](#ext-comp-defs-bg)[C.2Extended Component
+										      >	Definitions](#ext-comp-defs-bg)[C.2.1Cryptographic Support
+										      >	(FCS)](#ext-comp-FCS)[C.2.1.1FCS\_CKM\_EXT Cryptographic Key
+										      >	Management](#ext-comp-FCS_CKM_EXT)[C.2.2Identification and
+										      >	Authentication (FIA)](#ext-comp-FIA)[C.2.2.1FIA\_BLT\_EXT Bluetooth
+										      >	Pairing](#ext-comp-FIA_BLT_EXT)[C.2.3Trusted Path/Channels
+										      >	(FTP)](#ext-comp-FTP)[C.2.3.1FTP\_BLT\_EXT Bluetooth Trusted
+										      >	Communications](#ext-comp-FTP_BLT_EXT)[Appendix D - Implicitly Satisfied
+										      >	Requirements](#satisfiedreqs)[Appendix E - Entropy Documentation and
+										      >	Assessment](#EAR)[Appendix F - Acronyms](#acronyms)[Appendix G -
+										      >	Bibliography](#appendix-bibliography)
+										      >	:::
+										      >
+										      >	1 Introduction {#Introduction .indexable data-level="1"}
+										      >	==============
+										      >
+										      >	1.1 Overview {#ppoverview .indexable data-level="2"}
+										      >	------------
+										      >
+										      >	The scope of the Bluetooth [PP-Module](#abbr_PP-Module) is to describe
+										      >	the security functionality of Bluetooth technology in terms of
+										      >	\[[CC](#abbr_CC)\] and to define functional and assurance requirements
+										      >	for the Bluetooth capability of mobile devices and operating systems.
+										      >	Bluetooth is a communications standard for short-range wireless
+										      >	transmissions. Bluetooth is implemented in many commercial devices as a
+										      >	method for wirelessly connecting devices or accessories. This
+										      >	[PP-Module](#abbr_PP-Module) is intended for use with the following
+										      >	Base-PPs:
+										      >
+										      >	-   General Purpose Operating System (GPOS) Protection Profile, Version
+										      >	    4.2.1
+										      >	-   Mobile Device Fundamentals ([MDF](#abbr_MDF)) Protection Profile,
+										      >	    Version 3.2
+										      >
+										      >	These Base-PPs are valid because consumer-grade desktop and mobile
+										      >	devices may both have Bluetooth hardware radios and so both desktop and
+										      >	mobile operating systems have the software/firmware capability to allow
+										      >	products to use them.
+										      >
+										      >	1.2 Terms {#glossary .indexable data-level="2"}
+										      >	---------
+										      >
+										      >	The following sections list Common Criteria and technology terms used in
+										      >	this document.
+										      >
+										      >	### 1.2.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
+										      >
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Assurance}                  | Grounds for confidence that a     |
+										      >	| Assurance                         | [TOE](#abbr_TOE) meets the SFRs   |
+										      >	| :::                               | [\[CC\]](#bibCC).                 |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Base_Protection_Profile}    | Protection Profile used as a      |
+										      >	| Base Protection Profile           | basis to build a                  |
+										      >	| ([Base-PP](#abbr_Base-PP))        | [PP-Configuration](#abbr_PP-Confi |
+										      >	| :::                               | guration).                        |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Collaborative_Protection_Pr | A Protection Profile developed by |
+										      >	| ofile}                            | international technical           |
+										      >	| Collaborative Protection Profile  | communities and approved by       |
+										      >	| ([cPP](#abbr_cPP))                | multiple schemes                  |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Common_Criteria}            | Common Criteria for Information   |
+										      >	| Common Criteria ([CC](#abbr_CC))  | Technology Security Evaluation    |
+										      >	| :::                               | (International Standard ISO/IEC   |
+										      >	|                                   | 15408).                           |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Common_Criteria_Testing_Lab | Within the context of the Common  |
+										      >	| oratory}                          | Criteria Evaluation and           |
+										      >	| Common Criteria Testing           | Validation Scheme (CCEVS), an IT  |
+										      >	| Laboratory                        | security evaluation facility,     |
+										      >	| :::                               | accredited by the National        |
+										      >	|                                   | Voluntary Laboratory              |
+										      >	|                                   | Accreditation Program (NVLAP) and |
+										      >	|                                   | approved by the NIAP Validation   |
+										      >	|                                   | Body to conduct Common            |
+										      >	|                                   | Criteria-based evaluations.       |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Common_Evaluation_Methodolo | Common Evaluation Methodology for |
+										      >	| gy}                               | Information Technology Security   |
+										      >	| Common Evaluation Methodology     | Evaluation.                       |
+										      >	| ([CEM](#abbr_CEM))                |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Distributed_TOE}            | A [TOE](#abbr_TOE) composed of    |
+										      >	| Distributed [TOE](#abbr_TOE)      | multiple components operating as  |
+										      >	| :::                               | a logical whole.                  |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Extended_Package}           | A deprecated document form for    |
+										      >	| Extended Package ([EP](#abbr_EP)) | collecting SFRs that implement a  |
+										      >	| :::                               | particular protocol, technology,  |
+										      >	|                                   | or functionality. See Functional  |
+										      >	|                                   | Packages.                         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Functional_Package}         | A document that collects SFRs for |
+										      >	| Functional Package                | a particular protocol,            |
+										      >	| ([FP](#abbr_FP))                  | technology, or functionality.     |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Operational_Environment}    | Hardware and software that are    |
+										      >	| Operational Environment           | outside the [TOE](#abbr_TOE)      |
+										      >	| ([OE](#abbr_OE))                  | boundary that support the         |
+										      >	| :::                               | [TOE](#abbr_TOE) functionality    |
+										      >	|                                   | and security policy.              |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Protection_Profile}         | An implementation-independent set |
+										      >	| Protection Profile                | of security requirements for a    |
+										      >	| ([PP](#abbr_PP))                  | category of products.             |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Protection_Profile_Configur | A comprehensive set of security   |
+										      >	| ation}                            | requirements for a product type   |
+										      >	| Protection Profile Configuration  | that consists of at least one     |
+										      >	| ([PP-Configuration](#abbr_PP-Conf | [Base-PP](#abbr_Base-PP) and at   |
+										      >	| iguration))                       | least one                         |
+										      >	| :::                               | [PP-Module](#abbr_PP-Module).     |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Protection_Profile_Module}  | An implementation-independent     |
+										      >	| Protection Profile Module         | statement of security needs for a |
+										      >	| ([PP-Module](#abbr_PP-Module))    | [TOE](#abbr_TOE) type             |
+										      >	| :::                               | complementary to one or more Base |
+										      >	|                                   | Protection Profiles.              |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Security_Assurance_Requirem | A requirement to assure the       |
+										      >	| ent}                              | security of the [TOE](#abbr_TOE). |
+										      >	| Security Assurance Requirement    |                                   |
+										      >	| ([SAR](#abbr_SAR))                |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Security_Functional_Require | A requirement for security        |
+										      >	| ment}                             | enforcement by the                |
+										      >	| Security Functional Requirement   | [TOE](#abbr_TOE).                 |
+										      >	| ([SFR](#abbr_SFR))                |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Security_Target}            | A set of implementation-dependent |
+										      >	| Security Target ([ST](#abbr_ST))  | security requirements for a       |
+										      >	| :::                               | specific product.                 |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Target_of_Evaluation}       | The product under evaluation.     |
+										      >	| Target of Evaluation              |                                   |
+										      >	| ([TOE](#abbr_TOE))                |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#TOE_Security_Functionality} | The security functionality of the |
+										      >	| [TOE](#abbr_TOE) Security         | product under evaluation.         |
+										      >	| Functionality ([TSF](#abbr_TSF))  |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#TOE_Summary_Specification}  | A description of how a            |
+										      >	| [TOE](#abbr_TOE) Summary          | [TOE](#abbr_TOE) satisfies the    |
+										      >	| Specification ([TSS](#abbr_TSS))  | SFRs in an [ST](#abbr_ST).        |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >
+										      >	### 1.2.2 Technical Terms {#tech-terms .indexable data-level="3"}
+										      >
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Authentication}             | Verifying the identity of         |
+										      >	| Authentication                    | communicating devices based on    |
+										      >	| :::                               | their Bluetooth address.          |
+										      >	|                                   | Bluetooth does not provide native |
+										      >	|                                   | user authentication.              |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Authorization}              | Allowing the control of resources |
+										      >	| Authorization                     | by ensuring that a device is      |
+										      >	| :::                               | authorized to use a service       |
+										      >	|                                   | before permitting it to do so.    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#BD_ADDR}                    | The Bluetooth device Address,     |
+										      >	| BD\_ADDR                          | which is used to identify a       |
+										      >	| :::                               | Bluetooth device.                 |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#BR/EDR}                     | Bluetooth basic rate              |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR)   | ([BR](#abbr_BR)) and enhanced     |
+										      >	| :::                               | data rate ([EDR](#abbr_EDR)).     |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#BR/EDR_Controller}          | A term referring to the Bluetooth |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR)   | Radio, Baseband, Link Manager,    |
+										      >	| Controller                        | and [HCI](#abbr_HCI) layers.      |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#BR/EDR_Piconet_Physical_Cha | A Channel that is divided into    |
+										      >	| nnel}                             | time slots in which each slot is  |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR)   | related to an RF hop frequency.   |
+										      >	| Piconet Physical Channel          | Consecutive hops normally         |
+										      >	| :::                               | correspond to different RF hop    |
+										      >	|                                   | frequencies and occur at a        |
+										      >	|                                   | standard hop rate of 1600 hops    |
+										      >	|                                   | per second. These consecutive     |
+										      >	|                                   | hops follow a pseudo-random       |
+										      >	|                                   | hopping sequence, hopping through |
+										      >	|                                   | a 79 RF channel set, or           |
+										      >	|                                   | optionally fewer channels when    |
+										      >	|                                   | Adaptive Frequency Hopping (AFH)  |
+										      >	|                                   | is in use.                        |
+										      >	|                                   | [BR](#abbr_BR)/[EDR](#abbr_EDR)/[ |
+										      >	|                                   | LE](#abbr_LE)                     |
+										      >	|                                   | Bluetooth basic rate              |
+										      >	|                                   | ([BR](#abbr_BR)), enhanced data   |
+										      >	|                                   | rate ([EDR](#abbr_EDR)) and low   |
+										      >	|                                   | energy ([LE](#abbr_LE)).          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Bluetooth}                  | A wireless communication link     |
+										      >	| Bluetooth                         | operating in the unlicensed ISM   |
+										      >	| :::                               | band at 2.4 GHz using a frequency |
+										      >	|                                   | hopping transceiver. It allows    |
+										      >	|                                   | real-time AV and data             |
+										      >	|                                   | communications between Bluetooth  |
+										      >	|                                   | Hosts. The link protocol is based |
+										      >	|                                   | on time slots.                    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Bluetooth_Baseband}         | The part of the Bluetooth system  |
+										      >	| Bluetooth Baseband                | that specifies or implements the  |
+										      >	| :::                               | medium access and physical layer  |
+										      >	|                                   | procedures to support the         |
+										      >	|                                   | exchange of real-time voice, data |
+										      >	|                                   | information streams, and ad hoc   |
+										      >	|                                   | networking between Bluetooth      |
+										      >	|                                   | devices.                          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Bluetooth_Controller}       | A generic term referring to a     |
+										      >	| Bluetooth Controller              | Primary Controller with or        |
+										      >	| :::                               | without a Secondary Controller.   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Bluetooth_Device}           | A device that is capable of       |
+										      >	| Bluetooth Device                  | short-range wireless              |
+										      >	| :::                               | communications using the          |
+										      >	|                                   | Bluetooth system.                 |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Bluetooth_Device_Address}   | A 48 bit address used to identify |
+										      >	| Bluetooth Device Address          | each Bluetooth device.            |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Connect_(to_service)}       | The establishment of a connection |
+										      >	| Connect (to service)              | to a service. If not already      |
+										      >	| :::                               | done, this also includes          |
+										      >	|                                   | establishment of a physical link, |
+										      >	|                                   | logical transport, logical link   |
+										      >	|                                   | and [L2CAP](#abbr_L2CAP) channel. |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Connectable_device}         | A [BR](#abbr_BR)/[EDR](#abbr_EDR) |
+										      >	| Connectable device                | device in range that periodically |
+										      >	| :::                               | listens on its page scan physical |
+										      >	|                                   | channel and will respond to a     |
+										      >	|                                   | page on that channel. An          |
+										      >	|                                   | [LE](#abbr_LE) device that is     |
+										      >	|                                   | advertising using a connectable   |
+										      >	|                                   | advertising event.                |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Connected_devices}          | Two                               |
+										      >	| Connected devices                 | [BR](#abbr_BR)/[EDR](#abbr_EDR)   |
+										      >	| :::                               | devices and with a physical link  |
+										      >	|                                   | between them. Connecting A phase  |
+										      >	|                                   | in the communication between      |
+										      >	|                                   | devices when a connection between |
+										      >	|                                   | the devices is being established. |
+										      >	|                                   | The connecting phase follows      |
+										      >	|                                   | after the link establishment      |
+										      >	|                                   | phase is completed.               |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Connection}                 | An interaction between two peer   |
+										      >	| Connection                        | applications or higher layer      |
+										      >	| :::                               | protocols mapped onto an          |
+										      >	|                                   | [L2CAP](#abbr_L2CAP) channel.     |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Connection_establishment}   | A procedure for creating a        |
+										      >	| Connection establishment          | connection mapped onto a channel. |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Connection_event}           | A series of one or more pairs of  |
+										      >	| Connection event                  | interleaving data packets sent    |
+										      >	| :::                               | between a master and a slave on   |
+										      >	|                                   | the same physical channel.        |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Creation_of_a_secure_connec | A procedure of establishing a     |
+										      >	| tion}                             | connection, including             |
+										      >	| Creation of a secure connection   | authentication and encryption.    |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Creation_of_a_trusted_relat | A procedure where the remote      |
+										      >	| ionship}                          | device is marked as a trusted     |
+										      >	| Creation of a trusted             | device. This includes storing a   |
+										      >	| relationship                      | common link key for future        |
+										      >	| :::                               | authentication, or pairing, when  |
+										      >	|                                   | a link key is not available.      |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Device_discovery}           | A procedure for retrieving the    |
+										      >	| Device discovery                  | Bluetooth device address, clock,  |
+										      >	| :::                               | class-of-device field and used    |
+										      >	|                                   | page scan mode from discoverable  |
+										      >	|                                   | devices.                          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Discoverable_Mode}          | A Bluetooth device that is        |
+										      >	| Discoverable Mode                 | performing inquiry scans in       |
+										      >	| :::                               | [BR](#abbr_BR)/[EDR](#abbr_EDR)   |
+										      >	|                                   | or advertising with a             |
+										      >	|                                   | discoverable or connectable       |
+										      >	|                                   | advertising event with a          |
+										      >	|                                   | discoverable flag set in          |
+										      >	|                                   | [LE](#abbr_LE).                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Discoverable_device}        | A [BR](#abbr_BR)/[EDR](#abbr_EDR) |
+										      >	| Discoverable device               | device in range that periodically |
+										      >	| :::                               | listens on an inquiry scan        |
+										      >	|                                   | physical channel and will respond |
+										      >	|                                   | to an inquiry on that channel. An |
+										      >	|                                   | [LE](#abbr_LE) device in range    |
+										      >	|                                   | that is advertising with a        |
+										      >	|                                   | connectable or scannable          |
+										      >	|                                   | advertising event with a          |
+										      >	|                                   | discoverable flag set in the      |
+										      >	|                                   | advertising data. This device is  |
+										      >	|                                   | in the discoverable mode.         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Discovery_procedure}        | A Bluetooth device that is        |
+										      >	| Discovery procedure               | carrying out the inquiry          |
+										      >	| :::                               | procedure in                      |
+										      >	|                                   | [BR](#abbr_BR)/[EDR](#abbr_EDR)   |
+										      >	|                                   | or scanning for advertisers using |
+										      >	|                                   | a discoverable or connectable     |
+										      >	|                                   | advertising event with a          |
+										      >	|                                   | discoverable flag set in          |
+										      >	|                                   | [LE](#abbr_LE).                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Host}                       | A logical entity defined as all   |
+										      >	| Host                              | of the layers below the non-core  |
+										      >	| :::                               | profiles and above the Host       |
+										      >	|                                   | Controller interface              |
+										      >	|                                   | ([HCI](#abbr_HCI)); i.e.          |
+										      >	|                                   | Bluetooth Host attached to a      |
+										      >	|                                   | Bluetooth Controller may          |
+										      >	|                                   | communicate with other Bluetooth  |
+										      >	|                                   | Hosts attached to their           |
+										      >	|                                   | Controllers as well.              |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#L2CAP_Channel}              | A logical connection on           |
+										      >	| [L2CAP](#abbr_L2CAP) Channel      | [L2CAP](#abbr_L2CAP) level        |
+										      >	| :::                               | between two devices serving a     |
+										      >	|                                   | single application or higher      |
+										      >	|                                   | layer protocol.                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#L2CAP_Channel_establishment | A procedure for establishing a    |
+										      >	| }                                 | logical connection on             |
+										      >	| [L2CAP](#abbr_L2CAP) Channel      | [L2CAP](#abbr_L2CAP) level.       |
+										      >	| establishment                     |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#LMP_authentication}         | An [LMP](#abbr_LMP) level         |
+										      >	| [LMP](#abbr_LMP) authentication   | procedure for verifying the       |
+										      >	| :::                               | identity of a remote device.      |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#LMP_pairing}                | A procedure that authenticates    |
+										      >	| [LMP](#abbr_LMP) pairing          | two devices and creates a common  |
+										      >	| :::                               | link key that can be used as a    |
+										      >	|                                   | basis for a trusted relationship  |
+										      >	|                                   | or a (single) secure connection.  |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Link}                       | Shorthand for a logical link.     |
+										      >	| Link                              |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Link_establishment}         | A procedure for establishing the  |
+										      >	| Link establishment                | default ACL link and hierarchy of |
+										      >	| :::                               | links and channels between        |
+										      >	|                                   | devices.                          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Link_key}                   | A secret that is known by two     |
+										      >	| Link key                          | devices and is used to            |
+										      >	| :::                               | authenticate the link.            |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Logical_Link_Control_and_Ad | A data link protocol used in the  |
+										      >	| aptation_Protocol}                | Bluetooth protocol stack.         |
+										      >	| Logical Link Control and          |                                   |
+										      >	| Adaptation Protocol               |                                   |
+										      >	| ([L2CAP](#abbr_L2CAP))            |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Logical_link}               | The lowest architectural level    |
+										      >	| Logical link                      | used to offer independent data    |
+										      >	| :::                               | transport services to clients of  |
+										      >	|                                   | the Bluetooth system.             |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Name_discovery}             | A procedure for retrieving the    |
+										      >	| Name discovery                    | user-friendly name (the Bluetooth |
+										      >	| :::                               | device name) of a connectable     |
+										      >	|                                   | device.                           |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#OBEX_Push}                  | A method of Bluetooth one-way     |
+										      >	| [OBEX](#abbr_OBEX) Push           | file transfer that is initiated   |
+										      >	| :::                               | by the entity that is providing   |
+										      >	|                                   | the file.                         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#PIN}                        | A user-friendly value that can be |
+										      >	| PIN                               | used to authenticate connections  |
+										      >	| :::                               | to a device before pairing has    |
+										      >	|                                   | taken place.                      |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Paired_device}              | A Bluetooth device for which a    |
+										      >	| Paired device                     | link key has been created (either |
+										      >	| :::                               | before connection establishment   |
+										      >	|                                   | was requested or during           |
+										      >	|                                   | connecting phase).                |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Piconet}                    | A collection of devices occupying |
+										      >	| Piconet                           | a shared physical channel where   |
+										      >	| :::                               | one of the devices is the Piconet |
+										      >	|                                   | Master and the remaining devices  |
+										      >	|                                   | are connected to it.              |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Piconet_Master}             | The                               |
+										      >	| Piconet Master                    | [BR](#abbr_BR)/[EDR](#abbr_EDR)   |
+										      >	| :::                               | device in a piconet whose         |
+										      >	|                                   | Bluetooth Clock and Bluetooth     |
+										      >	|                                   | Device Address are used to define |
+										      >	|                                   | the piconet physical channel      |
+										      >	|                                   | characteristics.                  |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Piconet_Slave}              | Any                               |
+										      >	| Piconet Slave                     | [BR](#abbr_BR)/[EDR](#abbr_EDR)   |
+										      >	| :::                               | device in a piconet that is not   |
+										      >	|                                   | the Piconet Master, but is        |
+										      >	|                                   | connected to the Piconet Master.  |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#RFCOMM}                     | A transport protocol used in the  |
+										      >	| RFCOMM                            | Bluetooth protocol stack that     |
+										      >	| :::                               | emulates RS-232 serial port       |
+										      >	|                                   | connections.                      |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Trusted_Device}             | A device that has a fixed         |
+										      >	| Trusted Device                    | relationship with another device  |
+										      >	| :::                               | and has full access to all        |
+										      >	|                                   | services.                         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Unknown_device}             | A Bluetooth device for which no   |
+										      >	| Unknown device                    | information (Bluetooth Device     |
+										      >	| :::                               | Address, link key or other) is    |
+										      >	|                                   | stored.                           |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Untrusted_Device}           | A device that does not have an    |
+										      >	| Untrusted Device                  | established relationship with     |
+										      >	| :::                               | another Bluetooth device, which   |
+										      >	|                                   | results in the untrusted device   |
+										      >	|                                   | receiving restricted access to    |
+										      >	|                                   | services.                         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >
+										      >	1.3 Compliant Targets of Evaluation {#TOEdescription .indexable data-level="2"}
+										      >	-----------------------------------
+										      >
+										      >	The Target of Evaluation ([TOE](#abbr_TOE)) in this
+										      >	[PP-Module](#abbr_PP-Module) is a product that implements Bluetooth
+										      >	functionality. This [PP-Module](#abbr_PP-Module) describes the extended
+										      >	security functionality of Bluetooth in terms of [CC](#abbr_CC). This
+										      >	[PP-Module](#abbr_PP-Module) extends the Protection Profile for General
+										      >	Purpose Operating Systems or Mobile Device Fundamentals. A compliant
+										      >	[TOE](#abbr_TOE) will meet all mandatory SFRs defined in this
+										      >	[PP-Module](#abbr_PP-Module) in addition to the mandatory SFRs of its
+										      >	claimed [Base-PP](#abbr_Base-PP). For each [Base-PP](#abbr_Base-PP),
+										      >	this [PP-Module](#abbr_PP-Module) refines several of the
+										      >	[Base-PP](#abbr_Base-PP)\'s SFRs so that they can accommodate the
+										      >	Bluetooth functionality defined by the [PP-Module](#abbr_PP-Module). A
+										      >	compliant [TOE](#abbr_TOE) will claim all selection-based SFRs from this
+										      >	[PP-Module](#abbr_PP-Module) and its [Base-PP](#abbr_Base-PP) as needed
+										      >	based on the relevant selections in other requirements being chosen.
+										      >
+										      >	Note that [\[MDF\]](#bibMDF) evaluation activities require certain tests
+										      >	to be performed against all radios present on the device. When the
+										      >	[TOE](#abbr_TOE) also claims conformance to a
+										      >	[PP-Configuration](#abbr_PP-Configuration) that includes this
+										      >	[PP-Module](#abbr_PP-Module), those tests are executed against the
+										      >	Bluetooth radio as well.
+										      >
+										      >	Also note that each [Base-PP](#abbr_Base-PP) defines its own
+										      >	requirements for protection of data at rest. When the [TOE](#abbr_TOE)
+										      >	also claims conformance to a [PP-Configuration](#abbr_PP-Configuration)
+										      >	that includes this [PP-Module](#abbr_PP-Module), any data that is used
+										      >	by the [TOE](#abbr_TOE)\'s Bluetooth implementation is expected to be
+										      >	stored using the same protection mechanisms.
+										      >
+										      >	### 1.3.1 TOE Boundary {#TOEboundary .indexable data-level="3"}
+										      >
+										      >	The Bluetooth implementation is a logical component executing on an end
+										      >	user personal computing or mobile device. As such, the [TOE](#abbr_TOE)
+										      >	must rely heavily on the [TOE](#abbr_TOE)\'s operational environment
+										      >	(host platform, network stack, and operating system) for its execution
+										      >	domain and its proper usage. The [TOE](#abbr_TOE) will rely on the IT
+										      >	environment to address much of the security functionality related to
+										      >	administrative functions. The physical boundary of the [TOE](#abbr_TOE)
+										      >	includes the physical device on which it is installed, as this device
+										      >	will contain an internal or external Bluetooth radio that is used as the
+										      >	physical medium for transmitting and receiving data over the Bluetooth
+										      >	logical channel.
+										      >
+										      >	1.4 Use Cases {#usecases .indexable data-level="2"}
+										      >	-------------
+										      >
+										      >	Requirements in this [PP-Module](#abbr_PP-Module) are designed to
+										      >	address the security problems in at least the following use cases. These
+										      >	use cases are intentionally very broad, as many specific use cases exist
+										      >	within these larger categories.
+										      >
+										      >	 \[USE CASE 1\] General-Purpose Operating System
+										      >	:   This use case is for a Bluetooth [TOE](#abbr_TOE) that is part of a
+										      >	    general-purpose operating system. Specifically, the Bluetooth
+										      >	    [TOE](#abbr_TOE) is expected to be part of the operating system
+										      >	    itself and not a standalone third-party application that is
+										      >	    installed on top of it.
+										      >
+										      >	 \[USE CASE 2\] Mobile Device
+										      >	:   This use case is for a Bluetooth [TOE](#abbr_TOE) that is part of a
+										      >	    mobile operating system that runs on a mobile device. Specifically,
+										      >	    the Bluetooth [TOE](#abbr_TOE) is expected to be part of the mobile
+										      >	    operating system itself and not a standalone third-party application
+										      >	    that is acquired from the mobile vendor\'s application store.
+										      >
+										      >	2 Conformance Claims {#Conformance_Claims .indexable data-level="1"}
+										      >	====================
+										      >
+										      >	Conformance Statement
+										      >	:   This [PP-Module](#abbr_PP-Module) inherits exact conformance as
+										      >	    required from the specified [Base-PP](#abbr_Base-PP) and as defined
+										      >	    in the [CC](#abbr_CC) and [CEM](#abbr_CEM) addenda for Exact
+										      >	    Conformance, Selection-Based SFRs, and Optional SFRs (dated May
+										      >	    2017).
+										      >	    The following PPs and [PP](#abbr_PP)-Modules are allowed to be
+										      >	    specified in a [PP-Configuration](#abbr_PP-Configuration) with this
+										      >	    [PP-Module](#abbr_PP-Module).
+										      >	    -   [PP-Module](#abbr_PP-Module) for VPN Client, Version 2.2
+										      >	    -   [PP-Module](#abbr_PP-Module) for MDM Agent, Version 1.0
+										      >
+										      >	CC Conformance Claims
+										      >	:   This [PP-Module](#abbr_PP-Module) is conformant to Parts 2
+										      >	    (extended) and 3 (extended) of Common Criteria Version 3.1, Release
+										      >	    5 \[[CC](#abbr_CC)\].
+										      >
+										      >	Package Claims
+										      >	:   There are no package claims for this [PP-Module](#abbr_PP-Module).
+										      >
+										      >	3 Security Problem Description {#spd .indexable data-level="1"}
+										      >	==============================
+										      >
+										      >	All threats, assumptions, organizational security policies, and/or
+										      >	objectives that apply to this [PP-Module](#abbr_PP-Module) are inherited
+										      >	from the [Base-PP](#abbr_Base-PP) to which the [TOE](#abbr_TOE) also
+										      >	conforms. This [PP-Module](#abbr_PP-Module) does not add or remove any
+										      >	elements to the security problem definition given in the
+										      >	[Base-PP](#abbr_Base-PP). The SFRs defined in this
+										      >	[PP-Module](#abbr_PP-Module) provide additional mechanisms for
+										      >	mitigating the threats already defined in the Base-PPs due to the fact
+										      >	that including a Bluetooth implementation introduces a new external
+										      >	interface to the underlying general-purpose OS or mobile device
+										      >	platform.
+										      >
+										      >	3.1 Threats {#Threats .indexable data-level="2"}
+										      >	-----------
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) defines no additional threats beyond
+										      >	those defined in the base PPs. Note however that the SFRs defined in
+										      >	this [PP-Module](#abbr_PP-Module) will assist in the mitigation of the
+										      >	following threats defined in the base PPs:
+										      >
+										      >	T.NETWORK\_EAVESDROP
+										      >	:   See [MDF](#abbr_MDF) [PP](#abbr_PP), Section 3.1 and GPOS
+										      >	    [PP](#abbr_PP), Section 3.1.
+										      >
+										      >	T.NETWORK\_ATTACK
+										      >	:   See [MDF](#abbr_MDF) [PP](#abbr_PP), Section 3.1 and GPOS
+										      >	    [PP](#abbr_PP), Section 3.1.
+										      >
+										      >	3.2 Assumptions {#Assumptions .indexable data-level="2"}
+										      >	---------------
+										      >
+										      >	This document does not define any additional assumptions.
+										      >
+										      >	3.3 Organizational Security Policies {#Organizational_Security_Policies .indexable da
+										      >	------------------------------------
+										      >
+										      >	An organization deploying the [TOE](#abbr_TOE) is expected to satisfy
+										      >	the organizational security policy listed below in addition to all
+										      >	organizational security policies defined by the claimed base
+										      >	[PP](#abbr_PP).
+										      >
+										      >	This document does not define any additional OSPs.
+										      >
+										      >	4 Security Objectives {#Security_Objectives .indexable data-level="1"}
+										      >	=====================
+										      >
+										      >	4.1 Security Objectives for the TOE {#Security_Objectives_for_the_TOE .indexable data
+										      >	-----------------------------------
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) defines no additional [TOE](#abbr_TOE)
+										      >	security objectives beyond those defined in the base PPs. Note however
+										      >	that the SFRs defined in this [PP-Module](#abbr_PP-Module) will assist
+										      >	in the achievement of the following objectives defined in the base
+										      >	[PP](#abbr_PP):
+										      >
+										      >	O.PROTECTED\_COMMS
+										      >	:   See [MDF](#abbr_MDF) [PP](#abbr_PP), Section 4.1 and GPOS
+										      >	    [PP](#abbr_PP), Section 4.1.
+										      >
+										      >	4.2 Security Objectives for the Operational Environment {#objectivesEnvironment .inde
+										      >	-------------------------------------------------------
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any objectives for the
+										      >	Operational Environment.
+										      >
+										      >	No environmental security objectives have been identified that are
+										      >	specific to Bluetooth technology. However, any environmental security
+										      >	objectives defined in the Base-PPs will also apply to the portion of the
+										      >	[TOE](#abbr_TOE) that implements Bluetooth.
+										      >
+										      >	4.3 Security Objectives Rationale {#SOR .indexable,h2 data-level="2"}
+										      >	---------------------------------
+										      >
+										      >	This section describes how the assumptions, threats, and organizational
+										      >	security policies map to the security objectives.
+										      >
+										      >	  ----------------------------------------------- -----------------------------------
+										      >	  Threat, Assumption, or OSP                      Security Objectives                
+										      >
+										      >	  [T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP)\   [O.PROTECTED\_COMMS](#O.PROTECTED_C
+										      >
+										      >	  [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)\         [O.PROTECTED\_COMMS](#O.PROTECTED_C
+										      >	  ----------------------------------------------- -----------------------------------
+										      >
+										      >	  : [Table [1]{.counter}]{#t-sec-obj-rat .ctr data-myid="t-sec-obj-rat"
+										      >	  data-counter-type="ct-Table"}: Security Objectives Rationale
+										      >
+										      >	5 Security Requirements {#security-requirements .indexable data-level="1"}
+										      >	=======================
+										      >
+										      >	This chapter describes the security requirements which have to be
+										      >	fulfilled by the product under evaluation. Those requirements comprise
+										      >	functional components from Part 2 and assurance components from Part 3
+										      >	of [\[CC\]](#bibCC). The following conventions are used for the
+										      >	completion of operations:
+										      >
+										      >	-   **Refinement** operation (denoted by **bold text** or
+										      >	    ~~strikethrough text~~): is used to add details to a requirement
+										      >	    (including replacing an assignment with a more restrictive
+										      >	    selection) or to remove part of the requirement that is made
+										      >	    irrelevant through the completion of another operation, and thus
+										      >	    further restricts a requirement.
+										      >	-   **Selection** (denoted by *italicized text*): is used to select one
+										      >	    or more options provided by the \[[CC](#abbr_CC)\] in stating a
+										      >	    requirement.
+										      >	-   **Assignment** operation (denoted by [italicized
+										      >	    text]{.assignable-content}): is used to assign a specific value to
+										      >	    an unspecified parameter, such as the length of a password. Showing
+										      >	    the value in square brackets indicates assignment.
+										      >	-   **Iteration** operation: is indicated by appending the
+										      >	    [SFR](#abbr_SFR) name with a slash and unique identifier suggesting
+										      >	    the purpose of the operation, e.g. \"/EXAMPLE1.\"
+										      >
+										      >	5.1 mobile devices PP Security Functional Requirements Direction {#secreq-b-mdf .inde
+										      >	----------------------------------------------------------------
+										      >
+										      >	In a [PP-Configuration](#abbr_PP-Configuration) that includes mobile
+										      >	devices [PP](#abbr_PP), the [TOE](#abbr_TOE) is expected to rely on some
+										      >	of the security functions implemented by the as a whole and evaluated
+										      >	against the mobile devices [PP](#abbr_PP). The following sections
+										      >	describe any modifications that the [ST](#abbr_ST) author must make to
+										      >	the SFRs defined in the mobile devices [PP](#abbr_PP) in addition to
+										      >	what is mandated by [Section 5.3 TOE Security Functional
+										      >	Requirements](#man-sfrs){.dynref}.
+										      >
+										      >	### 5.1.1 Modified SFRs {#modsfr-b-mdf .indexable data-level="3"}
+										      >
+										      >	The SFRs listed in this section are defined in the mobile devices
+										      >	[PP](#abbr_PP) and relevant to the secure operation of the
+										      >	[TOE](#abbr_TOE).
+										      >
+										      >	#### 5.1.1.1 Security Management (FMT) {#fmt .indexable data-level="4"}
+										      >
+										      >	::: {#FMT_SMF_EXT.1 .comp}
+										      >	#### FMT\_SMF\_EXT.1 Specification of Management Functions
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_SMF_EXT.1.1 .reqid}
+										      >	[FMT\_SMF\_EXT.1.1](#FMT_SMF_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	This [PP-Module](#abbr_PP-Module) does not modify this [SFR](#abbr_SFR)
+										      >	as it is defined in the [MDF](#abbr_MDF) [PP](#abbr_PP). However, note
+										      >	that this [PP-Module](#abbr_PP-Module) requires the list of radios
+										      >	specified in the assignment for management function 4 (\"enable/disable
+										      >	\[**assignment:** *list of all radios*\]\") to include Bluetooth radios.
+										      >	Bluetooth [BR](#abbr_BR)/[EDR](#abbr_EDR) and Bluetooth [LE](#abbr_LE)
+										      >	will be listed separately if the [TSF](#abbr_TSF) provides the ability
+										      >	to enable/disable them separately (i.e., if management function BT-3
+										      >	below is claimed). Otherwise, both interfaces will be treated as one
+										      >	radio for that assignment.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 5.1.2 Additional SFRs {#addsfr-b-mdf .indexable data-level="3"}
+										      >
+										      >	This section defines additional SFRs that must be added to the
+										      >	[TOE](#abbr_TOE) boundary in order to implement the functionality in any
+										      >	[PP-Configuration](#abbr_PP-Configuration) where the mobile devices
+										      >	[PP](#abbr_PP) is claimed as the [Base-PP](#abbr_Base-PP).
+										      >
+										      >	#### 5.1.2.1 Security Management (FMT) {#fmt .indexable data-level="4"}
+										      >
+										      >	::: {#FMT_SMF_EXT.1/BT .comp}
+										      >	#### FMT\_SMF\_EXT.1/BT Specification of Management Functions
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_SMF_EXT.1.1/BT .reqid}
+										      >	[FMT\_SMF\_EXT.1.1/BT](#FMT_SMF_EXT.1.1/BT){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall be capable of performing the following
+										      >	**Bluetooth** management functions:
+										      >
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| Function                                 | Impl | User | Admi | Admi |
+										      >	|                                          | .    | Only | n    | n    |
+										      >	|                                          |      |      |      | Only |
+										      >	+==========================================+======+======+======+======+
+										      >	| BT-1. Configure the Bluetooth trusted    | M    | O    | O    | O    |
+										      >	| channel.                                 |      |      |      |      |
+										      >	|                                          |      |      |      |      |
+										      >	| -   Disable/enable the Discoverable (for |      |      |      |      |
+										      >	|     [BR](#abbr_BR)/[EDR](#abbr_EDR)) and |      |      |      |      |
+										      >	|     Advertising (for [LE](#abbr_LE))     |      |      |      |      |
+										      >	|     modes;                               |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-2. Change the Bluetooth device name   | O    | O    | O    | O    |
+										      >	| (separately for                          |      |      |      |      |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
+										      >	| [LE](#abbr_LE));                         |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-3. Provide separate controls for      | O    | O    | O    | O    |
+										      >	| turning the                              |      |      |      |      |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
+										      >	| [LE](#abbr_LE) radios on and off;        |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-4. Allow/disallow the following       | O    | O    | O    | O    |
+										      >	| additional wireless technologies to be   |      |      |      |      |
+										      >	| used with Bluetooth: \[**selection**:    |      |      |      |      |
+										      >	| *Wi-Fi*, *NFC*, *\[**assignment**:       |      |      |      |      |
+										      >	| [other wireless                          |      |      |      |      |
+										      >	| technologies]{.assignable-content}\]*\]; |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-5. Configure allowable methods of Out | O    | O    | O    | O    |
+										      >	| of Band pairing (for                     |      |      |      |      |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
+										      >	| [LE](#abbr_LE));                         |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-6. Disable/enable the Discoverable    | O    | O    | O    | O    |
+										      >	| (for [BR](#abbr_BR)/[EDR](#abbr_EDR))    |      |      |      |      |
+										      >	| and Advertising (for [LE](#abbr_LE))     |      |      |      |      |
+										      >	| modes separately;                        |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-7. Disable/enable the Connectable     | O    | O    | O    | O    |
+										      >	| mode (for                                |      |      |      |      |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
+										      >	| [LE](#abbr_LE));                         |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-8. Disable/enable the Bluetooth       | O    | O    | O    | O    |
+										      >	| \[**assignment**: [list of Bluetooth     |      |      |      |      |
+										      >	| service and/or profiles available on the |      |      |      |      |
+										      >	| OS (for [BR](#abbr_BR)/[EDR](#abbr_EDR)  |      |      |      |      |
+										      >	| and                                      |      |      |      |      |
+										      >	| [LE](#abbr_LE))]{.assignable-content}\]; |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >	| BT-9. Specify minimum level of security  | O    | O    | O    | O    |
+										      >	| for each pairing (for                    |      |      |      |      |
+										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
+										      >	| [LE](#abbr_LE));                         |      |      |      |      |
+										      >	+------------------------------------------+------+------+------+------+
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ As is the case with the
+										      >	\[[MDF](#abbr_MDF) [PP](#abbr_PP)\], the first column lists the
+										      >	management function, the second column lists whether it is mandatory to
+										      >	implement the function and the remaining columns indicate whether it is
+										      >	mandatory, optional, or prohibited to implement the function by role as
+										      >	follows: ]{.note}
+										      >
+										      >	-   The third column indicates functions that are to be restricted to
+										      >	    the user (i.e. not available to the administrator).
+										      >	-   The fourth column indicates functions that are available to the
+										      >	    administrator. These functions can still be available to the user,
+										      >	    as long as the function is not restricted to the administrator
+										      >	    (column 5).
+										      >	-   The fifth column indicates whether the function is to be restricted
+										      >	    to the administrator when the device is enrolled and the
+										      >	    administrator applies the indicated policy (i.e., MDM
+										      >	    administration). This does not prevent the user from modifying a
+										      >	    setting to make the function stricter, but the user cannot undo the
+										      >	    configuration enforced by the administrator.
+										      >
+										      >	For columns 2-5, an \'M\' indicates that it is mandatory, an \'O\'
+										      >	indicates that it is optional, and a \'-\' indicates that it is
+										      >	prohibited.
+										      >
+										      >	(BT-1.) Management of the Discoverable and Advertising mode and
+										      >	management of the Bluetooth device name are mandatory. All other
+										      >	management functions for Bluetooth are currently objective.
+										      >
+										      >	(BT-2. optional) Requires management of the Bluetooth device name
+										      >	separately for [BR](#abbr_BR)/[EDR](#abbr_EDR) and [LE](#abbr_LE)
+										      >	radios.
+										      >
+										      >	(BT-4. optional) May include disabling Wi-Fi being used as a part of
+										      >	Bluetooth High Speed and/or disabling NFC as an Out of Band pairing
+										      >	method for Bluetooth. May also include other wireless technologies
+										      >	beyond those already specified.
+										      >
+										      >	(BT-8. optional) The Bluetooth services and/or profiles that may be
+										      >	disabled should be listed for the user or administrator either by
+										      >	service and/or profile name or by the types of applications for which
+										      >	the service and/or profile is used.
+										      >
+										      >	(BT-9. optional) The minimum level of security permitted may be
+										      >	configurable for each individual pairing or for all Bluetooth pairings.
+										      >
+										      >	-   If the [TSF](#abbr_TSF) supports any of the
+										      >	    [BR](#abbr_BR)/[EDR](#abbr_EDR) security modes in the following
+										      >	    list; it should provide a mechanism for the user to choose the
+										      >	    minimum level of security to enforce for a particular device during
+										      >	    the pairing process: Security Mode 1 (any level); Security Mode 2;
+										      >	    (any level); Security Mode 3; (any level); Security Mode 4; Levels
+										      >	    0;1;2 (aside from the services permitted to use Mode 4; Level 0 in
+										      >	    Bluetooth Core Specification version 4.2; Vol. 3; Part C; p. 325).
+										      >	-   If the [TSF](#abbr_TSF) supports any of the [LE](#abbr_LE) security
+										      >	    modes in the following list; it should provide a mechanism for the
+										      >	    user to choose the minimum level of security to enforce for a
+										      >	    particular device during the pairing process: Security Mode 1:
+										      >	    Levels 1, 2; Security Mode 2, (any level).
+										      >	-   Examples of levels of security are the use of legacy pairing; the
+										      >	    use of different types of Secure Simple Pairing; a requirement for
+										      >	    Man-in-the-Middle protection; the enforcement of Secure Connections
+										      >	    Only mode; etc.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	5.2 General Purpose Operating Systems PP Security Functional Requirements Direction {
+										      >	-----------------------------------------------------------------------------------
+										      >
+										      >	In a [PP-Configuration](#abbr_PP-Configuration) that includes General
+										      >	Purpose Operating Systems [PP](#abbr_PP), the [TOE](#abbr_TOE) is
+										      >	expected to rely on some of the security functions implemented by the as
+										      >	a whole and evaluated against the General Purpose Operating Systems
+										      >	[PP](#abbr_PP). The following sections describe any modifications that
+										      >	the [ST](#abbr_ST) author must make to the SFRs defined in the General
+										      >	Purpose Operating Systems [PP](#abbr_PP) in addition to what is mandated
+										      >	by [Section 5.3 TOE Security Functional
+										      >	Requirements](#man-sfrs){.dynref}.
+										      >
+										      >	### 5.2.1 Modified SFRs {#modsfr-b-gpos .indexable data-level="3"}
+										      >
+										      >	The SFRs listed in this section are defined in the General Purpose
+										      >	Operating Systems [PP](#abbr_PP) and relevant to the secure operation of
+										      >	the [TOE](#abbr_TOE).
+										      >
+										      >	#### 5.2.1.1 Security Management (FMT) {#fmt .indexable data-level="4"}
+										      >
+										      >	::: {#FMT_MOF_EXT.1 .comp}
+										      >	#### FMT\_MOF\_EXT.1 Management of Security Functions Behavior
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MOF_EXT.1.1 .reqid}
+										      >	[FMT\_MOF\_EXT.1.1](#FMT_MOF_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	There is no change to the text of this [SFR](#abbr_SFR). The
+										      >	[SFR](#abbr_SFR) references [FMT\_SMF\_EXT.1](#FMT_SMF_EXT.1) and states
+										      >	that the OS shall permit the administrator role to perform the relevant
+										      >	functions listed in [FMT\_SMF\_EXT.1](#FMT_SMF_EXT.1). The function
+										      >	\"Enable/Disable the Bluetooth interface\" is listed as an optional
+										      >	management function in [FMT\_SMF\_EXT.1](#FMT_SMF_EXT.1) for both users
+										      >	and administrators. When this [PP-Module](#abbr_PP-Module) is claimed,
+										      >	the administrator or user role must be able to enable/disable the
+										      >	Bluetooth interface. In other words, the function itself is moved from
+										      >	optional to mandatory, but this [PP-Module](#abbr_PP-Module) does not
+										      >	require that it be implemented by a specific role. If the [ST](#abbr_ST)
+										      >	indicates that the administrator role can perform this function, then
+										      >	the restrictions imposed by [FMT\_MOF\_EXT.1](#FMT_MOF_EXT.1) will apply
+										      >	to it.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_SMF_EXT.1 .comp}
+										      >	#### FMT\_SMF\_EXT.1 Specification of Management Functions
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_SMF_EXT.1.1 .reqid}
+										      >	[FMT\_SMF\_EXT.1.1](#FMT_SMF_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	This [PP-Module](#abbr_PP-Module) does not modify this [SFR](#abbr_SFR)
+										      >	as it is defined in the GPOS [PP](#abbr_PP). However, note that this
+										      >	[PP-Module](#abbr_PP-Module) requires the function \"Enable/disable
+										      >	Bluetooth interface\" to be implemented, though this
+										      >	[PP-Module](#abbr_PP-Module) does not mandate whether it be assigned to
+										      >	the Administrator or User role.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 5.2.2 Additional SFRs {#addsfr-b-gpos .indexable data-level="3"}
+										      >
+										      >	This section defines additional SFRs that must be added to the
+										      >	[TOE](#abbr_TOE) boundary in order to implement the functionality in any
+										      >	[PP-Configuration](#abbr_PP-Configuration) where the General Purpose
+										      >	Operating Systems [PP](#abbr_PP) is claimed as the
+										      >	[Base-PP](#abbr_Base-PP).
+										      >
+										      >	#### 5.2.2.1 Security Management (FMT) {#fmt .indexable data-level="4"}
+										      >
+										      >	::: {#FMT_MOF_EXT.1/BT .comp}
+										      >	#### FMT\_MOF\_EXT.1/BT Management of Security Functions Behavior
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MOF_EXT.1.1/BT .reqid}
+										      >	[FMT\_MOF\_EXT.1.1/BT](#FMT_MOF_EXT.1.1/BT){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The OS shall restrict the ability to perform the function indicated in
+										      >	the \"Administrator\" column in
+										      >	[FMT\_SMF\_EXT.1.1](#FMT_SMF_EXT.1.1)**/BT** to the administrator.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ The management functions in
+										      >	[FMT\_SMF\_EXT.1/BT](#FMT_SMF_EXT.1/BT) require the function BT-1 to be
+										      >	supported by the [TOE](#abbr_TOE) and manageable by an Administrator at
+										      >	minimum. All other management functions, and what roles may perform
+										      >	them, are optional. The [ST](#abbr_ST) must make it clear which of these
+										      >	functions are provided by the [TOE](#abbr_TOE) and which roles are able
+										      >	to manage them. ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_SMF_EXT.1/BT .comp}
+										      >	#### FMT\_SMF\_EXT.1/BT Specification of Management Functions
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_SMF_EXT.1.1/BT .reqid}
+										      >	[FMT\_SMF\_EXT.1.1/BT](#FMT_SMF_EXT.1.1/BT){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The OS shall be capable of performing the following **Bluetooth**
+										      >	management functions:
+										      >
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| Function              | Administrator         | User                  |
+										      >	+=======================+=======================+=======================+
+										      >	| BT-1. Configure the   | X                     | O                     |
+										      >	| Bluetooth trusted     |                       |                       |
+										      >	| channel.              |                       |                       |
+										      >	|                       |                       |                       |
+										      >	| -   Disable/enable    |                       |                       |
+										      >	|     the Discoverable  |                       |                       |
+										      >	|     (for              |                       |                       |
+										      >	|     [BR](#abbr_BR)/[E |                       |                       |
+										      >	| DR](#abbr_EDR))       |                       |                       |
+										      >	|     and Advertising   |                       |                       |
+										      >	|     (for              |                       |                       |
+										      >	|     [LE](#abbr_LE))   |                       |                       |
+										      >	|     modes;            |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-2. Change the      | O                     | O                     |
+										      >	| Bluetooth device name |                       |                       |
+										      >	| (separately for       |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR)            |                       |                       |
+										      >	| and [LE](#abbr_LE));  |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-3. Provide         | O                     | O                     |
+										      >	| separate controls for |                       |                       |
+										      >	| turning the           |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR)            |                       |                       |
+										      >	| and [LE](#abbr_LE)    |                       |                       |
+										      >	| radios on and off;    |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-4. Allow/disallow  | O                     | O                     |
+										      >	| the following         |                       |                       |
+										      >	| additional wireless   |                       |                       |
+										      >	| technologies to be    |                       |                       |
+										      >	| used with Bluetooth:  |                       |                       |
+										      >	| \[**selection**:      |                       |                       |
+										      >	| *Wi-Fi*, *NFC*,       |                       |                       |
+										      >	| *\[**assignment**:    |                       |                       |
+										      >	| [other wireless       |                       |                       |
+										      >	| technologies]{.assign |                       |                       |
+										      >	| able-content}\]*\];   |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-5. Configure       | O                     | O                     |
+										      >	| allowable methods of  |                       |                       |
+										      >	| Out of Band pairing   |                       |                       |
+										      >	| (for                  |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR)            |                       |                       |
+										      >	| and [LE](#abbr_LE));  |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-6. Disable/enable  | O                     | O                     |
+										      >	| the Discoverable (for |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR))           |                       |                       |
+										      >	| and Advertising (for  |                       |                       |
+										      >	| [LE](#abbr_LE)) modes |                       |                       |
+										      >	| separately;           |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-7. Disable/enable  | O                     | O                     |
+										      >	| the Connectable mode  |                       |                       |
+										      >	| (for                  |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR)            |                       |                       |
+										      >	| and [LE](#abbr_LE));  |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-8. Disable/enable  | O                     | O                     |
+										      >	| the Bluetooth         |                       |                       |
+										      >	| \[**assignment**:     |                       |                       |
+										      >	| [list of Bluetooth    |                       |                       |
+										      >	| service and/or        |                       |                       |
+										      >	| profiles available on |                       |                       |
+										      >	| the OS (for           |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR)            |                       |                       |
+										      >	| and                   |                       |                       |
+										      >	| [LE](#abbr_LE))]{.ass |                       |                       |
+										      >	| ignable-content}\];   |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >	| BT-9. Specify minimum | O                     | O                     |
+										      >	| level of security for |                       |                       |
+										      >	| each pairing (for     |                       |                       |
+										      >	| [BR](#abbr_BR)/[EDR]( |                       |                       |
+										      >	| #abbr_EDR)            |                       |                       |
+										      >	| and [LE](#abbr_LE));  |                       |                       |
+										      >	+-----------------------+-----------------------+-----------------------+
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ The [ST](#abbr_ST) should indicate
+										      >	which of the optional management functions are implemented in the
+										      >	[TOE](#abbr_TOE). This can be done by adjusting the \"Administrator\"
+										      >	and \"User\" columns to \"X\" according to which capabilities are
+										      >	present or not present, and for which privilege level. ]{.note}
+										      >
+										      >	(BT-1.) Management of the Discoverable and Advertising mode and
+										      >	management of the Bluetooth device name are mandatory. All other
+										      >	management functions for Bluetooth are currently objective.
+										      >
+										      >	(BT-2. optional) Requires management of the Bluetooth device name
+										      >	separately for [BR](#abbr_BR)/[EDR](#abbr_EDR) and [LE](#abbr_LE)
+										      >	radios.
+										      >
+										      >	(BT-4. optional) May include disabling Wi-Fi being used as a part of
+										      >	Bluetooth High Speed and/or disabling NFC as an Out of Band pairing
+										      >	method for Bluetooth. May also include other wireless technologies
+										      >	beyond those already specified.
+										      >
+										      >	(BT-8. optional) The Bluetooth services and/or profiles that may be
+										      >	disabled should be listed for the user or administrator either by
+										      >	service and/or profile name or by the types of applications for which
+										      >	the service and/or profile is used.
+										      >
+										      >	(BT-9. optional) The minimum level of security permitted may be
+										      >	configurable for each individual pairing or for all Bluetooth pairings.
+										      >
+										      >	-   If the [TSF](#abbr_TSF) supports any of the
+										      >	    [BR](#abbr_BR)/[EDR](#abbr_EDR) security modes in the following
+										      >	    list; it should provide a mechanism for the user to choose the
+										      >	    minimum level of security to enforce for a particular device during
+										      >	    the pairing process: Security Mode 1 (any level); Security Mode 2;
+										      >	    (any level); Security Mode 3; (any level); Security Mode 4; Levels
+										      >	    0;1;2 (aside from the services permitted to use Mode 4; Level 0 in
+										      >	    Bluetooth Core Specification version 4.2; Vol. 3; Part C; p. 325).
+										      >	-   If the [TSF](#abbr_TSF) supports any of the [LE](#abbr_LE) security
+										      >	    modes in the following list; it should provide a mechanism for the
+										      >	    user to choose the minimum level of security to enforce for a
+										      >	    particular device during the pairing process: Security Mode 1:
+										      >	    Levels 1, 2; Security Mode 2, (any level).
+										      >	-   Examples of levels of security are the use of legacy pairing; the
+										      >	    use of different types of Secure Simple Pairing; a requirement for
+										      >	    Man-in-the-Middle protection; the enforcement of Secure Connections
+										      >	    Only mode; etc.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	5.3 TOE Security Functional Requirements {#man-sfrs .indexable data-level="2"}
+										      >	----------------------------------------
+										      >
+										      >	The following section describes the SFRs that must be satisfied by any
+										      >	[TOE](#abbr_TOE) that claims conformance to this
+										      >	[PP-Module](#abbr_PP-Module). These SFRs must be claimed regardless of
+										      >	which [PP-Configuration](#abbr_PP-Configuration) is used to define the
+										      >	[TOE](#abbr_TOE).
+										      >
+										      >	### 5.3.1 Security Audit (FAU) {#fau .indexable data-level="3"}
+										      >
+										      >	::: {#FAU_GEN.1/BT .comp}
+										      >	#### FAU\_GEN.1/BT Audit Data Generation (Bluetooth)
+										      >
+										      >	::: {.element}
+										      >	::: {#FAU_GEN.1.1/BT .reqid}
+										      >	[FAU\_GEN.1.1/BT](#FAU_GEN.1.1/BT){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall be able to generate an audit record of the
+										      >	following auditable events:
+										      >
+										      >	a.  Start-up and shutdown of the audit functions
+										      >	b.  All auditable events for the \[*not selected*\] level of audit
+										      >	c.  \[*Specifically defined auditable events in the Auditable Events
+										      >	    table*\].
+										      >
+										      >	**[Table [2]{.counter} Auditable Events]{#audit .ctr data-myid="audit"
+										      >	data-counter-type="ct-Table"}**
+										      >
+										      >	Requirement
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	Auditable Events
+										      >
+										      >	Additional Audit Record Contents
+										      >
+										      >	[FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8)
+										      >
+										      >	None.
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1)
+										      >
+										      >	Failed user authorization of Bluetooth device.
+										      >
+										      >	User authorization decision (e.g., user rejected connection, incorrect
+										      >	pin entry).
+										      >
+										      >	Failed user authorization for local Bluetooth Service.
+										      >
+										      >	Bluetooth address and name of device. Bluetooth profile. Identity of
+										      >	local service with \[**selection**: *service ID*, *profile name*\].
+										      >
+										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2)
+										      >
+										      >	Initiation of Bluetooth connection.
+										      >
+										      >	Bluetooth address and name of device.
+										      >
+										      >	Failure of Bluetooth connection.
+										      >
+										      >	Reason for failure.
+										      >
+										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3) (optional)
+										      >
+										      >	Duplicate connection attempt.
+										      >
+										      >	BD\_ADDR of connection attempt.
+										      >
+										      >	[FIA\_BLT\_EXT.4](#FIA_BLT_EXT.4)
+										      >
+										      >	None.
+										      >
+										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5) (if claimed)
+										      >
+										      >	None.
+										      >
+										      >	[FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6)
+										      >
+										      >	None.
+										      >
+										      >	[FIA\_BLT\_EXT.7](#FIA_BLT_EXT.7)
+										      >
+										      >	None.
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1)
+										      >
+										      >	None.
+										      >
+										      >	[FTP\_BLT\_EXT.2](#FTP_BLT_EXT.2)
+										      >
+										      >	None.
+										      >
+										      >	[FTP\_BLT\_EXT.3/BR](#FTP_BLT_EXT.3/BR)
+										      >
+										      >	None.
+										      >
+										      >	[FTP\_BLT\_EXT.3/LE](#FTP_BLT_EXT.3/LE) (if claimed)
+										      >
+										      >	None.
+										      >
+										      >	::: {.element}
+										      >	::: {#FAU_GEN.1.2/BT .reqid}
+										      >	[FAU\_GEN.1.2/BT](#FAU_GEN.1.2/BT){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall record within each audit record at least the
+										      >	following information:
+										      >
+										      >	a.  Date and time of the event
+										      >	b.  Type of event
+										      >	c.  Subject identity
+										      >	d.  The outcome (success or failure) of the event
+										      >	e.  \[*Additional information in the Auditable Events table*\].
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[It is not feasible for the
+										      >	[FIA\_BLT\_EXT.3]{.no-link} event to be audited if the rejection is
+										      >	performed at the [HCI](#abbr_HCI) layer because the Bluetooth standard
+										      >	does not provide a notification interface for this behavior in the
+										      >	[HCI](#abbr_HCI). This is why the event is labeled as optional. However,
+										      >	if the rejection is performed above the [HCI](#abbr_HCI) layer, it is
+										      >	expected that a conformant [TOE](#abbr_TOE) should implement this
+										      >	functionality.]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 5.3.2 Cryptographic Support (FCS) {#fcs .indexable data-level="3"}
+										      >
+										      >	::: {#FCS_CKM_EXT.8 .comp}
+										      >	#### FCS\_CKM\_EXT.8 Bluetooth Key Generation
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_CKM_EXT.8.1 .reqid}
+										      >	[FCS\_CKM\_EXT.8.1](#FCS_CKM_EXT.8.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall generate public/private [ECDH](#abbr_ECDH)
+										      >	key pairs every \[**assignment**: [frequency of and/or criteria for new
+										      >	key pair generation]{.assignable-content}\].
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[There are multiple acceptable ways of
+										      >	keeping [ECDH](#abbr_ECDH) key pairs adequately fresh, including a
+										      >	time-based approach such that the same key pairs will not be used for
+										      >	more than, for instance, 24 hours. Alternatively, the criteria might be
+										      >	linked to the number of passed or failed authentication attempts. As a
+										      >	starting point to determine reasonable authentication attempt-based
+										      >	replacement criteria, note that the Bluetooth specification (v4.1, Vol.
+										      >	2, 5.1) suggests mitigating repeated authentication attempts by changing
+										      >	a device\'s private key after three failed authentication attempts from
+										      >	any BD\_ADDR, after ten successful pairings from any BD\_ADDR, or after
+										      >	a combination of these such that any three successful pairings count as
+										      >	one failed pairing. ]{.note}
+										      >
+										      >	This requirement also applies to Bluetooth [LE](#abbr_LE) if the
+										      >	[TOE](#abbr_TOE) supports [LE](#abbr_LE) Secure Connections, which was
+										      >	introduced in version 4.2 of the specification.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 5.3.3 Identification and Authentication (FIA) {#fia .indexable data-level="3"}
+										      >
+										      >	::: {#FIA_BLT_EXT.1 .comp}
+										      >	#### FIA\_BLT\_EXT.1 Bluetooth User Authorization
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.1.1 .reqid}
+										      >	[FIA\_BLT\_EXT.1.1](#FIA_BLT_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall require explicit user authorization before
+										      >	pairing with a remote Bluetooth device.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ User authorization includes explicit
+										      >	actions like affirming the remote device\'s name, expressing an intent
+										      >	to connect to the remote device, and entering relevant pairing
+										      >	information (e.g. PINs; numeric codes; or \"yes/no\" responses). The
+										      >	user must have to explicitly permit all pairing attempts; even when
+										      >	bonding is not taking place.]{.note}
+										      >
+										      >	Because explicit user action must be required to permit pairing; it must
+										      >	not be possible for applications to programmatically enter pairing
+										      >	information (e.g. PINs; numeric codes; or \"yes/no\" responses) during
+										      >	the pairing process. The absence of public APIs for programmatic
+										      >	authorization is not sufficient to meet this requirement; hidden or
+										      >	private APIs must be absent as well.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_BLT_EXT.2 .comp}
+										      >	#### FIA\_BLT\_EXT.2 Bluetooth Mutual Authentication
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.2.1 .reqid}
+										      >	[FIA\_BLT\_EXT.2.1](#FIA_BLT_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall require Bluetooth mutual authentication
+										      >	between devices prior to any data transfer over the Bluetooth link.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ If devices are not already paired,
+										      >	the pairing process must be initiated. If the devices are already
+										      >	paired, mutual authentication based on the current link key must succeed
+										      >	before any data passes over the link. ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_BLT_EXT.3 .comp}
+										      >	#### FIA\_BLT\_EXT.3 Rejection of Duplicate Bluetooth Connections
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.3.1 .reqid}
+										      >	[FIA\_BLT\_EXT.3.1](#FIA_BLT_EXT.3.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall discard pairing and session initialization
+										      >	attempts from a Bluetooth device address (BD\_ADDR) to which an active
+										      >	session already exists.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ Session is defined as the time
+										      >	interval for which the [TSF](#abbr_TSF) is actively connected to another
+										      >	device. Thus, the session terminates when the device disconnects from
+										      >	the [TSF](#abbr_TSF). If the [TOE](#abbr_TOE) has an active session to a
+										      >	remote Bluetooth device, new session initialization and/or pairing
+										      >	attempts from devices claiming the same Bluetooth device address may be
+										      >	malicious and should be rejected/ignored. Only one session to a single
+										      >	remote BD\_ADDR may be supported at a time. ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_BLT_EXT.4 .comp}
+										      >	#### FIA\_BLT\_EXT.4 Secure Simple Pairing
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.4.1 .reqid}
+										      >	[FIA\_BLT\_EXT.4.1](#FIA_BLT_EXT.4.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall support Bluetooth Secure Simple Pairing, both
+										      >	in the host and the controller.
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.4.2 .reqid}
+										      >	[FIA\_BLT\_EXT.4.2](#FIA_BLT_EXT.4.2){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall support Secure Simple Pairing during the
+										      >	pairing process.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ The Bluetooth host and controller
+										      >	each support a particular version of the Bluetooth Core Specification
+										      >	and a particular set of features. Support for various features is
+										      >	indicated by each side during the Link Manager Protocol
+										      >	([LMP](#abbr_LMP)) Features Exchange. Refer to the Bluetooth
+										      >	specification \[Bluetooth\] for feature definitions, including the
+										      >	definitions of Secure Simple Pairing (Controller Support) and Secure
+										      >	Simple Pairing (Host Support). ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_BLT_EXT.6 .comp}
+										      >	#### FIA\_BLT\_EXT.6 Trusted Bluetooth Device User Authorization
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.6.1 .reqid}
+										      >	[FIA\_BLT\_EXT.6.1](#FIA_BLT_EXT.6.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall require explicit user authorization before
+										      >	granting trusted remote devices access to services associated with the
+										      >	following Bluetooth profiles: \[**assignment**: [list of Bluetooth
+										      >	profiles]{.assignable-content}\].
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ In addition to pairing, it may be
+										      >	appropriate to require explicit user action to authorize a particular
+										      >	remote device to access certain Bluetooth services. The [TSF](#abbr_TSF)
+										      >	may choose to require this additional action for all devices or only for
+										      >	those devices that do not have a required level of trust.]{.note}
+										      >
+										      >	It is strongly preferred that for each device, the [TSF](#abbr_TSF)
+										      >	maintains a list of devices trusted to use for that particular service.
+										      >	However, the [TSF](#abbr_TSF) might designate certain devices as having
+										      >	a trusted device relationship with the [TOE](#abbr_TOE) and granting
+										      >	them \"blanket\" access to all services.
+										      >
+										      >	Furthermore, it may be the case that the [TSF](#abbr_TSF) allows
+										      >	movement of devices from the untrusted to the trusted category for a
+										      >	particular service after the user provides explicit authorization for
+										      >	the device to use the service. For example, it may be appropriate to
+										      >	require that the user provide explicit, manual authorization before a
+										      >	remote device may use the [OBEX](#abbr_OBEX) service for an object
+										      >	transfer the first time. The user might be given the option to permit
+										      >	future connections to that service by the particular device without
+										      >	requiring explicit authorization each time.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_BLT_EXT.7 .comp}
+										      >	#### FIA\_BLT\_EXT.7 Untrusted Bluetooth Device User Authorization
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.7.1 .reqid}
+										      >	[FIA\_BLT\_EXT.7.1](#FIA_BLT_EXT.7.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall require explicit user authorization before
+										      >	granting untrusted remote devices access to services associated with the
+										      >	following Bluetooth profiles: \[**assignment**: [list of Bluetooth
+										      >	profiles]{.assignable-content}\].
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ [FIA\_BLT\_EXT.7](#FIA_BLT_EXT.7)
+										      >	differs from [FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6) because a conformant
+										      >	[TOE](#abbr_TOE) may distinguish between \"trusted\" and \"untrusted\"
+										      >	devices such that the [TSF](#abbr_TSF) grants \"untrusted\" devices
+										      >	access to fewer services following pairing. However, this behavior is
+										      >	not required; if the [TSF](#abbr_TSF) does not treat \"trusted\" and
+										      >	\"untrusted\" devices any differently, the [ST](#abbr_ST) author may
+										      >	complete the assignments in [FIA\_BLT\_EXT.6.1](#FIA_BLT_EXT.6.1) and
+										      >	[FIA\_BLT\_EXT.7.1](#FIA_BLT_EXT.7.1) with lists of Bluetooth profiles.
+										      >	]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 5.3.4 Trusted Path/Channels (FTP) {#ftp .indexable data-level="3"}
+										      >
+										      >	::: {#FTP_BLT_EXT.1 .comp}
+										      >	#### FTP\_BLT\_EXT.1 Bluetooth Encryption
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_BLT_EXT.1.1 .reqid}
+										      >	[FTP\_BLT\_EXT.1.1](#FTP_BLT_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall enforce the use of encryption when
+										      >	transmitting data over the Bluetooth trusted channel for
+										      >	[BR](#abbr_BR)/[EDR](#abbr_EDR) and \[**selection**: *[LE](#abbr_LE)*,
+										      >	*no other connections*\].
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ [LE](#abbr_LE) is selectable because
+										      >	not all conformant TOEs include support for [LE](#abbr_LE). If
+										      >	[LE](#abbr_LE) is supported, it is expected that the [TSF](#abbr_TSF) be
+										      >	able to provide encryption for this interface. Selection of
+										      >	[LE](#abbr_LE) in [FTP\_BLT\_EXT.1.1](#FTP_BLT_EXT.1.1) requires the
+										      >	inclusion of the selection-based [SFR](#abbr_SFR)
+										      >	[FTP\_BLT\_EXT.3/LE](#FTP_BLT_EXT.3/LE). ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_BLT_EXT.1.2 .reqid}
+										      >	[FTP\_BLT\_EXT.1.2](#FTP_BLT_EXT.1.2){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall use key pairs per
+										      >	[FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8) for Bluetooth encryption.
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FTP_BLT_EXT.2 .comp}
+										      >	#### FTP\_BLT\_EXT.2 Persistence of Bluetooth Encryption
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_BLT_EXT.2.1 .reqid}
+										      >	[FTP\_BLT\_EXT.2.1](#FTP_BLT_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall \[**selection**: *restart encryption*,
+										      >	*terminate the connection*\] if the remote device stops encryption while
+										      >	connected to the [TOE](#abbr_TOE).
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ Permitting devices to terminate
+										      >	and/or restart encryption in the middle of a connection weakens user
+										      >	data protection. Note that an encryption pause request, which includes a
+										      >	request to stop encryption, stops encryption only temporarily. This
+										      >	requirement is not intended to address the encryption pause feature.
+										      >	]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FTP_BLT_EXT.3/BR .comp}
+										      >	#### FTP\_BLT\_EXT.3/BR Bluetooth Encryption Parameters (BR/EDR)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_BLT_EXT.3.1/BR .reqid}
+										      >	[FTP\_BLT\_EXT.3.1/BR](#FTP_BLT_EXT.3.1/BR){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall set the minimum encryption key size to
+										      >	\[**assignment**: [key size larger than or equal to 128
+										      >	bits]{.assignable-content}\] for \[*[BR](#abbr_BR)/[EDR](#abbr_EDR)*\]
+										      >	and not negotiate encryption key sizes smaller than the minimum size.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ Encryption is mandatory for
+										      >	[BR](#abbr_BR)/[EDR](#abbr_EDR) connections when both devices support
+										      >	Secure Simple Pairing. Minimum encryption requirements will be set and
+										      >	verified for each Bluetooth profile/application. ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	5.4 TOE Security Functional Requirements Rationale {#obj-req-map .indexable data-leve
+										      >	--------------------------------------------------
+										      >
+										      >	The following rationale provides justification for each security
+										      >	objective for the [TOE](#abbr_TOE), showing that the SFRs are suitable
+										      >	to meet and achieve the security objectives:\
+										      >
+										      >	[Table [3]{.counter}]{#t-obj_map .ctr data-myid="t-obj_map"
+										      >	data-counter-type="ct-Table"}: [SFR](#abbr_SFR) Rationale
+										      >
+										      >	Objective
+										      >
+										      >	Addressed by
+										      >
+										      >	Rationale
+										      >
+										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS)\
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1)
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) supports the objective by ensuring
+										      >	that Bluetooth communications are not initiated without user approval.
+										      >
+										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2)
+										      >
+										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2) supports the objective by requiring
+										      >	the [TSF](#abbr_TSF) to implement Bluetooth mutual authenticaiton.
+										      >
+										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3)
+										      >
+										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3) supports the objective by preventing
+										      >	Bluetooth spoofing by rejecting connections with duplicate device
+										      >	addresses.
+										      >
+										      >	[FIA\_BLT\_EXT.4](#FIA_BLT_EXT.4)
+										      >
+										      >	[FIA\_BLT\_EXT.4](#FIA_BLT_EXT.4) supports the objective by defining the
+										      >	[TSF](#abbr_TSF)\'s implementation of Bluetooth Secure Simple Pairing.
+										      >
+										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5)
+										      >
+										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5) supports the objective by requiring
+										      >	the [TSF](#abbr_TSF) to support Secure Connections Only mode for the
+										      >	supported Bluetooth communication channels.
+										      >
+										      >	[FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6)
+										      >
+										      >	[FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6) supports the objective by requiring
+										      >	the [TSF](#abbr_TSF) to specify the Bluetooth profiles that it requires
+										      >	explicit user authorization to grant access to for trusted devices.
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1)
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1) supports the objective by requiring
+										      >	the [TSF](#abbr_TSF) to implement encryption to protect Bluetooth
+										      >	communications
+										      >
+										      >	[FTP\_BLT\_EXT.2](#FTP_BLT_EXT.2)
+										      >
+										      >	[FTP\_BLT\_EXT.2](#FTP_BLT_EXT.2) supports the objective by requiring
+										      >	the [TSF](#abbr_TSF) to prevent data transmission over Bluetooth if the
+										      >	paired device is not using encryption.
+										      >
+										      >	5.5 TOE Security Assurance Requirements {#mod-sars .indexable data-level="2"}
+										      >	---------------------------------------
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any SARs beyond those
+										      >	defined within the Base-PPs to which it can claim conformance. It is
+										      >	important to note that a [TOE](#abbr_TOE) that is evaluated against this
+										      >	[PP-Module](#abbr_PP-Module) is inherently evaluated against the mobile
+										      >	devices [PP](#abbr_PP), and General Purpose Operating Systems
+										      >	[PP](#abbr_PP) as well. These PPs include a number of EAs associated
+										      >	with both Security Functional Requirements (SFRs) and SARs.
+										      >	Additionally, this [PP-Module](#abbr_PP-Module) includes a number of
+										      >	[SFR](#abbr_SFR)-based EAs that similarly refine the SARs of the
+										      >	Base-PPs. The evaluation laboratory will evaluate the [TOE](#abbr_TOE)
+										      >	against the chosen [Base-PP](#abbr_Base-PP) and supplement that
+										      >	evaluation with the necessary SFRs that are taken from this
+										      >	[PP-Module](#abbr_PP-Module).
+										      >
+										      >	6 Consistency Rationale {#mod-conrat .indexable data-level="1"}
+										      >	=======================
+										      >
+										      >	6.1 Protection Profile for mobile devices {#conrat-b-mdf .indexable data-level="2"}
+										      >	-----------------------------------------
+										      >
+										      >	### 6.1.1 Consistency of TOE Type {#contoe-b-mdf .indexable data-level="3"}
+										      >
+										      >	If this [PP-Module](#abbr_PP-Module) is used to extend the
+										      >	[MDF](#abbr_MDF) [PP](#abbr_PP), the [TOE](#abbr_TOE) type for the
+										      >	overall [TOE](#abbr_TOE) is still a mobile device. However, one of the
+										      >	functions of the device must be the ability for it to have Bluetooth
+										      >	capability. The [TOE](#abbr_TOE) boundary is simply extended to include
+										      >	that functionality.
+										      >
+										      >	### 6.1.2 Consistency of Security Problem Definition {#consecprob-b-mdf .indexable da
+										      >
+										      >	The threats that apply to this [PP-Module](#abbr_PP-Module) are
+										      >	inherited from the [Base-PP](#abbr_Base-PP) to which the
+										      >	[TOE](#abbr_TOE) also conforms. This [PP-Module](#abbr_PP-Module) does
+										      >	not add or remove any elements to the security problem definition given
+										      >	in the [MDF](#abbr_MDF) [PP](#abbr_PP).
+										      >
+										      >	  [PP-Module](#abbr_PP-Module) Threat, Assumption, OSP   Consistency Rationale
+										      >	  ------------------------------------------------------ ----------------------------
+										      >	  [T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP)           This threat comes directly f
+										      >	  [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)                 This threat comes directly f
+										      >
+										      >	### 6.1.3 Consistency of Objectives {#conobj-b-mdf .indexable data-level="3"}
+										      >
+										      >	The objectives that apply to this [PP-Module](#abbr_PP-Module) are
+										      >	inherited from the [Base-PP](#abbr_Base-PP) to which the
+										      >	[TOE](#abbr_TOE) also conforms. This [PP-Module](#abbr_PP-Module) does
+										      >	not add or remove any elements to the objectives given in the
+										      >	[MDF](#abbr_MDF) [PP](#abbr_PP). The objectives for the TOEs are
+										      >	consistent with the mobile devices [PP](#abbr_PP) based on the following
+										      >	rationale:
+										      >
+										      >	  [PP-Module](#abbr_PP-Module) [TOE](#abbr_TOE) Objective   Consistency Rationale
+										      >	  --------------------------------------------------------- -------------------------
+										      >	  [O.PROTECTED\_COMMS](#O.PROTECTED_COMMS)                  This objective comes dire
+										      >
+										      >	### 6.1.4 Consistency of Requirements {#conreq-b-mdf .indexable data-level="3"}
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) identifies several SFRs from the
+										      >	mobile devices [PP](#abbr_PP) that are needed to support Bluetooth
+										      >	functionality. This is considered to be consistent because the
+										      >	functionality provided by the mobile devices [PP](#abbr_PP) is being
+										      >	used for its intended purpose. The [PP-Module](#abbr_PP-Module) also
+										      >	identifies a number of modified SFRs from the mobile devices
+										      >	[PP](#abbr_PP) as well as new SFRs that are used entirely to provide
+										      >	functionality for Bluetooth. The rationale for why this does not
+										      >	conflict with the claims defined by the mobile devices [PP](#abbr_PP)
+										      >	are as follows:
+										      >
+										      >	[PP-Module](#abbr_PP-Module) Requirement
+										      >
+										      >	Consistency Rationale
+										      >
+										      >	Modified SFRs
+										      >
+										      >	[FMT\_SMF\_EXT.1](#FMT_SMF_EXT.1)
+										      >
+										      >	This [SFR](#abbr_SFR) is unchanged from its definition in the
+										      >	[Base-PP](#abbr_Base-PP); the only change required by this
+										      >	[PP-Module](#abbr_PP-Module) is how to interpret it in the context of
+										      >	Bluetooth capabilities.
+										      >
+										      >	Additional SFRs
+										      >
+										      >	[FMT\_SMF\_EXT.1/BT](#FMT_SMF_EXT.1/BT)
+										      >
+										      >	The [ST](#abbr_ST) author is instructed to complete an assignment in the
+										      >	[SFR](#abbr_SFR) with information related to Bluetooth, and to include
+										      >	additional management functions in this [SFR](#abbr_SFR) based on the
+										      >	Bluetooth capability defined by the [PP-Module](#abbr_PP-Module).
+										      >
+										      >	Mandatory SFRs
+										      >
+										      >	[FAU\_GEN.1/BT](#FAU_GEN.1/BT)
+										      >
+										      >	The [PP-Module](#abbr_PP-Module) defines auditable events for Bluetooth
+										      >	that extends the audit functionality defined in each
+										      >	[Base-PP](#abbr_Base-PP).
+										      >
+										      >	[FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8)
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1)
+										      >
+										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2)
+										      >
+										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3)
+										      >
+										      >	[FIA\_BLT\_EXT.4](#FIA_BLT_EXT.4)
+										      >
+										      >	[FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6)
+										      >
+										      >	[FIA\_BLT\_EXT.7](#FIA_BLT_EXT.7)
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1)
+										      >
+										      >	[FTP\_BLT\_EXT.2](#FTP_BLT_EXT.2)
+										      >
+										      >	[FTP\_BLT\_EXT.3/BR](#FTP_BLT_EXT.3/BR)
+										      >
+										      >	Optional SFRs
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any Optional
+										      >	requirements.
+										      >
+										      >	Selection-based SFRs
+										      >
+										      >	[FTP\_BLT\_EXT.3/LE](#FTP_BLT_EXT.3/LE)
+										      >
+										      >	Objective SFRs
+										      >
+										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5)
+										      >
+										      >	Implementation-Dependent SFRs
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any
+										      >	Implementation-Dependent requirements.
+										      >
+										      >	6.2 Protection Profile for General Purpose Operating Systems {#conrat-b-gpos .indexab
+										      >	------------------------------------------------------------
+										      >
+										      >	### 6.2.1 Consistency of TOE Type {#contoe-b-gpos .indexable data-level="3"}
+										      >
+										      >	If this [PP-Module](#abbr_PP-Module) is used to extend the \[GPOS
+										      >	[PP](#abbr_PP)\], the [TOE](#abbr_TOE) type for the overall
+										      >	[TOE](#abbr_TOE) is still a generic operating system. However, one of
+										      >	the functions of the generic operating system must be the ability for it
+										      >	to have Bluetooth capability. The [TOE](#abbr_TOE) boundary is simply
+										      >	extended to include that functionality.
+										      >
+										      >	### 6.2.2 Consistency of Security Problem Definition {#consecprob-b-gpos .indexable d
+										      >
+										      >	The threats that apply to this [PP-Module](#abbr_PP-Module) are
+										      >	inherited from the [Base-PP](#abbr_Base-PP) to which the
+										      >	[TOE](#abbr_TOE) also conforms. This [PP-Module](#abbr_PP-Module) does
+										      >	not add or remove any elements to the security problem definition given
+										      >	in the GPOS [PP](#abbr_PP).
+										      >
+										      >	  [PP-Module](#abbr_PP-Module) Threat, Assumption, OSP   Consistency Rationale
+										      >	  ------------------------------------------------------ ----------------------------
+										      >	  [T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP)           This threat comes directly f
+										      >	  [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)                 This threat comes directly f
+										      >
+										      >	### 6.2.3 Consistency of Objectives {#conobj-b-gpos .indexable data-level="3"}
+										      >
+										      >	The objectives that apply to this [PP-Module](#abbr_PP-Module) are
+										      >	inherited from the [Base-PP](#abbr_Base-PP) to which the
+										      >	[TOE](#abbr_TOE) also conforms. This [PP-Module](#abbr_PP-Module) does
+										      >	not add or remove any elements to the objectives given in the GPOS
+										      >	[PP](#abbr_PP). The objectives for the TOEs are consistent with the
+										      >	General Purpose Operating Systems [PP](#abbr_PP) based on the following
+										      >	rationale:
+										      >
+										      >	  [PP-Module](#abbr_PP-Module) [TOE](#abbr_TOE) Objective   Consistency Rationale
+										      >	  --------------------------------------------------------- -------------------------
+										      >	  [O.PROTECTED\_COMMS](#O.PROTECTED_COMMS)                  This objective comes dire
+										      >
+										      >	### 6.2.4 Consistency of Requirements {#conreq-b-gpos .indexable data-level="3"}
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) identifies several SFRs from the
+										      >	General Purpose Operating Systems [PP](#abbr_PP) that are needed to
+										      >	support Bluetooth functionality. This is considered to be consistent
+										      >	because the functionality provided by the General Purpose Operating
+										      >	Systems [PP](#abbr_PP) is being used for its intended purpose. The
+										      >	[PP-Module](#abbr_PP-Module) also identifies a number of modified SFRs
+										      >	from the General Purpose Operating Systems [PP](#abbr_PP) as well as new
+										      >	SFRs that are used entirely to provide functionality for Bluetooth. The
+										      >	rationale for why this does not conflict with the claims defined by the
+										      >	General Purpose Operating Systems [PP](#abbr_PP) are as follows:
+										      >
+										      >	[PP-Module](#abbr_PP-Module) Requirement
+										      >
+										      >	Consistency Rationale
+										      >
+										      >	Modified SFRs
+										      >
+										      >	[FMT\_MOF\_EXT.1](#FMT_MOF_EXT.1)
+										      >
+										      >	This [SFR](#abbr_SFR) is unchanged from its definition in the
+										      >	[Base-PP](#abbr_Base-PP); the only change required by this
+										      >	[PP-Module](#abbr_PP-Module) is how to interpret it in the context of
+										      >	Bluetooth capabilities.
+										      >
+										      >	[FMT\_SMF\_EXT.1](#FMT_SMF_EXT.1)
+										      >
+										      >	This [SFR](#abbr_SFR) is unchanged from its definition in the
+										      >	[Base-PP](#abbr_Base-PP); the only change required by this
+										      >	[PP-Module](#abbr_PP-Module) is how to interpret it in the context of
+										      >	Bluetooth capabilities.
+										      >
+										      >	Additional SFRs
+										      >
+										      >	[FMT\_MOF\_EXT.1/BT](#FMT_MOF_EXT.1/BT)
+										      >
+										      >	The [ST](#abbr_ST) author is required to associate all claimed
+										      >	management functions with the administrative privileges required to
+										      >	execute them. This [PP-Module](#abbr_PP-Module) simply extends this
+										      >	requirement to apply to the management functions added and mandated by
+										      >	the [PP-Module](#abbr_PP-Module).
+										      >
+										      >	[FMT\_SMF\_EXT.1/BT](#FMT_SMF_EXT.1/BT)
+										      >
+										      >	The [ST](#abbr_ST) author is required to include an optional management
+										      >	function defined in the [Base-PP](#abbr_Base-PP) that relates to
+										      >	Bluetooth, and to include additional management functions in this
+										      >	[SFR](#abbr_SFR) based on the Bluetooth capability defined by the
+										      >	[PP-Module](#abbr_PP-Module).
+										      >
+										      >	Mandatory SFRs
+										      >
+										      >	[FAU\_GEN.1/BT](#FAU_GEN.1/BT)
+										      >
+										      >	The [PP-Module](#abbr_PP-Module) defines auditable events for Bluetooth
+										      >	that extends the audit functionality defined in each
+										      >	[Base-PP](#abbr_Base-PP).
+										      >
+										      >	[FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8)
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1)
+										      >
+										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2)
+										      >
+										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3)
+										      >
+										      >	[FIA\_BLT\_EXT.4](#FIA_BLT_EXT.4)
+										      >
+										      >	[FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6)
+										      >
+										      >	[FIA\_BLT\_EXT.7](#FIA_BLT_EXT.7)
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1)
+										      >
+										      >	[FTP\_BLT\_EXT.2](#FTP_BLT_EXT.2)
+										      >
+										      >	[FTP\_BLT\_EXT.3/BR](#FTP_BLT_EXT.3/BR)
+										      >
+										      >	Optional SFRs
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any Optional
+										      >	requirements.
+										      >
+										      >	Selection-based SFRs
+										      >
+										      >	[FTP\_BLT\_EXT.3/LE](#FTP_BLT_EXT.3/LE)
+										      >
+										      >	Objective SFRs
+										      >
+										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5)
+										      >
+										      >	Implementation-Dependent SFRs
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any
+										      >	Implementation-Dependent requirements.
+										      >
+										      >	Appendix A - Optional SFRs {#opt-sfrs .indexable data-level="A"}
+										      >	==========================
+										      >
+										      >	A.1 Strictly Optional Requirements {#opt-sfrs .indexable data-level="2"}
+										      >	----------------------------------
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any Strictly Optional
+										      >	SFRs.
+										      >
+										      >	A.2 Objective Requirements {#obj-sfrs .indexable data-level="2"}
+										      >	--------------------------
+										      >
+										      >	### A.2.1 Identification and Authentication {#fia .indexable data-level="3"}
+										      >
+										      >	::: {#FIA_BLT_EXT.5 .comp}
+										      >	#### FIA\_BLT\_EXT.5 Bluetooth Secure Connections
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_BLT_EXT.5.1 .reqid}
+										      >	[FIA\_BLT\_EXT.5.1](#FIA_BLT_EXT.5.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall support Secure Connections Only mode for
+										      >	Bluetooth [BR](#abbr_BR)/[EDR](#abbr_EDR) and \[**selection**:
+										      >	*Bluetooth [LE](#abbr_LE)*, *no other Bluetooth protocol*\].
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ The specification states that Secure
+										      >	Connections Only Mode, also called \"FIPS Mode,\" should be used when
+										      >	security is more important than backwards compatibility. From the
+										      >	specification, \"The Host will enforce that the P-256 elliptic curve is
+										      >	used during pairing; the secure authentication sequences are used; and
+										      >	[AES-CCM](#abbr_AES-CCM) is used for encryption.\" Also, \"if a
+										      >	[BR](#abbr_BR)/[EDR](#abbr_EDR)/[LE](#abbr_LE) device is configured in
+										      >	Secure Connections Only Mode, then a transport will only be used when
+										      >	Secure Connections is supported by both devices.\" ]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	A.3 Implementation-Based Requirements {#impl-dep-sfrs .indexable data-level="2"}
+										      >	-------------------------------------
+										      >
+										      >	This [PP-Module](#abbr_PP-Module) does not define any
+										      >	Implementation-Based SFRs.
+										      >
+										      >	Appendix B - Selection-Based Requirements {#sel-sfrs .indexable data-level="1"}
+										      >	=========================================
+										      >
+										      >	B.1 Trusted Path/Channels {#ftp .indexable data-level="2"}
+										      >	-------------------------
+										      >
+										      >	::: {#FTP_BLT_EXT.3/LE .comp}
+										      >	#### FTP\_BLT\_EXT.3/LE Bluetooth Encryption Parameters (LE)
+										      >
+										      >	::: {.statustag}
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_BLT_EXT.3.1/LE .reqid}
+										      >	[FTP\_BLT\_EXT.3.1/LE](#FTP_BLT_EXT.3.1/LE){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TSF](#abbr_TSF) shall set the minimum encryption key size to
+										      >	\[**assignment**: [key size larger than or equal to 128
+										      >	bits]{.assignable-content}\] for \[*[LE](#abbr_LE)*\] and not negotiate
+										      >	encryption key sizes smaller than the minimum size.
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[ The [TOE](#abbr_TOE) must implement
+										      >	encryption for Bluetooth [BR](#abbr_BR)/[EDR](#abbr_EDR) as required by
+										      >	[FTP\_BLT\_EXT.1.1](#FTP_BLT_EXT.1.1). A conformant [TOE](#abbr_TOE)
+										      >	does not need to support Bluetooth [LE](#abbr_LE); however, if it does,
+										      >	then it must also support encryption for it.
+										      >	[FTP\_BLT\_EXT.3/LE](#FTP_BLT_EXT.3/LE) must therefore be claimed if
+										      >	\'[LE](#abbr_LE)\' is selected in [FTP\_BLT\_EXT.1.1](#FTP_BLT_EXT.1.1).
+										      >	]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	Appendix C - Extended Component Definitions {#ext-comp-defs .indexable data-level="A"
+										      >	===========================================
+										      >
+										      >	This appendix contains the definitions for all extended requirements
+										      >	specified in the .
+										      >
+										      >	C.1 Extended Components Table {#ext-comp-defs-bg .indexable data-level="2"}
+										      >	-----------------------------
+										      >
+										      >	All extended components specified in the are listed in this table:
+										      >
+										      >	  -----------------------------------------------------------------------------------
+										      >	  Functional Class                           Functional Components
+										      >	  ------------------------------------------ ----------------------------------------
+										      >	  Cryptographic Support (FCS)                FCS\_CKM\_EXT Cryptographic Key Manageme
+										      >
+										      >	  Identification and Authentication (FIA)    FIA\_BLT\_EXT Bluetooth Pairing\
+										      >
+										      >	  Trusted Path/Channels ([FTP](#abbr_FTP))   FTP\_BLT\_EXT Bluetooth Trusted Communic
+										      >	  -----------------------------------------------------------------------------------
+										      >
+										      >	  : **[Table [4]{.counter}]{.ctr data-myid=""
+										      >	  data-counter-type="ct-Table"}: Extended Component Definitions**
+										      >
+										      >	C.2 Extended Component Definitions {#ext-comp-defs-bg .indexable data-level="2"}
+										      >	----------------------------------
+										      >
+										      >	### C.2.1 Cryptographic Support (FCS) {#ext-comp-FCS .indexable data-level="3"}
+										      >
+										      >	This defines the following extended components as part of the FCS class
+										      >	originally defined by [CC](#abbr_CC) Part 2:
+										      >
+										      >	### C.2.1.1 FCS\_CKM\_EXT Cryptographic Key Management {#ext-comp-FCS_CKM_EXT .indexa
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	#### Family Behavior
+										      >
+										      >	<div>
+										      >
+										      >	Components in this family define requirements for cryptographic key
+										      >	management beyond those which are specified in the Part 2 family
+										      >	FCS\_CKM.
+										      >
+										      >	</div>
+										      >
+										      >	#### Component Leveling
+										      >
+										      >	FCS\_CKM\_EXT8
+										      >
+										      >	[FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8), Bluetooth Key Generation, requires
+										      >	the [TSF](#abbr_TSF) to generate key pairs used for Bluetooth over a
+										      >	specified time period or in response to some observed event.
+										      >
+										      >	#### Management: FCS\_CKM\_EXT.8
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FCS\_CKM\_EXT.8
+										      >
+										      >	There are no auidtable events foreseen.
+										      >
+										      >	#### FCS\_CKM\_EXT.8 Bluetooth Key Generation
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: FCS\_CKM.1 Cryptographic Key Generation
+										      >
+										      >	FPT\_STM.1 Reliable Time Stamps
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1) Bluetooth Encryption
+										      >
+										      >	#### FCS\_CKM\_EXT.8.1 {#ext-comp-FCS_CKM_EXT.8.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall generate public/private [ECDH](#abbr_ECDH)
+										      >	key pairs every \[**assignment**: [frequency of and/or criteria for new
+										      >	key pair generation]{.assignable-content}\].
+										      >	:::
+										      >	:::
+										      >
+										      >	### C.2.2 Identification and Authentication (FIA) {#ext-comp-FIA .indexable data-leve
+										      >
+										      >	This defines the following extended components as part of the FIA class
+										      >	originally defined by [CC](#abbr_CC) Part 2:
+										      >
+										      >	### C.2.2.1 FIA\_BLT\_EXT Bluetooth Pairing {#ext-comp-FIA_BLT_EXT .indexable data-le
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	#### Family Behavior
+										      >
+										      >	<div>
+										      >
+										      >	Components in this family define Bluetooth-specific identification and
+										      >	authentication requirements.
+										      >
+										      >	</div>
+										      >
+										      >	#### Component Leveling
+										      >
+										      >	FIA\_BLT\_EXT1234675
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1), Bluetooth User Authorization,
+										      >	requires the [TSF](#abbr_TSF) to have explicit user authorization before
+										      >	allowing a Bluetooth pairing.
+										      >
+										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2), Bluetooth Mutual Authentication,
+										      >	requires the [TSF](#abbr_TSF) to enforce mutual authentication for
+										      >	Bluetooth.
+										      >
+										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3), Rejection of Duplicate Bluetooth
+										      >	Connections, requires the [TSF](#abbr_TSF) to reject duplicate attempts
+										      >	to connect to Bluetooth.
+										      >
+										      >	[FIA\_BLT\_EXT.4](#FIA_BLT_EXT.4), Secure Simple Pairing, requires the
+										      >	[TSF](#abbr_TSF) to support Secure Simple Pairing.
+										      >
+										      >	[FIA\_BLT\_EXT.6](#FIA_BLT_EXT.6), Trusted Bluetooth Device User
+										      >	Authorization, requires the [TSF](#abbr_TSF) to have explicit user
+										      >	authentication before associating trusted services with Bluetooth.
+										      >
+										      >	[FIA\_BLT\_EXT.7](#FIA_BLT_EXT.7), Untrusted Bluetooth Device User
+										      >	Authorization, requires the [TSF](#abbr_TSF) to have explicit user
+										      >	authentication before associating untrusted services with Bluetooth.
+										      >
+										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5), Bluetooth Secure Connections,
+										      >	requires the [TSF](#abbr_TSF) to support Secure Connections Only mode.
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.1
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.1
+										      >
+										      >	The following actions should be auditable if FAU\_GEN Security audit
+										      >	data generation is included in the [PP](#abbr_PP)/[ST](#abbr_ST):
+										      >
+										      >	-   Failed user authorization of Bluetooth device.
+										      >	-   Failed user authorization for local Bluetooth device.
+										      >
+										      >	#### FIA\_BLT\_EXT.1 Bluetooth User Authorization
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: No dependencies.
+										      >
+										      >	#### FIA\_BLT\_EXT.1.1 {#ext-comp-FIA_BLT_EXT.1.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall require explicit user authorization before
+										      >	pairing with a remote Bluetooth device.
+										      >	:::
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.2
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.2
+										      >
+										      >	The following actions should be auditable if FAU\_GEN Security audit
+										      >	data generation is included in the [PP](#abbr_PP)/[ST](#abbr_ST):
+										      >
+										      >	-   Initiation of Bluetooth connection.
+										      >	-   Failure of Bluetooth connection.
+										      >
+										      >	#### FIA\_BLT\_EXT.2 Bluetooth Mutual Authentication
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User
+										      >	Authorization
+										      >
+										      >	#### FIA\_BLT\_EXT.2.1 {#ext-comp-FIA_BLT_EXT.2.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall require Bluetooth mutual authentication
+										      >	between devices prior to any data transfer over the Bluetooth link.
+										      >	:::
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.3
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.3
+										      >
+										      >	The following actions should be auditable if FAU\_GEN Security audit
+										      >	data generation is included in the [PP](#abbr_PP)/[ST](#abbr_ST):
+										      >
+										      >	-   Duplicate connection attempt.
+										      >
+										      >	#### FIA\_BLT\_EXT.3 Rejection of Duplicate Bluetooth Connections
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User
+										      >	Authorization
+										      >
+										      >	#### FIA\_BLT\_EXT.3.1 {#ext-comp-FIA_BLT_EXT.3.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall discard pairing and session initialization
+										      >	attempts from a Bluetooth device address (BD\_ADDR) to which an active
+										      >	session already exists.
+										      >	:::
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.4
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.4
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FIA\_BLT\_EXT.4 Secure Simple Pairing
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User
+										      >	Authorization
+										      >
+										      >	#### FIA\_BLT\_EXT.4.1 {#ext-comp-FIA_BLT_EXT.4.1}
+										      >
+										      >	The [TOE](#abbr_TOE) shall support Bluetooth Secure Simple Pairing, both
+										      >	in the host and the controller.
+										      >
+										      >	#### FIA\_BLT\_EXT.4.2 {#ext-comp-FIA_BLT_EXT.4.2}
+										      >
+										      >	The [TOE](#abbr_TOE) shall support Secure Simple Pairing during the
+										      >	pairing process.
+										      >	:::
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.6
+										      >
+										      >	The following actions could be considered for the management functions
+										      >	in FMT:
+										      >
+										      >	-   Ability to specify the services that require explicit user
+										      >	    authorization before trusted devices can use them.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.6
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FIA\_BLT\_EXT.6 Trusted Bluetooth Device User Authorization
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User
+										      >	Authorization
+										      >
+										      >	#### FIA\_BLT\_EXT.6.1 {#ext-comp-FIA_BLT_EXT.6.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall require explicit user authorization before
+										      >	granting trusted remote devices access to services associated with the
+										      >	following Bluetooth profiles: \[**assignment**: [list of Bluetooth
+										      >	profiles]{.assignable-content}\].
+										      >	:::
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.7
+										      >
+										      >	The following actions could be considered for the management functions
+										      >	in FMT:
+										      >
+										      >	-   Ability to specify the services that require explicit user
+										      >	    authorization before untrusted devices can use them.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.7
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FIA\_BLT\_EXT.7 Untrusted Bluetooth Device User Authorization
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User
+										      >	Authorization
+										      >
+										      >	#### FIA\_BLT\_EXT.7.1 {#ext-comp-FIA_BLT_EXT.7.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall require explicit user authorization before
+										      >	granting untrusted remote devices access to services associated with the
+										      >	following Bluetooth profiles: \[**assignment**: [list of Bluetooth
+										      >	profiles]{.assignable-content}\].
+										      >	:::
+										      >
+										      >	#### Management: FIA\_BLT\_EXT.5
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FIA\_BLT\_EXT.5
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FIA\_BLT\_EXT.5 Bluetooth Secure Connections
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User
+										      >	Authorization
+										      >
+										      >	#### FIA\_BLT\_EXT.5.1 {#ext-comp-FIA_BLT_EXT.5.1}
+										      >
+										      >	The [TOE](#abbr_TOE) shall support Secure Connections Only mode for
+										      >	Bluetooth [BR](#abbr_BR)/[EDR](#abbr_EDR) and \[**selection**:
+										      >	*Bluetooth [LE](#abbr_LE)*, *no other Bluetooth protocol*\].
+										      >	:::
+										      >	:::
+										      >
+										      >	### C.2.3 Trusted Path/Channels (FTP) {#ext-comp-FTP .indexable data-level="3"}
+										      >
+										      >	This defines the following extended components as part of the
+										      >	[FTP](#abbr_FTP) class originally defined by [CC](#abbr_CC) Part 2:
+										      >
+										      >	### C.2.3.1 FTP\_BLT\_EXT Bluetooth Trusted Communications {#ext-comp-FTP_BLT_EXT .in
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	#### Family Behavior
+										      >
+										      >	<div>
+										      >
+										      >	Components in this family define requirements for Bluetooth encryption.
+										      >
+										      >	</div>
+										      >
+										      >	#### Component Leveling
+										      >
+										      >	FTP\_BLT\_EXT123
+										      >
+										      >	[FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1), Bluetooth Encryption, requires the
+										      >	[TSF](#abbr_TSF) to enforce encryption when transmitting over Bluetooth.
+										      >
+										      >	[FTP\_BLT\_EXT.2](#FTP_BLT_EXT.2), Persistence of Bluetooth Encryption,
+										      >	requires the [TSF](#abbr_TSF) to ensure encryption for the duration of
+										      >	the use of the Bluetooth channel.
+										      >
+										      >	FTP\_BLT\_EXT.3, Bluetooth Encryption Parameters, specifies the key
+										      >	sizes used for Bluetooth.
+										      >
+										      >	#### Management: FTP\_BLT\_EXT.1
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FTP\_BLT\_EXT.1
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FTP\_BLT\_EXT.1 Bluetooth Encryption
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8) Bluetooth Key
+										      >	Generation
+										      >
+										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1) Bluetooth User Authorization
+										      >
+										      >	#### FTP\_BLT\_EXT.1.1 {#ext-comp-FTP_BLT_EXT.1.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall enforce the use of encryption when
+										      >	transmitting data over the Bluetooth trusted channel for
+										      >	[BR](#abbr_BR)/[EDR](#abbr_EDR) and \[**selection**: *[LE](#abbr_LE)*,
+										      >	*no other connections*\].
+										      >
+										      >	#### FTP\_BLT\_EXT.1.2 {#ext-comp-FTP_BLT_EXT.1.2}
+										      >
+										      >	The [TSF](#abbr_TSF) shall use key pairs per
+										      >	[FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8) for Bluetooth encryption.
+										      >	:::
+										      >
+										      >	#### Management: FTP\_BLT\_EXT.2
+										      >
+										      >	No specific management functions are identified.
+										      >
+										      >	#### Audit: FTP\_BLT\_EXT.2
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FTP\_BLT\_EXT.2 Persistence of Bluetooth Encryption
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1) Bluetooth Encryption
+										      >
+										      >	#### FTP\_BLT\_EXT.2.1 {#ext-comp-FTP_BLT_EXT.2.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall \[**selection**: *restart encryption*,
+										      >	*terminate the connection*\] if the remote device stops encryption while
+										      >	connected to the [TOE](#abbr_TOE).
+										      >	:::
+										      >
+										      >	#### Management: FTP\_BLT\_EXT.3
+										      >
+										      >	The following actions could be considered for the management functions
+										      >	in FMT:
+										      >
+										      >	-   Specification of minimum encryption key size.
+										      >
+										      >	#### Audit: FTP\_BLT\_EXT.3
+										      >
+										      >	There are no auditable events foreseen.
+										      >
+										      >	#### FTP\_BLT\_EXT.3 Bluetooth Encryption Parameters
+										      >
+										      >	::: {style="margin-left: 1em;"}
+										      >	Hierarchical to: No other components.
+										      >
+										      >	Dependencies to: [FTP\_BLT\_EXT.1](#FTP_BLT_EXT.1) Bluetooth Encryption
+										      >
+										      >	#### FTP\_BLT\_EXT.3.1 {#ext-comp-FTP_BLT_EXT.3.1}
+										      >
+										      >	The [TSF](#abbr_TSF) shall set the minimum encryption key size to
+										      >	\[**assignment**: [key size larger than or equal to 128
+										      >	bits]{.assignable-content}\] for \[**assignment**: [Bluetooth
+										      >	protocol]{.assignable-content}\].
+										      >	:::
+										      >	:::
+										      >
+										      >	Appendix D - Implicitly Satisfied Requirements {#satisfiedreqs .indexable data-level=
+										      >	==============================================
+										      >
+										      >	This appendix lists requirements that should be considered satisfied by
+										      >	products successfully evaluated against this
+										      >	[PP-Module](#abbr_PP-Module). However, these requirements are not
+										      >	featured explicitly as SFRs and should not be included in the
+										      >	[ST](#abbr_ST). They are not included as standalone SFRs because it
+										      >	would increase the time, cost, and complexity of evaluation. This
+										      >	approach is permitted by \[[CC](#abbr_CC)\] Part 1, 8.2 Dependencies
+										      >	between components.
+										      >
+										      >	This information benefits systems engineering activities which call for
+										      >	inclusion of particular security controls. Evaluation against the
+										      >	[PP-Module](#abbr_PP-Module) provides evidence that these controls are
+										      >	present and have been evaluated.
+										      >
+										      >	  Requirement                                 Rationale for Satisfaction
+										      >	  ------------------------------------------- ---------------------------------------
+										      >	  FCS\_CKM.1 - Cryptographic Key Generation   [FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8) has a
+										      >	  FPT\_STM.1 - Reliable Time Stamps           [FCS\_CKM\_EXT.8](#FCS_CKM_EXT.8) has a
+										      >
+										      >	Appendix E - Entropy Documentation and Assessment {#EAR .indexable data-level="A"}
+										      >	=================================================
+										      >
+										      >	The [TOE](#abbr_TOE) does not require any additional supplementary
+										      >	information to describe its entropy sources beyond the requirements
+										      >	outlined in the Base-PPs.
+										      >
+										      >	Appendix F - Acronyms {#acronyms .indexable data-level="A"}
+										      >	=====================
+										      >
+										      >	  Acronym                                                                      Meanin
+										      >	  ---------------------------------------------------------------------------- ------
+										      >	  [[AES](#abbr_AES)]{#abbr_AES .term}                                          [Advan
+										      >	  [[AES-CCM](#abbr_AES-CCM)]{#abbr_AES-CCM .term}                              [[AES]
+										      >	  [[API](#abbr_API)]{#abbr_API .term}                                          [Appli
+										      >	  [[BR](#abbr_BR)]{#abbr_BR .term}                                             [Basic
+										      >	  [[Base-PP](#abbr_Base-PP)]{#abbr_Base-PP .term}                              [Base 
+										      >	  [[CC](#abbr_CC)]{#abbr_CC .term}                                             [Commo
+										      >	  [[CEM](#abbr_CEM)]{#abbr_CEM .term}                                          [Commo
+										      >	  [[ECDH](#abbr_ECDH)]{#abbr_ECDH .term}                                       [Ellip
+										      >	  [[EDR](#abbr_EDR)]{#abbr_EDR .term}                                          [Enhan
+										      >	  [[EP](#abbr_EP)]{#abbr_EP .term}                                             [Exten
+										      >	  [[FP](#abbr_FP)]{#abbr_FP .term}                                             [Funct
+										      >	  [[FTP](#abbr_FTP)]{#abbr_FTP .term}                                          [File 
+										      >	  [[HCI](#abbr_HCI)]{#abbr_HCI .term}                                          [Host 
+										      >	  [[L2CAP](#abbr_L2CAP)]{#abbr_L2CAP .term}                                    [Logic
+										      >	  [[LE](#abbr_LE)]{#abbr_LE .term}                                             [Low E
+										      >	  [[LMP](#abbr_LMP)]{#abbr_LMP .term}                                          [Link 
+										      >	  [[MDF](#abbr_MDF)]{#abbr_MDF .term}                                          [Mobil
+										      >	  [[OBEX](#abbr_OBEX)]{#abbr_OBEX .term}                                       [Objec
+										      >	  [[OE](#abbr_OE)]{#abbr_OE .term}                                             [Opera
+										      >	  [[PP](#abbr_PP)]{#abbr_PP .term}                                             [Prote
+										      >	  [[PP-Configuration](#abbr_PP-Configuration)]{#abbr_PP-Configuration .term}   [Prote
+										      >	  [[PP-Module](#abbr_PP-Module)]{#abbr_PP-Module .term}                        [Prote
+										      >	  [[SAR](#abbr_SAR)]{#abbr_SAR .term}                                          [Secur
+										      >	  [[SFR](#abbr_SFR)]{#abbr_SFR .term}                                          [Secur
+										      >	  [[ST](#abbr_ST)]{#abbr_ST .term}                                             [Secur
+										      >	  [[TOE](#abbr_TOE)]{#abbr_TOE .term}                                          [Targe
+										      >	  [[TSF](#abbr_TSF)]{#abbr_TSF .term}                                          [[TOE]
+										      >	  [[TSFI](#abbr_TSFI)]{#abbr_TSFI .term data-plural="TSFIs"}                   [[TSF]
+										      >	  [[TSS](#abbr_TSS)]{#abbr_TSS .term}                                          [[TOE]
+										      >	  [[cPP](#abbr_cPP)]{#abbr_cPP .term data-plural="cPPs"}                       [Colla
+										      >
+										      >	Appendix G - Bibliography {#appendix-bibliography .indexable data-level="A"}
+										      >	=========================
+										      >
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| Identifier                        | Title                             |
+										      >	+===================================+===================================+
+										      >	| [\[Bluetooth\]]{#bibBluetooth}    | [Bluetooth Core Specifications,   |
+										      >	|                                   | version 5.2; December             |
+										      >	|                                   | 2019](https://www.bluetooth.org/e |
+										      >	|                                   | n-us/specification/adopted-specif |
+										      >	|                                   | ications),                        |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| [\[[CC](#abbr_CC)\]]{#bibCC}      | Common Criteria for Information   |
+										      >	|                                   | Technology Security Evaluation -  |
+										      >	|                                   |                                   |
+										      >	|                                   | -   [Part 1: Introduction and     |
+										      >	|                                   |     General                       |
+										      >	|                                   |     Model](http://www.commoncrite |
+										      >	|                                   | riaportal.org/files/ccfiles/CCPAR |
+										      >	|                                   | T1V3.1R5.pdf),                    |
+										      >	|                                   |     CCMB-2017-04-001, Version 3.1 |
+										      >	|                                   |     Revision 5, April 2017.       |
+										      >	|                                   | -   [Part 2: Security Functional  |
+										      >	|                                   |     Components](http://www.common |
+										      >	|                                   | criteriaportal.org/files/ccfiles/ |
+										      >	|                                   | CCPART2V3.1R5.pdf),               |
+										      >	|                                   |     CCMB-2017-04-002, Version 3.1 |
+										      >	|                                   |     Revision 5, April 2017.       |
+										      >	|                                   | -   [Part 3: Security Assurance   |
+										      >	|                                   |     Components](http://www.common |
+										      >	|                                   | criteriaportal.org/files/ccfiles/ |
+										      >	|                                   | CCPART3V3.1R5.pdf),               |
+										      >	|                                   |     CCMB-2017-04-003, Version 3.1 |
+										      >	|                                   |     Revision 5, April 2017.       |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| [\[[CEM](#abbr_CEM)\]]{#bibCEM}   | [Common Evaluation Methodology    |
+										      >	|                                   | for Information Technology        |
+										      >	|                                   | Security - Evaluation             |
+										      >	|                                   | Methodology](http://www.commoncri |
+										      >	|                                   | teriaportal.org/files/ccfiles/CEM |
+										      >	|                                   | V3.1R5.pdf),                      |
+										      >	|                                   | CCMB-2017-04-004, Version 3.1,    |
+										      >	|                                   | Revision 5, April 2017.           |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| [\[GPOS\]]{#bibGPOS}              | [Protection Profile for General   |
+										      >	|                                   | Purpose Operating Systems,        |
+										      >	|                                   | Version                           |
+										      >	|                                   | 4.2.1](https://www.niap-ccevs.org |
+										      >	|                                   | /MMO/PP/PP_OS_V4.2.1.pdf),        |
+										      >	|                                   | April 22, 2019                    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| [\[[MDF](#abbr_MDF)\]]{#bibMDF}   | [Protection Profile for Mobile    |
+										      >	|                                   | Device Fundamentals, Version      |
+										      >	|                                   | 3.2](https://www.niap-ccevs.org/M |
+										      >	|                                   | MO/PP/pp_md_v3.1.pdf),            |
+										      >	|                                   | April 15, 2021                    |
+										      >	+-----------------------------------+-----------------------------------+
