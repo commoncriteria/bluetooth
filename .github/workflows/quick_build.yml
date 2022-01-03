@@ -22,9 +22,14 @@ jobs:
     - name: Quick Build
       run: make release 
 
+    - id: validate
+      run: |
+        RNG_OUT=">output/ValidationReport.txt" make validate
+        echo ::set-output name=VALERRORS::$(wc -l output/ValidationReport.txt | {read first rest; echo $first;})
+ 
     - id: spellcheck
       run: |
-        make spellcheck-release
+        SPELL_OUT=">output/SpellCheckReport.txt" make spellcheck-release
         echo ::set-output name=LINES::$(wc -l output/SpellCheckReport.txt | { read first rest ; echo $first ; } )
 
     - name: diff
@@ -62,6 +67,8 @@ jobs:
       run: |
         # Generates a GitHub Workflow output named `lines` with a coverage value
         echo "##[set-output name=spellcolor;]$(if [ 0 = ${{ steps.spellcheck.outputs.LINES }} ]; then echo green; else echo red; fi)"
+        echo "##[set-output name=valcolor;]$(if [ 0 = ${{ steps.validate.outputs.VALERRORS }} ]; then echo green; else echo red; fi)"
+
         # Output values to be used by other steps
         echo "##[set-output name=path;]${BADGE_PATH}"
         echo "##[set-output name=branch;]${BRANCH}"
