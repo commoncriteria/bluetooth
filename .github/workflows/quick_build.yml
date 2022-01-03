@@ -107,6 +107,16 @@ jobs:
         color: ${{ steps.coverage.outputs.spellcolor }}
         path: ${{ steps.extract_branch.outputs.branch }}/spell-badge.svg
 
+     # Use the output from the `coverage` step
+    - name: Generate the validation badge SVG image
+      uses: emibcn/badge-action@v1
+      with:
+        label: 'Misspellings'
+        status: ${{ steps.validate.outputs.VALERRORS }}
+        color: ${{ steps.coverage.outputs.valcolor }}
+        path: ${{ steps.extract_branch.outputs.branch }}/validation.svg
+
+
     - name: Upload badge as artifact
       uses: actions/upload-artifact@v2
       with:
