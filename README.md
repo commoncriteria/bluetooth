@@ -1,12 +1,14 @@
 
 PP-Module for Bluetooth
 ===============
-[![Build](https://github.com/commoncriteria/bluetooth/actions/workflows/build.yml/badge.svg)](https://github.com/commoncriteria/bluetooth/actions/workflows/build.yml)
-[![Validate](https://github.com/commoncriteria/bluetooth/actions/workflows/validate.yml/badge.svg)](https://github.com/commoncriteria/bluetooth/actions/workflows/validate.yml)
-[![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/pp-template.svg?maxAge=2592000)](https://github.com/commoncriteria/pp-template/issues) 
-![license](https://img.shields.io/badge/license-Unlicensed-blue.svg)
+[![Build](https://github.com/commoncriteria/bluetooth/workflows/Build/badge.svg)
+![Validate](https://github.com/commoncriteria/bluetooth/workflows/Validate/badge.svg)
+[![SanityChecks](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/warnings-badge.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/SanityChecksOutput.md)
+[![SpellCheck](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/spell-badge.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/SpellCheckReport.txt)
+[![QuickBuild](https://github.com/commoncriteria/bluetooth/actions/workflows/quick_build.yml/badge.svg)](https://commoncriteria.github.io/bluetooth)
+[![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/bluetooth.svg?maxAge=2592000)](https://github.com/commoncriteria/bluetooth/issues) 
 
-This repository hosts the draft version of the Protection Profile for QQQQ based on the 
+This repository hosts the draft version of the Protection Profile for BluetoothQ based on the 
 [Essential Security Requirements (ESR)](https://commoncriteria.github.io/pp/QQQQ/QQQQ-esr.html) for this technology class of 
 products. This repository is used to facilitate collaboration and development on the draft document. 
 See the [release](#Release-Version) section if you are looking for the officially released version for evaluations. 
