@@ -26,3 +26,12 @@ NoInputNoOutput
 NoOutput
 MDF
 CEM
+HCI
+DEV1
+DEV2
+MiTM
+OBEX
+EDR
+L2CAP
+LMP
+'trusted'
