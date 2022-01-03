@@ -29,7 +29,8 @@ jobs:
     - id: validate
       run: |
         RNG_OUT=">output/ValidationReport.txt" make validate || true
- 
+        echo ::set-output name=VALERRORS::$(wc -l output/ValidationReport.txt | { read first rest ; echo $first ; } )
+
     - id: spellcheck
       run: |
         SPELL_OUT=">output/SpellCheckReport.txt" make spellcheck-release
