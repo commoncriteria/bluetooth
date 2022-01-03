@@ -256,8 +256,8 @@
 										      >	|                                   | hopping sequence, hopping through |
 										      >	|                                   | a 79 RF channel set, or           |
 										      >	|                                   | optionally fewer channels when    |
-										      >	|                                   | Adaptive Frequency Hopping (AFH)  |
-										      >	|                                   | is in use.                        |
+										      >	|                                   | Adaptive Frequency Hopping        |
+										      >	|                                   | ([AFH](#abbr_AFH)) is in use.     |
 										      >	|                                   | [BR](#abbr_BR)/[EDR](#abbr_EDR)/[ |
 										      >	|                                   | LE](#abbr_LE)                     |
 										      >	|                                   | Bluetooth basic rate              |
@@ -425,9 +425,9 @@
 										      >	| :::                               |                                   |
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Link_establishment}         | A procedure for establishing the  |
-										      >	| Link establishment                | default ACL link and hierarchy of |
-										      >	| :::                               | links and channels between        |
-										      >	|                                   | devices.                          |
+										      >	| Link establishment                | default [ACL](#abbr_ACL) link and |
+										      >	| :::                               | hierarchy of links and channels   |
+										      >	|                                   | between devices.                  |
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Link_key}                   | A secret that is known by two     |
 										      >	| Link key                          | devices and is used to            |
@@ -1634,7 +1634,7 @@
 										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2)
 										      >
 										      >	[FIA\_BLT\_EXT.2](#FIA_BLT_EXT.2) supports the objective by requiring
-										      >	the [TSF](#abbr_TSF) to implement Bluetooth mutual authenticaiton.
+										      >	the [TSF](#abbr_TSF) to implement Bluetooth mutual authentication.
 										      >
 										      >	[FIA\_BLT\_EXT.3](#FIA_BLT_EXT.3)
 										      >
@@ -2091,7 +2091,7 @@
 										      >
 										      >	#### Audit: FCS\_CKM\_EXT.8
 										      >
-										      >	There are no auidtable events foreseen.
+										      >	There are no auditable events foreseen.
 										      >
 										      >	#### FCS\_CKM\_EXT.8 Bluetooth Key Generation
 										      >
@@ -2487,8 +2487,10 @@
 										      >
 										      >	  Acronym                                                                      Meanin
 										      >	  ---------------------------------------------------------------------------- ------
+										      >	  [[ACL](#abbr_ACL)]{#abbr_ACL .term}                                          [Async
 										      >	  [[AES](#abbr_AES)]{#abbr_AES .term}                                          [Advan
 										      >	  [[AES-CCM](#abbr_AES-CCM)]{#abbr_AES-CCM .term}                              [[AES]
+										      >	  [[AFH](#abbr_AFH)]{#abbr_AFH .term}                                          [Adapt
 										      >	  [[API](#abbr_API)]{#abbr_API .term}                                          [Appli
 										      >	  [[BR](#abbr_BR)]{#abbr_BR .term}                                             [Basic
 										      >	  [[Base-PP](#abbr_Base-PP)]{#abbr_Base-PP .term}                              [Base 
