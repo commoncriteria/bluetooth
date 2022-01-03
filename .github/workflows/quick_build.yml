@@ -33,7 +33,7 @@ jobs:
 
     - id: spellcheck
       run: |
-        SPELL_OUT=">output/SpellCheckReport.txt" make spellcheck-release
+        SPELL_OUT=">output/SpellCheckReport.txt" make spellcheck
         echo ::set-output name=LINES::$(wc -l output/SpellCheckReport.txt | { read first rest ; echo $first ; } )
 
     - name: diff
@@ -147,7 +147,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add output #"${{ steps.extract_branch.outputs.branch }}"
+        git add "${{ steps.extract_branch.outputs.branch }}"
         git commit -m "Add/Update badges"
 
     - name: Push badge commit
