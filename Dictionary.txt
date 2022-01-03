@@ -1,4 +1,5 @@
 Piconet
+piconet
 ACL
 ADDR
 AFH
@@ -7,6 +8,14 @@ BT
 wirelessly
 v4
 discoverable
-Wi-Fi
-OSP
-OSPs
+Discoverable
+Wi
+Fi
+'
+GPOS
+Impl
+MDM
+MOF
+RFCOMM
+STM
+PINs
