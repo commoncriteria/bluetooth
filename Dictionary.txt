@@ -20,4 +20,9 @@ RFCOMM
 STM
 PINs
 hoc
-
+iteratively
+NoInput
+NoInputNoOutput
+NoOutput
+MDF
+CEM
