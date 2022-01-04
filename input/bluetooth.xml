@@ -393,10 +393,15 @@
 			</h:ul></text>
 			<M ref="I"/>
 			<app-note> Management of the Discoverable and Advertising mode and management of the Bluetooth device name are mandatory. All other management functions for Bluetooth are currently objective.</app-note>
-		<aactivity>	<Tests>For <_/>, the evaluator shall disable the Discoverable mode and shall verify that other Bluetooth BR/EDR devices cannot detect the TOE. The evaluator shall use the protocol analyzer to verify that the TOE does not respond to inquiries from other devices searching for Bluetooth devices. The evaluator shall enable Discoverable mode and verify that other devices can detect the TOE and that the TOE sends response packets to inquiries from searching devices.</Tests>
-
+			<aactivity>
+			  <Tests>
+			    For <_/>, the evaluator shall disable the Discoverable mode and
+			    shall verify that other Bluetooth BR/EDR devices cannot detect the TOE.
+			    The evaluator shall use the protocol analyzer to verify that the TOE does not respond to inquiries from other devices searching for Bluetooth devices.
+			    The evaluator shall enable Discoverable mode and verify that other devices can detect the TOE and that the TOE sends response packets to inquiries from searching devices.
+			  </Tests>
 			</aactivity>		
-					</management-function>
+		      </management-function>
                     <management-function>
 		      <text>BT-2. Change the Bluetooth device name (separately for BR/EDR and LE);</text>
               <Tests>For <_/>(conditional): The evaluator shall examine Bluetooth traffic from the TOE to determine the current Bluetooth device name, change the Bluetooth device name, and verify that the Bluetooth traffic from the TOE lists the new name. The evaluator shall examine Bluetooth traffic from the TOE to determine the current Bluetooth device name for BR/EDR and LE. The evaluator shall change the Bluetooth device name for LE independently of the device name for BR/EDR. The evaluator shall verify that the Bluetooth traffic from the TOE lists the new name.</Tests>
