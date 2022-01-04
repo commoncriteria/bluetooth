@@ -24,7 +24,7 @@ jobs:
 
 
     - name: Quick Build
-      run: make release 
+      run: WARN_PATH="output/SanityChecksOutput.md" make release 
 
     - id: validate
       run: |
