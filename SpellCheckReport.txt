@@ -1,9 +1,0 @@
-output/bluetooth-sd.html: ASE
-output/bluetooth-sd.html: Acknowledgements
-output/bluetooth-sd.html: Activites
-output/bluetooth-sd.html: CCRA
-output/bluetooth-sd.html: FSP
-output/bluetooth-sd.html: SDs
-output/bluetooth-sd.html: labelled
-output/bluetooth-sd.html: workunit
-output/bluetooth-sd.html: workunits
