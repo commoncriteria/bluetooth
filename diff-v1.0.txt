@@ -1043,7 +1043,7 @@
 										      >	the Bluetooth device name are mandatory. All other management functions
 										      >	for Bluetooth are currently objective.
 										      >
-										      >	Function [3](#) requires management of the Bluetooth device name
+										      >	Function [3](#_mf_3) requires management of the Bluetooth device name
 										      >	separately for [BR](#abbr_BR)/[EDR](#abbr_EDR) and [LE](#abbr_LE)
 										      >	radios.
 										      >
@@ -2179,6 +2179,8 @@
 										      >	#### FTP\_BLT\_EXT.3/LE Bluetooth Encryption Parameters (LE)
 										      >
 										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FTP\_BLT\_EXT.1.1](#FTP_BLT_EXT.1.1).***
 										      >	:::
 										      >
 										      >	::: {.element}
@@ -2570,8 +2572,8 @@
 										      >
 										      >	The [TSF](#abbr_TSF) shall enforce the use of encryption when
 										      >	transmitting data over the Bluetooth trusted channel for
-										      >	[BR](#abbr_BR)/[EDR](#abbr_EDR) and \[**selection**: *[LE](#abbr_LE)*,
-										      >	*no other connections*\].
+										      >	[BR](#abbr_BR)/[EDR](#abbr_EDR) and \[**assignment**: [list of other
+										      >	connection modes]{.assignable-content}\].
 										      >
 										      >	#### FTP\_BLT\_EXT.1.2 {#ext-comp-FTP_BLT_EXT.1.2}
 										      >
