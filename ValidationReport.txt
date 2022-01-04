@@ -1,0 +1,1 @@
+/home/runner/work/bluetooth/bluetooth/input/bluetooth.xml:396:14: error: element "aactivity" not allowed here; expected the element end-tag or element "TSS" or "Tests"

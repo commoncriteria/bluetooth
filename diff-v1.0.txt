@@ -781,63 +781,194 @@
 										      >	The [TSF](#abbr_TSF) shall be capable of performing the following
 										      >	**Bluetooth** management functions:
 										      >
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| Function                                 | Impl | User | Admi | Admi |
-										      >	|                                          | .    | Only | n    | n    |
-										      >	|                                          |      |      |      | Only |
-										      >	+==========================================+======+======+======+======+
-										      >	| BT-1. Configure the Bluetooth trusted    | M    | O    | O    | O    |
-										      >	| channel.                                 |      |      |      |      |
-										      >	|                                          |      |      |      |      |
-										      >	| -   Disable/enable the Discoverable (for |      |      |      |      |
-										      >	|     [BR](#abbr_BR)/[EDR](#abbr_EDR)) and |      |      |      |      |
-										      >	|     Advertising (for [LE](#abbr_LE))     |      |      |      |      |
-										      >	|     modes;                               |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-2. Change the Bluetooth device name   | O    | O    | O    | O    |
-										      >	| (separately for                          |      |      |      |      |
-										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
-										      >	| [LE](#abbr_LE));                         |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-3. Provide separate controls for      | O    | O    | O    | O    |
-										      >	| turning the                              |      |      |      |      |
-										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
-										      >	| [LE](#abbr_LE) radios on and off;        |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-4. Allow/disallow the following       | O    | O    | O    | O    |
-										      >	| additional wireless technologies to be   |      |      |      |      |
-										      >	| used with Bluetooth: \[**selection**:    |      |      |      |      |
-										      >	| *Wi-Fi*, *NFC*, *\[**assignment**:       |      |      |      |      |
-										      >	| [other wireless                          |      |      |      |      |
-										      >	| technologies]{.assignable-content}\]*\]; |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-5. Configure allowable methods of Out | O    | O    | O    | O    |
-										      >	| of Band pairing (for                     |      |      |      |      |
-										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
-										      >	| [LE](#abbr_LE));                         |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-6. Disable/enable the Discoverable    | O    | O    | O    | O    |
-										      >	| (for [BR](#abbr_BR)/[EDR](#abbr_EDR))    |      |      |      |      |
-										      >	| and Advertising (for [LE](#abbr_LE))     |      |      |      |      |
-										      >	| modes separately;                        |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-7. Disable/enable the Connectable     | O    | O    | O    | O    |
-										      >	| mode (for                                |      |      |      |      |
-										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
-										      >	| [LE](#abbr_LE));                         |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-8. Disable/enable the Bluetooth       | O    | O    | O    | O    |
-										      >	| \[**assignment**: [list of Bluetooth     |      |      |      |      |
-										      >	| service and/or profiles available on the |      |      |      |      |
-										      >	| OS (for [BR](#abbr_BR)/[EDR](#abbr_EDR)  |      |      |      |      |
-										      >	| and                                      |      |      |      |      |
-										      >	| [LE](#abbr_LE))]{.assignable-content}\]; |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
-										      >	| BT-9. Specify minimum level of security  | O    | O    | O    | O    |
-										      >	| for each pairing (for                    |      |      |      |      |
-										      >	| [BR](#abbr_BR)/[EDR](#abbr_EDR) and      |      |      |      |      |
-										      >	| [LE](#abbr_LE));                         |      |      |      |      |
-										      >	+------------------------------------------+------+------+------+------+
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| \#        | Managemen | Impl.     | User Only | Admin     | Admin     |
+										      >	|           | t         |           |           |           | Only      |
+										      >	|           | Function  |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 1         | BT-1.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Configure | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | the       | M[Mandato | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | Bluetooth | ry]{.tool | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | trusted   | tiptext}  | iptext}   | iptext}   | iptext}   |
+										      >	|           | channel.  | :::       | :::       | :::       | :::       |
+										      >	|           |           |           |           |           |           |
+										      >	|           | -   Disab |           |           |           |           |
+										      >	|           | le/enable |           |           |           |           |
+										      >	|           |     the   |           |           |           |           |
+										      >	|           |     Disco |           |           |           |           |
+										      >	|           | verable   |           |           |           |           |
+										      >	|           |     (for  |           |           |           |           |
+										      >	|           |     [BR]( |           |           |           |           |
+										      >	|           | #abbr_BR) |           |           |           |           |
+										      >	|           | /[EDR](#a |           |           |           |           |
+										      >	|           | bbr_EDR)) |           |           |           |           |
+										      >	|           |     and   |           |           |           |           |
+										      >	|           |     Adver |           |           |           |           |
+										      >	|           | tising    |           |           |           |           |
+										      >	|           |     (for  |           |           |           |           |
+										      >	|           |     [LE]( |           |           |           |           |
+										      >	|           | #abbr_LE) |           |           |           |           |
+										      >	|           | )         |           |           |           |           |
+										      >	|           |     modes |           |           |           |           |
+										      >	|           | ;         |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 2         | BT-2.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Change    | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | the       | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | Bluetooth | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | device    | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | name      | :::       | :::       | :::       | :::       |
+										      >	|           | (separate |           |           |           |           |
+										      >	|           | ly        |           |           |           |           |
+										      >	|           | for       |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR)      |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE));   |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 3         | BT-3.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Provide   | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | separate  | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | controls  | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | for       | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | turning   | :::       | :::       | :::       | :::       |
+										      >	|           | the       |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR)      |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE)     |           |           |           |           |
+										      >	|           | radios on |           |           |           |           |
+										      >	|           | and off;  |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 4         | BT-4.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Allow/dis | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | allow     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | following | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | additiona | :::       | :::       | :::       | :::       |
+										      >	|           | l         |           |           |           |           |
+										      >	|           | wireless  |           |           |           |           |
+										      >	|           | technolog |           |           |           |           |
+										      >	|           | ies       |           |           |           |           |
+										      >	|           | to be     |           |           |           |           |
+										      >	|           | used with |           |           |           |           |
+										      >	|           | Bluetooth |           |           |           |           |
+										      >	|           | :         |           |           |           |           |
+										      >	|           | \[**selec |           |           |           |           |
+										      >	|           | tion**:   |           |           |           |           |
+										      >	|           | *Wi-Fi*,  |           |           |           |           |
+										      >	|           | *NFC*,    |           |           |           |           |
+										      >	|           | *\[**assi |           |           |           |           |
+										      >	|           | gnment**: |           |           |           |           |
+										      >	|           | [other    |           |           |           |           |
+										      >	|           | wireless  |           |           |           |           |
+										      >	|           | technolog |           |           |           |           |
+										      >	|           | ies]{.ass |           |           |           |           |
+										      >	|           | ignable-c |           |           |           |           |
+										      >	|           | ontent}\] |           |           |           |           |
+										      >	|           | *\];      |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 5         | BT-5.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Configure | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | allowable | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | methods   | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | of Out of | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | Band      | :::       | :::       | :::       | :::       |
+										      >	|           | pairing   |           |           |           |           |
+										      >	|           | (for      |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR)      |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE));   |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 6         | BT-6.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Disable/e | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | nable     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | Discovera | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | ble       | :::       | :::       | :::       | :::       |
+										      >	|           | (for      |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR))     |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | Advertisi |           |           |           |           |
+										      >	|           | ng        |           |           |           |           |
+										      >	|           | (for      |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE))    |           |           |           |           |
+										      >	|           | modes     |           |           |           |           |
+										      >	|           | separatel |           |           |           |           |
+										      >	|           | y;        |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 7         | BT-7.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Disable/e | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | nable     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | Connectab | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | le        | :::       | :::       | :::       | :::       |
+										      >	|           | mode (for |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR)      |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE));   |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 8         | BT-8.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Disable/e | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | nable     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | Bluetooth | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | \[**assig | :::       | :::       | :::       | :::       |
+										      >	|           | nment**:  |           |           |           |           |
+										      >	|           | [list of  |           |           |           |           |
+										      >	|           | Bluetooth |           |           |           |           |
+										      >	|           | service   |           |           |           |           |
+										      >	|           | and/or    |           |           |           |           |
+										      >	|           | profiles  |           |           |           |           |
+										      >	|           | available |           |           |           |           |
+										      >	|           | on the OS |           |           |           |           |
+										      >	|           | (for      |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR)      |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE))]{. |           |           |           |           |
+										      >	|           | assignabl |           |           |           |           |
+										      >	|           | e-content |           |           |           |           |
+										      >	|           | }\];      |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
+										      >	| 9         | BT-9.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Specify   | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | minimum   | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | level of  | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | security  | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | for each  | :::       | :::       | :::       | :::       |
+										      >	|           | pairing   |           |           |           |           |
+										      >	|           | (for      |           |           |           |           |
+										      >	|           | [BR](#abb |           |           |           |           |
+										      >	|           | r_BR)/[ED |           |           |           |           |
+										      >	|           | R](#abbr_ |           |           |           |           |
+										      >	|           | EDR)      |           |           |           |           |
+										      >	|           | and       |           |           |           |           |
+										      >	|           | [LE](#abb |           |           |           |           |
+										      >	|           | r_LE));   |           |           |           |           |
+										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
 										      >
 										      >	::: {.appnote}
 										      >	[Application Note: ]{.note-header}[ As is the case with the
@@ -884,6 +1015,49 @@
 										      >
 										      >	(BT-9. optional) The minimum level of security permitted may be
 										      >	configurable for each individual pairing or for all Bluetooth pairings.
+										      >
+										      >	-   If the [TSF](#abbr_TSF) supports any of the
+										      >	    [BR](#abbr_BR)/[EDR](#abbr_EDR) security modes in the following
+										      >	    list; it should provide a mechanism for the user to choose the
+										      >	    minimum level of security to enforce for a particular device during
+										      >	    the pairing process: Security Mode 1 (any level); Security Mode 2;
+										      >	    (any level); Security Mode 3; (any level); Security Mode 4; Levels
+										      >	    0;1;2 (aside from the services permitted to use Mode 4; Level 0 in
+										      >	    Bluetooth Core Specification version 4.2; Vol. 3; Part C; p. 325).
+										      >	-   If the [TSF](#abbr_TSF) supports any of the [LE](#abbr_LE) security
+										      >	    modes in the following list; it should provide a mechanism for the
+										      >	    user to choose the minimum level of security to enforce for a
+										      >	    particular device during the pairing process: Security Mode 1:
+										      >	    Levels 1, 2; Security Mode 2, (any level).
+										      >	-   Examples of levels of security are the use of legacy pairing; the
+										      >	    use of different types of Secure Simple Pairing; a requirement for
+										      >	    Man-in-the-Middle protection; the enforcement of Secure Connections
+										      >	    Only mode; etc.
+										      >
+										      >	\
+										      >	\
+										      >	**Function-specific Application Notes:**\
+										      >	\
+										      >
+										      >	Management of the Discoverable and Advertising mode and management of
+										      >	the Bluetooth device name are mandatory. All other management functions
+										      >	for Bluetooth are currently objective.
+										      >
+										      >	Function [3](#) requires management of the Bluetooth device name
+										      >	separately for [BR](#abbr_BR)/[EDR](#abbr_EDR) and [LE](#abbr_LE)
+										      >	radios.
+										      >
+										      >	May include disabling Wi-Fi being used as a part of Bluetooth High Speed
+										      >	and/or disabling NFC as an Out of Band pairing method for Bluetooth. May
+										      >	also include other wireless technologies beyond those already specified.
+										      >
+										      >	The Bluetooth services and/or profiles that may be disabled should be
+										      >	listed for the user or administrator either by service and/or profile
+										      >	name or by the types of applications for which the service and/or
+										      >	profile is used.
+										      >
+										      >	The minimum level of security permitted may be configurable for each
+										      >	individual pairing or for all Bluetooth pairings.
 										      >
 										      >	-   If the [TSF](#abbr_TSF) supports any of the
 										      >	    [BR](#abbr_BR)/[EDR](#abbr_EDR) security modes in the following
