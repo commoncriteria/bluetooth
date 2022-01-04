@@ -2210,12 +2210,13 @@
 										      >	===========================================
 										      >
 										      >	This appendix contains the definitions for all extended requirements
-										      >	specified in the .
+										      >	specified in the Module.
 										      >
 										      >	C.1 Extended Components Table {#ext-comp-defs-bg .indexable data-level="2"}
 										      >	-----------------------------
 										      >
-										      >	All extended components specified in the are listed in this table:
+										      >	All extended components specified in the Module are listed in this
+										      >	table:
 										      >
 										      >	  -----------------------------------------------------------------------------------
 										      >	  Functional Class                           Functional Components
@@ -2235,8 +2236,8 @@
 										      >
 										      >	### C.2.1 Cryptographic Support (FCS) {#ext-comp-FCS .indexable data-level="3"}
 										      >
-										      >	This defines the following extended components as part of the FCS class
-										      >	originally defined by [CC](#abbr_CC) Part 2:
+										      >	This Module defines the following extended components as part of the FCS
+										      >	class originally defined by [CC](#abbr_CC) Part 2:
 										      >
 										      >	### C.2.1.1 FCS\_CKM\_EXT Cryptographic Key Management {#ext-comp-FCS_CKM_EXT .indexa
 										      >
@@ -2288,8 +2289,8 @@
 										      >
 										      >	### C.2.2 Identification and Authentication (FIA) {#ext-comp-FIA .indexable data-leve
 										      >
-										      >	This defines the following extended components as part of the FIA class
-										      >	originally defined by [CC](#abbr_CC) Part 2:
+										      >	This Module defines the following extended components as part of the FIA
+										      >	class originally defined by [CC](#abbr_CC) Part 2:
 										      >
 										      >	### C.2.2.1 FIA\_BLT\_EXT Bluetooth Pairing {#ext-comp-FIA_BLT_EXT .indexable data-le
 										      >
@@ -2519,7 +2520,7 @@
 										      >
 										      >	### C.2.3 Trusted Path/Channels (FTP) {#ext-comp-FTP .indexable data-level="3"}
 										      >
-										      >	This defines the following extended components as part of the
+										      >	This Module defines the following extended components as part of the
 										      >	[FTP](#abbr_FTP) class originally defined by [CC](#abbr_CC) Part 2:
 										      >
 										      >	### C.2.3.1 FTP\_BLT\_EXT Bluetooth Trusted Communications {#ext-comp-FTP_BLT_EXT .in
