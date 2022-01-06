@@ -1,25 +1,29 @@
 Protection Profile Module for Bluetooth
-===============
+=======
 
-[![Build Status](https://travis-ci.com/commoncriteria/pp-template.svg?branch=master)](https://travis-ci.com/commoncriteria/pp-template)
-[![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/pp-template.svg?maxAge=2592000)](https://github.com/commoncriteria/pp-template/issues) 
-![license](https://img.shields.io/badge/license-Unlicensed-blue.svg)
+[![Build](https://github.com/commoncriteria/bluetooth/workflows/Build/badge.svg)
+![Validate](https://github.com/commoncriteria/bluetooth/workflows/Validate/badge.svg)
+[![Validation](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/validation.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/ValidationReport.txt)
+[![SanityChecks](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/warnings-badge.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/SanityChecksOutput.md)
+[![SpellCheck](https://raw.githubusercontent.com/commoncriteria/bluetooth/gh-pages/master/spell-badge.svg)](https://github.com/commoncriteria/bluetooth/blob/gh-pages/SpellCheckReport.txt)
+[![QuickBuild](https://github.com/commoncriteria/bluetooth/actions/workflows/quick_build.yml/badge.svg)](https://commoncriteria.github.io/bluetooth)
+[![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/bluetooth.svg?maxAge=2592000)](https://github.com/commoncriteria/bluetooth/issues) 
 
-This repository hosts the draft version of the Protection Profile for QQQQ based on the 
-[Essential Security Requirements (ESR)](https://commoncriteria.github.io/pp/QQQQ/QQQQ-esr.html) for this technology class of 
-products. This repository is used to facilitate collaboration and development on the draft document. 
+This repository hosts the draft version of the Protection Profile for Bluetooth based on the 
+[Essential Security Requirements (ESR)](https://commoncriteria.github.io/pp/bluetooth/bluetooth-esr.html) for this technology class of 
+products. 
+This repository is used to facilitate collaboration and development on the draft document. 
 See the [release](#Release-Version) section if you are looking for the officially released version for evaluations. 
-A list of products that have passed evaluation against this Protection Profile can be found [here](QQQQ).
 
 ## Draft Version
 
-* [PP-Module for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.html) (html)
-* [PP-Module for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.pdf) (pdf)
-* [PP-Module SD for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.html) (html)
-* [PP-Module SD for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.pdf) (pdf)
+* [Protection Profile Module for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.html) (html)
+* [Protection Profile Module for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.pdf) (pdf)
+* [Protection Profile Module Supporting Documents for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.html) (html)
+* [Protection Profile Module Supporting Documents for Bluetooth](https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.pdf) (pdf)
 
 ## Release Version
-* [Protection Profile for QQQQ](QQQQ)
+* [Protection Profile Module for Bluetooth](https://www.niap-ccevs.org/Profile/Info.cfm?PPID=425&id=425)
 
 ## Contributing
 
@@ -28,13 +32,13 @@ If you are interested in contributing directly to future versions the this Prote
 
 ## Feedback
 
-Questions, comments, and fixes can be submitted to the [repository issue tracker](https://github.com/commoncriteria/QQQQ/issues)
+Questions, comments, and fixes can be submitted to the [repository issue tracker](https://github.com/commoncriteria/bluetooth/issues)
 
 ## Quickstart
 To clone this project along with its _transforms_ submodule run:
 
 ````
-  git clone --recursive git@github.com:commoncriteria/qqqq.git
+  git clone --recursive git@github.com:commoncriteria/bluetooth
 ````
 To pull updates from the upstream _transforms_ submodule and commit them run:
 ````
