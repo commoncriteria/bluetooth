@@ -382,13 +382,13 @@
                 </h:ul>  -->
                 
 
-                <management-function-set default="O">
+                <management-function-set default="O" ctr-prefix="BT-">
                       <manager cid="I">Impl.</manager>
                       <manager cid="UO">User Only</manager>
                       <manager cid="A">Admin</manager>
                       <manager cid="AO">Admin Only</manager>
                       <management-function>
-			<text>BT-1. Configure the Bluetooth trusted channel. <h:ul>
+			<text>Configure the Bluetooth trusted channel. <h:ul>
                         <h:li>Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes;</h:li>
 			</h:ul></text>
 			<M ref="I"/>
@@ -403,7 +403,7 @@
 			</aactivity>		
 		      </management-function>
                     <management-function>
-		      <text>BT-2. Change the Bluetooth device name (separately for BR/EDR and LE);</text>
+		      <text>Change the Bluetooth device name (separately for BR/EDR and LE);</text>
 		      <aactivity><Tests>
 			  The evaluator shall examine Bluetooth traffic from the TOE to determine the current Bluetooth device name, change the Bluetooth device name, and verify that the Bluetooth traffic from the TOE lists the new name.
 			  The evaluator shall examine Bluetooth traffic from the TOE to determine the current Bluetooth device name for BR/EDR and LE.
@@ -411,14 +411,14 @@
 		      </Tests></aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-3. Provide separate controls for turning the BR/EDR and LE radios on and off;</text>
+		      <text>Provide separate controls for turning the BR/EDR and LE radios on and off;</text>
 		      <app-note> Function <_/> requires management of the Bluetooth device name separately for BR/EDR and LE radios.</app-note>
 		      <aactivity>
 			<Tests>The evaluator shall disable Bluetooth BR/EDR and enable Bluetooth LE. The evaluator shall examine Bluetooth traffic from the TOE to confirm that only Bluetooth LE traffic is present. The evaluator shall repeat the test with Bluetooth BR/EDR enabled and Bluetooth LE disabled, confirming that only Bluetooth BR/EDR is present.</Tests>		
 		      </aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-4. Allow/disallow the following additional wireless technologies to be used with Bluetooth: 
+		      <text>Allow/disallow the following additional wireless technologies to be used with Bluetooth: 
                         <selectables>
                           <selectable>Wi-Fi</selectable>
                           <selectable>NFC</selectable>
@@ -431,7 +431,7 @@
 			</aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-5. Configure allowable methods of Out of Band pairing (for BR/EDR and LE);</text>
+		      <text>Configure allowable methods of Out of Band pairing (for BR/EDR and LE);</text>
 		    <aactivity>
 
 						<TSS>If function BT-5, "Configure allowable methods of Out of Band pairing (for BR/EDR and LE)," is selected, the evaluator shall verify that the TSS describes when Out of Band pairing methods are allowed and which ones are configurable.</TSS>
@@ -439,14 +439,14 @@
 		    </aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-6. Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes separately;</text>
+		      <text>Disable/enable the Discoverable (for BR/EDR) and Advertising (for LE) modes separately;</text>
 		    <aactivity>
 		      <TSS>If function BT-8, "Disable/enable the Bluetooth services and/or profiles available on the OS (for BR/EDR and LE)," is selected, the evaluator shall verify that all supported Bluetooth services are listed in the TSS as manageable and, if the TOE allows disabling by application rather than by service name, that a list of services for each application is also listed.</TSS>
 		      <Tests>(conditional): The evaluator shall enable Advertising for Bluetooth LE, verify that the advertisements are captured by the protocol analyzer, disable Advertising, and verify that no advertisements from the device are captured by the protocol analyzer.</Tests>
 		    </aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-7. Disable/enable the Connectable mode (for BR/EDR and LE);</text>
+		      <text>Disable/enable the Connectable mode (for BR/EDR and LE);</text>
 		    <aactivity>
 		      <Tests>
 			The evaluator shall enable Connectable mode and verify that other Bluetooth devices may pair with the TOE and (if the devices were bonded) re-connect after pairing and disconnection.
@@ -458,7 +458,7 @@
 		    </aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-8. Disable/enable the Bluetooth <assignable>list of Bluetooth service and/or profiles available on the OS (for BR/EDR and LE)</assignable>;</text>
+		      <text>Disable/enable the Bluetooth <assignable>list of Bluetooth service and/or profiles available on the OS (for BR/EDR and LE)</assignable>;</text>
 		      <app-note> The Bluetooth services and/or profiles that may be disabled should be listed for the user or administrator either by service and/or profile name or by the types of applications for which the service and/or profile is used.</app-note>
 		      <aactivity>
 			<Tests>
@@ -469,7 +469,7 @@
 		      </aactivity>
                     </management-function>
                     <management-function>
-		      <text>BT-9. Specify minimum level of security for each pairing (for BR/EDR and LE);</text>
+		      <text>Specify minimum level of security for each pairing (for BR/EDR and LE);</text>
 		      <app-note> The minimum level of security permitted may be configurable for each individual pairing or for all Bluetooth pairings.
                       <h:ul>
 			<h:li>If the TSF supports any of the BR/EDR security modes in the following list; it should provide a mechanism for the user to choose the minimum level of security to enforce for a particular device during the pairing process: 
