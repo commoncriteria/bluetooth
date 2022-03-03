@@ -57,8 +57,8 @@
 										      >	](#conreq-b-gpos)[Appendix A - Optional SFRs](#opt-sfrs)[A.1Strictly
 										      >	Optional Requirements ](#opt-sfrs)[A.2Objective Requirements
 										      >	](#obj-sfrs)[A.2.1Identification and
-										      >	Authentication](#fia)[A.3Implementation-based Requirements
-										      >	](#impl-dep-sfrs)[Appendix B - Selection-based Requirements
+										      >	Authentication](#fia)[A.3Implementation-Based Requirements
+										      >	](#impl-dep-sfrs)[Appendix B - Selection-Based Requirements
 										      >	](#sel-sfrs)[B.1Trusted Path/Channels](#ftp)[Appendix C - Extended
 										      >	Component Definitions](#ext-comp-defs)[C.1Extended Components
 										      >	Table](#ext-comp-defs-bg)[C.2Extended Component
@@ -642,8 +642,8 @@
 										      >
 										      >	An organization deploying the [TOE](#abbr_TOE) is expected to satisfy
 										      >	the organizational security policy listed below in addition to all
-										      >	organizational security policies defined by the claimed
-										      >	[Base-PP](#abbr_Base-PP).
+										      >	organizational security policies defined by the claimed base
+										      >	[PP](#abbr_PP).
 										      >
 										      >	This document does not define any additional OSPs.
 										      >
@@ -682,8 +682,10 @@
 										      >
 										      >	  ----------------------------------------------- -----------------------------------
 										      >	  Threat, Assumption, or OSP                      Security Objectives                
-										      >	  [T.NETWORK\_​EAVESDROP](#T.NETWORK_EAVESDROP)   [O.PROTECTED\_​COMMS](#O.PROTECTED_CO
-										      >	  [T.NETWORK\_​ATTACK](#T.NETWORK_ATTACK)         [O.PROTECTED\_​COMMS](#O.PROTECTED_CO
+										      >
+										      >	  [T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP)\   [O.PROTECTED\_COMMS](#O.PROTECTED_C
+										      >
+										      >	  [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)\         [O.PROTECTED\_COMMS](#O.PROTECTED_C
 										      >	  ----------------------------------------------- -----------------------------------
 										      >
 										      >	  : [Table [1]{.counter}]{#t-sec-obj-rat .ctr data-myid="t-sec-obj-rat"
@@ -784,12 +786,13 @@
 										      >	|           | t         |           |           |           | Only      |
 										      >	|           | Function  |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-1      | Configure | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | the       | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | Bluetooth | M[Mandato | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | trusted   | ry]{.tool | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | channel.  | tiptext}  | iptext}   | iptext}   | iptext}   |
-										      >	|           |           | :::       | :::       | :::       | :::       |
+										      >	| 1         | BT-1.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Configure | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | the       | M[Mandato | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | Bluetooth | ry]{.tool | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | trusted   | tiptext}  | iptext}   | iptext}   | iptext}   |
+										      >	|           | channel.  | :::       | :::       | :::       | :::       |
+										      >	|           |           |           |           |           |           |
 										      >	|           | -   Disab |           |           |           |           |
 										      >	|           | le/enable |           |           |           |           |
 										      >	|           |     the   |           |           |           |           |
@@ -810,12 +813,13 @@
 										      >	|           |     modes |           |           |           |           |
 										      >	|           | ;         |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-2      | Change    | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | the       | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | Bluetooth | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | device    | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | name      | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | (separate | :::       | :::       | :::       | :::       |
+										      >	| 2         | BT-2.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Change    | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | the       | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | Bluetooth | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | device    | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | name      | :::       | :::       | :::       | :::       |
+										      >	|           | (separate |           |           |           |           |
 										      >	|           | ly        |           |           |           |           |
 										      >	|           | for       |           |           |           |           |
 										      >	|           | [BR](#abb |           |           |           |           |
@@ -826,12 +830,13 @@
 										      >	|           | [LE](#abb |           |           |           |           |
 										      >	|           | r_LE));   |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-3      | Provide   | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | separate  | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | controls  | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | for       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | turning   | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | the       | :::       | :::       | :::       | :::       |
+										      >	| 3         | BT-3.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Provide   | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | separate  | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | controls  | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | for       | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | turning   | :::       | :::       | :::       | :::       |
+										      >	|           | the       |           |           |           |           |
 										      >	|           | [BR](#abb |           |           |           |           |
 										      >	|           | r_BR)/[ED |           |           |           |           |
 										      >	|           | R](#abbr_ |           |           |           |           |
@@ -842,12 +847,13 @@
 										      >	|           | radios on |           |           |           |           |
 										      >	|           | and off;  |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-4      | Allow/dis | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | allow     | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | the       | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | following | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | additiona | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | l         | :::       | :::       | :::       | :::       |
+										      >	| 4         | BT-4.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Allow/dis | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | allow     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | following | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | additiona | :::       | :::       | :::       | :::       |
+										      >	|           | l         |           |           |           |           |
 										      >	|           | wireless  |           |           |           |           |
 										      >	|           | technolog |           |           |           |           |
 										      >	|           | ies       |           |           |           |           |
@@ -869,12 +875,13 @@
 										      >	|           | ontent}\] |           |           |           |           |
 										      >	|           | *\];      |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-5      | Configure | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | allowable | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | methods   | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | of Out of | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | Band      | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | pairing   | :::       | :::       | :::       | :::       |
+										      >	| 5         | BT-5.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Configure | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | allowable | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | methods   | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | of Out of | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | Band      | :::       | :::       | :::       | :::       |
+										      >	|           | pairing   |           |           |           |           |
 										      >	|           | (for      |           |           |           |           |
 										      >	|           | [BR](#abb |           |           |           |           |
 										      >	|           | r_BR)/[ED |           |           |           |           |
@@ -884,12 +891,13 @@
 										      >	|           | [LE](#abb |           |           |           |           |
 										      >	|           | r_LE));   |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-6      | Disable/e | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | nable     | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | the       | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | Discovera | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | ble       | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | (for      | :::       | :::       | :::       | :::       |
+										      >	| 6         | BT-6.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Disable/e | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | nable     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | Discovera | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | ble       | :::       | :::       | :::       | :::       |
+										      >	|           | (for      |           |           |           |           |
 										      >	|           | [BR](#abb |           |           |           |           |
 										      >	|           | r_BR)/[ED |           |           |           |           |
 										      >	|           | R](#abbr_ |           |           |           |           |
@@ -904,12 +912,13 @@
 										      >	|           | separatel |           |           |           |           |
 										      >	|           | y;        |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-7      | Disable/e | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | nable     | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | the       | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | Connectab | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | le        | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | mode (for | :::       | :::       | :::       | :::       |
+										      >	| 7         | BT-7.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Disable/e | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | nable     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | Connectab | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | le        | :::       | :::       | :::       | :::       |
+										      >	|           | mode (for |           |           |           |           |
 										      >	|           | [BR](#abb |           |           |           |           |
 										      >	|           | r_BR)/[ED |           |           |           |           |
 										      >	|           | R](#abbr_ |           |           |           |           |
@@ -918,12 +927,13 @@
 										      >	|           | [LE](#abb |           |           |           |           |
 										      >	|           | r_LE));   |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-8      | Disable/e | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | nable     | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | the       | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | Bluetooth | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | \[**assig | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | nment**:  | :::       | :::       | :::       | :::       |
+										      >	| 8         | BT-8.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Disable/e | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | nable     | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | the       | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | Bluetooth | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | \[**assig | :::       | :::       | :::       | :::       |
+										      >	|           | nment**:  |           |           |           |           |
 										      >	|           | [list of  |           |           |           |           |
 										      >	|           | Bluetooth |           |           |           |           |
 										      >	|           | service   |           |           |           |           |
@@ -943,12 +953,13 @@
 										      >	|           | e-content |           |           |           |           |
 										      >	|           | }\];      |           |           |           |           |
 										      >	+-----------+-----------+-----------+-----------+-----------+-----------+
-										      >	| BT-9      | Specify   | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
-										      >	|           | minimum   | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
-										      >	|           | level of  | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
-										      >	|           | security  | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
-										      >	|           | for each  | iptext}   | iptext}   | iptext}   | iptext}   |
-										      >	|           | pairing   | :::       | :::       | :::       | :::       |
+										      >	| 9         | BT-9.     | ::: {.too | ::: {.too | ::: {.too | ::: {.too |
+										      >	|           | Specify   | ltipped}  | ltipped}  | ltipped}  | ltipped}  |
+										      >	|           | minimum   | O[Optiona | O[Optiona | O[Optiona | O[Optiona |
+										      >	|           | level of  | l]{.toolt | l]{.toolt | l]{.toolt | l]{.toolt |
+										      >	|           | security  | iptext}   | iptext}   | iptext}   | iptext}   |
+										      >	|           | for each  | :::       | :::       | :::       | :::       |
+										      >	|           | pairing   |           |           |           |           |
 										      >	|           | (for      |           |           |           |           |
 										      >	|           | [BR](#abb |           |           |           |           |
 										      >	|           | r_BR)/[ED |           |           |           |           |
@@ -1032,7 +1043,7 @@
 										      >	the Bluetooth device name are mandatory. All other management functions
 										      >	for Bluetooth are currently objective.
 										      >
-										      >	Function [BT-3](#_mf_3) requires management of the Bluetooth device name
+										      >	Function [3](#_mf_3) requires management of the Bluetooth device name
 										      >	separately for [BR](#abbr_BR)/[EDR](#abbr_EDR) and [LE](#abbr_LE)
 										      >	radios.
 										      >
@@ -1787,7 +1798,7 @@
 										      >
 										      >	Rationale
 										      >
-										      >	[O.PROTECTED\_​COMMS](#O.PROTECTED_COMMS)\
+										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS)\
 										      >
 										      >	[FIA\_BLT\_EXT.1](#FIA_BLT_EXT.1)
 										      >
@@ -1969,10 +1980,10 @@
 										      >
 										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5)
 										      >
-										      >	Implementation-based SFRs
+										      >	Implementation-Dependent SFRs
 										      >
 										      >	This [PP-Module](#abbr_PP-Module) does not define any
-										      >	Implementation-based requirements.
+										      >	Implementation-Dependent requirements.
 										      >
 										      >	6.2 Protection Profile for General Purpose Operating Systems {#conrat-b-gpos .indexab
 										      >	------------------------------------------------------------
@@ -2105,10 +2116,10 @@
 										      >
 										      >	[FIA\_BLT\_EXT.5](#FIA_BLT_EXT.5)
 										      >
-										      >	Implementation-based SFRs
+										      >	Implementation-Dependent SFRs
 										      >
 										      >	This [PP-Module](#abbr_PP-Module) does not define any
-										      >	Implementation-based requirements.
+										      >	Implementation-Dependent requirements.
 										      >
 										      >	Appendix A - Optional SFRs {#opt-sfrs .indexable data-level="A"}
 										      >	==========================
@@ -2152,13 +2163,13 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	A.3 Implementation-based Requirements {#impl-dep-sfrs .indexable data-level="2"}
+										      >	A.3 Implementation-Based Requirements {#impl-dep-sfrs .indexable data-level="2"}
 										      >	-------------------------------------
 										      >
 										      >	This [PP-Module](#abbr_PP-Module) does not define any
-										      >	Implementation-based SFRs.
+										      >	Implementation-Based SFRs.
 										      >
-										      >	Appendix B - Selection-based Requirements {#sel-sfrs .indexable data-level="1"}
+										      >	Appendix B - Selection-Based Requirements {#sel-sfrs .indexable data-level="1"}
 										      >	=========================================
 										      >
 										      >	B.1 Trusted Path/Channels {#ftp .indexable data-level="2"}

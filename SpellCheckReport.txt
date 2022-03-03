@@ -1,1 +1,0 @@
-output/bluetooth-sd.html: AGD
