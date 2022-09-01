@@ -3,7 +3,7 @@
 
 
 <?xml-model href="../transforms/schemas/CCModule.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<Module target-products="Bluetooth" name="PP-Module for Bluetooth"
+<Module target-product="Bluetooth" name="PP-Module for Bluetooth"
   xmlns="https://niap-ccevs.org/cc/v1"
   xmlns:sec="https://niap-ccevs.org/cc/v1/section"
   xmlns:h="http://www.w3.org/1999/xhtml">
