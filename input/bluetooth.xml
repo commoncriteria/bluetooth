@@ -1490,6 +1490,7 @@
       <sec:fia title="Identification and Authentication">
         
         <f-component cc-id="fia_blt_ext.5" name="Bluetooth Secure Connections">
+	  <depends><objective/></depends>
           <consistency-rationale></consistency-rationale>
           <comp-lev>requires the TSF to support Secure Connections Only mode.</comp-lev>
           <management>No specific management functions are identified.
