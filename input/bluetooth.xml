@@ -230,7 +230,7 @@
 	      </threat>
 	      <threat name="T.NETWORK_ATTACK">
 		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
-		      <consistency-rationale>This threat comes directly from both base PPs.</consistency-rationale>
+		      <consistency-rationale>This threat comes directly from <_/>.</consistency-rationale>
 		      <objective-refer ref="O.PROTECTED_COMMS">
 			      <rationale>The threat T.NETWORK_ATTACK is countered by O.PROTECTED_COMMS as this provides the capability
 				  to communicate using Bluetooth as a means to maintain the confidentiality of data that
@@ -323,7 +323,84 @@
         <h:b>Iteration</h:b> operation: Identified with a slash followed by a unique text string (e.g. "/WLAN") or a number inside parentheses (e.g. "(1)")</h:li>
     </h:ul>
 
+      <base-pp id="b-mdf">
+	<git>
+	  <url>https://github.com/commoncriteria/mobile-device</url>
+	  <branch>release-3.3</branch>
+	</git>
+        <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417</url>
 
+
+      <con-toe> If this PP-Module is used to extend the MDF PP, the TOE type for the overall TOE is still a mobile device. 
+        However, one of the functions of the device must be the ability for it to have Bluetooth capability. The TOE boundary is simply extended to include that functionality. </con-toe>
+      <con-sec-prob>The threats that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the security problem definition given in the MDF PP.</con-sec-prob>
+      <con-obj>The objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the objectives given in the MDF PP.</con-obj>
+      <con-op-en/>
+
+          
+      <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
+        This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
+        so it does not affect any other key generation activities required by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.1">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.2">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.3">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="ftp_blt_ext.1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="ftp_blt_ext.2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="ftp_blt_ext.3" iteration="BR">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="ftp_blt_ext.3" iteration="LE">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+
+
+	
+      </base-pp>
+
+      
+   <!-- 
+    <base-pp version="4.2.1" name="General Purpose Operating Systems" product="Operating System" short="GPOS"
+      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442">
+            xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
+    
+   <base-pp id="b-gpos">
+     <git>
+       <url>https://github.com/commoncriteria/operatingsystem</url>
+       <branch>just-depends</branch>
+     </git>
+     <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442</url>
+
+      <con-toe>If this PP-Module is used to extend the [GPOS PP], the TOE type for the overall TOE is still a generic operating system. 
+        However, one of the functions of the generic operating system must be the ability for it to have Bluetooth capability. The TOE boundary is simply extended to include that functionality.</con-toe>
+      <con-sec-prob>The threats that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the security problem definition given in the GPOS PP.</con-sec-prob>
+      <con-obj>The objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the objectives given in the GPOS PP.</con-obj>
+      <con-op-en/>
+         
+      <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
+        This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
+        so it does not affect any other key generation activities required by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.1">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.2">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.3">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_blt_ext.7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="ftp_blt_ext.1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="ftp_blt_ext.2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="ftp_blt_ext.3" iteration="BR">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="ftp_blt_ext.3" iteration="LE">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
+      <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+
+     
+   </base-pp>
 <!--    
     <base-pp version="3.1" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
       url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417"> 
@@ -334,17 +411,14 @@
     <base-pp version="3.2" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
       url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417">-->
       <!--       xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
-      <base-pp id="b-mdf">
-	<git>
-	  <url>https://github.com/commoncriteria/mobile-device</url>
-	  <branch>release-3.3</branch>
-	</git>
-        <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417</url>
+
+
+   <sfrs>
+      <!-- <modified-sfrs> -->
  
-      <modified-sfrs>
- 
-<sec:fmt title="Security Management (FMT)">
+      <sec:fmt title="Security Management (FMT)">
   <f-component name="Specification of Management Functions" cc-id="fmt_smf_ext.1">
+    <depends on="b-mdf"/>
     <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
  <f-element>
    <title>This PP-Module does not modify this SFR as it is defined in the MDF PP. However, note that this PP-Module
@@ -361,17 +435,10 @@
  </f-element>
   </f-component>
  
-</sec:fmt> 
 
-
-
-
-      </modified-sfrs>
-      <additional-sfrs>
-        
-        
-        <sec:fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="BT"> 
+<!-- additional SFR-->
+          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="BT">
+	    <depends on="b-mdf"/>
             <consistency-rationale>The ST author is instructed to complete an assignment in the SFR with information related to Bluetooth, 
               and to include additional management functions in this SFR based on the Bluetooth capability defined by the PP-Module.</consistency-rationale>
             <f-element>
@@ -534,15 +601,10 @@
         </sec:fmt>
         
         
-      </additional-sfrs>
       
           
        
-      <con-toe> If this PP-Module is used to extend the MDF PP, the TOE type for the overall TOE is still a mobile device. 
-        However, one of the functions of the device must be the ability for it to have Bluetooth capability. The TOE boundary is simply extended to include that functionality. </con-toe>
-      <con-sec-prob>The threats that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the security problem definition given in the MDF PP.</con-sec-prob>
-      <con-obj>The objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the objectives given in the MDF PP.</con-obj>
-      <con-op-en/>
+      
    <!-- 
       <con-mod ref="T.TSF_FAILURE">The Base-PP defines threats for local attacks and remote attacks, both of which could cause a failure of the TSF. This PP-Module adds a generic TSF failure threat
       in the event that the WLAN Client fails through unintended system behavior rather than a direct malicious attack.</con-mod>
@@ -569,41 +631,10 @@
       <con-mod ref="OE.TRUSTED_ADMIN">The Base-PP defines OE.PROPER_USER and OE.PROPER_ADMIN objectives that serve the same purpose as OE.TRUSTED_ADMIN in this PP-Module.</con-mod>          
 -->
 
-          
-      <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
-        This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
-        so it does not affect any other key generation activities required by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.1">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.2">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.3">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="ftp_blt_ext.1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.3" iteration="BR">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.3" iteration="LE">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      
-    </base-pp>
-   <!-- 
-    <base-pp version="4.2.1" name="General Purpose Operating Systems" product="Operating System" short="GPOS"
-      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442">
-            xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
-    
-   <base-pp id="b-gpos">
-     <git>
-       <url>https://github.com/commoncriteria/operatingsystem</url>
-       <branch>release-4.3</branch>
-     </git>
-     <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442</url>
-      <modified-sfrs>
-        <sec:fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
+
+   <sec:fmt title="Security Management (FMT)">
+          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior">
+	    <depends on="b-gpos"/>
             <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
     <f-element>
       <title>
@@ -624,8 +655,9 @@
     </f-element>
           </f-component>
           
-         
           <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions">
+	    <depends on="b-gpos"/>
+	    
             <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
             <f-element>
               <title>
@@ -642,12 +674,14 @@
           </f-component>
             
         </sec:fmt>
-      </modified-sfrs>
-      <additional-sfrs>
+      <!-- </modified-sfrs> -->
+      <!-- <additional-sfrs> -->
         
         
         <sec:fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior" iteration="BT"> 
+          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior" iteration="BT">
+	    <depends on="b-gpos"/>
+	    
             <consistency-rationale>The ST author is required to associate all claimed management functions with the administrative privileges required to execute them. 
               This PP-Module simply extends this requirement to apply to the management functions added and mandated by the PP-Module.</consistency-rationale>
             <f-element>
@@ -687,7 +721,8 @@
             </f-element>
           </f-component>
           
-          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="BT"> 
+          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="BT">
+	    <depends on="b-gpos"/>
             <consistency-rationale>The ST author is required to include an optional management function defined in the Base-PP that relates to Bluetooth, 
               and to include additional management functions in this SFR based on the Bluetooth capability defined by the PP-Module. </consistency-rationale>
             <f-element>
@@ -798,37 +833,11 @@
         </sec:fmt>
         
         
-      </additional-sfrs>
+      <!-- </additional-sfrs> -->
       
       
       
-      <con-toe>If this PP-Module is used to extend the [GPOS PP], the TOE type for the overall TOE is still a generic operating system. 
-        However, one of the functions of the generic operating system must be the ability for it to have Bluetooth capability. The TOE boundary is simply extended to include that functionality.</con-toe>
-      <con-sec-prob>The threats that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the security problem definition given in the GPOS PP.</con-sec-prob>
-      <con-obj>The objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the objectives given in the GPOS PP.</con-obj>
-      <con-op-en/>
-         
-      <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
-        This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
-        so it does not affect any other key generation activities required by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.1">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.2">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.3">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="ftp_blt_ext.1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.3" iteration="BR">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.3" iteration="LE">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
-        but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-    </base-pp>
       
-    <man-sfrs>
       
       <sec:fau title="Security Audit (FAU)">
         <f-component cc-id="fau_gen.1" name="Audit Data Generation (Bluetooth)" iteration="BT"> 
@@ -1371,7 +1380,8 @@
           </f-element>
         </f-component>
 
-        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters" status="invisible">
+        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters">
+	  <invisible/>
           <consistency-rationale></consistency-rationale>
           <comp-lev> specifies the key sizes used for Bluetooth.</comp-lev>
           <management>The following actions could be considered for the management functions in FMT: <h:ul>
@@ -1424,25 +1434,6 @@
             </aactivity>
           </f-element>
         </f-component>
- 
-      </sec:ftp>
-    </man-sfrs>
-    
-    <!-- SME: the template guidance said to use the "status" attribute in the f-component tag to specify an SFR as optional. However, when we did this, the optional SFR still stayed in the mandatory requirements section - 
-    it just added a box underneath the heading saying the SFR was optional. It also stayed listed as 'mandatory' in the consistency rationale. Putting it in the <opt-sfrs> section as we did here fixed those issues
-    but it also prevented any of the intro text to the optional SFRs appendix from being displayed. We are flagging this as an issue with the template. Note that FE and FE-EM modules were done in this manner as well so we don't believe
-    it should be an issue here, but for future use it may be beneficial to correct the template so that it behaves as intended. -->
-    <opt-sfrs>
-  
-    </opt-sfrs>
-
-    <!-- SME: the template guidance said to use the "status" attribute in the f-component tag to specify an SFR as selection-based. However, when we did this, the selection-based SFR still stayed in the mandatory requirements section - 
-    it just added a box underneath the heading saying the SFR was selection-based. It also stayed listed as 'mandatory' in the consistency rationale. Putting it in the <sel-sfrs> section as we did here fixed those issues
-    but it also prevented any of the intro text to the selection-based SFRs appendix from being displayed. We are flagging this as an issue with the template. Note that FE and FE-EM modules were done in this manner as well so we don't believe
-    it should be an issue here, but for future use it may be beneficial to correct the template so that it behaves as intended. -->
-    <sel-sfrs>
-
-      <sec:ftp title="Trusted Path/Channels">
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (LE)" iteration="LE">
 	  <depends on="s_le"/>
           <consistency-rationale></consistency-rationale>
@@ -1484,10 +1475,8 @@
       </sec:ftp>
       
       
-    </sel-sfrs>
-    <obj-sfrs>
-      
-      <sec:fia title="Identification and Authentication">
+
+    <sec:fia title="Identification and Authentication">
         
         <f-component cc-id="fia_blt_ext.5" name="Bluetooth Secure Connections">
 	  <depends><objective/></depends>
@@ -1534,42 +1523,40 @@
           </f-element>
         </f-component>
       </sec:fia>
-      
-    </obj-sfrs>
-    <impl-dep-sfrs></impl-dep-sfrs>
+   </sfrs>
   </sec:Security_Requirements>
 
-  <appendix title="Optional Requirements" id="optional"> As indicated in <xref to="ccl"/>,
-    the baseline requirements (those that must be performed by the TOE are
-    contained in the body of this PP. Additionally, there are three other types of requirements
-    specified in <xref to="optional"/>, <xref to="sel-based"/>, and <xref to="objective"/>. The first type (in this appendix) are requirements that can be included
-    in the <xref to="ST"/>, but are not required in order for a TOE to claim conformance to
-    this PP-Module. The second type (in <xref to="sel-based"/>) are requirements based on selections
-    in the body of the PP-Module: if certain selections are made, then additional requirements in that
-    appendix must be included. The third type (in <xref to="objective"/> are components that
-    are not required in order to conform to this PP-Module, but will be included in the baseline
-    requirements in future versions of this PP-Module, so adoption by vendors is encouraged. </appendix>
+  <appendix title="Optional Requirements" id="optional"/><!--  As indicated in <xref to="ccl"/>, -->
+    <!-- the baseline requirements (those that must be performed by the TOE are -->
+    <!-- contained in the body of this PP. Additionally, there are three other types of requirements -->
+    <!-- specified in <xref to="optional"/>, <xref to="sel-based"/>, and <xref to="objective"/>. The first type (in this appendix) are requirements that can be included -->
+    <!-- in the <xref to="ST"/>, but are not required in order for a TOE to claim conformance to -->
+    <!-- this PP-Module. The second type (in <xref to="sel-based"/>) are requirements based on selections -->
+    <!-- in the body of the PP-Module: if certain selections are made, then additional requirements in that -->
+    <!-- appendix must be included. The third type (in <xref to="objective"/> are components that -->
+    <!-- are not required in order to conform to this PP-Module, but will be included in the baseline -->
+    <!-- requirements in future versions of this PP-Module, so adoption by vendors is encouraged. </appendix> -->
 
   <!-- 
        Do NOT put SFRs in this section. All SFR belong up above in SFR section. 
        To make an SFR optional tag it above as status="sel-based" 
   -->
-  <appendix title="Selection-Based Requirements" id="sel-based"> As indicated in the introduction to
-    this PP-Module, the baseline requirements are contained in the body of this PP-Module. There are additional requirements based on
-    selections in the body of the PP-Module: if certain selections are made, then additional requirements
-    below will need to be included. 
-  </appendix>
+  <appendix title="Selection-Based Requirements" id="sel-based"/><!--  As indicated in the introduction to -->
+  <!--   this PP-Module, the baseline requirements are contained in the body of this PP-Module. There are additional requirements based on -->
+  <!--   selections in the body of the PP-Module: if certain selections are made, then additional requirements -->
+  <!--   below will need to be included.  -->
+  <!-- </appendix> -->
 
   <!-- 
        Do NOT put SFRs in this section. All SFR belong up above in SFR section. 
        To make an SFR optional tag it above as status="objective" 
   -->
-  <appendix title="Objective Requirements" id="objective"> This appendix includes requirements that
-    specify security functionality which also addresses threats. The requirements are not currently
-    mandated in the body of this PP-Module as they describe security functionality not yet widely available
-    in commercial technology. However, these requirements may be included in the ST such that the
-    TOE is still conformant to this PP-Module, and it is expected that they be included as soon as
-    possible. </appendix>
+  <!-- <appendix title="Objective Requirements" id="objective"> This appendix includes requirements that -->
+  <!--   specify security functionality which also addresses threats. The requirements are not currently -->
+  <!--   mandated in the body of this PP-Module as they describe security functionality not yet widely available -->
+  <!--   in commercial technology. However, these requirements may be included in the ST such that the -->
+  <!--   TOE is still conformant to this PP-Module, and it is expected that they be included as soon as -->
+  <!--   possible. </appendix> -->
 
 <!-- SME: entropy appendix was removed since it was not present in the original EP. Is this appropriate or would you prefer we have a stub appendix that states the entropy source(s) used by the TOE are provided by the OS platform
   and this will therefore be covered through evaluation of the TOE against the claimed Base-PP? -->
