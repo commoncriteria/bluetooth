@@ -1,0 +1,1 @@
+* https://commoncriteria.github.io/bluetooth/v1.0/bluetooth-paged.pdf[bluetooth-paged.pdf]
