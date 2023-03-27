@@ -49,15 +49,10 @@ draft document. See the link:#Release-Version[release] section if you
 are looking for the officially released version for evaluations.
 
 === Draft Version
-
-* https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.html[Protection
+* https://commoncriteria.github.io/bluetooth/master/bluetooth-release.html[Protection
 Profile Module for Bluetooth] (html)
-* https://commoncriteria.github.io/pp/bluetooth/bluetooth-release.pdf[Protection
-Profile Module for Bluetooth] (pdf)
-* https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.html[Protection
+* https://commoncriteria.github.io/bluetooth/master/bluetooth-sd.html[Protection
 Profile Module Supporting Documents for Bluetooth] (html)
-* https://commoncriteria.github.io/pp/bluetooth/bluetooth-sd.pdf[Protection
-Profile Module Supporting Documents for Bluetooth] (pdf)
 
 === Release Version
 
