@@ -60,7 +60,7 @@ Profile Module Supporting Documents for Bluetooth] (html)
 
 * https://www.niap-ccevs.org/Profile/Info.cfm?PPID=425&id=425[On NIAP]
 
-* HTML Documents - https://github.com/commoncriteria/bluetooth/blob/gh-pages/v1.0/HTMLs.adoc[On Github]
+* https://github.com/commoncriteria/bluetooth/blob/gh-pages/v1.0/HTMLs.adoc[On Github]
 
 
 === Contributing
