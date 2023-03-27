@@ -58,10 +58,9 @@ Profile Module Supporting Documents for Bluetooth] (html)
 === Release Version
 ==== v1.0
 
-* https://www.niap-ccevs.org/Profile/Info.cfm?PPID=425&id=425[Protection
-Profile Module for Bluetooth]
+* https://www.niap-ccevs.org/Profile/Info.cfm?PPID=425&id=425[On NIAP]
 
-* HTML Documents - https://github.com/commoncriteria/bluetooth/blob/gh-pages/v1.0/HTMLs.adoc
+* HTML Documents - https://github.com/commoncriteria/bluetooth/blob/gh-pages/v1.0/HTMLs.adoc[On Github]
 
 
 === Contributing
