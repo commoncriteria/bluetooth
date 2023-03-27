@@ -48,7 +48,8 @@ repository is used to facilitate collaboration and development on the
 draft document. See the link:#Release-Version[release] section if you
 are looking for the officially released version for evaluations.
 
-=== Draft Version
+=== Draft Version (Up-to-date Master branch)
+
 * https://commoncriteria.github.io/bluetooth/master/bluetooth-release.html[Protection
 Profile Module for Bluetooth] (html)
 * https://commoncriteria.github.io/bluetooth/master/bluetooth-sd.html[Protection
