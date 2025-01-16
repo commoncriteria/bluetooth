@@ -343,7 +343,7 @@
     </h:ul>
 
 
-    <base-pp id="bpp-mdf" name="Protection Profile for Mobile Device Fundamentals" product="Mobile Device" short="MDF" version="3.3">
+    <base-pp id="bpp-mdf" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF" version="3.3">
       <git>
         <url>https://github.com/commoncriteria/mobile-device</url>
         <branch>release-3.3</branch>
@@ -599,7 +599,7 @@
       <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
       
     </base-pp>
-    <base-pp id="bpp-gpos" name="Protection Profile for General Purpose Operating System" product="Operating System" short="GPOS" version="4.3">
+    <base-pp id="bpp-gpos" name="General Purpose Operating System" product="Operating System" short="GPOS" version="4.3">
       <git>
         <url>https://github.com/commoncriteria/operatingsystem</url>
         <branch>release-4.3</branch>
