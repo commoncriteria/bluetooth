@@ -18,7 +18,7 @@
     </entry>
   </RevisionHistory>
 
-  <sec:Introduction>
+  <release-notes><h:h3>TDs Applied</h:h3></release-notes><sec:Introduction>
     <sec:Overview>
     <h:p>
       The scope of the Bluetooth PP-Module is to describe the security functionality of Bluetooth technology in terms of [CC] 

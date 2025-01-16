@@ -1,0 +1,4 @@
+/home/runner/work/bluetooth/bluetooth/input/bluetooth.xml:166:28: error: element "sec:Conformance_Claims" incomplete; missing required element "CClaimsInfo"
+/home/runner/work/bluetooth/bluetooth/input/bluetooth.xml:195:49: error: value of attribute "title" is invalid; must be equal to "Security Problem Definition"
+/home/runner/work/bluetooth/bluetooth/input/bluetooth.xml:337:27: error: element "base-pp" missing required attributes "name", "product", "short" and "version"
+/home/runner/work/bluetooth/bluetooth/input/bluetooth.xml:598:25: error: element "base-pp" missing required attributes "name", "product", "short" and "version"
