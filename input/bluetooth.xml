@@ -3,7 +3,7 @@
 
 
 <?xml-model href="../transforms/schemas/CCModule.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<Module target-product="Bluetooth" name="PP-Module for Bluetooth"
+<Module target-product="Bluetooth" target-products="Bluetooth" name="PP-Module for Bluetooth"
   xmlns="https://niap-ccevs.org/cc/v1"
   xmlns:sec="https://niap-ccevs.org/cc/v1/section"
   xmlns:h="http://www.w3.org/1999/xhtml">
@@ -11,9 +11,9 @@
   <PPReference>
    
     <ReferenceTable>
-      <PPVersion>1.0</PPVersion>
+      <PPVersion>1.1</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2021-04-15</PPPubDate>
+      <PPPubDate>2025-01-31</PPPubDate>
       <Keywords>Bluetooth; NFC</Keywords>
     </ReferenceTable>
   </PPReference>
@@ -24,10 +24,16 @@
       <date>2021-04-15</date>
       <subject>Initial Release</subject>
     </entry>
+    <entry>
+      <version>1.1</version>
+      <date>2025-01-31</date>
+      <subject>Updates based on CC:2022</subject>
+    </entry>
   </RevisionHistory>
 
   <sec:Introduction>
     <sec:Overview>
+      <h:b>this is HTML bold text</h:b>
     <h:p>
       The scope of the Bluetooth PP-Module is to describe the security functionality of Bluetooth technology in terms of [CC] 
       and to define functional and assurance requirements for the Bluetooth capability of mobile devices and operating systems.
@@ -163,7 +169,28 @@
     </section>
   </sec:Introduction>
 
-  <sec:Conformance_Claims/>
+    <sec:Conformance_Claims boilerplate="no">
+      
+      
+      <!-- The new CClaimsInfo construct -->
+      <CClaimsInfo cc-version="cc-2022r1" cc-approach="direct-rationale">
+        <cc-st-conf>exact</cc-st-conf>       
+        <cc-pt2-conf>extended</cc-pt2-conf>
+        <cc-pt3-conf>extended</cc-pt3-conf>
+        <cc-pp-conf/>
+        <cc-pp-config-with> 
+          <PP-cc-ref>Protection Profile for General Purpose Operating Systems, Version 4.3</PP-cc-ref>
+          <PP-cc-ref>Protection Profile for Mobile Device Fundamentals, Version 3.3</PP-cc-ref>
+          <Mod-cc-ref>PP-Module for Virtual Private Network (VPN) Clients, version 2.5</Mod-cc-ref>  
+          <Mod-cc-ref>PP-Module for Wireless LAN Clients, version 1.1</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for Mobile Device Management Agent, version 1.0</Mod-cc-ref>
+          <Mod-cc-ref>cPP-Module for Biometric Enrolment and Verification, version 1.1</Mod-cc-ref>  
+        </cc-pp-config-with>
+        <cc-pkg-claim>
+          <AP-cc-ref conf="conformant">Assurance Package for Flaw Remediation Version 1.0</AP-cc-ref>
+        </cc-pkg-claim>
+      </CClaimsInfo>	
+  </sec:Conformance_Claims>
 
   <!-- <sec:Conformance_Claims boilerplate="no"> -->
   <!--   <cclaims> -->
@@ -192,7 +219,7 @@
   <!-- </sec:Conformance_Claims> -->
 
 
-  <sec:spd title="Security Problem Description">
+  <sec:Security_Problem_Description title="Security Problem Definition">
     All threats, assumptions, organizational security policies, and/or objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. 
     This PP-Module does not add or remove any elements to the security problem definition given in the Base-PP. 
     The SFRs defined in this PP-Module provide additional mechanisms for mitigating the threats already defined in the Base-PPs due to the fact that including a 
@@ -258,7 +285,7 @@
       </OSP>
       </OSPs> -->
     </sec:Organizational_Security_Policies>
-  </sec:spd>
+  </sec:Security_Problem_Description>
   
 
 
@@ -324,22 +351,12 @@
     </h:ul>
 
 
-<!--    
-    <base-pp version="3.1" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
-      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417"> 
-             xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> 
-
-       -->
-   <!-- 
-    <base-pp version="3.2" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF"
-      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417">-->
-      <!--       xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
-      <base-pp id="b-mdf">
-	<git>
-	  <url>https://github.com/commoncriteria/mobile-device</url>
-	  <branch>release-3.3</branch>
-	</git>
-        <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=417&amp;id=417</url>
+    <base-pp id="bpp-mdf" name="Protection Profile for Mobile Device Fundamentals" product="Mobile Device" short="MDF" version="3.3">
+      <git>
+        <url>https://github.com/commoncriteria/mobile-device</url>
+        <branch>release-3.3</branch>
+      </git>
+      <url>https://www.niap-ccevs.org/static_html/protection-profile/468/MDF%203.3%20PP/index.html</url>
  
       <modified-sfrs>
  
@@ -590,17 +607,12 @@
       <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
       
     </base-pp>
-   <!-- 
-    <base-pp version="4.2.1" name="General Purpose Operating Systems" product="Operating System" short="GPOS"
-      url="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442">
-            xmlurl="https://raw.githubusercontent.com/commoncriteria/mobile-device/master/input/mobile-device.xml"> -->
-    
-   <base-pp id="b-gpos">
-     <git>
-       <url>https://github.com/commoncriteria/operatingsystem</url>
-       <branch>release-4.3</branch>
-     </git>
-     <url>https://www.niap-ccevs.org/Profile/Info.cfm?PPID=442&amp;id=442</url>
+    <base-pp id="bpp-gpos" name="Protection Profile for General Purpose Operating System" product="Operating System" short="GPOS" version="4.3">
+      <git>
+        <url>https://github.com/commoncriteria/operatingsystem</url>
+        <branch>release-4.3</branch>
+      </git>
+      <url>https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html</url>
       <modified-sfrs>
         <sec:fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
