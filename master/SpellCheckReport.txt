@@ -1,7 +1,6 @@
-output/bluetooth-release-linkable.html: Bluetooths
-output/bluetooth-release.html: Bluetooths
-output/bluetooth-sd.html: Bluetooths
+output/bluetooth-release-linkable.html: Enrolment
+output/bluetooth-release.html: Enrolment
 output/bluetooth-sd.html: evaluator’s
 output/bluetooth-sd.html: fail’
 output/bluetooth-sd.html: pass’
-output/bluetooth.html: Bluetooths
+output/bluetooth.html: Enrolment
