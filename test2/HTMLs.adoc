@@ -1,0 +1,7 @@
+* https://commoncriteria.github.io/bluetooth/test2/AppliedTDs-Diff.html[AppliedTDs-Diff.html]
+* https://commoncriteria.github.io/bluetooth/test2/AppliedTDs.html[AppliedTDs.html]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth-release-linkable.html[bluetooth-release-linkable.html]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth-release.html[bluetooth-release.html]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth-sd.html[bluetooth-sd.html]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth.html[bluetooth.html]
+* https://commoncriteria.github.io/bluetooth/test2/diff-v1.0.html[diff-v1.0.html]

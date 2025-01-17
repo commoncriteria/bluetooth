@@ -1,0 +1,4 @@
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth-release-linkable.html.pdf[bluetooth-release-linkable.html.pdf]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth-release.html.pdf[bluetooth-release.html.pdf]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth-sd.html.pdf[bluetooth-sd.html.pdf]
+* https://commoncriteria.github.io/bluetooth/test2/bluetooth.html.pdf[bluetooth.html.pdf]
