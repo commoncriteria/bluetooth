@@ -40,8 +40,8 @@
       Bluetooth is a communications standard for short-range wireless transmissions. 
       Bluetooth is implemented in many commercial devices as a method for wirelessly connecting devices or accessories.
       This PP-Module is intended for use with the following Base-PPs: <h:ul>
-        <h:li><xref to="b-gpos"/></h:li>
-        <h:li><xref to="b-mdf"/></h:li>
+        <h:li>General Purpose Operating System (GPOS) Protection Profile, Version 4.3</h:li>
+        <h:li>Mobile Device Fundamentals (MDF) Protection Profile, Version 3.3</h:li>
       </h:ul>
     </h:p>
     <h:p> These Base-PPs are valid because consumer-grade desktop and mobile devices may both have Bluetooth hardware radios and so both desktop and mobile operating systems have the 
@@ -852,7 +852,7 @@
               </h:p>
               <h:ol type="a">
                 <h:li>Start-up and shutdown of the audit functions</h:li>
-                <h:li>All auditable events for the [<h:i>not selected</h:i>] level of audit</h:li>
+                <h:li>All auditable events for the [<h:i>not specified</h:i>] level of audit</h:li>
                 <h:li>[<h:i>Specifically defined auditable events in the Auditable Events table</h:i>].</h:li>
               </h:ol>
               
@@ -937,7 +937,7 @@
                 <h:li>Type of event</h:li>
                 <h:li>Subject identity</h:li>
                 <h:li>The outcome (success or failure) of the event</h:li>
-                <h:li>[<h:i>Additional information in the Auditable Events table</h:i>].</h:li>
+                <h:li>For each audit event type, based on the auditable event definitions of the functional components included in the PP/ST, [<h:i>Additional information in the Auditable Events table</h:i>].</h:li>
               </h:ol>
               </title>
             <note role="application">It is not feasible for the <no-link>FIA_BLT_EXT.3</no-link> event to be audited if the rejection is performed at the HCI layer because the Bluetooth standard does not provide a notification 
@@ -1394,7 +1394,7 @@
           <dependencies>FTP_BLT_EXT.1 Bluetooth Encryption</dependencies>
           
           <f-element>
-            <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for <assignable>Bluetooth protocol</assignable>.
+            <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for <assignable>Bluetooth protocol</assignable> and not negotiate encryption key sizes smaller than the minimum size.
             </title>
            
           </f-element>
@@ -1624,23 +1624,16 @@
         <description>
           <h:a href="https://www.bluetooth.org/en-us/specification/adopted-specifications">Bluetooth Core Specifications, version 5.2; December 2019</h:a>,</description>
       </entry>
-     <cc-entry/>
-     <entry id="bibCEM">
-        <tag>CEM</tag>
-        <description>
-          <h:a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R5.pdf">Common
-            Evaluation Methodology for Information Technology Security - Evaluation Methodology</h:a>,
-          CCMB-2017-04-004, Version 3.1, Revision 5, April 2017.</description>
-      </entry>
+      <cc-entry/>
       <entry id="bibGPOS">
         <tag>GPOS</tag>
         <description><h:a
-          href="https://www.niap-ccevs.org/MMO/PP/PP_OS_V4.2.1.pdf">Protection Profile for General Purpose Operating Systems, Version 4.2.1</h:a>, April 22, 2019</description>
+          href="https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html">Protection Profile for General Purpose Operating Systems, Version 4.3</h:a>, September 27, 2022</description>
       </entry>      
       <entry id="bibMDF">
         <tag>MDF</tag>
         <description><h:a
-          href="https://www.niap-ccevs.org/MMO/PP/pp_md_v3.1.pdf">Protection Profile for Mobile Device Fundamentals, Version 3.2</h:a>, April 15, 2021</description>
+          href="https://www.niap-ccevs.org/static_html/protection-profile/468/MDF%203.3%20PP/index.html">Protection Profile for Mobile Device Fundamentals, Version 3.3</h:a>, Version 3.3, September 12, 2022</description>
       </entry>
  
     </bibliography>
