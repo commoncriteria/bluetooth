@@ -669,8 +669,8 @@ function showTarget(id){
       Bluetooth is a communications standard for short-range wireless transmissions. 
       Bluetooth is implemented in many commercial devices as a method for wirelessly connecting devices or accessories.
       This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr>: <ul>
-        <li><a href="#b-gpos" class="dynref" data-format=""></a></li>
-        <li><a href="#b-mdf" class="dynref" data-format=""></a></li>
+        <li>General Purpose Operating System (GPOS) Protection Profile, Version 4.3</li>
+        <li>Mobile Device Fundamentals (<abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr>) Protection Profile, Version 3.3</li>
       </ul>
     </p>
     <p> These <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr> are valid because consumer-grade desktop and mobile devices may both have Bluetooth hardware radios and so both desktop and mobile operating systems have the 
@@ -1297,7 +1297,7 @@ Operating System
               </p>
               <ol type="a">
                 <li>Start-up and shutdown of the audit functions</li>
-                <li>All auditable events for the [<i>not selected</i>] level of audit</li>
+                <li>All auditable events for the [<i>not specified</i>] level of audit</li>
                 <li>[<i>Specifically defined auditable events in the Auditable Events table</i>].</li>
               </ol>
               
@@ -1377,7 +1377,7 @@ Operating System
                 <li>Type of event</li>
                 <li>Subject identity</li>
                 <li>The outcome (success or failure) of the event</li>
-                <li>[<i>Additional information in the Auditable Events table</i>].</li>
+                <li>For each audit event type, based on the auditable event definitions of the functional components included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>Additional information in the Auditable Events table</i>].</li>
               </ol>
               <div class="appnote"><span class="note-header">Application
       Note:
@@ -1770,7 +1770,7 @@ Operating System
           
           <div class="element"><div class="reqid" id="FTP_BLT_EXT.3.1"><a href="#FTP_BLT_EXT.3.1" class="abbr">FTP_BLT_EXT.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall set the minimum encryption key size to [<b>assignment</b>: 
      <span class="assignable-content">key size larger than or equal to 128 bits</span>] for [<b>assignment</b>: 
-     <span class="assignable-content">Bluetooth protocol</span>].
+     <span class="assignable-content">Bluetooth protocol</span>] and not negotiate encryption key sizes smaller than the minimum size.
             </div></div>
         </div>
         <div class="comp" id="FTP_BLT_EXT.3/BR"><h4>FTP_BLT_EXT.3/BR Bluetooth Encryption Parameters (BR/EDR)</h4>
@@ -2060,7 +2060,7 @@ Operating System
           </ul>
           </p><h4>Audit: FTP_BLT_EXT.3</h4><p>There are no auditable events foreseen.</p><h4>FTP_BLT_EXT.3 Bluetooth Encryption Parameters</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FTP_BLT_EXT.1">FTP_BLT_EXT.1</a> Bluetooth Encryption</td></tr></table><h4 id="ext-comp-FTP_BLT_EXT.3.1">FTP_BLT_EXT.3.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall set the minimum encryption key size to [<b>assignment</b>: 
      <span class="assignable-content">key size larger than or equal to 128 bits</span>] for [<b>assignment</b>: 
-     <span class="assignable-content">Bluetooth protocol</span>].
+     <span class="assignable-content">Bluetooth protocol</span>] and not negotiate encryption key sizes smaller than the minimum size.
             </div></div></span></span><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix D -  Implicitly Satisfied Requirements</h1>
   <p>
     This appendix lists requirements that should be considered satisfied by products successfully evaluated against this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>. 
@@ -2132,10 +2132,7 @@ Operating System
                 Framework for the specification of evaluation methods and activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART5R1.pdf">Part 5: 
                  Pre-defined packages of security requirements</a>, CCMB-2022-11-005, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
-          <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R5.pdf">Common
-            Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
-          CCMB-2017-04-004, Version 3.1, Revision 5, April 2017.</span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
+          </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="bibGPOS">[GPOS]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/MMO/PP/PP_OS_V4.2.1.pdf">Protection Profile for General Purpose Operating Systems, Version 4.2.1</a>, April 22, 2019</span></td></tr><tr><td><span id="bibMDF">[<abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr>]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/MMO/PP/pp_md_v3.1.pdf">Protection Profile for Mobile Device Fundamentals, Version 3.2</a>, April 15, 2021</span></td></tr></table></body></html>
+          </ul></span></td></tr><tr><td><span id="bibGPOS">[GPOS]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html">Protection Profile for General Purpose Operating Systems, Version 4.3</a>, September 27, 2022</span></td></tr><tr><td><span id="bibMDF">[<abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr>]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/static_html/protection-profile/468/MDF%203.3%20PP/index.html">Protection Profile for Mobile Device Fundamentals, Version 3.3</a>, Version 3.3, September 12, 2022</span></td></tr></table></body></html>

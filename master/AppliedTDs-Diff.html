@@ -54,11 +54,9 @@
         <p>
              The scope of the Bluetooth <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is to describe the security functionality of Bluetooth technology in terms of [<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>] and to define functional and assurance requirements for the Bluetooth capability of mobile devices and operating systems. Bluetooth is a communications standard for short-range wireless transmissions. Bluetooth is implemented in many commercial devices as a method for wirelessly connecting devices or accessories. This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr>: 
             <ul>
+                <li>General Purpose Operating System (GPOS) Protection Profile, Version 4.3</li>
                 <li>
-                    <a href="#b-gpos" class="dynref" data-format=""></a>
-                </li>
-                <li>
-                    <a href="#b-mdf" class="dynref" data-format=""></a>
+                    Mobile Device Fundamentals (<abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr>) Protection Profile, Version 3.3
                 </li>
             </ul>
         </p>
@@ -936,7 +934,7 @@
                     <ol type="a">
                         <li>Start-up and shutdown of the audit functions</li>
                         <li>
-                            All auditable events for the [<i>not selected</i>] level of audit
+                            All auditable events for the [<i>not specified</i>] level of audit
                         </li>
                         <li>
                             [<i>Specifically defined auditable events in the Auditable Events table</i>].
@@ -1004,7 +1002,7 @@
                         <li>Subject identity</li>
                         <li>The outcome (success or failure) of the event</li>
                         <li>
-                            [<i>Additional information in the Auditable Events table</i>].
+                            For each audit event type, based on the auditable event definitions of the functional components included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>Additional information in the Auditable Events table</i>].
                         </li>
                     </ol>
                     <div class="appnote">
@@ -1821,7 +1819,7 @@
                             </tr>
                         </table>
                         <h4 id="ext-comp-FTP_BLT_EXT.3.1">FTP_BLT_EXT.3.1</h4>
-                        The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall set the minimum encryption key size to [<b>assignment</b>: <span class="assignable-content">key size larger than or equal to 128 bits</span>] for [<b>assignment</b>: <span class="assignable-content">Bluetooth protocol</span>]. 
+                        The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall set the minimum encryption key size to [<b>assignment</b>: <span class="assignable-content">key size larger than or equal to 128 bits</span>] for [<b>assignment</b>: <span class="assignable-content">Bluetooth protocol</span>] and not negotiate encryption key sizes smaller than the minimum size. 
                     </div>
                 </div>
             </span></span>
@@ -1983,9 +1981,6 @@
                     </span></td>
             </tr>
             <tr>
-                <td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description"> <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R5.pdf">Common Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>, CCMB-2017-04-004, Version 3.1, Revision 5, April 2017.</span></td>
-            </tr>
-            <tr>
                 <td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - 
                         <ul>
                             <li>
@@ -1995,10 +1990,10 @@
                     </span></td>
             </tr>
             <tr>
-                <td><span id="bibGPOS">[GPOS]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/MMO/PP/PP_OS_V4.2.1.pdf">Protection Profile for General Purpose Operating Systems, Version 4.2.1</a>, April 22, 2019</span></td>
+                <td><span id="bibGPOS">[GPOS]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html">Protection Profile for General Purpose Operating Systems, Version 4.3</a>, September 27, 2022</span></td>
             </tr>
             <tr>
-                <td><span id="bibMDF">[<abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr>]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/MMO/PP/pp_md_v3.1.pdf">Protection Profile for Mobile Device Fundamentals, Version 3.2</a>, April 15, 2021</span></td>
+                <td><span id="bibMDF">[<abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr>]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/static_html/protection-profile/468/MDF%203.3%20PP/index.html">Protection Profile for Mobile Device Fundamentals, Version 3.3</a>, Version 3.3, September 12, 2022</span></td>
             </tr>
         </table>
     </body>
