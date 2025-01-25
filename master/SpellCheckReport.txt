@@ -1,6 +1,9 @@
 output/bluetooth-release-linkable.html: Enrolment
+output/bluetooth-release-linkable.html: unconnectable
 output/bluetooth-release.html: Enrolment
+output/bluetooth-release.html: unconnectable
 output/bluetooth-sd.html: evaluator’s
 output/bluetooth-sd.html: fail’
 output/bluetooth-sd.html: pass’
 output/bluetooth.html: Enrolment
+output/bluetooth.html: unconnectable
