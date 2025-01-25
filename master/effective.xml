@@ -526,24 +526,24 @@
       <con-op-en/>
 
       <con-mod ref="fau-gen-1-bt">This SFR extends the audit functionality already present in the Base-PP to address auditing of behavior that is specific to this PP-Module.</con-mod>    
-      <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
+      <con-mod ref="fcs-ckm-ext-8">This SFR applies to the frequency of key generation activity. 
         This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
         so it does not affect any other key generation activities required by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.1">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.2">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.3">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="fia_blt_ext.7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="ftp_blt_ext.1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+      <con-mod ref="fia-blt-ext-1">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia-blt-ext-2">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia-blt-ext-3">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia-blt-ext-4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia-blt-ext-6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia_-lt-ext-7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="ftp-blt-ext-1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
         but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+      <con-mod ref="ftp-blt-ext-2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
         but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.3" iteration="BR">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+      <con-mod ref="ftp-blt-ext-3-br">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
         but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="ftp_blt_ext.3" iteration="LE">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+      <con-mod ref="ftp-blt-ext-3-le">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
         but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
-      <con-mod ref="fia_blt_ext.5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
+      <con-mod ref="fia-blt-ext-5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
       
     </base-pp>
     <base-pp id="bpp-gpos" name="General Purpose Operating System" product="Operating System" short="GPOS" version="4.3">
@@ -831,7 +831,7 @@
           <fam-behavior>Components in this family define requirements for cryptographic key management beyond those which are specified in the Part 2 family FCS_CKM.
           </fam-behavior>
         </ext-comp-def>
-        <f-component cc-id="fcs_ckm_ext.8" name="Bluetooth Key Generation">
+        <f-component cc-id="fcs_ckm_ext.8" id="fcs-ckm-ext-8" name="Bluetooth Key Generation">
           <consistency-rationale/>
           
           <comp-lev> requires the TSF to generate key pairs used for Bluetooth over a specified time period or in response to some observed event.</comp-lev>
@@ -888,7 +888,7 @@
           <fam-behavior>Components in this family define Bluetooth-specific identification and authentication requirements.
           </fam-behavior>
         </ext-comp-def>
-        <f-component cc-id="fia_blt_ext.1" name="Bluetooth User Authorization">
+        <f-component cc-id="fia_blt_ext.1" id="fia-blt-ext-1" name="Bluetooth User Authorization">
           <consistency-rationale/>
           <comp-lev> requires the TSF to have explicit user authorization before allowing a Bluetooth pairing.</comp-lev>
           <management>No specific management functions are identified.
@@ -949,7 +949,7 @@
         </f-component>
         
         
-        <f-component cc-id="fia_blt_ext.2" name="Bluetooth Mutual Authentication">
+        <f-component cc-id="fia_blt_ext.2" id="fia-blt-ext-2" name="Bluetooth Mutual Authentication">
           <consistency-rationale/>
           <comp-lev> requires the TSF to enforce mutual authentication for Bluetooth.</comp-lev>
           <management>No specific management functions are identified.
@@ -999,7 +999,7 @@
         </f-component>
 
 
-        <f-component cc-id="fia_blt_ext.3" name="Rejection of Duplicate Bluetooth Connections">
+        <f-component cc-id="fia_blt_ext.3" id="fia-blt-ext-3" name="Rejection of Duplicate Bluetooth Connections">
           <consistency-rationale/>
           <comp-lev> requires the TSF to reject duplicate attempts to connect to Bluetooth.</comp-lev>
           <management>No specific management functions are identified.
@@ -1047,7 +1047,7 @@
         </f-component>
         
         
-        <f-component cc-id="fia_blt_ext.4" name="Secure Simple Pairing">
+        <f-component cc-id="fia_blt_ext.4" id="fia-blt-ext-4" name="Secure Simple Pairing">
           <consistency-rationale/>
           <comp-lev> requires the TSF to support Secure Simple Pairing.</comp-lev>
           <management>No specific management functions are identified.</management>
@@ -1088,7 +1088,7 @@
         </f-component>
         
 
-        <f-component cc-id="fia_blt_ext.6" name="Trusted Bluetooth Device User Authorization">
+        <f-component cc-id="fia_blt_ext.6" id="fia-blt-ext-6" name="Trusted Bluetooth Device User Authorization">
           <consistency-rationale/>
           <comp-lev> requires the TSF to have explicit user authentication before associating trusted services with Bluetooth.</comp-lev>
           <management>The following actions could be considered for the management functions in FMT: <h:ul>
@@ -1141,7 +1141,7 @@
         </f-component>
 
 
-        <f-component cc-id="fia_blt_ext.7" name="Untrusted Bluetooth Device User Authorization">
+        <f-component cc-id="fia_blt_ext.7" id="fia-blt-ext-7" name="Untrusted Bluetooth Device User Authorization">
           <consistency-rationale/>
           <comp-lev> requires the TSF to have explicit user authentication before associating untrusted services with Bluetooth.</comp-lev>
           <management>The following actions could be considered for the management functions in FMT: <h:ul>
@@ -1209,7 +1209,7 @@
           <fam-behavior>Components in this family define requirements for Bluetooth encryption.
           </fam-behavior>
         </ext-comp-def>
-        <f-component cc-id="ftp_blt_ext.1" name="Bluetooth Encryption">
+        <f-component cc-id="ftp_blt_ext.1" id="ftp-blt-ext-1" name="Bluetooth Encryption">
           <consistency-rationale/>
           <comp-lev> requires the TSF to enforce encryption when transmitting over Bluetooth.</comp-lev>
           <management>No specific management functions are identified.
@@ -1252,7 +1252,7 @@
           <audit-event/>
         </f-component>
       
-        <f-component cc-id="ftp_blt_ext.2" name="Persistence of Bluetooth Encryption">
+        <f-component cc-id="ftp_blt_ext.2" id="ftp-blt-ext-2" name="Persistence of Bluetooth Encryption">
           <consistency-rationale/>
           <comp-lev> requires the TSF to ensure encryption for the duration of the use of the Bluetooth channel.</comp-lev>
           <management>No specific management functions are identified.
@@ -1291,7 +1291,7 @@
           <audit-event/>
         </f-component>
 
-        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters" status="invisible">
+        <f-component cc-id="ftp_blt_ext.3" id="ftp-blt-ext-3" name="Bluetooth Encryption Parameters" status="invisible">
           <consistency-rationale/>
           <comp-lev> specifies the key sizes used for Bluetooth.</comp-lev>
           <management>The following actions could be considered for the management functions in FMT: <h:ul>
@@ -1307,7 +1307,7 @@
            
           </f-element>
         </f-component>
-        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (BR/EDR)" iteration="BR">
+        <f-component cc-id="ftp_blt_ext.3" id="ftp-blt-ext-3-br" name="Bluetooth Encryption Parameters (BR/EDR)" iteration="BR">
           <consistency-rationale/>       
           <f-element>
             <title>The TSF shall set the minimum encryption key size to <assignable>key size larger than or equal to 128 bits</assignable> for [<h:i>BR/EDR</h:i>] and not negotiate encryption key sizes smaller than the minimum size.
@@ -1368,7 +1368,7 @@
       </section>	
 
       <sec:ftp title="Trusted Path/Channels">
-        <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (LE)" iteration="LE">
+        <f-component cc-id="ftp_blt_ext.3" id="ftp-blt-ext-3-le" name="Bluetooth Encryption Parameters (LE)" iteration="LE">
 	  <depends on="s_le"/>
           <consistency-rationale/>
           <f-element>
@@ -1419,7 +1419,7 @@
       
       <sec:fia title="Identification and Authentication">
         
-        <f-component cc-id="fia_blt_ext.5" name="Bluetooth Secure Connections">
+        <f-component cc-id="fia_blt_ext.5" id="fia-blt-ext-5" name="Bluetooth Secure Connections">
 	  <depends><objective/></depends>
           <consistency-rationale/>
           <comp-lev>requires the TSF to support Secure Connections Only mode.</comp-lev>
