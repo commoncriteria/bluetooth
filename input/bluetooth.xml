@@ -532,33 +532,8 @@
       <con-sec-prob>The threats that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the security problem definition given in the MDF PP.</con-sec-prob>
       <con-obj>The objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the objectives given in the MDF PP.</con-obj>
       <con-op-en/>
-   <!-- 
-      <con-mod ref="T.TSF_FAILURE">The Base-PP defines threats for local attacks and remote attacks, both of which could cause a failure of the TSF. This PP-Module adds a generic TSF failure threat
-      in the event that the WLAN Client fails through unintended system behavior rather than a direct malicious attack.</con-mod>
-      <con-mod ref="T.UNAUTHORIZED_ACCESS">The Base-PP defines threats for local attacks and remote attacks. The threat of unauthorized access to the WLAN Client is a specific threat that results from successful exploitation 
-      of one of these Base-PP threats.</con-mod>
-      <con-mod ref="T.UNDETECTED_ACTIONS">The Base-PP defines threats for local attacks and remote attacks. It does not define a threat specifically for undetected actions but it does map the local attack and remote attack threats to a
-      TOE objective for accountability. Therefore, the threat of undetected actions is consistent with the Base-PP because this is a subset of the threats defined in the Base-PP, or a mechanism to increase the likelihood that these
-      threats will successfully be exploited.</con-mod>        
-          
-      <con-mod ref="A.NO_TOE_BYPASS">This assumption relates to the deployment of the TOE in relation to the network resources that it interacts with. It does not enforce any restrictions on the TOE's deployment that are contrary to
-        what the Base-PP requires.</con-mod>
-      <con-mod ref="A.TRUSTED_ADMIN">The Base-PP defines A.PROPER_USER and A.PROPER_ADMIN objectives that serve the same purpose as OE.TRUSTED_ADMIN in this PP-Module.</con-mod>
 
-      <con-mod ref="O.AUTH_COMM">This objective is specifically for a communications interface that is defined by the PP-Module, but it is consistent with the general O.PROTECTED_COMMS objective specified in the Base-PP.</con-mod>
-      <con-mod ref="O.CRYPTOGRAPHIC_FUNCTIONS">The TOE implements this objective in part by relying on the cryptographic functionality specified in the Base-PP to address the Base-PP's O.PROTECTED_COMMS objective. The PP-Module
-      uses these cryptographic functions for the same purpose as the Base-PP.</con-mod>
-      <con-mod ref="O.SELF_TEST">The Base-PP defines a general O.INTEGRITY objective; this PP-Module defines O.SELF_TEST as a specific method of guaranteeing the integrity of the TOE.</con-mod>
-      <con-mod ref="O.SYSTEM_MONITORING">The Base-PP defines an O.ACCOUNTABILITY objective for system auditing. The O.SYSTEM_MONITORING objective in this PP-Module serves the same purpose.</con-mod>
-      <con-mod ref="O.TOE_ADMINISTRATION">The Base-PP defines an O.MANAGEMENT objective for TOE administration. The O.TOE_ADMINISTRTION objective in this PP-Module serves the same purpose.</con-mod>
-      <con-mod ref="O.WIRELESS_ACCESS_POINT_CONNECTION">This objective relates to behavior that applies to a communications interface defined in this PP-Module and therefore does not relate to the Base-PP's functionality.</con-mod>
-          
-      <con-mod ref="OE.NO_TOE_BYPASS">This objective relates to the deployment of the TOE in relation to the network resources that it interacts with. It does not enforce any restrictions on the TOE's deployment that are contrary to
-      what the Base-PP requires.</con-mod>
-      <con-mod ref="OE.TRUSTED_ADMIN">The Base-PP defines OE.PROPER_USER and OE.PROPER_ADMIN objectives that serve the same purpose as OE.TRUSTED_ADMIN in this PP-Module.</con-mod>          
--->
-
-          
+      <con-mod ref="fau-gen-1-bt">This SFR extends the audit functionality already present in the Base-PP to address auditing of behavior that is specific to this PP-Module.</con-mod>    
       <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
         This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
         so it does not affect any other key generation activities required by the Base-PP.</con-mod>
@@ -792,6 +767,7 @@
       <con-obj>The objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. This PP-Module does not add or remove any elements to the objectives given in the GPOS PP.</con-obj>
       <con-op-en/>
          
+      <con-mod ref="fau_gen.1" iteration="BT">This SFR extends the audit functionality already present in the Base-PP to address auditing of behavior that is specific to this PP-Module.</con-mod>   
       <con-mod ref="fcs_ckm_ext.8">This SFR applies to the frequency of key generation activity. 
         This does not conflict with the Base-PP because it involves a key generation mechanism defined in the Base-PP and relates exclusively to Bluetooth functionality 
         so it does not affect any other key generation activities required by the Base-PP.</con-mod>
@@ -819,7 +795,7 @@
       </section>
       
       <sec:fau title="Security Audit (FAU)">
-        <f-component cc-id="fau_gen.1" name="Audit Data Generation (Bluetooth)" iteration="BT"> 
+        <f-component cc-id="fau_gen.1" id="fau-gen-1-bt" name="Audit Data Generation (Bluetooth)" iteration="BT"> 
           <consistency-rationale>The PP-Module defines auditable events for Bluetooth that extends the audit functionality defined in each Base-PP.</consistency-rationale>
           <f-element>
             <title>
