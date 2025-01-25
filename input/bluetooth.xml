@@ -33,7 +33,6 @@
 
   <sec:Introduction>
     <sec:Overview>
-      <h:b>this is HTML bold text</h:b>
     <h:p>
       The scope of the Bluetooth PP-Module is to describe the security functionality of Bluetooth technology in terms of [CC] 
       and to define functional and assurance requirements for the Bluetooth capability of mobile devices and operating systems.
@@ -191,33 +190,6 @@
         </cc-pkg-claim>
       </CClaimsInfo>	
   </sec:Conformance_Claims>
-
-  <!-- <sec:Conformance_Claims boilerplate="no"> -->
-  <!--   <cclaims> -->
-  <!--     <cclaim name="Conformance Statement"> -->
-  <!--       <description> This PP-Module inherits exact conformance as required from -->
-  <!--         the specified Base-PP and as defined in the CC and -->
-  <!--         CEM addenda for Exact Conformance, Selection-Based SFRs, and Optional -->
-  <!--         SFRs (dated May 2017).</h:p><h:p>  -->
-  <!--         The following PPs and PP-Modules are allowed to -->
-  <!--         be specified in a PP-Configuration with this PP-Module. <h:ul> -->
-  <!--           <h:li>PP-Module for VPN Client, Version 2.2</h:li> -->
-  <!--           <h:li>PP-Module for MDM Agent, Version 1.0</h:li> -->
-            <!-- <h:li>PP-Module for WLAN Clients, Version 1.0</h:li> -->
-  <!--         </h:ul> -->
-  <!--       </description> -->
-  <!--     </cclaim> -->
-  <!--     <cclaim name="CC Conformance Claims"> -->
-  <!--       <description>This PP-Module is conformant to Parts 2 (extended) and 3 -->
-  <!--         (extended) of Common Criteria Version 3.1, Release 5 [CC]. -->
-  <!--       </description> -->
-  <!--     </cclaim> -->
-  <!--     <cclaim name="Package Claims"> -->
-  <!--       <description>There are no package claims for this PP-Module.</description> -->
-  <!--     </cclaim> -->
-  <!--   </cclaims> -->
-  <!-- </sec:Conformance_Claims> -->
-
 
   <sec:Security_Problem_Description title="Security Problem Definition">
     All threats, assumptions, organizational security policies, and/or objectives that apply to this PP-Module are inherited from the Base-PP to which the TOE also conforms. 
@@ -842,117 +814,45 @@
       
     <man-sfrs>
       
+      <section id="man-audit-table" title="Auditable Events for Mandatory SFRs">
+        <audit-table table="mandatory" id="a-mandatory-events"/>
+      </section>
+      
       <sec:fau title="Security Audit (FAU)">
         <f-component cc-id="fau_gen.1" name="Audit Data Generation (Bluetooth)" iteration="BT"> 
           <consistency-rationale>The PP-Module defines auditable events for Bluetooth that extends the audit functionality defined in each Base-PP.</consistency-rationale>
           <f-element>
             <title>
 	      <h:p>
-              The TSF shall be able to generate an audit record of the following auditable events: 
+              The TSF shall be able to generate audit data of the following auditable events: 
               </h:p>
               <h:ol type="a">
                 <h:li>Start-up and shutdown of the audit functions</h:li>
                 <h:li>All auditable events for the [<h:i>not specified</h:i>] level of audit</h:li>
-                <h:li>[<h:i>Specifically defined auditable events in the Auditable Events table</h:i>].</h:li>
+                <h:li>[<h:i>all auditable events for mandatory SFRs specified in <xref to="a-mandatory-events"/></h:i>].</h:li>
               </h:ol>
-              
-              <h:b><ctr id="audit" ctr-type="Table"> Auditable Events</ctr></h:b>
-              <h:table>
-                <h:tr>
-                  <h:th>Requirement</h:th>
-                  <h:th>Auditable Events</h:th>
-                  <h:th>Additional Audit Record Contents</h:th>
-                </h:tr>
-                <h:tr>
-                  <h:td>FCS_CKM_EXT.8</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                
-                <h:tr>
-                  <h:td rowspan="2">FIA_BLT_EXT.1</h:td>
-                  <h:td>Failed user authorization of Bluetooth device.</h:td>
-                  <h:td>User authorization decision (e.g., user rejected connection, incorrect pin entry).</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>Failed user authorization for local Bluetooth Service.</h:td>
-                  <h:td>Bluetooth address and name of device.  Bluetooth profile. Identity of local service with 
-                    <selectables>
-                      <selectable>service ID</selectable>
-                      <selectable>profile name</selectable>
-                    </selectables>.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td rowspan="2">FIA_BLT_EXT.2</h:td>
-                  <h:td>Initiation of Bluetooth connection.</h:td>
-                  <h:td>Bluetooth address and name of device.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>Failure of Bluetooth connection.</h:td>
-                  <h:td>Reason for failure.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FIA_BLT_EXT.3 (optional)</h:td>
-                  <h:td>Duplicate connection attempt.</h:td>
-                  <h:td>BD_ADDR of connection attempt.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FIA_BLT_EXT.4</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FIA_BLT_EXT.5 (if claimed)</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FIA_BLT_EXT.6</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FIA_BLT_EXT.7</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FTP_BLT_EXT.1</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FTP_BLT_EXT.2</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FTP_BLT_EXT.3/BR</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-                <h:tr>
-                  <h:td>FTP_BLT_EXT.3/LE (if claimed)</h:td>
-                  <h:td colspan="2">None.</h:td>
-                </h:tr>
-              </h:table>
-              
             </title>
           </f-element>
             <f-element>
-              <title>The TSF shall record within each audit record at least the following information: <h:ol type="a">
+              <title>The TSF shall record within the audit data at least the following information: <h:ol type="a">
                 <h:li>Date and time of the event</h:li>
                 <h:li>Type of event</h:li>
                 <h:li>Subject identity</h:li>
                 <h:li>The outcome (success or failure) of the event</h:li>
-                <h:li>For each audit event type, based on the auditable event definitions of the functional components included in the PP/ST, [<h:i>Additional information in the Auditable Events table</h:i>].</h:li>
+                <h:li>For each audit event type, based on the auditable event definitions of the functional components included in the PP/ST, [<h:i>all auditable events for mandatory SFRs specified in <xref to="a-mandatory-events"/></h:i>].</h:li>
               </h:ol>
               </title>
             <note role="application">It is not feasible for the <no-link>FIA_BLT_EXT.3</no-link> event to be audited if the rejection is performed at the HCI layer because the Bluetooth standard does not provide a notification 
               interface for this behavior in the HCI. This is why the event is labeled as optional. 
               However, if the rejection is performed above the HCI layer, it is expected that a conformant TOE should implement this functionality.</note>
             <aactivity>
-              <TSS>
-		<h:p>
-                There are additional auditable events that serve to extend the FAU_GEN.1 SFR found in each Base-PP. </h:p><h:p>
+              <no-tests>
+                <h:p>There are additional auditable events that serve to extend the FAU_GEN.1 SFR found in each Base-PP. </h:p><h:p>
                 This SFR is evaluated in the same manner as defined by the Evaluation Activities for the claimed Base-PP. 
-                The only difference is that the evaluator shall also assess the auditable events required for this PP-Module in addition to those defined in the claimed Base-PP.
-		</h:p>
-              </TSS>
+                The only difference is that the evaluator shall also assess the auditable events required for this PP-Module in addition to those defined in the claimed Base-PP.</h:p></no-tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
         
       </sec:fau>
@@ -1007,6 +907,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
 
         
@@ -1063,6 +964,20 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event>
+            <audit-event-descr>Failed user authorization of Bluetooth device.</audit-event-descr>
+            <audit-event-info>User authorization decision (e.g., user rejected connection, incorrect pin entry).</audit-event-info>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Failed user authorization for local Bluetooth Service.</audit-event-descr>
+            <audit-event-info><selectables>
+              <selectable>complete</selectable>
+              <selectable>last <assignable>integer greater than or equal to 2</assignable> octets of the</selectable></selectables> BD_ADDR and
+              <selectables>
+                <selectable>name of device</selectable>
+                <selectable>uniquely generated nonce for each pairing</selectable>
+                <selectable>no other information</selectable></selectables>.</audit-event-info>
+          </audit-event>
         </f-component>
         
         
@@ -1099,6 +1014,20 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event>
+            <audit-event-descr>Initiation of Bluetooth connection.</audit-event-descr>
+            <audit-event-info><selectables>
+              <selectable>complete</selectable>
+              <selectable>last <assignable>integer greater than or equal to 2</assignable> octets of the</selectable></selectables> BD_ADDR and
+              <selectables>
+                <selectable>name of device</selectable>
+                <selectable>uniquely generated nonce for each pairing</selectable>
+                <selectable>no other information</selectable></selectables>.</audit-event-info>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Failure of Bluetooth connection.</audit-event-descr>
+            <audit-event-info>Reason for failure.</audit-event-info>
+          </audit-event>
         </f-component>
 
 
@@ -1141,6 +1070,12 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event>
+            <audit-event-descr>Duplicate connection attempt.</audit-event-descr>
+            <audit-event-info><selectables>
+              <selectable>complete</selectable>
+              <selectable>last <assignable>integer greater than or equal to 2</assignable> octets of the</selectable></selectables> BD_ADDR of connection attempt.</audit-event-info>
+          </audit-event>
         </f-component>
         
         
@@ -1181,6 +1116,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
         
 
@@ -1233,6 +1169,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
 
 
@@ -1291,6 +1228,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
 
        </sec:fia>  
@@ -1343,6 +1281,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
       
         <f-component cc-id="ftp_blt_ext.2" name="Persistence of Bluetooth Encryption">
@@ -1381,6 +1320,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
 
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters" status="invisible">
@@ -1407,7 +1347,7 @@
 
             <note role="application">
               Encryption is mandatory for BR/EDR connections when both devices support Secure Simple Pairing. 
-              Minimum encryption requirements will be set and verified for each Bluetooth profile/application. 
+              Minimum encryption requirements will be set and verified for each Bluetooth profile/application. However, when the TOE is in the Bluetooth Observer role, one-way devices (e.g., unconnectable Bluetooth Broadcasters) can send unencrypted communications (e.g., beacon or advertisement messages) to the TOE and the TOE can accept them because they are outside the Trusted Channel. 
             </note>   
 
             <aactivity>
@@ -1435,6 +1375,7 @@
               </Tests>
             </aactivity>
           </f-element>
+          <audit-event/>
         </f-component>
  
       </sec:ftp>
@@ -1453,6 +1394,10 @@
     but it also prevented any of the intro text to the selection-based SFRs appendix from being displayed. We are flagging this as an issue with the template. Note that FE and FE-EM modules were done in this manner as well so we don't believe
     it should be an issue here, but for future use it may be beneficial to correct the template so that it behaves as intended. -->
     <sel-sfrs>
+      
+      <section id="sb-audit-table" title="Auditable Events for Selection-based SFRs">
+        <audit-table table="sel-based" id="a-sel-based-events"/>
+      </section>	
 
       <sec:ftp title="Trusted Path/Channels">
         <f-component cc-id="ftp_blt_ext.3" name="Bluetooth Encryption Parameters (LE)" iteration="LE">
@@ -1492,12 +1437,17 @@
               </Tests>
             </aactivity>
           </f-element>
+        <audit-event/>
         </f-component>
       </sec:ftp>
       
       
     </sel-sfrs>
     <obj-sfrs>
+      
+      <section id="obj-audit-table" title="Auditable Events for Objective SFRs">
+        <audit-table table="objective" id="a-objective-events"/>
+      </section>
       
       <sec:fia title="Identification and Authentication">
         
@@ -1544,6 +1494,7 @@
               </Tests>
             </aactivity>
           </f-element>
+        <audit-event/>
         </f-component>
       </sec:fia>
       
