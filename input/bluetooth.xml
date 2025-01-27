@@ -779,7 +779,7 @@
       <con-mod ref="fia-blt-ext-4">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
       <con-mod ref="fia-blt-ext-6">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
       <con-mod ref="fia-blt-ext-7">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base-PP.</con-mod>
-      <con-mod ref="ftp_blt_ext-1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
+      <con-mod ref="ftp-blt-ext-1">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
         but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
       <con-mod ref="ftp-blt-ext-2">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base-PP, 
         but it relies on the same cryptographic algorithms specified in the Base-PP to function.</con-mod>
