@@ -859,10 +859,12 @@ The following sections list Common Criteria and technology terms used in this do
       environmental security objectives defined in the <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr> will also apply to the portion of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that implements Bluetooth.
 
         
+    
     <h2 id="" class="indexable,h2" data-level="2">4.2 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
 		security policies map to operational environment security objectives.
 	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr></table>
+    
   <h1 id="Security_Requirements" class="indexable" data-level="1">5 Security Requirements</h1>
       This chapter describes the security requirements which have to be fulfilled by the product under evaluation.
      Those requirements comprise functional components from Part 2 and assurance components from Part 3 of 
@@ -1425,7 +1427,13 @@ Operating System
 <tr><td><a href="#FTP_BLT_EXT.3/BR">FTP_BLT_EXT.3/BR</a></td><td>Mitigates the threat of network disclosure by enforcing the use of appropriate encryption parameters for Bluetooth data in <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> mode.</td></tr>
 <tr><td><a href="#FTP_BLT_EXT.3/LE">FTP_BLT_EXT.3/LE</a> (selection-based)</td><td>Mitigates the threat of network disclosure by enforcing the use of appropriate encryption parameters for Bluetooth data in <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> mode.</td></tr>
 <tr><td><a href="#FIA_BLT_EXT.5">FIA_BLT_EXT.5</a> (objective)</td><td>Mitigates the threat of network disclosure by enforcing the use of Secure Connections Only mode to block insecure communications.</td></tr>
-<tr class="major-row"><td rowspan="6"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a><br/></td><td><a href="#FAU_GEN.1/BT">FAU_GEN.1/BT</a></td><td>Mitigates the threat of network attack by generating audit data that could be used to determine if an attack has occurred.</td></tr>
+<tr class="major-row"><td rowspan="12"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a><br/></td><td><a href="#FMT_SMF_EXT.1">FMT_SMF_EXT.1</a> (modified from <abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr><td><a href="#FMT_SMF_EXT.1/BT">FMT_SMF_EXT.1/BT</a> (additional to <abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr><td><a href="#FMT_MOF_EXT.1">FMT_MOF_EXT.1</a> (modified from GPOS <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr><td><a href="#FMT_MOF_EXT.1/BT">FMT_MOF_EXT.1/BT</a> (additional to GPOS <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr><td><a href="#FMT_SMF_EXT.1">FMT_SMF_EXT.1</a> (modified from GPOS <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr><td><a href="#FMT_SMF_EXT.1/BT">FMT_SMF_EXT.1/BT</a> (additional to GPOS <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr><td><a href="#FAU_GEN.1/BT">FAU_GEN.1/BT</a></td><td>Mitigates the threat of network attack by generating audit data that could be used to determine if an attack has occurred.</td></tr>
 <tr><td><a href="#FIA_BLT_EXT.1">FIA_BLT_EXT.1</a></td><td>Mitigates the threat of network attack by blocking connections that do not have explicit authorization.</td></tr>
 <tr><td><a href="#FIA_BLT_EXT.2">FIA_BLT_EXT.2</a></td><td>Mitigates the threat of network attack by enforcing mutual authentication so that unrecognized endpoints are not authorized.</td></tr>
 <tr><td><a href="#FIA_BLT_EXT.3">FIA_BLT_EXT.3</a></td><td>Mitigates the threat of network attack by rejecting duplicate connections, which mitigates the risk of device impersonation.</td></tr>

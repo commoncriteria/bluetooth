@@ -232,6 +232,14 @@
 	      <threat name="T.NETWORK_ATTACK">
 		      <description>See MDF PP, Section 3.1 and GPOS PP, Section 3.1.</description>
 		      <consistency-rationale>This threat comes directly from both base PPs.</consistency-rationale>
+
+	        <addressed-by>FMT_SMF_EXT.1 (modified from MDF PP)</addressed-by><rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+	        <addressed-by>FMT_SMF_EXT.1/BT (additional to MDF PP)</addressed-by><rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+	        
+	        <addressed-by>FMT_MOF_EXT.1 (modified from GPOS PP)</addressed-by><rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+	        <addressed-by>FMT_MOF_EXT.1/BT (additional to GPOS PP)</addressed-by><rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+	        <addressed-by>FMT_SMF_EXT.1 (modified from GPOS PP)</addressed-by><rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+	        <addressed-by>FMT_SMF_EXT.1/BT (additional to GPOS PP)</addressed-by><rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
 	        
 		      <addressed-by>FAU_GEN.1/BT</addressed-by><rationale>Mitigates the threat of network attack by generating audit data that could be used to determine if an attack has occurred.</rationale>
 	        <addressed-by>FIA_BLT_EXT.1</addressed-by><rationale>Mitigates the threat of network attack by blocking connections that do not have explicit authorization.</rationale>
@@ -280,9 +288,11 @@
         </SOE>
       </SOEs> -->
     </sec:Security_Objectives_for_the_Operational_Environment>    
+    
     <sec:Security_Objectives_Rationale>
-      <!-- NOTE: This section should remain empty and is populated from the rationale tags in the previous sections.  -->
+    
     </sec:Security_Objectives_Rationale>
+    
   </sec:Security_Objectives>
   
   <sec:Security_Requirements>
