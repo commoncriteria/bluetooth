@@ -172,9 +172,9 @@
         <cc-pp-config-with> 
           <PP-cc-ref>Protection Profile for General Purpose Operating Systems, Version 4.3</PP-cc-ref>
           <PP-cc-ref>Protection Profile for Mobile Device Fundamentals, Version 3.3</PP-cc-ref>
-          <Mod-cc-ref>PP-Module for Virtual Private Network (VPN) Clients, version 2.5</Mod-cc-ref>  
+          <Mod-cc-ref>PP-Module for Virtual Private Network (VPN) Clients, version 2.6</Mod-cc-ref>  
           <Mod-cc-ref>PP-Module for Wireless LAN Clients, version 1.1</Mod-cc-ref>
-          <Mod-cc-ref>PP-Module for Mobile Device Management Agent, version 1.0</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for Mobile Device Management Agent, version 1.2</Mod-cc-ref>
           <Mod-cc-ref>cPP-Module for Biometric Enrolment and Verification, version 1.1</Mod-cc-ref>  
         </cc-pp-config-with>
         <cc-pkg-claim>
