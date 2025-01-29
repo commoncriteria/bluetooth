@@ -1,0 +1,1 @@
+/home/runner/work/bluetooth/bluetooth/transforms/schemas/CCModule.rng:540:30: error: missing children
