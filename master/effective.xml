@@ -324,22 +324,20 @@
       <modified-sfrs>
  
 <sec:fmt title="Security Management (FMT)">
-  <f-component name="Specification of Management Functions" cc-id="fmt_smf_ext.1">
+  
+  <base-sfr-spec cc-id="fmt_smf_ext.1" title="Specification of Management Functions" id="modsfr-mdf-fmt-smf-ext-1">
     <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
- <f-element>
-   <title>This PP-Module does not modify this SFR as it is defined in the MDF PP. However, note that this PP-Module
-	   requires the list of radios specified in the assignment for management function 4 ("enable/disable
-	   [<h:b>assignment:</h:b> <h:i>list of all radios</h:i>]") to include Bluetooth radios. Bluetooth BR/EDR and Bluetooth LE will 
-	   be listed separately if the TSF provides the ability to enable/disable them separately (i.e., if management 
-	   function BT-3 below is claimed). Otherwise, both interfaces will be treated as one radio for that assignment.
-   </title>
-   <aactivity>
-     <no-tests>
-       There is no change to the Base PP EAs for this SFR when this PP-Module is claimed.
-     </no-tests>
-   </aactivity>
- </f-element>
-  </f-component>
+    
+    <description>This PP-Module does not modify this SFR as it is defined in the MDF PP. However, note that this PP-Module
+      requires the list of radios specified in the assignment for management function 4 ("enable/disable
+      [<h:b>assignment:</h:b> <h:i>list of all radios</h:i>]") to include Bluetooth radios. Bluetooth BR/EDR and Bluetooth LE will 
+      be listed separately if the TSF provides the ability to enable/disable them separately (i.e., if management 
+      function BT-3 below is claimed). Otherwise, both interfaces will be treated as one radio for that assignment.</description>
+    
+    <no-change/>
+    
+  </base-sfr-spec>
+ 
  
 </sec:fmt> 
 
