@@ -551,44 +551,34 @@
       <url>https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html</url>
       <modified-sfrs>
         <sec:fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_mof_ext.1" name="Management of Security Functions Behavior"> 
+          
+          <base-sfr-spec cc-id="fmt_mof_ext.1" title="Management of Functions Behavior" id="modsfr-gpos-fmt-mof-ext-1">
             <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
-    <f-element>
-      <title>
-        There is no change to the text of this SFR. The SFR references FMT_SMF_EXT.1 and states that the OS shall permit 
-	      the administrator role to perform the relevant functions listed in FMT_SMF_EXT.1. The function "Enable/Disable
-	      the Bluetooth interface" is listed as an optional management function in FMT_SMF_EXT.1 for both users and 
-	      administrators. When this PP-Module is claimed, the administrator or user role must be able to enable/disable
-	      the Bluetooth interface. In other words, the function itself is moved from optional to mandatory, but this
-	      PP-Module does not require that it be implemented by a specific role. If the ST indicates that the
-	      administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply
-	      to it.
-      </title>
-      <aactivity>
-        <no-tests>
-          There is no change to the Base PP EAs for this SFR when this PP-Module is claimed.
-        </no-tests>
-      </aactivity>
-    </f-element>
-          </f-component>
+            
+            <description>There is no change to the text of this SFR. The SFR references FMT_SMF_EXT.1 and states that the OS shall permit 
+              the administrator role to perform the relevant functions listed in FMT_SMF_EXT.1. The function "Enable/Disable
+              the Bluetooth interface" is listed as an optional management function in FMT_SMF_EXT.1 for both users and 
+              administrators. When this PP-Module is claimed, the administrator or user role must be able to enable/disable
+              the Bluetooth interface. In other words, the function itself is moved from optional to mandatory, but this
+              PP-Module does not require that it be implemented by a specific role. If the ST indicates that the
+              administrator role can perform this function, then the restrictions imposed by FMT_MOF_EXT.1 will apply
+              to it.</description>
+            
+            <no-change/>
+            
+          </base-sfr-spec>
+          
+          <base-sfr-spec cc-id="fmt_smf_ext.1" title="Specification of Management Functions" id="modsfr-gpos-fmt-smf-ext-1">
+            <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
+            
+            <description>This PP-Module does not modify this SFR as it is defined in the GPOS PP. However, note that this PP-Module
+              requires the function "Enable/disable Bluetooth interface" to be implemented, though this PP-Module 
+              does not mandate whether it be assigned to the Administrator or User role.  </description>
+            
+            <no-change/>
+          </base-sfr-spec>
           
          
-          <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions">
-            <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
-            <f-element>
-              <title>
-                This PP-Module does not modify this SFR as it is defined in the GPOS PP. However, note that this PP-Module
-		      requires the function "Enable/disable Bluetooth interface" to be implemented, though this PP-Module 
-		      does not mandate whether it be assigned to the Administrator or User role.  
-              </title>
-              <aactivity>
-                <no-tests>
-                  There is no change to the Base PP EAs for this SFR when this PP-Module is claimed.
-                </no-tests>
-              </aactivity>
-            </f-element>
-          </f-component>
-            
         </sec:fmt>
       </modified-sfrs>
       <additional-sfrs>
