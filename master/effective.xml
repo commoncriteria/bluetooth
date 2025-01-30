@@ -323,7 +323,7 @@
  
       <modified-sfrs>
  
-        <sec:fmt title="Security Management (FMT)" id="mdf-mod-fmt">
+        <section title="Security Management (FMT)" id="mdf-mod-fmt">
   
   <base-sfr-spec cc-id="fmt_smf_ext.1" title="Specification of Management Functions" id="modsfr-mdf-fmt-smf-ext-1">
     <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
@@ -339,7 +339,7 @@
   </base-sfr-spec>
  
  
-</sec:fmt> 
+</section> 
 
 
 
@@ -550,7 +550,7 @@
       </git>
       <url>https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html</url>
       <modified-sfrs>
-        <sec:fmt title="Security Management (FMT)" id="gpos-mod-fmt">
+        <section title="Security Management (FMT)" id="gpos-mod-fmt">
           
           <base-sfr-spec cc-id="fmt_mof_ext.1" title="Management of Functions Behavior" id="modsfr-gpos-fmt-mof-ext-1">
             <consistency-rationale>This SFR is unchanged from its definition in the Base-PP; the only change required by this PP-Module is how to interpret it in the context of Bluetooth capabilities.</consistency-rationale>
@@ -579,7 +579,7 @@
           </base-sfr-spec>
           
          
-        </sec:fmt>
+        </section>
       </modified-sfrs>
       <additional-sfrs>
         
