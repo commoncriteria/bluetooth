@@ -1,1 +1,7 @@
-/home/runner/work/bluetooth/bluetooth/transforms/schemas/CCModule.rng:540:30: error: missing children
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:326:69: error: found attribute "id", but no attributes allowed here
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:328:116: error: element "base-sfr-spec" not allowed here; expected element "ext-comp-class", "ext-comp-def" or "f-component"
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:342:11: error: element "sec:fmt" incomplete; missing required element "f-component"
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:553:70: error: found attribute "id", but no attributes allowed here
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:555:120: error: element "base-sfr-spec" not allowed here; expected element "ext-comp-class", "ext-comp-def" or "f-component"
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:571:125: error: element "base-sfr-spec" not allowed here; expected element "ext-comp-class", "ext-comp-def" or "f-component"
+/home/runner/work/bluetooth/bluetooth/output/effective.xml:582:19: error: element "sec:fmt" incomplete; missing required element "f-component"
