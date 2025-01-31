@@ -450,7 +450,7 @@
                         <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Mobile Device Management Agent, version 1.2
                     </li>
                     <li>
-                        <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>-Module for Biometric Enrolment and Verification, version 1.1
+                        <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>-Module for Biometric Enrolment and Verification - for unlocking the device, version 1.1
                     </li>
                 </ul>
             </dd>
@@ -909,7 +909,16 @@
                 <td>Failed user authorization of Bluetooth device.</td><td>User authorization decision (e.g., user rejected connection, incorrect pin entry).</td>
             </tr>
             <tr data-sortkey="FIA_BLT_EXT.1.7">
-                <td>Failed user authorization for local Bluetooth Service.</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_7">complete</span>, <span class="selectable-content" id="_s_8">last [<b>assignment</b>: <span class="assignable-content">integer greater than or equal to 2</span>] octets of the</span>] BD_ADDR and [<b>selection</b>: <span class="selectable-content" id="_s_9">name of device</span>, <span class="selectable-content" id="_s_10">uniquely generated nonce for each pairing</span>, <span class="selectable-content" id="_s_11">no other information</span>].</td>
+                <td>Failed user authorization for local Bluetooth Service.</td><td>
+                    <ul>
+                        <li>
+                            [<b>selection</b>: <span class="selectable-content" id="_s_7">complete</span>, <span class="selectable-content" id="_s_8">last [<b>assignment</b>: <span class="assignable-content">integer greater than or equal to 2</span>] octets of the</span>] BD_ADDR and [<b>selection</b>: <span class="selectable-content" id="_s_9">name of device</span>, <span class="selectable-content" id="_s_10">uniquely generated nonce for each pairing</span>, <span class="selectable-content" id="_s_11">no other information</span>].
+                        </li>
+                        <li>
+                            Bluetooth profile. Identity of local service with [<b>selection</b>: <span class="selectable-content" id="_s_12">service ID</span>, <span class="selectable-content" id="_s_13">profile name</span>]
+                        </li>
+                    </ul>
+                </td>
             </tr>
             <tr data-sortkey="FIA_BLT_EXT.2">
                 <td rowspan="3"><a href="#FIA_BLT_EXT.2">FIA_BLT_EXT.2</a></td><td style="display:none"></td>
@@ -918,7 +927,7 @@
                 <td></td>
             </tr>
             <tr data-sortkey="FIA_BLT_EXT.2.6">
-                <td>Initiation of Bluetooth connection.</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_12">complete</span>, <span class="selectable-content" id="_s_13">last [<b>assignment</b>: <span class="assignable-content">integer greater than or equal to 2</span>] octets of the</span>] BD_ADDR and [<b>selection</b>: <span class="selectable-content" id="_s_14">name of device</span>, <span class="selectable-content" id="_s_15">uniquely generated nonce for each pairing</span>, <span class="selectable-content" id="_s_16">no other information</span>].</td>
+                <td>Initiation of Bluetooth connection.</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_14">complete</span>, <span class="selectable-content" id="_s_15">last [<b>assignment</b>: <span class="assignable-content">integer greater than or equal to 2</span>] octets of the</span>] BD_ADDR and [<b>selection</b>: <span class="selectable-content" id="_s_16">name of device</span>, <span class="selectable-content" id="_s_17">uniquely generated nonce for each pairing</span>, <span class="selectable-content" id="_s_18">no other information</span>].</td>
             </tr>
             <tr data-sortkey="FIA_BLT_EXT.2.7">
                 <td>Failure of Bluetooth connection.</td><td>Reason for failure.</td>
@@ -930,7 +939,7 @@
                 <td></td>
             </tr>
             <tr data-sortkey="FIA_BLT_EXT.3.6">
-                <td>Duplicate connection attempt.</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_17">complete</span>, <span class="selectable-content" id="_s_18">last [<b>assignment</b>: <span class="assignable-content">integer greater than or equal to 2</span>] octets of the</span>] BD_ADDR of connection attempt.</td>
+                <td>Duplicate connection attempt.</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_19">complete</span>, <span class="selectable-content" id="_s_20">last [<b>assignment</b>: <span class="assignable-content">integer greater than or equal to 2</span>] octets of the</span>] BD_ADDR of connection attempt.</td>
             </tr>
             <tr data-sortkey="FIA_BLT_EXT.4">
                 <td rowspan="2"><a href="#FIA_BLT_EXT.4">FIA_BLT_EXT.4</a></td><td style="display:none"></td>
@@ -1021,7 +1030,7 @@
                         <li>Subject identity</li>
                         <li>The outcome (success or failure) of the event</li>
                         <li>
-                            For each audit event type, based on the auditable event definitions of the functional components included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>all auditable events for mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> specified in <a href="#a-mandatory-events" class="a-mandatory-events-ref">Table <span class="counter">1</span></a></i>].
+                            For each audit event type, based on the auditable event definitions of the functional components included in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, functional package or <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, [<i>all auditable events for mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> specified in <a href="#a-mandatory-events" class="a-mandatory-events-ref">Table <span class="counter">1</span></a></i>].
                         </li>
                     </ol>
                     <div class="appnote">
@@ -1166,7 +1175,7 @@
                     <a href="#FTP_BLT_EXT.1.1" class="abbr">FTP_BLT_EXT.1.1</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the use of encryption when transmitting data over the Bluetooth trusted channel for <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and [<b>selection</b>: <span class="selectable-content" id="s_le"><abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr></span>, <span class="selectable-content" id="_s_20">no other connections</span>]. 
+                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enforce the use of encryption when transmitting data over the Bluetooth trusted channel for <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and [<b>selection</b>: <span class="selectable-content" id="s_le"><abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr></span>, <span class="selectable-content" id="_s_22">no other connections</span>]. 
                     <div class="appnote">
                         <span class="note-header">Application Note: </span><span class="note"> <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> is selectable because not all conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> include support for <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr>. If <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> is supported, it is expected that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> be able to provide encryption for this interface. Selection of <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> in <a href="#FTP_BLT_EXT.1.1">FTP_BLT_EXT.1.1</a> requires the inclusion of the selection-based <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <a href="#FTP_BLT_EXT.3/LE">FTP_BLT_EXT.3/LE</a>. </span>
                     </div>
@@ -1188,7 +1197,7 @@
                     <a href="#FTP_BLT_EXT.2.1" class="abbr">FTP_BLT_EXT.2.1</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <span class="selectable-content" id="_s_21">restart encryption</span>, <span class="selectable-content" id="_s_22">terminate the connection</span>] if the remote device stops encryption while connected to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
+                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <span class="selectable-content" id="_s_23">restart encryption</span>, <span class="selectable-content" id="_s_24">terminate the connection</span>] if the remote device stops encryption while connected to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
                     <div class="appnote">
                         <span class="note-header">Application Note: </span><span class="note"> Permitting devices to terminate and/or restart encryption in the middle of a connection weakens user data protection. Note that an encryption pause request, which includes a request to stop encryption, stops encryption only temporarily. This requirement is not intended to address the encryption pause feature. </span>
                     </div>
@@ -1221,7 +1230,7 @@
                     <th>Threat</th><th>Addressed by</th><th>Rationale</th>
                 </tr>
                 <tr class="major-row">
-                    <td rowspan="13"><a href="#T.NETWORK_EAVESDROP">T.NETWORK_​EAVESDROP</a>
+                    <td rowspan="14"><a href="#T.NETWORK_EAVESDROP">T.NETWORK_​EAVESDROP</a>
                         <br>
                     </td><td>FMT_SMF_EXT.1 (modified from <abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td>
                 </tr>
@@ -1244,7 +1253,10 @@
                     <td><a href="#FCS_CKM_EXT.8">FCS_CKM_EXT.8</a></td><td>Mitigates the threat by ensuring that key pairs are regenerated to reduce the risk of disclosure.</td>
                 </tr>
                 <tr>
-                    <td><a href="#FIA_BLT_EXT.3">FIA_BLT_EXT.3</a></td><td>Mitigates the threat of network eavesdrop by using Secure Simple Pairing to prevent the disclosure of Bluetooth connection parameters.</td>
+                    <td><a href="#FIA_BLT_EXT.3">FIA_BLT_EXT.3</a></td><td>Mitigates the threat of network eavesdrop by preventing multiple requests to connect to the same Bluetooth device address.</td>
+                </tr>
+                <tr>
+                    <td><a href="#FIA_BLT_EXT.4">FIA_BLT_EXT.4</a></td><td>Mitigates the threat of network eavesdrop by using Secure Simple Pairing to prevent the disclosure of Bluetooth connection parameters.</td>
                 </tr>
                 <tr>
                     <td><a href="#FTP_BLT_EXT.1">FTP_BLT_EXT.1</a></td><td>Mitigates the threat of network disclosure by enforcing the use of encryption for Bluetooth data in transit.</td>
@@ -1262,7 +1274,7 @@
                     <td><a href="#FIA_BLT_EXT.5">FIA_BLT_EXT.5</a> (objective)</td><td>Mitigates the threat of network disclosure by enforcing the use of Secure Connections Only mode to block insecure communications.</td>
                 </tr>
                 <tr class="major-row">
-                    <td rowspan="12"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a>
+                    <td rowspan="13"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a>
                         <br>
                     </td><td>FMT_SMF_EXT.1 (modified from <abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td>
                 </tr>
@@ -1292,6 +1304,9 @@
                 </tr>
                 <tr>
                     <td><a href="#FIA_BLT_EXT.3">FIA_BLT_EXT.3</a></td><td>Mitigates the threat of network attack by rejecting duplicate connections, which mitigates the risk of device impersonation.</td>
+                </tr>
+                <tr>
+                    <td><a href="#FIA_BLT_EXT.4">FIA_BLT_EXT.4</a></td><td>Mitigates the threat of network attack by using Secure Simple Pairing to prevent unauthorized connections.</td>
                 </tr>
                 <tr>
                     <td><a href="#FIA_BLT_EXT.6">FIA_BLT_EXT.6</a></td><td>Mitigates the threat of network attack by preventing the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> from establishing a connection with an unauthorized or unknown device.</td>
@@ -1546,7 +1561,7 @@
                     <a href="#FIA_BLT_EXT.5.1" class="abbr">FIA_BLT_EXT.5.1</a>
                 </div>
                 <div class="reqdesc">
-                    The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall support Secure Connections Only mode for Bluetooth <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and [<b>selection</b>: <span class="selectable-content" id="_s_23">Bluetooth <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr></span>, <span class="selectable-content" id="_s_24">no other Bluetooth protocol</span>]. 
+                    The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall support Secure Connections Only mode for Bluetooth <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and [<b>selection</b>: <span class="selectable-content" id="_s_25">Bluetooth <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr></span>, <span class="selectable-content" id="_s_26">no other Bluetooth protocol</span>]. 
                     <div class="appnote">
                         <span class="note-header">Application Note: </span><span class="note"> The specification states that Secure Connections Only Mode, also called "FIPS Mode," should be used when security is more important than backwards compatibility. From the specification, "The Host will enforce that the P-256 elliptic curve is used during pairing; the secure authentication sequences are used; and <abbr class="dyn-abbr"><a href="#abbr_AES-CCM">AES-CCM</a></abbr> is used for encryption." Also, "if a <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> device is configured in Secure Connections Only Mode, then a transport will only be used when Secure Connections is supported by both devices." </span>
                     </div>
@@ -1864,7 +1879,7 @@
                             </tr>
                         </table>
                         <h4 id="ext-comp-FIA_BLT_EXT.5.1">FIA_BLT_EXT.5.1</h4>
-                        The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall support Secure Connections Only mode for Bluetooth <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and [<b>selection</b>: <span class="selectable-content" id="_s_23">Bluetooth <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr></span>, <span class="selectable-content" id="_s_24">no other Bluetooth protocol</span>]. 
+                        The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall support Secure Connections Only mode for Bluetooth <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and [<b>selection</b>: <span class="selectable-content" id="_s_25">Bluetooth <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr></span>, <span class="selectable-content" id="_s_26">no other Bluetooth protocol</span>]. 
                     </div>
                 </div>
             </span><span data-sortkey="Trusted Path/Channels (FTP)">
@@ -1931,7 +1946,7 @@
                             </tr>
                         </table>
                         <h4 id="ext-comp-FTP_BLT_EXT.2.1">FTP_BLT_EXT.2.1</h4>
-                        The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <span class="selectable-content" id="_s_21">restart encryption</span>, <span class="selectable-content" id="_s_22">terminate the connection</span>] if the remote device stops encryption while connected to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
+                        The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <span class="selectable-content" id="_s_23">restart encryption</span>, <span class="selectable-content" id="_s_24">terminate the connection</span>] if the remote device stops encryption while connected to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
                     </div>
                     <h4>Management: FTP_BLT_EXT.3</h4>
                     <p>
