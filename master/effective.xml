@@ -349,7 +349,7 @@
       </modified-sfrs>
       <additional-sfrs>
         <section id="mdf-addtl-audit-table" title="Auditable Events for Additional SFRs when MDF is           the Base-PP">
-          <audit-table table="mdf-additional" id="a-mdf-additional-events"/>
+          <audit-table table="mdf-additional" id="a-mdf-additional-events" title="Auditable Events for MDF PP Additional SFRs"/>
         </section>
         
         <sec:fmt title="Security Management (FMT)">
@@ -588,7 +588,7 @@
       </modified-sfrs>
       <additional-sfrs>
         <section id="gpos-addtl-audit-table" title="Auditable Events for Additional SFRs when GPOS is           the Base-PP">
-          <audit-table table="gpos-additional" id="a-gpos-additional-events"/>
+          <audit-table table="gpos-additional" id="a-gpos-additional-events" title="Auditable Events for GPOS PP Additional SFRs"/>
         </section>
         
         <sec:fmt title="Security Management (FMT)">
