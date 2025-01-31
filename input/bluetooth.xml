@@ -520,7 +520,7 @@
                 </Tests>
               </aactivity>
             </f-element>
-            <audit-event/>
+            <audit-event table="mdf-additional"/>
           </f-component>
           
         </sec:fmt>
@@ -640,7 +640,7 @@
                 
               </aactivity>
             </f-element>
-            <audit-event/>
+            <audit-event table="gpos-additional"/>
           </f-component>
           
           <f-component cc-id="fmt_smf_ext.1" name="Specification of Management Functions" iteration="BT"> 
@@ -749,7 +749,7 @@
                 </Tests>
               </aactivity>
             </f-element>
-            <audit-event/>
+            <audit-event table="gpos-additional"/>
           </f-component>
           
         </sec:fmt>
