@@ -2,4 +2,4 @@
 * https://commoncriteria.github.io/bluetooth/xml-builder-review/bluetooth-release.html[bluetooth-release.html]
 * https://commoncriteria.github.io/bluetooth/xml-builder-review/bluetooth-sd.html[bluetooth-sd.html]
 * https://commoncriteria.github.io/bluetooth/xml-builder-review/bluetooth.html[bluetooth.html]
-* https://commoncriteria.github.io/bluetooth/xml-builder-review/diff-v1.0.html[diff-v1.0.html]
+* https://commoncriteria.github.io/bluetooth/xml-builder-review/diff-master.html[diff-master.html]
