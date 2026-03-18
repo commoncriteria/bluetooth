@@ -228,7 +228,8 @@
   <sec:Security_Objectives>
     <!-- 4.1 Security Objectives for the TOE -->
     <!-- 4.2 Security Objctives for the Operational Environment -->
-    <sec:Security_Objectives_for_the_Operational_Environment>No environmental security objectives have been identified that are specific to Bluetooth technology. However, any environmental security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.</sec:Security_Objectives_for_the_Operational_Environment>
+    <sec:Security_Objectives_for_the_Operational_Environment>No environmental security objectives have been identified that are specific to Bluetooth technology. However, any
+      environmental security objectives defined in the Base-PPs will also apply to the portion of the TOE that implements Bluetooth.</sec:Security_Objectives_for_the_Operational_Environment>
     <!-- 4.3 Security Objectives Rationale -->
   </sec:Security_Objectives>
   <!-- 5.0 Security Requirements -->
@@ -913,6 +914,7 @@
     </obj-sfrs>
     <impl-dep-sfrs/>
   </sec:Security_Requirements>
+  <appendix title="Validation Guidelines" id="validation_guidelines"/>
   <appendix title="Implicitly Satisfied Requirements" id="satisfiedreqs">
     <h:p>
       This appendix lists requirements that should be considered satisfied by products successfully evaluated against this PP-Module. 
@@ -944,6 +946,7 @@
     </h:table>
   </appendix>
   <appendix title="Entropy Documentation and Assessment" id="EAR">The TOE does not require any additional supplementary information to describe its entropy sources beyond the requirements outlined in the Base-PPs.</appendix>
+  <appendix title="Initialization Vector Requirements for NIST-Approved Cipher Modes" id="vector"/>
   <appendix title="Objective Requirements" id="objective">This appendix includes requirements that
     specify security functionality which also addresses threats. The requirements are not currently
     mandated in the body of this PP-Module as they describe security functionality not yet widely available
