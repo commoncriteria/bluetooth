@@ -295,9 +295,9 @@
       agencies, Common Criteria Test Laboratories, and members of academia.
       </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#aa-bpp-mdf" style="text-indent:10px">2.1<span>Mobile Device Fundamentals</span></a><a href="#qq-sfrs-bpp-mdf-Modified" style="text-indent:20px">2.1.1<span>Modified SFRs
         </span></a><a href="#qq-sfrs-bpp-mdf-Additional" style="text-indent:20px">2.1.2<span>Additional SFRs
-        </span></a><a href="#fmt" style="text-indent:30px">2.1.2.1<span>Security Management (FMT)</span></a><a href="#aa-bpp-gpos" style="text-indent:10px">2.2<span>General Purpose Operating System</span></a><a href="#qq-sfrs-bpp-gpos-Modified" style="text-indent:20px">2.2.1<span>Modified SFRs
+        </span></a><a href="#fmt" style="text-indent:30px">2.1.2.1<span>Class FMT: Security Management</span></a><a href="#aa-bpp-gpos" style="text-indent:10px">2.2<span>General Purpose Operating System</span></a><a href="#qq-sfrs-bpp-gpos-Modified" style="text-indent:20px">2.2.1<span>Modified SFRs
         </span></a><a href="#qq-sfrs-bpp-gpos-Additional" style="text-indent:20px">2.2.2<span>Additional SFRs
-        </span></a><a href="#fmt" style="text-indent:30px">2.2.2.1<span>Security Management (FMT)</span></a><a href="#man-sfrs" style="text-indent:10px">2.3<span>TOE SFR Evaluation Activities</span></a><a href="#fau" style="text-indent:20px">2.3.1<span>Security Audit (FAU)</span></a><a href="#fcs" style="text-indent:20px">2.3.2<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">2.3.3<span>Identification and Authentication (FIA)</span></a><a href="#ftp" style="text-indent:20px">2.3.4<span>Trusted Path/Channels (FTP)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#ftp" style="text-indent:20px">2.5.1<span>Trusted Path/Channels</span></a><a href="#obj-sfrs" style="text-indent:10px">2.6<span>Evaluation Activities for Objective SFRs</span></a><a href="#fia" style="text-indent:20px">2.6.1<span>Identification and Authentication</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.7<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
+        </span></a><a href="#fmt" style="text-indent:30px">2.2.2.1<span>Class FMT: Security Management</span></a><a href="#man-sfrs" style="text-indent:10px">2.3<span>TOE SFR Evaluation Activities</span></a><a href="#fau" style="text-indent:20px">2.3.1<span>Class FAU: Security Audit</span></a><a href="#fcs" style="text-indent:20px">2.3.2<span>Class FCS: Cryptographic Support</span></a><a href="#fia" style="text-indent:20px">2.3.3<span>Class FIA: Identification and Authentication</span></a><a href="#ftp" style="text-indent:20px">2.3.4<span>Class FTP: Trusted Channels</span></a><a href="#opt-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#ftp" style="text-indent:20px">2.5.1<span>Class FTP: Trusted Path/Channels</span></a><a href="#obj-sfrs" style="text-indent:10px">2.6<span>Evaluation Activities for Objective SFRs</span></a><a href="#fia" style="text-indent:20px">2.6.1<span>Class FIA: Identification and Authentication</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.7<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
     PP-Module for Bluetooth is
     to describe the security functionality of 
     Bluetooth
@@ -442,7 +442,7 @@ The following sections list Common Criteria and technology terms used in this do
         </h3>
         
         
-        <h3 class="indexable" data-level="3" id="fmt">2.1.2.1 Security Management (FMT)</h3><div class="comp" id=""><h4>FMT_SMF_EXT.1/BT Specification of Management Functions</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMF_EXT.1/BT</div>
+        <h3 class="indexable" data-level="3" id="fmt">2.1.2.1 Class FMT: Security Management</h3><div class="comp" id=""><h4>FMT_SMF_EXT.1/BT Specification of Management Functions</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMF_EXT.1/BT</div>
 			  
 			
 					
@@ -529,7 +529,7 @@ The following sections list Common Criteria and technology terms used in this do
         </h3>
         
         
-        <h3 class="indexable" data-level="3" id="fmt">2.2.2.1 Security Management (FMT)</h3><div class="comp" id=""><h4>FMT_MOF_EXT.1/BT Management of Security Functions Behavior</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_MOF_EXT.1/BT</div>
+        <h3 class="indexable" data-level="3" id="fmt">2.2.2.1 Class FMT: Security Management</h3><div class="comp" id=""><h4>FMT_MOF_EXT.1/BT Management of Security Functions Behavior</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_MOF_EXT.1/BT</div>
                 
                 
                 
@@ -565,12 +565,12 @@ The following sections list Common Criteria and technology terms used in this do
                 </div></div></span></div>
         
         
-      <h2 class="indexable" data-level="1" id="man-sfrs">2.3 TOE SFR Evaluation Activities</h2><h2 class="indexable" data-level="2" id="fau">2.3.1 Security Audit (FAU)</h2><div class="comp" id="FAU-GEN-1-BT"><h4>FAU_GEN.1/BT Audit Data Generation (Bluetooth)</h4><span class="activity_pane_body"><div class="component-activity-header">FAU_GEN.1/BT</div>
+      <h2 class="indexable" data-level="1" id="man-sfrs">2.3 TOE SFR Evaluation Activities</h2><h2 class="indexable" data-level="2" id="fau">2.3.1 Class FAU: Security Audit</h2><div class="comp" id="FAU-GEN-1-BT"><h4>FAU_GEN.1/BT Audit Data Generation (Bluetooth)</h4><span class="activity_pane_body"><div class="component-activity-header">FAU_GEN.1/BT</div>
               
                 <p>There are additional auditable events that serve to extend the FAU_GEN.1 SFR found in each Base-PP. </p><p>
                 This SFR is evaluated in the same manner as defined by the Evaluation Activities for the claimed Base-PP. 
                 The only difference is that the evaluator shall also assess the auditable events required for this PP-Module in addition to those defined in the claimed Base-PP.</p><br/><br/>
-            </span></div><h2 class="indexable" data-level="2" id="fcs">2.3.2 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-EXT-8"><h4>FCS_CKM_EXT.8 Bluetooth Key Generation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM_EXT.8</div>
+            </span></div><h2 class="indexable" data-level="2" id="fcs">2.3.2 Class FCS: Cryptographic Support</h2><div class="comp" id="FCS-CKM-EXT-8"><h4>FCS_CKM_EXT.8 Bluetooth Key Generation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM_EXT.8</div>
               
               
               
@@ -588,7 +588,7 @@ The following sections list Common Criteria and technology terms used in this do
                 Step 3: Pair the TOE to a remote Bluetooth device and again record the public key currently in use by the TOE.<br/>
                 Step 4: Verify that the public key in Step 1 differs from the public key in Step 3.<br/>
 		</p>
-              </div></div></span></div><h2 class="indexable" data-level="2" id="fia">2.3.3 Identification and Authentication (FIA)</h2><div class="comp" id="FIA-BLT-EXT-1"><h4>FIA_BLT_EXT.1 Bluetooth User Authorization</h4><span class="activity_pane_body"><div class="component-activity-header">FIA_BLT_EXT.1</div>
+              </div></div></span></div><h2 class="indexable" data-level="2" id="fia">2.3.3 Class FIA: Identification and Authentication</h2><div class="comp" id="FIA-BLT-EXT-1"><h4>FIA_BLT_EXT.1 Bluetooth User Authorization</h4><span class="activity_pane_body"><div class="component-activity-header">FIA_BLT_EXT.1</div>
               
               
               
@@ -711,7 +711,7 @@ The following sections list Common Criteria and technology terms used in this do
                     That is, the evaluator shall use these results to demonstrate that the TSF will grant a device access to different services depending on whether or not the device is trusted.</li>
                 </ul></span>
                 
-              </div></div></span></div><h2 class="indexable" data-level="2" id="ftp">2.3.4 Trusted Path/Channels (FTP)</h2><div class="comp" id="FTP-BLT-EXT-1"><h4>FTP_BLT_EXT.1 Bluetooth Encryption</h4><span class="activity_pane_body"><div class="component-activity-header">FTP_BLT_EXT.1</div>
+              </div></div></span></div><h2 class="indexable" data-level="2" id="ftp">2.3.4 Class FTP: Trusted Channels</h2><div class="comp" id="FTP-BLT-EXT-1"><h4>FTP_BLT_EXT.1 Bluetooth Encryption</h4><span class="activity_pane_body"><div class="component-activity-header">FTP_BLT_EXT.1</div>
               
               
               
@@ -765,7 +765,7 @@ The following sections list Common Criteria and technology terms used in this do
                     Step 2: Verify that the encryption key size suggested by the remote device is not accepted by the TOE and that the connection is not completed.
                   </li>
                 </ul></span>
-              </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.4 Evaluation Activities for Optional SFRs</h2>The PP-Module does not define any optional requirements.<h2 class="indexable" data-level="1" id="sel-sfrs">2.5 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="ftp">2.5.1 Trusted Path/Channels</h2><div class="comp" id="FTP-BLT-EXT-3-LE"><h4>FTP_BLT_EXT.3/LE Bluetooth Encryption Parameters (LE)</h4><span class="activity_pane_body"><div class="component-activity-header">FTP_BLT_EXT.3/LE</div>
+              </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.4 Evaluation Activities for Optional SFRs</h2>The PP-Module does not define any optional requirements.<h2 class="indexable" data-level="1" id="sel-sfrs">2.5 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="ftp">2.5.1 Class FTP: Trusted Path/Channels</h2><div class="comp" id="FTP-BLT-EXT-3-LE"><h4>FTP_BLT_EXT.3/LE Bluetooth Encryption Parameters (LE)</h4><span class="activity_pane_body"><div class="component-activity-header">FTP_BLT_EXT.3/LE</div>
               
               
               
@@ -791,7 +791,7 @@ The following sections list Common Criteria and technology terms used in this do
                     Step 2: Verify that the encryption key size suggested by the remote device is not accepted by the TOE and that the connection is not completed.<br/>
                   </li>
                 </ul></span>
-              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.6 Evaluation Activities for Objective SFRs</h2><h2 class="indexable" data-level="2" id="fia">2.6.1 Identification and Authentication</h2><div class="comp" id="FIA-BLT-EXT-5"><h4>FIA_BLT_EXT.5 Bluetooth Secure Connections</h4><span class="activity_pane_body"><div class="component-activity-header">FIA_BLT_EXT.5</div>
+              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.6 Evaluation Activities for Objective SFRs</h2><h2 class="indexable" data-level="2" id="fia">2.6.1 Class FIA: Identification and Authentication</h2><div class="comp" id="FIA-BLT-EXT-5"><h4>FIA_BLT_EXT.5 Bluetooth Secure Connections</h4><span class="activity_pane_body"><div class="component-activity-header">FIA_BLT_EXT.5</div>
               
               
               
