@@ -322,7 +322,7 @@
     </h:ul>
 
 
-    <Base PP id="bpp-mdf" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF" version="4.0">
+    <base-pp id="bpp-mdf" name="Mobile Device Fundamentals" product="Mobile Device" short="MDF" version="4.0">
       <git>
         <url>https://github.com/commoncriteria/mobile-device</url>
         <branch>release-4.0</branch>
@@ -554,8 +554,8 @@
         but it relies on the same cryptographic algorithms specified in the Base PP to function.</con-mod>
       <con-mod ref="fia-blt-ext-5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base PP.</con-mod>
       
-    </Base PP>
-    <Base PP id="bpp-gpos" name="General Purpose Operating System" product="Operating System"
+    </base-pp>
+    <base-pp id="bpp-gpos" name="General Purpose Operating System" product="Operating System"
       short="GPOS" version="5.0">
       <git>
         <url>https://github.com/commoncriteria/operatingsystem</url>
@@ -783,7 +783,7 @@
       <con-mod ref="ftp-blt-ext-3-le">This SFR applies to encryption of Bluetooth communications. This is a trusted channel that is not discussed in the Base PP, 
         but it relies on the same cryptographic algorithms specified in the Base PP to function.</con-mod>
       <con-mod ref="fia-blt-ext-5">This SFR applies to the establishment of Bluetooth connectivity, which is behavior not described in or prevented by the Base PP.</con-mod>
-    </Base PP>
+    </base-pp>
       
     <man-sfrs>
       
