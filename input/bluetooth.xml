@@ -11,9 +11,10 @@
   <PPReference>
    
     <ReferenceTable>
+      <PPTitle>PP-Module for Bluetooth</PPTitle>
       <PPVersion>2.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2025-01-31</PPPubDate>
+      <PPPubDate>2026-04-03</PPPubDate>
       <Keywords>Bluetooth; NFC</Keywords>
     </ReferenceTable>
   </PPReference>
@@ -178,12 +179,15 @@
         <cc-pt3-conf>extended</cc-pt3-conf>
         <cc-pp-conf/>
         <cc-pp-config-with> 
+          
+          
           <PP-cc-ref>Protection Profile for General Purpose Operating Systems, Version 5.0</PP-cc-ref>
           <PP-cc-ref>Protection Profile for Mobile Device Fundamentals, Version 4.0</PP-cc-ref>
-          <Mod-cc-ref>PP-Module for Virtual Private Network (VPN) Clients, version 3.0</Mod-cc-ref>  
-          <Mod-cc-ref>PP-Module for Wireless LAN Clients, version 2.0</Mod-cc-ref>
-          <Mod-cc-ref>PP-Module for Mobile Device Management Agent, version 2.0</Mod-cc-ref>
-          <Mod-cc-ref>cPP-Module for Biometric Enrolment and Verification - for unlocking the device, version 1.1</Mod-cc-ref>  
+          <Mod-cc-ref>PP-Module for VPN Client, version 3.0</Mod-cc-ref>  
+          <Mod-cc-ref>PP-Module for Bluetooth, version 2.0</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for MDM Agent, version 2.0</Mod-cc-ref>
+          <Mod-cc-ref>PP-Module for WLAN Client, version 2.0</Mod-cc-ref>
+          <Mod-cc-ref>cPP-Module for Biometric Enrolment and Verification, version 2.0</Mod-cc-ref>  
         </cc-pp-config-with>
         <cc-pkg-claim/>
           </CClaimsInfo>	
