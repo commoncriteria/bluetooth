@@ -1,0 +1,1 @@
+/home/runner/work/bluetooth/bluetooth/input/bluetooth.xml:14:16: error: element "PPTitle" not allowed here; expected element "PPVersion"
