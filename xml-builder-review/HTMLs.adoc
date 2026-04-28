@@ -1,3 +1,4 @@
+* https://commoncriteria.github.io/bluetooth/xml-builder-review/Master-Diff.html[Master-Diff.html]
 * https://commoncriteria.github.io/bluetooth/xml-builder-review/bluetooth-release-linkable.html[bluetooth-release-linkable.html]
 * https://commoncriteria.github.io/bluetooth/xml-builder-review/bluetooth-release.html[bluetooth-release.html]
 * https://commoncriteria.github.io/bluetooth/xml-builder-review/bluetooth-sd.html[bluetooth-sd.html]
