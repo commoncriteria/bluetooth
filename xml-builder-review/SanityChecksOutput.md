@@ -1,3 +1,15 @@
+* Error: Detected multiple elements with an id of 'fmt'.
+* Error: Detected multiple elements with an id of 'fmt-smf-ext-1-bt'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext-1-1_BT'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext.1.1_BT_1'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext.1.1_BT_2'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext.1.1_BT_3'.
+* Error: Detected multiple elements with an id of 'fmt'.
+* Error: Detected multiple elements with an id of 'fmt-smf-ext-1-bt'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext-1-1_BT'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext.1.1_BT_1'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext.1.1_BT_2'.
+* Error: Detected multiple elements with an id of 'fmt_smf_ext.1.1_BT_3'.
 * Error: Detected multiple elements with an id of 'fia'.
 * Error: Detected multiple elements with an id of 'ftp'.
 * Error: Detected multiple elements with an id of 'ftp'.
