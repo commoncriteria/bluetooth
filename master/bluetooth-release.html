@@ -635,10 +635,10 @@ function showTarget(id){
 </table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.4<span>Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-mdf" style="text-indent:10px">5.1<span>
     Protection Profile for Mobile Device Fundamentals
        Security Functional Requirements Direction
-    </span></a><a href="#modsfr-bpp-mdf" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#@id" style="text-indent:30px">5.1.1.1<span>Class FMT: Security Management</span></a><a href="#addsfr-bpp-mdf" style="text-indent:20px">5.1.2<span> Additional SFRs</span></a><a href="#mdf-addtl-audit-table" style="text-indent:30px">5.1.2.1<span>Auditable Events for PP_MDF Additional SFRs</span></a><a href="#fmt" style="text-indent:30px">5.1.2.2<span>Class FMT: Security Management</span></a><a href="#secreq-bpp-gpos" style="text-indent:10px">5.2<span>
+    </span></a><a href="#modsfr-bpp-mdf" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#modsfr-mdf-mod-fmt" style="text-indent:30px">5.1.1.1<span>Class FMT: Security Management</span></a><a href="#addsfr-bpp-mdf" style="text-indent:20px">5.1.2<span> Additional SFRs</span></a><a href="#mdf-addtl-audit-table" style="text-indent:30px">5.1.2.1<span>Auditable Events for PP_MDF Additional SFRs</span></a><a href="#fmt" style="text-indent:30px">5.1.2.2<span>Class FMT: Security Management</span></a><a href="#secreq-bpp-gpos" style="text-indent:10px">5.2<span>
     Protection Profile for General Purpose Operating System
        Security Functional Requirements Direction
-    </span></a><a href="#modsfr-bpp-gpos" style="text-indent:20px">5.2.1<span> Modified SFRs </span></a><a href="#@id" style="text-indent:30px">5.2.1.1<span>Class FMT: Security Management</span></a><a href="#addsfr-bpp-gpos" style="text-indent:20px">5.2.2<span> Additional SFRs</span></a><a href="#gpos-addtl-audit-table" style="text-indent:30px">5.2.2.1<span>Auditable Events for PP_GPOS Additional SFRs</span></a><a href="#fmt" style="text-indent:30px">5.2.2.2<span>Class FMT: Security Management</span></a><a href="#man-sfrs" style="text-indent:10px">5.3<span>TOE Security Functional Requirements</span></a><a href="#man-audit-table" style="text-indent:20px">5.3.1<span>Auditable Events for Mandatory SFRs</span></a><a href="#fau" style="text-indent:20px">5.3.2<span>Class FAU: Security Audit</span></a><a href="#fcs" style="text-indent:20px">5.3.3<span>Class FCS: Cryptographic Support</span></a><a href="#fia" style="text-indent:20px">5.3.4<span>Class FIA: Identification and Authentication</span></a><a href="#ftp" style="text-indent:20px">5.3.5<span>Class FTP: Trusted Channels</span></a><a href="#obj-req-map" style="text-indent:10px">5.4<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-bpp-mdf" style="text-indent:10px">6.1<span>
+    </span></a><a href="#modsfr-bpp-gpos" style="text-indent:20px">5.2.1<span> Modified SFRs </span></a><a href="#modsfr-gpos-mod-fmt" style="text-indent:30px">5.2.1.1<span>Class FMT: Security Management</span></a><a href="#addsfr-bpp-gpos" style="text-indent:20px">5.2.2<span> Additional SFRs</span></a><a href="#gpos-addtl-audit-table" style="text-indent:30px">5.2.2.1<span>Auditable Events for PP_GPOS Additional SFRs</span></a><a href="#fmt" style="text-indent:30px">5.2.2.2<span>Class FMT: Security Management</span></a><a href="#man-sfrs" style="text-indent:10px">5.3<span>TOE Security Functional Requirements</span></a><a href="#man-audit-table" style="text-indent:20px">5.3.1<span>Auditable Events for Mandatory SFRs</span></a><a href="#fau" style="text-indent:20px">5.3.2<span>Class FAU: Security Audit</span></a><a href="#fcs" style="text-indent:20px">5.3.3<span>Class FCS: Cryptographic Support</span></a><a href="#fia" style="text-indent:20px">5.3.4<span>Class FIA: Identification and Authentication</span></a><a href="#ftp" style="text-indent:20px">5.3.5<span>Class FTP: Trusted Channels</span></a><a href="#obj-req-map" style="text-indent:10px">5.4<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-bpp-mdf" style="text-indent:10px">6.1<span>
     Protection Profile for Mobile Device Fundamentals</span></a><a href="#contoe-bpp-mdf" style="text-indent:20px">6.1.1<span>
 	Consistency of TOE Type
       </span></a><a href="#consecprob-bpp-mdf" style="text-indent:20px">6.1.2<span>
@@ -688,6 +688,12 @@ The following sections list Common Criteria and technology terms used in this do
       accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations.
     </td></tr>
 <tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation.</td></tr>
+<tr><td><div id="Direct_Rationale">Direct Rationale</div></td><td>
+		A type of Protection Profile, PP-Module, or Security Target in which the security
+		problem definition (SPD) elements are mapped directly to the SFRs and possibly to the 
+		security objectives for the operational environment. There are no security objectives
+		for the TOE.
+	</td></tr>
 <tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole.</td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
 	    or functionality. See Functional Packages.</td></tr>
@@ -830,19 +836,13 @@ The following sections list Common Criteria and technology terms used in this do
         <dl><dt class="threat defined" id="T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</dt><dd><span class="description">See PP_MDF, Section 3.1 and PP_GPOS, Section 3.1.</span></dd><dt class="threat defined" id="T.NETWORK_ATTACK">T.NETWORK_ATTACK</dt><dd><span class="description">See PP_MDF, Section 3.1 and PP_GPOS, Section 3.1.</span></dd></dl>     
     
         
-    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
+    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Assumptions beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s).</p>
       
-      This document does not define any additional assumptions.
-    
     
     
 
-    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>An organization deploying the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is
-      expected to satisfy the organizational security policy listed below in addition to all
-      organizational security policies defined by the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. </p>
+    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s).</p>
       
-      This document does not define any additional OSPs.
-    
       
     
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
@@ -891,7 +891,7 @@ Mobile Device
     <h3 id="modsfr-bpp-mdf" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
 		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the <abbr class="dyn-abbr"><a href="#abbr_MDF">MDF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> and relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
 
-		<h4 id="@id" class="indexable" data-level="4">5.1.1.1 Class FMT: Security Management</h4><div class="comp" id="@id"><h4>FMT_SMF_EXT.1: Specification of Management Functions</h4><span class="description">This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not modify this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as it is defined in the PP_MDF. However, note that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>
+		<h4 id="modsfr-mdf-mod-fmt" class="indexable" data-level="4">5.1.1.1 Class FMT: Security Management</h4><div class="comp" id="@id"><h4>FMT_SMF_EXT.1: Specification of Management Functions</h4><span class="description">This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not modify this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as it is defined in the PP_MDF. However, note that this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>
       requires the list of radios specified in the assignment for management function 4 ("enable/disable
       [<b>assignment:</b> <i>list of all radios</i>]") to include Bluetooth radios. Bluetooth <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> and Bluetooth <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> will 
       be listed separately if the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> provides the ability to enable/disable them separately (i.e., if management 
@@ -984,7 +984,7 @@ Operating System
     <h3 id="modsfr-bpp-gpos" class="indexable" data-level="3">5.2.1  Modified SFRs </h3>
 		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the GPOS <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> and relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
 
-		<h4 id="@id" class="indexable" data-level="4">5.2.1.1 Class FMT: Security Management</h4><div class="comp" id="@id"><h4>FMT_MOF_EXT.1: Management of Functions Behavior</h4><span class="description">There is no change to the text of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> references FMT_SMF_EXT.1 and states that the OS shall permit 
+		<h4 id="modsfr-gpos-mod-fmt" class="indexable" data-level="4">5.2.1.1 Class FMT: Security Management</h4><div class="comp" id="@id"><h4>FMT_MOF_EXT.1: Management of Functions Behavior</h4><span class="description">There is no change to the text of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> references FMT_SMF_EXT.1 and states that the OS shall permit 
               the administrator role to perform the relevant functions listed in FMT_SMF_EXT.1. The function "Enable/Disable
               the Bluetooth interface" is listed as an optional management function in FMT_SMF_EXT.1 for both users and 
               administrators. When this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is claimed, the administrator or user role must be able to enable/disable
@@ -1377,7 +1377,7 @@ Operating System
  
       
     <h2 id="obj-req-map" class="indexable" data-level="2">5.4 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">4</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="14"><a href="#T.NETWORK_EAVESDROP">T.NETWORK_​EAVESDROP</a><br/></td><td>FMT_SMF_EXT.1 (modified from PP_MDF)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">4</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="14"><a href="#T.NETWORK_EAVESDROP">T.NETWORK_​EAVESDROP</a></td><td>FMT_SMF_EXT.1 (modified from PP_MDF)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
 <tr><td><a href="#FMT_SMF_EXT.1/BT">FMT_SMF_EXT.1/BT</a> (additional to PP_MDF)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
 <tr><td>FMT_MOF_EXT.1 (modified from PP_GPOS)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
 <tr><td><a href="#FMT_MOF_EXT.1/BT">FMT_MOF_EXT.1/BT</a> (additional to PP_GPOS)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
@@ -1391,7 +1391,7 @@ Operating System
 <tr><td><a href="#FTP_BLT_EXT.3/BR">FTP_BLT_EXT.3/BR</a></td><td>Mitigates the threat of network disclosure by enforcing the use of appropriate encryption parameters for Bluetooth data in <abbr class="dyn-abbr"><a href="#abbr_BR">BR</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EDR">EDR</a></abbr> mode.</td></tr>
 <tr><td><a href="#FTP_BLT_EXT.3/LE">FTP_BLT_EXT.3/LE</a> (selection-based)</td><td>Mitigates the threat of network disclosure by enforcing the use of appropriate encryption parameters for Bluetooth data in <abbr class="dyn-abbr"><a href="#abbr_LE">LE</a></abbr> mode.</td></tr>
 <tr><td><a href="#FIA_BLT_EXT.5">FIA_BLT_EXT.5</a> (objective)</td><td>Mitigates the threat of network disclosure by enforcing the use of Secure Connections Only mode to block insecure communications.</td></tr>
-<tr class="major-row"><td rowspan="13"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a><br/></td><td>FMT_SMF_EXT.1 (modified from PP_MDF)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
+<tr class="major-row"><td rowspan="13"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a></td><td>FMT_SMF_EXT.1 (modified from PP_MDF)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
 <tr><td><a href="#FMT_SMF_EXT.1/BT">FMT_SMF_EXT.1/BT</a> (additional to PP_MDF)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
 <tr><td>FMT_MOF_EXT.1 (modified from PP_GPOS)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
 <tr><td><a href="#FMT_MOF_EXT.1/BT">FMT_MOF_EXT.1/BT</a> (additional to PP_GPOS)</td><td>Mitigates the threat of network eavesdrop by allowing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be configured to implement the functionality to enforce secure behavior.</td></tr>
@@ -1522,9 +1522,7 @@ Operating System
       	
 
       <h2 id="ftp" class="indexable" data-level="2">B.2 Class FTP: Trusted Path/Channels</h2>
-        <div class="comp" id="FTP_BLT_EXT.3/LE"><h4>FTP_BLT_EXT.3/LE Bluetooth Encryption Parameters (LE)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FTP_BLT_EXT.1.1">FTP_BLT_EXT.1.1</a>.
-           </i></b></div>
+        <div class="comp" id="FTP_BLT_EXT.3/LE"><h4>FTP_BLT_EXT.3/LE Bluetooth Encryption Parameters (LE)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FTP_BLT_EXT.1.1">FTP_BLT_EXT.1.1</a></i></b></li></ul></div>
 	  
           
           <div class="element"><div class="reqid" id="FTP_BLT_EXT.3.1/LE"><a href="#FTP_BLT_EXT.3.1/LE" class="abbr">FTP_BLT_EXT.3.1/LE</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall set the minimum encryption key size to [<b>assignment</b>: 
