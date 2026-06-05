@@ -821,17 +821,18 @@ Mitigates the threat of network eavesdrop by allowing the TSF to be configured t
           <audit-event table="mandatory">
             <audit-event-descr>Failed user authorization for local Bluetooth Service.</audit-event-descr>
             <audit-event-info>
-              <selectables onlyone="yes">
+              <selectables>
+                <selectable>complete</selectable>
+                <selectable>last <assignable>integer greater than or equal to 2</assignable> octets of the</selectable>
+              </selectables>
+              BD_ADDR and
+              <selectables>
                 <selectable>name of device</selectable>
-                <selectable>No additional information</selectable>
-              </selectables>
+                <selectable>uniquely generated nonce for each pairing</selectable>
+                <selectable>no other information</selectable>
+              </selectables>.
             </audit-event-info>
-            <audit-event-info>
-              <selectables onlyone="yes">
-                <selectable>service ID</selectable>
-                <selectable>No additional information</selectable>
-              </selectables>
-            </audit-event-info>
+            <audit-event-info>Bluetooth profile. Identity of local service with <selectables><selectable>service ID</selectable><selectable>profile name</selectable></selectables></audit-event-info>
           </audit-event>
         </f-component>
         <!-- FIA_BLT_EXT.2 Bluetooth Mutual Authentication -->
@@ -863,10 +864,16 @@ Mitigates the threat of network eavesdrop by allowing the TSF to be configured t
           <audit-event table="mandatory">
             <audit-event-descr>Initiation of Bluetooth connection.</audit-event-descr>
             <audit-event-info>
-              <selectables onlyone="yes">
-                <selectable>name of device</selectable>
-                <selectable>No additional information</selectable>
+              <selectables>
+                <selectable>complete</selectable>
+                <selectable>last <assignable>integer greater than or equal to 2</assignable> octets of the</selectable>
               </selectables>
+              BD_ADDR and
+              <selectables>
+                <selectable>name of device</selectable>
+                <selectable>uniquely generated nonce for each pairing</selectable>
+                <selectable>no other information</selectable>
+              </selectables>.
             </audit-event-info>
           </audit-event>
           <audit-event table="mandatory">
@@ -913,12 +920,7 @@ Mitigates the threat of network eavesdrop by allowing the TSF to be configured t
           </f-element>
           <audit-event table="mandatory">
             <audit-event-descr>Duplicate connection attempt.</audit-event-descr>
-            <audit-event-info>
-              <selectables onlyone="yes">
-                <selectable>complete</selectable>
-                <selectable>No additional information</selectable>
-              </selectables>
-            </audit-event-info>
+            <audit-event-info><selectables><selectable>complete</selectable><selectable>last <assignable>integer greater than or equal to 2</assignable> octets of the</selectable></selectables> BD_ADDR of connection attempt.</audit-event-info>
           </audit-event>
         </f-component>
         <!-- FIA_BLT_EXT.4 Secure Simple Pairing -->
