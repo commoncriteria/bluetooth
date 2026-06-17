@@ -191,10 +191,16 @@
           <rationale>Mitigates the threat of network attack by requiring certain services to be accessed only through explicit user authorization.</rationale>
           <addressed-by>FMT_MOF_EXT.1 (modified from PP_GPOS)</addressed-by>
           <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_MOF_EXT.1/BT (additional to PP_GPOS)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_SMF_EXT.1 (modified from PP_GPOS)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
           <addressed-by>FMT_SMF_EXT.1 (modified from PP_MDF)</addressed-by>
-          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.
-
-Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_SMF_EXT.1/BT (additional to PP_GPOS)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_SMF_EXT.1/BT (additional to PP_MDF)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
         </threat>
         <threat name="T.NETWORK_EAVESDROP">
           <description>See PP_MDF, Section 3.1 and PP_GPOS, Section 3.1.</description>
@@ -210,10 +216,16 @@ Mitigates the threat of network eavesdrop by allowing the TSF to be configured t
           <rationale>Mitigates the threat of network disclosure by enforcing the use of Secure Connections Only mode to block insecure communications.</rationale>
           <addressed-by>FMT_MOF_EXT.1 (modified from PP_GPOS)</addressed-by>
           <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_MOF_EXT.1/BT (additional to PP_GPOS)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_SMF_EXT.1 (modified from PP_GPOS)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
           <addressed-by>FMT_SMF_EXT.1 (modified from PP_MDF)</addressed-by>
-          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.
-
-Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_SMF_EXT.1/BT (additional to PP_GPOS)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
+          <addressed-by>FMT_SMF_EXT.1/BT (additional to PP_MDF)</addressed-by>
+          <rationale>Mitigates the threat of network eavesdrop by allowing the TSF to be configured to implement the functionality to enforce secure behavior.</rationale>
           <addressed-by>FTP_BLT_EXT.1</addressed-by>
           <rationale>Mitigates the threat of network disclosure by enforcing the use of encryption for Bluetooth data in transit.</rationale>
           <addressed-by>FTP_BLT_EXT.2</addressed-by>
