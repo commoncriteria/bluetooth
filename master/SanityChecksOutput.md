@@ -1,6 +1,0 @@
-warning: failed to load external entity "output/bpp-mdf.xml"
-warning: failed to load external entity "output/bpp-mdf.xml"
-warning: failed to load external entity "output/bpp-mdf.xml"
-warning: failed to load external entity "output/bpp-mdf.xml"
-warning: failed to load external entity "output/bpp-gpos.xml"
-warning: failed to load external entity "output/bpp-gpos.xml"
