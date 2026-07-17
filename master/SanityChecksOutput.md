@@ -1,3 +1,6 @@
- Failed to find a reference to bibMDF.
- Failed to find a reference to bibMDF.
- Failed to find a reference to bibGPOS.
+warning: failed to load external entity "output/bpp-mdf.xml"
+warning: failed to load external entity "output/bpp-mdf.xml"
+warning: failed to load external entity "output/bpp-mdf.xml"
+warning: failed to load external entity "output/bpp-mdf.xml"
+warning: failed to load external entity "output/bpp-gpos.xml"
+warning: failed to load external entity "output/bpp-gpos.xml"

@@ -766,7 +766,9 @@ The following sections list Common Criteria and technology terms used in this do
       A compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> will meet all mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> in addition to the mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> of its claimed base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. For each base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> refines several of the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> so that they can accommodate the
       Bluetooth functionality defined by the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>. A compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> will claim all selection-based <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> and its base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> as needed based on the relevant selections in other requirements being chosen.
       </p><p>
-      Note that <a href="#bibMDF" class="dynref" data-format=""></a> evaluation activities require certain tests to be performed against all radios present on the device. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> also claims conformance to a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> that includes 
+      Note that <a href="https://www.niap-ccevs.org/static_html/protection-profile/468/MDF%203.3%20PP/index.html">,
+        version 
+        </a> evaluation activities require certain tests to be performed against all radios present on the device. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> also claims conformance to a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> that includes 
       this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, those tests are executed against the Bluetooth radio as well.
       </p><p>
       Also note that each base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines its own requirements for protection of data at rest. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> also claims conformance to a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> that includes this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, 
@@ -1985,8 +1987,12 @@ Operating System
       </tr>
       <tr>
         <td>FPT_STM.1 - Reliable Time Stamps</td>
-        <td><a href="#FCS_CKM_EXT.8">FCS_CKM_EXT.8</a> has a dependency on FPT_STM.1 because key generation may be triggered by a given time period elapsing. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to <a href="#bibMDF" class="dynref" data-format=""></a>,
-        this dependency is satisfied explicitly through the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>'s definition of FPT_STM.1. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to <a href="#bibGPOS" class="dynref" data-format=""></a>, this dependency is satisfied implicitly through that
+        <td><a href="#FCS_CKM_EXT.8">FCS_CKM_EXT.8</a> has a dependency on FPT_STM.1 because key generation may be triggered by a given time period elapsing. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to <a href="https://www.niap-ccevs.org/static_html/protection-profile/468/MDF%203.3%20PP/index.html">,
+        version 
+        </a>,
+        this dependency is satisfied explicitly through the base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>'s definition of FPT_STM.1. When the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to <a href="https://www.niap-ccevs.org/static_html/protection-profile/469/OS%204.3%20PP/index.html">,
+        version 
+        </a>, this dependency is satisfied implicitly through that
         <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>'s A.PLATFORM assumption of a trustworthy computing platform, which can be reasonably assumed to include a hardware real-time clock.</td>
       </tr>
     </table>
